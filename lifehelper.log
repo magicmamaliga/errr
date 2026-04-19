@@ -1,0 +1,373 @@
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [2000]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+!!Port 8066 is in use switching to 8067
+🚀 Starting LifeHelper backend on port 8067...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [12112]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8067 (Press CTRL+C to quit)
+Launched via protocol: {'token': 'eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjU5NzA0MCwiaWF0IjoxNzc2NTEwNjQwLCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.fzc5n02GXNAfc3BApO354vjPwP2ZU2VO0f286c_-vf7Hbd2z2WV2VETNmijb9UDEWFrF82FqCNZ-tican07v0-2TVQFDTrLht3708QE_GvDDAHGgJNxlaghETvXVQ7FoqpOeRm1by2C7zfjJvAtcs4CjSQrSPapS5Jxxw6xREUc9W-P83DUFfqGxLAulOMM0L1gPwHiBR3V885MGKLlbVjDDjrf0S5stR8caJV1PfM58mL72794YxZ5V4TYecEwMeiK5sSV2UQOY3mt3xfWBK5s4Cyqu6-BPa7cckQLK5uvD78WsdEu699Hv4vcCRhFBYupNQSxmCbkhLBaZe7Tm_XL5SUCPRerBa5ih_P2tbItDGD1zPNdbwB_efr6fA-oZ6Enjm_o411lCJsV7wRaDUWzr_7K618lzxnWqaV9RJL9xjl_yD3tqIScL7GOcGbU8ECDftviu6WYm7aKVjZ141xCW8pD58FJllueZkxaaAXGNKKQwmZTe9ad8kR7dCyP1', '_action': 'launch'}
+JWT token set from protocol URI
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [10512]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:54704 - "OPTIONS /api/token HTTP/1.1" 200 OK
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\routes\token.py", line 24, in direct_login
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'JWT Token set directly via /api/token'
+Arguments: ()
+INFO:     127.0.0.1:54704 - "POST /api/token HTTP/1.1" 200 OK
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 112, in start_session
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'Starting new session with group: %s'
+Arguments: ('Default group',)
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 115, in start_session
+  File "server\audio\shutdown.py", line 54, in save_transcript_and_audio_on_shutdown
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'Saving transcript and audio on shutdown...'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 116, in start_session
+  File "server\audio\thread_starter.py", line 67, in start_audio_streamer
+  File "server\audio\thread_starter.py", line 106, in _find_loopback_device
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'Found Loopback Device (Index: 16): Speakers (Realtek(R) Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 116, in start_session
+  File "server\audio\thread_starter.py", line 74, in start_audio_streamer
+  File "server\audio\thread_starter.py", line 154, in _find_microphone_device
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 116, in start_session
+  File "server\audio\thread_starter.py", line 79, in start_audio_streamer
+  File "server\services\recordings.py", line 8, in create_recording
+  File "logging\__init__.py", line 1539, in info
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: 'Creating recording: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjU5NzA0MCwiaWF0IjoxNzc2NTEwNjQwLCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.fzc5n02GXNAfc3BApO354vjPwP2ZU2VO0f286c_-vf7Hbd2z2WV2VETNmijb9UDEWFrF82FqCNZ-tican07v0-2TVQFDTrLht3708QE_GvDDAHGgJNxlaghETvXVQ7FoqpOeRm1by2C7zfjJvAtcs4CjSQrSPapS5Jxxw6xREUc9W-P83DUFfqGxLAulOMM0L1gPwHiBR3V885MGKLlbVjDDjrf0S5stR8caJV1PfM58mL72794YxZ5V4TYecEwMeiK5sSV2UQOY3mt3xfWBK5s4Cyqu6-BPa7cckQLK5uvD78WsdEu699Hv4vcCRhFBYupNQSxmCbkhLBaZe7Tm_XL5SUCPRerBa5ih_P2tbItDGD1zPNdbwB_efr6fA-oZ6Enjm_o411lCJsV7wRaDUWzr_7K618lzxnWqaV9RJL9xjl_yD3tqIScL7GOcGbU8ECDftviu6WYm7aKVjZ141xCW8pD58FJllueZkxaaAXGNKKQwmZTe9ad8kR7dCyP1'
+Arguments: ()
+--- Logging error ---
+Traceback (most recent call last):
+  File "urllib3\connection.py", line 198, in _new_conn
+  File "urllib3\util\connection.py", line 85, in create_connection
+  File "urllib3\util\connection.py", line 73, in create_connection
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "urllib3\connectionpool.py", line 787, in urlopen
+  File "urllib3\connectionpool.py", line 493, in _make_request
+  File "urllib3\connection.py", line 494, in request
+  File "http\client.py", line 1331, in endheaders
+  File "http\client.py", line 1091, in _send_output
+  File "http\client.py", line 1035, in send
+  File "urllib3\connection.py", line 325, in connect
+  File "urllib3\connection.py", line 213, in _new_conn
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x00000233C5126CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "requests\adapters.py", line 644, in send
+  File "urllib3\connectionpool.py", line 841, in urlopen
+  File "urllib3\util\retry.py", line 519, in increment
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /api/v1/recordings?group=Default%20group (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233C5126CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "server\services\recordings.py", line 19, in create_recording
+  File "requests\api.py", line 115, in post
+  File "requests\api.py", line 59, in request
+  File "requests\sessions.py", line 589, in request
+  File "requests\sessions.py", line 703, in send
+  File "requests\adapters.py", line 677, in send
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /api/v1/recordings?group=Default%20group (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233C5126CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "server\audio\thread_starter.py", line 79, in start_audio_streamer
+  File "server\services\recordings.py", line 42, in create_recording
+RuntimeError: Failed Request: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /api/v1/recordings?group=Default%20group (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233C5126CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "logging\__init__.py", line 1163, in emit
+AttributeError: 'NoneType' object has no attribute 'write'
+Call stack:
+  File "lifehelper.py", line 87, in <module>
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 674, in run_until_complete
+  File "asyncio\windows_events.py", line 322, in run_forever
+  File "asyncio\base_events.py", line 641, in run_forever
+  File "asyncio\base_events.py", line 1986, in _run_once
+  File "asyncio\events.py", line 88, in _run
+  File "uvicorn\protocols\http\h11_impl.py", line 410, in run_asgi
+  File "uvicorn\middleware\proxy_headers.py", line 60, in __call__
+  File "fastapi\applications.py", line 1160, in __call__
+  File "starlette\applications.py", line 107, in __call__
+  File "starlette\middleware\errors.py", line 164, in __call__
+  File "starlette\middleware\cors.py", line 93, in __call__
+  File "starlette\middleware\cors.py", line 144, in simple_response
+  File "starlette\middleware\exceptions.py", line 63, in __call__
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\middleware\asyncexitstack.py", line 18, in __call__
+  File "starlette\routing.py", line 716, in __call__
+  File "starlette\routing.py", line 736, in app
+  File "starlette\routing.py", line 290, in handle
+  File "fastapi\routing.py", line 130, in app
+  File "starlette\_exception_handler.py", line 42, in wrapped_app
+  File "fastapi\routing.py", line 116, in app
+  File "fastapi\routing.py", line 670, in app
+  File "fastapi\routing.py", line 324, in run_endpoint_function
+  File "server\main.py", line 116, in start_session
+  File "server\audio\thread_starter.py", line 82, in start_audio_streamer
+  File "logging\__init__.py", line 1568, in error
+  File "logging\__init__.py", line 1684, in _log
+  File "logging\__init__.py", line 1700, in handle
+  File "logging\__init__.py", line 1762, in callHandlers
+  File "logging\__init__.py", line 1028, in handle
+  File "logging\__init__.py", line 1168, in emit
+Message: "Failed to create recording: Failed Request: HTTPConnectionPool(host='localhost', port=80): Max retries exceeded with url: /api/v1/recordings?group=Default%20group (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x00000233C5126CC0>: Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it'))"
+Arguments: ()
+INFO:     127.0.0.1:54704 - "POST /session/start HTTP/1.1" 500 Internal Server Error
