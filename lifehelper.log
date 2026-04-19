@@ -1,66 +1,159 @@
-INFO:     127.0.0.1:60754 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-04-19 09:26:33 [INFO] server.routes.token: JWT Token set directly via /api/token
-INFO:     127.0.0.1:60754 - "POST /api/token HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "OPTIONS /session/start HTTP/1.1" 200 OK
-2026-04-19 09:26:33 [INFO] lifehelper.main: Starting new session with group: Default group
-2026-04-19 09:26:34 [INFO] server.audio.shutdown: Saving transcript and audio on shutdown...
-2026-04-19 09:26:34 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 16): Speakers (Realtek(R) Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2
-2026-04-19 09:26:34 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
-2026-04-19 09:26:34 [INFO] server.services.recordings: Creating recording: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjU5NzA0MCwiaWF0IjoxNzc2NTEwNjQwLCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.fzc5n02GXNAfc3BApO354vjPwP2ZU2VO0f286c_-vf7Hbd2z2WV2VETNmijb9UDEWFrF82FqCNZ-tican07v0-2TVQFDTrLht3708QE_GvDDAHGgJNxlaghETvXVQ7FoqpOeRm1by2C7zfjJvAtcs4CjSQrSPapS5Jxxw6xREUc9W-P83DUFfqGxLAulOMM0L1gPwHiBR3V885MGKLlbVjDDjrf0S5stR8caJV1PfM58mL72794YxZ5V4TYecEwMeiK5sSV2UQOY3mt3xfWBK5s4Cyqu6-BPa7cckQLK5uvD78WsdEu699Hv4vcCRhFBYupNQSxmCbkhLBaZe7Tm_XL5SUCPRerBa5ih_P2tbItDGD1zPNdbwB_efr6fA-oZ6Enjm_o411lCJsV7wRaDUWzr_7K618lzxnWqaV9RJL9xjl_yD3tqIScL7GOcGbU8ECDftviu6WYm7aKVjZ141xCW8pD58FJllueZkxaaAXGNKKQwmZTe9ad8kR7dCyP1
-2026-04-19 09:26:36 [INFO] server.services.recordings:  Global config.RECORDING_ID: 69e491bd2e828deaad7f9fe9
-2026-04-19 09:26:36 [INFO] server.audio.thread_starter: Recording session started with ID: 69e491bd2e828deaad7f9fe9
-2026-04-19 09:26:36 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-04-19 09:26:36 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
-2026-04-19 09:26:36 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-04-19 09:26:36 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-04-19 09:26:36 [INFO] lifehelper.main: Session started.
-INFO:     127.0.0.1:60754 - "POST /session/start HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-2026-04-19 09:26:41 [ERROR] server.audio.transcribe: Error in transcribe worker: [WinError 2] The system cannot find the file specified
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-2026-04-19 09:27:41 [ERROR] server.audio.transcribe: Error in transcribe worker: [WinError 2] The system cannot find the file specified
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60754 - "GET /api/live HTTP/1.1" 200 OK
+2026-04-19 09:36:42 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+Launched via protocol: {'token': 'eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjU5NzA0MCwiaWF0IjoxNzc2NTEwNjQwLCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.fzc5n02GXNAfc3BApO354vjPwP2ZU2VO0f286c_-vf7Hbd2z2WV2VETNmijb9UDEWFrF82FqCNZ-tican07v0-2TVQFDTrLht3708QE_GvDDAHGgJNxlaghETvXVQ7FoqpOeRm1by2C7zfjJvAtcs4CjSQrSPapS5Jxxw6xREUc9W-P83DUFfqGxLAulOMM0L1gPwHiBR3V885MGKLlbVjDDjrf0S5stR8caJV1PfM58mL72794YxZ5V4TYecEwMeiK5sSV2UQOY3mt3xfWBK5s4Cyqu6-BPa7cckQLK5uvD78WsdEu699Hv4vcCRhFBYupNQSxmCbkhLBaZe7Tm_XL5SUCPRerBa5ih_P2tbItDGD1zPNdbwB_efr6fA-oZ6Enjm_o411lCJsV7wRaDUWzr_7K618lzxnWqaV9RJL9xjl_yD3tqIScL7GOcGbU8ECDftviu6WYm7aKVjZ141xCW8pD58FJllueZkxaaAXGNKKQwmZTe9ad8kR7dCyP1', '_action': 'launch'}
+JWT token set from protocol URI
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [7432]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:56487 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-04-19 09:37:00 [INFO] server.routes.token: JWT Token set directly via /api/token
+INFO:     127.0.0.1:56487 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "OPTIONS /session/start HTTP/1.1" 200 OK
+2026-04-19 09:37:00 [INFO] lifehelper.main: Starting new session with group: Default group
+2026-04-19 09:37:02 [INFO] server.audio.shutdown: Saving transcript and audio on shutdown...
+2026-04-19 09:37:02 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 16): Speakers (Realtek(R) Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2
+2026-04-19 09:37:02 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-04-19 09:37:02 [INFO] server.services.recordings: Creating recording: eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjU5NzA0MCwiaWF0IjoxNzc2NTEwNjQwLCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.fzc5n02GXNAfc3BApO354vjPwP2ZU2VO0f286c_-vf7Hbd2z2WV2VETNmijb9UDEWFrF82FqCNZ-tican07v0-2TVQFDTrLht3708QE_GvDDAHGgJNxlaghETvXVQ7FoqpOeRm1by2C7zfjJvAtcs4CjSQrSPapS5Jxxw6xREUc9W-P83DUFfqGxLAulOMM0L1gPwHiBR3V885MGKLlbVjDDjrf0S5stR8caJV1PfM58mL72794YxZ5V4TYecEwMeiK5sSV2UQOY3mt3xfWBK5s4Cyqu6-BPa7cckQLK5uvD78WsdEu699Hv4vcCRhFBYupNQSxmCbkhLBaZe7Tm_XL5SUCPRerBa5ih_P2tbItDGD1zPNdbwB_efr6fA-oZ6Enjm_o411lCJsV7wRaDUWzr_7K618lzxnWqaV9RJL9xjl_yD3tqIScL7GOcGbU8ECDftviu6WYm7aKVjZ141xCW8pD58FJllueZkxaaAXGNKKQwmZTe9ad8kR7dCyP1
+2026-04-19 09:37:03 [INFO] server.services.recordings:  Global config.RECORDING_ID: 69e494312e828deaad7f9fea
+2026-04-19 09:37:03 [INFO] server.audio.thread_starter: Recording session started with ID: 69e494312e828deaad7f9fea
+2026-04-19 09:37:03 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-04-19 09:37:03 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-04-19 09:37:03 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-04-19 09:37:03 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-04-19 09:37:03 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:56487 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live HTTP/1.1" 200 OK
+2026-04-19 09:37:08 [INFO] server.audio.transcribe: [2026-04-19T09:37:08] (bell ringing)
+INFO:     127.0.0.1:56487 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A08 HTTP/1.1" 200 OK
+2026-04-19 09:37:12 [INFO] server.audio.transcribe: [2026-04-19T09:37:12] (phone ringing)
+ - For some.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A08 HTTP/1.1" 200 OK
+2026-04-19 09:37:13 [INFO] server.audio.transcribe: [2026-04-19T09:37:13] (ethereal music)
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A12 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A13 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A13 HTTP/1.1" 200 OK
+2026-04-19 09:37:18 [INFO] server.audio.transcribe: [2026-04-19T09:37:18] No way that this is working.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A13 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A18 HTTP/1.1" 200 OK
+2026-04-19 09:37:20 [INFO] server.audio.transcribe: [2026-04-19T09:37:20] so bloody good.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A18 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A20 HTTP/1.1" 200 OK
+2026-04-19 09:37:24 [INFO] server.audio.transcribe: [2026-04-19T09:37:24] (birds chirping)
+ Ha.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A24 HTTP/1.1" 200 OK
+2026-04-19 09:37:27 [INFO] server.audio.transcribe: [2026-04-19T09:37:27] [laughs]
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A24 HTTP/1.1" 200 OK
+2026-04-19 09:37:29 [INFO] server.audio.transcribe: [2026-04-19T09:37:29] This is the testing for...
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A27 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A29 HTTP/1.1" 200 OK
+2026-04-19 09:37:31 [INFO] server.audio.transcribe: [2026-04-19T09:37:31] the local running
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A29 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A31 HTTP/1.1" 200 OK
+2026-04-19 09:37:34 [INFO] server.audio.transcribe: [2026-04-19T09:37:34] [♪♪♪]
+INFO:     127.0.0.1:56487 - "OPTIONS /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+2026-04-19 09:37:35 [INFO] server.audio.transcribe: [2026-04-19T09:37:35] Now I'm going to change it.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A31 HTTP/1.1" 200 OK
+2026-04-19 09:37:36 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A35 HTTP/1.1" 200 OK
+2026-04-19 09:37:38 [INFO] server.audio.transcribe: [2026-04-19T09:37:38] or AI transcription.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A35 HTTP/1.1" 200 OK
+2026-04-19 09:37:39 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+2026-04-19 09:37:40 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A38 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A38 HTTP/1.1" 200 OK
+2026-04-19 09:37:43 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A38 HTTP/1.1" 200 OK
+2026-04-19 09:37:45 [INFO] server.audio.transcribe: [2026-04-19T09:37:45] And now E is through.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A38 HTTP/1.1" 200 OK
+2026-04-19 09:37:46 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A45 HTTP/1.1" 200 OK
+2026-04-19 09:37:47 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A45 HTTP/1.1" 200 OK
+2026-04-19 09:37:48 [INFO] server.audio.transcribe: [2026-04-19T09:37:48] my...
+2026-04-19 09:37:49 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+2026-04-19 09:37:49 [INFO] server.audio.transcribe: [2026-04-19T09:37:49] (mysterious music)
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A45 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A49 HTTP/1.1" 200 OK
+2026-04-19 09:37:51 [INFO] server.audio.transcribe: [2026-04-19T09:37:51] thing.
+2026-04-19 09:37:52 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A49 HTTP/1.1" 200 OK
+2026-04-19 09:37:54 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A51 HTTP/1.1" 200 OK
+2026-04-19 09:37:54 [INFO] server.audio.transcribe: [2026-04-19T09:37:54] Which is very good.
+2026-04-19 09:37:55 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A51 HTTP/1.1" 200 OK
+2026-04-19 09:37:56 [INFO] server.audio.transcribe: [2026-04-19T09:37:56] (intense music)
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A54 HTTP/1.1" 200 OK
+2026-04-19 09:37:57 [INFO] server.audio.transcribe: [2026-04-19T09:37:57] If it works...
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A56 HTTP/1.1" 200 OK
+2026-04-19 09:37:59 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A57 HTTP/1.1" 200 OK
+2026-04-19 09:38:00 [INFO] server.audio.transcribe: [2026-04-19T09:38:00] Hello?
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A37%3A57 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A00 HTTP/1.1" 200 OK
+2026-04-19 09:38:03 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A00 HTTP/1.1" 200 OK
+2026-04-19 09:38:05 [INFO] server.audio.transcribe: [2026-04-19T09:38:05] Hello?
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A00 HTTP/1.1" 200 OK
+2026-04-19 09:38:07 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A05 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A05 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A05 HTTP/1.1" 200 OK
+2026-04-19 09:38:10 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A05 HTTP/1.1" 200 OK
+2026-04-19 09:38:12 [INFO] server.audio.transcribe: [2026-04-19T09:38:12] There is so much lead.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A05 HTTP/1.1" 200 OK
+2026-04-19 09:38:14 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A12 HTTP/1.1" 200 OK
+2026-04-19 09:38:15 [INFO] server.audio.transcribe: [2026-04-19T09:38:15] between
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A12 HTTP/1.1" 200 OK
+2026-04-19 09:38:17 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A15 HTTP/1.1" 200 OK
+2026-04-19 09:38:19 [INFO] server.audio.transcribe: [2026-04-19T09:38:19] saying hello and
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A15 HTTP/1.1" 200 OK
+2026-04-19 09:38:20 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A19 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A19 HTTP/1.1" 200 OK
+2026-04-19 09:38:23 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A19 HTTP/1.1" 200 OK
+2026-04-19 09:38:25 [INFO] server.audio.transcribe: [2026-04-19T09:38:25] the result of the transcription.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A19 HTTP/1.1" 200 OK
+2026-04-19 09:38:27 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+2026-04-19 09:38:30 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+2026-04-19 09:38:34 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+2026-04-19 09:38:36 [INFO] server.audio.transcribe: [2026-04-19T09:38:36] But nevertheless...
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A25 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A36 HTTP/1.1" 200 OK
+2026-04-19 09:38:37 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A36 HTTP/1.1" 200 OK
+2026-04-19 09:38:39 [INFO] server.audio.transcribe: [2026-04-19T09:38:39] works.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A36 HTTP/1.1" 200 OK
+2026-04-19 09:38:41 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A39 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A39 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A39 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56487 - "GET /api/live?since=2026-04-19T09%3A38%3A39 HTTP/1.1" 200 OK
+2026-04-19 09:38:46 [INFO] lifehelper.main: Stopping session...
+2026-04-19 09:38:46 [INFO] server.audio.capture: Capture loop finished.
+2026-04-19 09:38:46 [INFO] server.audio.capture: Microphone capture loop finished.
+INFO:     127.0.0.1:54968 - "GET /api/live?since=2026-04-19T09%3A38%3A39 HTTP/1.1" 200 OK
+2026-04-19 09:38:48 [ERROR] server.audio.transcribe: AI Transcription failed: 500 Server Error:  for url: https://lifehelper.uk/api/v1/recordings/69e494312e828deaad7f9fea/transcribe. Falling back to local.
+2026-04-19 09:38:48 [INFO] server.audio.shutdown: Saving transcript and audio on shutdown...
+2026-04-19 09:38:48 [ERROR] lifehelper.main: Error during session stop: [WinError 5] Access is denied: './transcripts'
+INFO:     127.0.0.1:56487 - "POST /session/stop HTTP/1.1" 500 Internal Server Error
