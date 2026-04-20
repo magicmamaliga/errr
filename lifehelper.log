@@ -1,236 +1,52 @@
-2026-04-19T08:38:43.031Z ERROR 1 --- [backend] [nio-8080-exec-6] u.m.backend.base.GlobalExceptionHandler  : Unhandled RuntimeException: Cannot invoke "uk.magicmamaliga.backend.user.model.wallet.Wallet.getAmount()" because the return value of "uk.magicmamaliga.backend.user.model.User.getWallet()" is null
-backend-1  |
-backend-1  | java.lang.NullPointerException: Cannot invoke "uk.magicmamaliga.backend.user.model.wallet.Wallet.getAmount()" because the return value of "uk.magicmamaliga.backend.user.model.User.getWallet()" is null
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribeBytes(AiTranscriptionService.java:97) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribe(AiTranscriptionService.java:70) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.AiTranscriptionController.transcribe(AiTranscriptionController.java:73) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.AiTranscriptionController$$SpringCGLIB$$0.transcribe(<generated>) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:194) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:207) ~[spring-security-oauth2-resource-server-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.OAuth2ProtectedResourceMetadataFilter.doFilterInternal(OAuth2ProtectedResourceMetadataFilter.java:97) ~[spring-security-oauth2-resource-server-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-backend-1  |
-backend-1  | 2026-04-19T08:38:49.619Z  INFO 1 --- [backend] [nio-8080-exec-4] u.m.b.r.ai.AiTranscriptionController     : AI transcription request for recording 69e494312e828deaad7f9fea by user tornaimate95@gmail.com
-backend-1  | 2026-04-19T08:38:49.620Z  INFO 1 --- [backend] [nio-8080-exec-4] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-04-19T08:38:49.623Z ERROR 1 --- [backend] [nio-8080-exec-4] u.m.backend.base.GlobalExceptionHandler  : Unhandled RuntimeException: Cannot invoke "uk.magicmamaliga.backend.user.model.wallet.Wallet.getAmount()" because the return value of "uk.magicmamaliga.backend.user.model.User.getWallet()" is null
-backend-1  |
-backend-1  | java.lang.NullPointerException: Cannot invoke "uk.magicmamaliga.backend.user.model.wallet.Wallet.getAmount()" because the return value of "uk.magicmamaliga.backend.user.model.User.getWallet()" is null
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribeBytes(AiTranscriptionService.java:97) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribe(AiTranscriptionService.java:70) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.AiTranscriptionController.transcribe(AiTranscriptionController.java:73) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.5.jar!/:7.0.5]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.AiTranscriptionController$$SpringCGLIB$$0.transcribe(<generated>) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:649) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.5.jar!/:7.0.5]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:371) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:194) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:207) ~[spring-security-oauth2-resource-server-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.OAuth2ProtectedResourceMetadataFilter.doFilterInternal(OAuth2ProtectedResourceMetadataFilter.java:97) ~[spring-security-oauth2-resource-server-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:380) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.3.jar!/:7.0.3]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57) ~[tomcat-embed-core-11.0.18.jar!/:na]
-backend-1  |    at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-backend-1  |
+2026-04-20 08:10:28 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+Launched via protocol: {'token': 'eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjY3Nzc3OCwiaWF0IjoxNzc2NTkxMzc4LCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.Cd3px-fLvdxRS5bYXIIBx6A88ckOrZXJEDeUprY5GDhvu33KLPRW8xD6CIuGLjXvyAKNIPF9MBiJmfaeffnZgG2FkLkzY1rwE-amTt3B6KFwCK_ll1PgIsAvqXL5XE8hpXwhdh-Wkf6CeCGKjmp56szAg6SQG0Q7ljqVw_syMd50z0vD2YiukOjMsgoxtB-lSnIJwD8ZJKUqsexWf34XVbfdXhB-8ffClEEWNUGgq8hk8uK-ikf1qtThtjNgf2V8vkYkDNNCcyB2-9vAozvdYOi57sU4ukSMWKTeH44hszIXHB7xBlAdtdbrYxvmw0TVHd9bVCVZVF7ryi_QGDlTZt-3Yk_UKdnOxYpF0HjGJ2jdDvjV-OykdJ8s8FZw6fRuhzyGjWZ3_Pt17aoVvYaoY7mVVh-rMW5yiPZ8jnvvkLgrcgbWy32YUf9XEbYTqxZ0817hAoDZKF1w5yneSvxFeT7rquPPb1b7aCHTclEXxKOzGaXMedT_0ROZeCqug61S', '_action': 'launch'}
+JWT token set from protocol URI
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [20820]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49772 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49772 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49772 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49772 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49772 - "GET /api/ HTTP/1.1" 200 OK
+2026-04-20 08:10:54 [INFO] lifehelper.main: Stopping session...
+2026-04-20 08:10:55 [INFO] server.audio.shutdown: Saving transcript and audio on shutdown...
+2026-04-20 08:10:55 [INFO] lifehelper.main: Session stopped.
+INFO:     127.0.0.1:49815 - "POST /session/stop HTTP/1.1" 200 OK
+2026-04-20 08:10:57 [INFO] lifehelper.main: Shutting down server after session stop.
+2026-04-20 08:11:07 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+Launched via protocol: {'token': 'eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjY3Nzc3OCwiaWF0IjoxNzc2NTkxMzc4LCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.Cd3px-fLvdxRS5bYXIIBx6A88ckOrZXJEDeUprY5GDhvu33KLPRW8xD6CIuGLjXvyAKNIPF9MBiJmfaeffnZgG2FkLkzY1rwE-amTt3B6KFwCK_ll1PgIsAvqXL5XE8hpXwhdh-Wkf6CeCGKjmp56szAg6SQG0Q7ljqVw_syMd50z0vD2YiukOjMsgoxtB-lSnIJwD8ZJKUqsexWf34XVbfdXhB-8ffClEEWNUGgq8hk8uK-ikf1qtThtjNgf2V8vkYkDNNCcyB2-9vAozvdYOi57sU4ukSMWKTeH44hszIXHB7xBlAdtdbrYxvmw0TVHd9bVCVZVF7ryi_QGDlTZt-3Yk_UKdnOxYpF0HjGJ2jdDvjV-OykdJ8s8FZw6fRuhzyGjWZ3_Pt17aoVvYaoY7mVVh-rMW5yiPZ8jnvvkLgrcgbWy32YUf9XEbYTqxZ0817hAoDZKF1w5yneSvxFeT7rquPPb1b7aCHTclEXxKOzGaXMedT_0ROZeCqug61S', '_action': 'launch'}
+JWT token set from protocol URI
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [8096]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49939 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49939 - "GET /api/ HTTP/1.1" 200 OK
+2026-04-20 08:11:17 [INFO] lifehelper.main: Stopping session...
+2026-04-20 08:11:18 [INFO] server.audio.shutdown: Saving transcript and audio on shutdown...
+2026-04-20 08:11:18 [INFO] lifehelper.main: Session stopped.
+INFO:     127.0.0.1:49984 - "POST /session/stop HTTP/1.1" 200 OK
+2026-04-20 08:11:20 [INFO] lifehelper.main: Shutting down server after session stop.
+2026-04-20 08:11:53 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+Launched via protocol: {'token': 'eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJMaWZlSGVscGVyIiwic3ViIjoidG9ybmFpbWF0ZTk1QGdtYWlsLmNvbSIsImV4cCI6MTc3NjY3Nzc3OCwiaWF0IjoxNzc2NTkxMzc4LCJzY29wZSI6IlVTRVIgRkFDVE9SX1BBU1NXT1JEIn0.Cd3px-fLvdxRS5bYXIIBx6A88ckOrZXJEDeUprY5GDhvu33KLPRW8xD6CIuGLjXvyAKNIPF9MBiJmfaeffnZgG2FkLkzY1rwE-amTt3B6KFwCK_ll1PgIsAvqXL5XE8hpXwhdh-Wkf6CeCGKjmp56szAg6SQG0Q7ljqVw_syMd50z0vD2YiukOjMsgoxtB-lSnIJwD8ZJKUqsexWf34XVbfdXhB-8ffClEEWNUGgq8hk8uK-ikf1qtThtjNgf2V8vkYkDNNCcyB2-9vAozvdYOi57sU4ukSMWKTeH44hszIXHB7xBlAdtdbrYxvmw0TVHd9bVCVZVF7ryi_QGDlTZt-3Yk_UKdnOxYpF0HjGJ2jdDvjV-OykdJ8s8FZw6fRuhzyGjWZ3_Pt17aoVvYaoY7mVVh-rMW5yiPZ8jnvvkLgrcgbWy32YUf9XEbYTqxZ0817hAoDZKF1w5yneSvxFeT7rquPPb1b7aCHTclEXxKOzGaXMedT_0ROZeCqug61S', '_action': 'launch'}
+JWT token set from protocol URI
+🚀 Starting LifeHelper backend on port 8066...
+🔒 HTTPS enabled (cert: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\certs\localhost.crt)
+INFO:     Started server process [23820]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on https://0.0.0.0:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:50262 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50262 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50262 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50262 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50262 - "GET /api/ HTTP/1.1" 200 OK
