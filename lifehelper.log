@@ -1,12 +1,134 @@
-Saving debug log to /var/log/letsencrypt/letsencrypt.log
-Requesting a certificate for lifehelper.uk
+root@srv1592388:/opt/lifehelper# cat /tmp/nginx-check.conf
+# ==============================================================================
+# Nginx config for LifeHelper
+# Serves React SPA + reverse proxies /api to Spring Boot
+# ==============================================================================
 
-Certbot failed to authenticate some domains (authenticator: webroot). The Certificate Authority reported these problems:
-  Domain: lifehelper.uk
-  Type:   connection
-  Detail: 2.24.206.44: Fetching http://lifehelper.uk/.well-known/acme-challenge/s27xskVU6uh5uCAZwSBnZxeQJZIOqoGsrU_bk4IQbFQ: Timeout during connect (likely firewall problem)
+# --- Rate limiting zones ---
+limit_req_zone $binary_remote_addr zone=auth_limit:10m rate=2r/s;
+limit_req_zone $binary_remote_addr zone=api_limit:10m rate=10r/s;
+limit_req_zone $binary_remote_addr zone=upload_limit:10m rate=5r/s;
+limit_req_zone $binary_remote_addr zone=webhook_limit:10m rate=50r/s;
 
-Hint: The Certificate Authority failed to download the temporary challenge files created by Certbot. Ensure that the listed domains serve their content from the provided --webroot-path/-w and that files created there can be downloaded from the internet.
+# Upstream for the Spring Boot backend container
+upstream backend {
+    server backend:8080;
+}
 
-Some challenges have failed.
-Ask for help or search for solutions at https://community.letsencrypt.org. See the logfile /var/log/letsencrypt/letsencrypt.log or re-run Certbot with -v for more details.
+server {
+    listen 80;
+    server_name _;
+    server_tokens off;
+
+    # --- Security headers ---
+    add_header X-Frame-Options "SAMEORIGIN" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Permissions-Policy "camera=(), microphone=(), geolocation=()" always
+    set $csp "default-src 'self'; script-src 'self' https://js.stripe.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; img-src 'self' data: https:; connect-src 'self' https://api.stripe.com https://localhost:* http://localhost:*; frame-src 'self' https://js.stripe.com; object-src 'none'; base-uri 'self'; form-action 'self';";
+    add_header Content-Security-Policy $csp always;
+
+    # --- Gzip compression ---
+    gzip on;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml text/javascript image/svg+xml;
+    gzip_min_length 256;
+
+    # --- Serve React SPA ---
+    root /usr/share/nginx/html;
+    index index.html;
+
+    # Let's Encrypt ACME challenge (certbot domain verification)
+    location /.well-known/acme-challenge/ {
+        root /var/www/certbot;
+    }
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # --- Proxy API calls to Spring Boot backend ---
+    # Rate limit: auth endpoints (login/register)
+    location /api/public/auth/ {
+        limit_req zone=auth_limit burst=5 nodelay;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/public/register {
+        limit_req zone=auth_limit burst=3 nodelay;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location /api/ {
+        limit_req zone=api_limit burst=20 nodelay;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Required for file uploads (25MB max, matching Spring Boot config)
+        client_max_body_size 25M;
+
+        # Timeouts for long-running AI streaming requests
+        proxy_read_timeout 300s;
+        proxy_send_timeout 300s;
+
+        # Required for SSE (Server-Sent Events) streaming from /api/v1/ai/ask
+        proxy_buffering off;
+        proxy_cache off;
+        proxy_set_header Connection '';
+        proxy_http_version 1.1;
+        chunked_transfer_encoding off;
+    }
+
+    # --- Proxy Stripe webhooks ---
+    location /webhook/ {
+        limit_req zone=webhook_limit burst=100 nodelay;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Stripe sends raw body – don't buffer
+        client_max_body_size 1M;
+    }
+
+    # --- Swagger UI (restrict access in production) ---
+    location /swagger-ui/ {
+        # Block external access by default - allow only from internal/dev networks
+        allow 127.0.0.1;
+        allow 10.0.0.0/8;
+        allow 172.16.0.0/12;
+        allow 192.168.0.0/16;
+        deny all;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    location /v3/ {
+        allow 127.0.0.1;
+        allow 10.0.0.0/8;
+        allow 172.16.0.0/12;
+        allow 192.168.0.0/16;
+        deny all;
+        proxy_pass http://backend;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+    }
+
+    # --- Static asset caching ---
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot)$ {
+        expires 30d;
+        add_header Cache-Control "public, immutable";
+    }
+}
