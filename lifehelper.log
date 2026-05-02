@@ -1,9 +1,31 @@
-java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x07a0x010x000x07]0x030x0310xafn0xf7EZ0x0dy=Us0x8e0xecm0x8c0xdeg0x0b0x070xf20xbd0xd50x0a0xab0xc5/0xe60x990xb10x870xea0xf1 ]. HTTP method names must be tokens
-	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:391) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:270) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1779) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480) ~[tomcat-embed-core-11.0.18.jar:11.0.18]
+2026-05-02 21:38:08 [INFO] server.audio.thread_starter: Switching microphone to device 20: Microphone Array (Intel® Smart Sound Technology for Digital Microphones) @ 48000Hz
+2026-05-02 21:38:08 [ERROR] server.routes.devices: Failed to switch device: 'channels'
+INFO:     127.0.0.1:61298 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-05-02 21:38:08 [INFO] server.audio.capture: Microphone device change detected, reopening stream...
+2026-05-02 21:38:08 [INFO] server.audio.capture: Opening mic stream (device 20) at 48000Hz
+2026-05-02 21:38:08 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+INFO:     127.0.0.1:61298 - "GET /api/live?since=2026-05-02T21%3A36%3A48 HTTP/1.1" 200 OK
+2026-05-02 21:38:09 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+2026-05-02 21:38:09 [INFO] server.audio.thread_starter: Switching microphone to device 21: Stereo Mix (Realtek(R) Audio) @ 48000Hz
+2026-05-02 21:38:09 [ERROR] server.routes.devices: Failed to switch device: 'channels'
+INFO:     127.0.0.1:61298 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-05-02 21:38:09 [INFO] server.audio.capture: Microphone device change detected, reopening stream...
+2026-05-02 21:38:09 [INFO] server.audio.capture: Opening mic stream (device 21) at 48000Hz
+2026-05-02 21:38:10 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+INFO:     127.0.0.1:61298 - "GET /api/live?since=2026-05-02T21%3A36%3A48 HTTP/1.1" 200 OK
+2026-05-02 21:38:11 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+2026-05-02 21:38:11 [INFO] server.audio.thread_starter: Switching loopback to device 24: 27E1N1600AE (HD Audio Driver for Display Audio) [Loopback] @ 48000Hz
+2026-05-02 21:38:11 [ERROR] server.routes.devices: Failed to switch device: 'channels'
+INFO:     127.0.0.1:61298 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-05-02 21:38:11 [INFO] server.audio.capture: Loopback device change detected, reopening stream...
+2026-05-02 21:38:11 [INFO] server.audio.capture: Opening loopback stream (device 24) at 48000Hz
+2026-05-02 21:38:11 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+INFO:     127.0.0.1:61298 - "GET /api/live?since=2026-05-02T21%3A36%3A48 HTTP/1.1" 200 OK
+2026-05-02 21:38:12 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+2026-05-02 21:38:12 [INFO] server.audio.thread_starter: Switching loopback to device 23: Speakers (Realtek(R) Audio) [Loopback] @ 48000Hz
+2026-05-02 21:38:12 [ERROR] server.routes.devices: Failed to switch device: 'channels'
+INFO:     127.0.0.1:61298 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-05-02 21:38:12 [INFO] server.audio.capture: Loopback device change detected, reopening stream...
+2026-05-02 21:38:12 [INFO] server.audio.capture: Opening loopback stream (device 23) at 48000Hz
+2026-05-02 21:38:13 [WARNING] server.auth: [auth] No RSA public key found - skipping signature verification
+INFO:     127.0.0.1:61298 - "GET /api/live?since=2026-05-02T21%3A36%3A48 HTTP/1.1" 200 OK
