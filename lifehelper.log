@@ -1,8 +1,26 @@
-C:\Users\Mate\Desktop\Project\lifehelper\build.ps1 : The term 'backend' is not recognized as the name of a cmdlet,
-function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the
-path is correct and try again.
-At line:1 char:1
-+ .\build.ps1 -User magicmamaliga -Tag v1.0.10
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : ObjectNotFound: (backend:String) [build.ps1], CommandNotFoundException
-    + FullyQualifiedErrorId : CommandNotFoundException,build.ps1
+Run python build_update.py --full
+273 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.5
+273 INFO: Python: 3.12.10
+299 INFO: Platform: Windows-2025Server-10.0.26100-SP0
+299 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 321, in <module>
+    run()
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 215, in run
+    run_build(pyi_config, spec_file, **vars(args))
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 70, in run_build
+    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\building\build_main.py", line 1275, in main
+    build(specfile, distpath, workpath, clean_build)
+  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\building\build_main.py", line 1213, in build
+    exec(code, spec_namespace)
+  File "lifehelper.spec", line 31, in <module>
+    a = Analysis(
+        ^^^^^^^^^
+TypeError: Analysis.__init__() got multiple values for argument 'pathex'
+============================================================
+FULL BUILD: PyInstaller + app code
+============================================================
+PyInstaller build failed!
