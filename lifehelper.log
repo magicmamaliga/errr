@@ -1,12 +1,10 @@
-2026-05-10 15:15:24 [INFO] launcher: Current app version: 1.0.12
-2026-05-10 15:15:25 [INFO] launcher: App is up to date.
-Traceback (most recent call last):
-  File "launcher.py", line 255, in <module>
-  File "launcher.py", line 251, in main
-  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\lifehelper.py", line 21, in <module>
-    from server.main import app
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\main.py", line 6, in <module>
-    from fastapi.middleware.cors import CORSMiddleware
-ModuleNotFoundError: No module named 'fastapi.middleware.cors'
+S C:\Users\Mate\Desktop\Project\lifehelper\local-server> .\build.bat
+=========================================================
+LifeHelper Local Server Build Script
+=========================================================
+
+[1/5] Checking prerequisites...
+
+[2/5] Installing Python dependencies...
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+speechbrain 1.0.3 requires torchaudio, which is not installed.
