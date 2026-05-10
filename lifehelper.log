@@ -1,9 +1,13 @@
 Run python build_update.py --full
-273 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.5
-273 INFO: Python: 3.12.10
-299 INFO: Platform: Windows-2025Server-10.0.26100-SP0
-299 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
+311 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.5
+311 INFO: Python: 3.12.10
+335 INFO: Platform: Windows-2025Server-10.0.26100-SP0
+335 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
 Traceback (most recent call last):
+============================================================
+FULL BUILD: PyInstaller + app code
+============================================================
+PyInstaller build failed!
   File "<frozen runpy>", line 198, in _run_module_as_main
   File "<frozen runpy>", line 88, in _run_code
   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 321, in <module>
@@ -16,11 +20,7 @@ Traceback (most recent call last):
     build(specfile, distpath, workpath, clean_build)
   File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\building\build_main.py", line 1213, in build
     exec(code, spec_namespace)
-  File "lifehelper.spec", line 31, in <module>
+  File "lifehelper.spec", line 29, in <module>
     a = Analysis(
         ^^^^^^^^^
 TypeError: Analysis.__init__() got multiple values for argument 'pathex'
-============================================================
-FULL BUILD: PyInstaller + app code
-============================================================
-PyInstaller build failed!
