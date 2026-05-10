@@ -1,15 +1,6 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper> .\build.ps1 -User magicmamaliga -Tag v1.0.10
-At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:175 char:35
-+ Write-Host "   cd /opt/lifehelper && ./deploy.sh lifehelper.uk <email ...
-+                                   ~~
-The token '&&' is not a valid statement separator in this version.
-At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:175 char:64
-+ ... ite-Host "   cd /opt/lifehelper && ./deploy.sh lifehelper.uk <email>"
-+                                                                  ~
-The '<' operator is reserved for future use.
-At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:181 char:36
-+ Write-Host "   docker compose up -d"
-+                                    ~
-The string is missing the terminator: ".
-    + CategoryInfo          : ParserError: (:) [], ParseException
-    + FullyQualifiedErrorId : InvalidEndOfLine
+docker : WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
+At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:34 char:14
+ $dockerOut = docker info 2>&1
+              ~~~~~~~~~~~~~~~~
+ CategoryInfo          : NotSpecified: (WARNING: DOCKER...BLES_RAW is set:String) [], RemoteException
+ FullyQualifiedErrorId : NativeCommandError
