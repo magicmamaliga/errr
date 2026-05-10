@@ -1,48 +1,12 @@
-root@srv1592388:/opt/lifehelper# ./deploy.sh lifehelper.uk tornaimate95@gmail.com
-=========================================================
- LifeHelper 🛟 Deploying to VPS
- Domain: lifehelper.uk
- Email:  tornaimate95@gmail.com
-=========================================================
-
-[✓] Re-deploy detected – skipping system prep.
-[✓] Pulling latest changes...
-Password for 'https://magicmamaliga@github.com':
-Already up to date.
-[✓] Project updated.
-[✓] .env file already exists.
-[✓] Domain updated in .env: lifehelper.uk
-[✓] Already authenticated with GHCR.
-[✓] Creating downloads directory for desktop app updates...
-[✓] Downloads directory ready at /opt/lifehelper/downloads/
-[✓] Pulling pre-built images...
-[+] pull 4/4
- ✔ Image ghcr.io/magicmamaliga/lifehelper-backend:latest  Pulled                                                    0.6s
- ✔ Image ghcr.io/magicmamaliga/lifehelper-frontend:latest Pulled                                                    0.8s
- ✔ Image certbot/certbot:v3.3.0                           Pulled                                                    0.4s
- ✔ Image mongo:7                                          Pulled                                                    0.4s
-[✓] Images pulled successfully!
-[✓] Starting containers...
-[+] up 4/4
- ✔ Container lifehelper-mongodb-1 Healthy                                                                           0.5s
- ✔ Container lifehelper-backend-1 Healthy                                                                           1.0s
- ✔ Container lifehelper-nginx-1   Running                                                                           0.0s
- ✔ Container lifehelper-certbot-1 Started                                                                           0.2s
-[✓] Waiting for services to start...
-[!] Backend may still be starting. Check with: docker compose logs backend
-[✓] Checking for desktop app update zip...
-[✓] Latest tag: v1.0.12 – downloading update zip...
-[✓] Using GH_TOKEN for authenticated download...
-[✓] Found asset: https://api.github.com/repos/magicmamaliga/lifehelper/releases/assets/416592575
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-100 35864  100 35864    0     0   213k      0 --:--:-- --:--:-- --:--:--  213k
-[✓] Update zip downloaded and linked as latest.
-[✓] DESKTOP_APP_VERSION set to 1.0.12 in .env
-[+] up 2/2
- ✔ Container lifehelper-mongodb-1 Healthy                                                                           0.6s
- ✔ Container lifehelper-backend-1 Running                                                                           0.0s
-[✓] Backend restarted with new desktop version.
-[✓] SSL certificate for lifehelper.uk already exists – skipping certbot.
-[✓] Setting up SSL auto-renewal cron job...
+2026-05-10 15:15:24 [INFO] launcher: Current app version: 1.0.12
+2026-05-10 15:15:25 [INFO] launcher: App is up to date.
+Traceback (most recent call last):
+  File "launcher.py", line 255, in <module>
+  File "launcher.py", line 251, in main
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\lifehelper.py", line 21, in <module>
+    from server.main import app
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\main.py", line 6, in <module>
+    from fastapi.middleware.cors import CORSMiddleware
+ModuleNotFoundError: No module named 'fastapi.middleware.cors'
