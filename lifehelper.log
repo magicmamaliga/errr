@@ -1,26 +1,3 @@
-Run python build_update.py --full
-311 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.5
-311 INFO: Python: 3.12.10
-335 INFO: Platform: Windows-2025Server-10.0.26100-SP0
-335 INFO: Python environment: C:\hostedtoolcache\windows\Python\3.12.10\x64
-Traceback (most recent call last):
-============================================================
-FULL BUILD: PyInstaller + app code
-============================================================
-PyInstaller build failed!
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 321, in <module>
-    run()
-  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 215, in run
-    run_build(pyi_config, spec_file, **vars(args))
-  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\__main__.py", line 70, in run_build
-    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
-  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\building\build_main.py", line 1275, in main
-    build(specfile, distpath, workpath, clean_build)
-  File "C:\hostedtoolcache\windows\Python\3.12.10\x64\Lib\site-packages\PyInstaller\building\build_main.py", line 1213, in build
-    exec(code, spec_namespace)
-  File "lifehelper.spec", line 29, in <module>
-    a = Analysis(
-        ^^^^^^^^^
-TypeError: Analysis.__init__() got multiple values for argument 'pathex'
+[!] Could not download update zip from https://github.com/magicmamaliga/lifehelper/releases/download/v1.0.12/lifehelper-app-update-v1.0.12.zip
+[!] The GitHub Release may not exist yet (CI still building?).
+[!] You can re-run this later or manually copy the zip to /opt/lifehelper/downloads/
