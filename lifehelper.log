@@ -1,6 +1,8 @@
-docker : WARNING: DOCKER_INSECURE_NO_IPTABLES_RAW is set
-At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:34 char:14
- $dockerOut = docker info 2>&1
-              ~~~~~~~~~~~~~~~~
- CategoryInfo          : NotSpecified: (WARNING: DOCKER...BLES_RAW is set:String) [], RemoteException
- FullyQualifiedErrorId : NativeCommandError
+C:\Users\Mate\Desktop\Project\lifehelper\build.ps1 : The term 'backend' is not recognized as the name of a cmdlet,
+function, script file, or operable program. Check the spelling of the name, or if a path was included, verify that the
+path is correct and try again.
+At line:1 char:1
++ .\build.ps1 -User magicmamaliga -Tag v1.0.10
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (backend:String) [build.ps1], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException,build.ps1
