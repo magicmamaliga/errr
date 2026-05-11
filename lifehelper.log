@@ -1,3 +1,43 @@
+2026-05-11 20:49:56 [INFO] launcher: Current app version: 1.0.15
+2026-05-11 20:49:56 [INFO] launcher: App is up to date.
+2026-05-11 20:49:57 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-11 20:49:57 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-11 20:49:58 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [22408]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:49700 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49700 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-11 20:50:02 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
+2026-05-11 20:50:02 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-11 20:50:02 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:49700 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-11 20:50:02 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Starting re-diarization for recording 69f8456ffa503bc48bbed097
+2026-05-11 20:50:02 [INFO] launcher: Re-diarization thread spawned for recording 69f8456ffa503bc48bbed097
+INFO:     127.0.0.1:49700 - "POST /diarize/69f8456ffa503bc48bbed097 HTTP/1.1" 200 OK
+2026-05-11 20:50:11 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Audio downloaded: 1169.2s loopback, 1169.2s mic
+2026-05-11 20:50:11 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
+pyannote\audio\core\io.py:47: UserWarning: 
+torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
+* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
+* fix torchcodec installation. Error message was:
+
+Could not load libtorchcodec. Likely causes:
+          1. FFmpeg is not properly installed in your environment. We support
+             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
+             for each of those versions. Errors for versions not installed on
+             your system are expected; only the error for your installed FFmpeg
+             version is relevant. On Windows, ensure you've installed the
+             "full-shared" version which ships DLLs.
+          2. The PyTorch version (2.11.0+cpu) is not compatible with
+             this version of TorchCodec. Refer to the version compatibility
+             table:
+             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
+          3. Another runtime dependency; see exceptions below.
+
+        The following exceptions were raised as we tried to load libtorchcodec:
+        
 [start of libtorchcodec loading traceback]
 FFmpeg version 8:
 Traceback (most recent call last):
@@ -29,8 +69,10 @@ Traceback (most recent call last):
   File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
 ImportError: No spec found for libtorchcodec_core4
 [end of libtorchcodec loading traceback].
-2026-05-11 20:14:56 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
-2026-05-11 20:14:56 [ERROR] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization failed for recording 69f8456ffa503bc48bbed097: Pipeline.from_pretrained() got an unexpected keyword argument 'use_auth_token'
+2026-05-11 20:50:42 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
+2026-05-11 20:50:43 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
+2026-05-11 20:50:43 [INFO] launcher: HTTP Request: GET https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
+2026-05-11 20:50:47 [ERROR] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization failed for recording 69f8456ffa503bc48bbed097: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\speechbrain\\utils'
 Traceback (most recent call last):
   File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\shutdown.py", line 214, in _run_background_diarization
     segments, speaker_data = run_full_diarization(loopback_audio, mic_audio, sample_rate)
@@ -44,4 +86,46 @@ Traceback (most recent call last):
   File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 72, in _get_diarization_pipeline
     _diarization_pipeline = Pipeline.from_pretrained(
                             ^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: Pipeline.from_pretrained() got an unexpected keyword argument 'use_auth_token'
+  File "pyannote\audio\core\pipeline.py", line 239, in from_pretrained
+  File "pyannote\core\utils\helper.py", line 68, in get_class_by_name
+  File "importlib\__init__.py", line 90, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "pyannote\audio\pipelines\__init__.py", line 25, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "pyannote\audio\pipelines\speaker_diarization.py", line 41, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "pyannote\audio\pipelines\speaker_verification.py", line 42, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "speechbrain\__init__.py", line 6, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "speechbrain\core.py", line 39, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "speechbrain\dataio\__init__.py", line 4, in <module>
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "speechbrain\utils\__init__.py", line 6, in <module>
+  File "speechbrain\utils\importutils.py", line 265, in lazy_export_all
+  File "speechbrain\utils\importutils.py", line 206, in find_imports
+FileNotFoundError: [WinError 3] The system cannot find the path specified: 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\speechbrain\\utils'
+2026-05-11 20:51:58 [INFO] launcher: No session started within 121s of startup. Shutting down idle server.
