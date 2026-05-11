@@ -1,5 +1,3 @@
-2026-05-11 19:11:36 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Audio downloaded: 1169.2s loopback, 1169.2s mic
-2026-05-11 19:11:37 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
 pyannote\audio\core\io.py:47: UserWarning: 
 torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
 * use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
@@ -51,42 +49,7 @@ Traceback (most recent call last):
   File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
 ImportError: No spec found for libtorchcodec_core4
 [end of libtorchcodec loading traceback].
-2026-05-11 19:12:06 [ERROR] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization failed for recording 69f8456ffa503bc48bbed097: [Errno 2] No such file or directory: 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\pyannote\\audio\\telemetry\\config.yaml'
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\shutdown.py", line 214, in _run_background_diarization
-    segments, speaker_data = run_full_diarization(loopback_audio, mic_audio, sample_rate)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 283, in run_full_diarization
-    loopback_segments = diarize_audio(loopback_audio, sample_rate, "L")
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 131, in diarize_audio
-    pipeline = _get_diarization_pipeline()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 60, in _get_diarization_pipeline
-    from pyannote.audio import Pipeline
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "pyimod02_importers.py", line 457, in exec_module
-  File "pyannote\audio\__init__.py", line 28, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "pyimod02_importers.py", line 457, in exec_module
-  File "pyannote\audio\core\inference.py", line 34, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "pyimod02_importers.py", line 457, in exec_module
-  File "pyannote\audio\core\model.py", line 49, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "pyimod02_importers.py", line 457, in exec_module
-  File "pyannote\audio\telemetry\__init__.py", line 1, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "pyimod02_importers.py", line 457, in exec_module
-  File "pyannote\audio\telemetry\metrics.py", line 36, in <module>
-FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\pyannote\\audio\\telemetry\\config.yaml'
+2026-05-11 19:40:48 [ERROR] launcher: HF_TOKEN environment variable not set. Cannot load pyannote models.
+2026-05-11 19:40:48 [ERROR] launcher: HF_TOKEN environment variable not set. Cannot load pyannote models.
+2026-05-11 19:40:48 [INFO] launcher: Full diarization complete: 0 total segments, 0 speakers with embeddings
+2026-05-11 19:40:48 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] No diarization segments produced, skipping upload
