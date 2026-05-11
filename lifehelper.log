@@ -1,5 +1,5 @@
-At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:207 char:77
-+ ... st "    cd /opt/lifehelper; ./deploy.sh lifehelper.uk your@email.com"
+At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:202 char:73
++ ... Write-Host " Git tag $GitTag pushed -> CI building .exe + update zip"
 +                                                                         ~
 The string is missing the terminator: ".
 At C:\Users\Mate\Desktop\Project\lifehelper\build.ps1:156 char:13
