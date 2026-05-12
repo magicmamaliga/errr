@@ -1,99 +1,52 @@
-2026-05-11 22:16:42 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
-pyannote\audio\core\io.py:47: UserWarning: 
-torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
-* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
-* fix torchcodec installation. Error message was:
-
-Could not load libtorchcodec. Likely causes:
-          1. FFmpeg is not properly installed in your environment. We support
-             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
-             for each of those versions. Errors for versions not installed on
-             your system are expected; only the error for your installed FFmpeg
-             version is relevant. On Windows, ensure you've installed the
-             "full-shared" version which ships DLLs.
-          2. The PyTorch version (2.11.0+cpu) is not compatible with
-             this version of TorchCodec. Refer to the version compatibility
-             table:
-             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
-          3. Another runtime dependency; see exceptions below.
-
-        The following exceptions were raised as we tried to load libtorchcodec:
-        
-[start of libtorchcodec loading traceback]
-FFmpeg version 8:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core8
-
-FFmpeg version 7:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core7
-
-FFmpeg version 6:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core6
-
-FFmpeg version 5:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core5
-
-FFmpeg version 4:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core4
-[end of libtorchcodec loading traceback].
-2026-05-11 22:17:05 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
-2026-05-11 22:17:07 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
-2026-05-11 22:17:11 [WARNING] launcher: SpeechBrain could not find any working torchaudio backend. Audio files may fail to load. Follow this link for instructions and troubleshooting: https://speechbrain.readthedocs.io/en/latest/audioloading.html
-2026-05-11 22:17:11 [DEBUG] launcher: Registered checkpoint save hook for _speechbrain_save
-2026-05-11 22:17:11 [DEBUG] launcher: Registered checkpoint load hook for _speechbrain_load
-2026-05-11 22:17:11 [DEBUG] launcher: Registered checkpoint save hook for save
-2026-05-11 22:17:11 [DEBUG] launcher: Registered checkpoint load hook for load
-2026-05-11 22:17:12 [INFO] launcher: Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
-2026-05-11 22:17:12 [INFO] launcher: Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
-2026-05-11 22:17:12 [DEBUG] launcher: Registered checkpoint save hook for _save
-2026-05-11 22:17:12 [DEBUG] launcher: Registered checkpoint load hook for _recover
-2026-05-11 22:17:13 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-05-12 06:28:57 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
+2026-05-12 06:28:59 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
+2026-05-12 06:29:00 [WARNING] launcher: SpeechBrain could not find any working torchaudio backend. Audio files may fail to load. Follow this link for instructions and troubleshooting: https://speechbrain.readthedocs.io/en/latest/audioloading.html
+2026-05-12 06:29:00 [DEBUG] launcher: Registered checkpoint save hook for _speechbrain_save
+2026-05-12 06:29:00 [DEBUG] launcher: Registered checkpoint load hook for _speechbrain_load
+2026-05-12 06:29:00 [DEBUG] launcher: Registered checkpoint save hook for save
+2026-05-12 06:29:00 [DEBUG] launcher: Registered checkpoint load hook for load
+2026-05-12 06:29:01 [INFO] launcher: Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
+2026-05-12 06:29:01 [INFO] launcher: Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-05-12 06:29:01 [DEBUG] launcher: Registered checkpoint save hook for _save
+2026-05-12 06:29:01 [DEBUG] launcher: Registered checkpoint load hook for _recover
+2026-05-12 06:29:01 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-05-12 06:29:02 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/xvec_transform.npz "HTTP/1.1 302 Found"
 Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
-2026-05-11 22:17:13 [WARNING] launcher: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
-2026-05-11 22:17:13 [INFO] launcher: HTTP Request: GET https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
-2026-05-11 22:17:13 [INFO] launcher: HTTP Request: GET https://cas-bridge.xethub.hf.co/xet-bridge-us/650d827e72afb1e60e8a8a6a/af3832af50024120092ca2a2fcc0c0873b42eec60ecb3bd0c0356c43fa8969b6?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260511%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260511T205131Z&X-Amz-Expires=3600&X-Amz-Signature=b57e685a9dc78abedcbc9005bf63542b3383891929e433c4377ebef6d23cf97d&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=65769a7639831c6862e31c41&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1778536291&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODUzNjI5MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NTBkODI3ZTcyYWZiMWU2MGU4YThhNmEvYWYzODMyYWY1MDAyNDEyMDA5MmNhMmEyZmNjMGMwODczYjQyZWVjNjBlY2IzYmQwYzAzNTZjNDNmYTg5NjliNioifV19&Signature=Y55XcnffTvrnzIvjbschDjVfU-x8Hm0IJRK62POcDESWIOs5j1l19LUwfSGZIqipH45ZuOtwbGQgooYzme5FPO8g0u%7EptfkHuyeXzJp89hnU-ns8-OSvD%7ErDYVe2VB8bLD3f6bEE1hwwp474IwI3nhnVG3TpInYw9BXAbxOKyX8WcS3LSVBT6ZrLS8kaRmA9fVA9ECHTylbStXQsHjGIQGtFKAFgVzpcYKY54oRNjx%7EJ6LpQYGSlOfqBbf2zqa3Ur4gaRc-z5F0uUVg8glpgETRHLXguLHlF8t6tbY9lNv4M%7EgLV5fEbKQrV8DodHBC6fvxHD9Yh0H6578IU2xKvsw__&Key-Pair-Id=K2L8F4GPSG1IFC "HTTP/1.1 200 OK"
-2026-05-11 22:17:15 [ERROR] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization failed for recording 69f8456ffa503bc48bbed097: No module named 'pyannote.audio.models'
+2026-05-12 06:29:02 [WARNING] launcher: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-12 06:29:02 [INFO] launcher: HTTP Request: GET https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/xvec_transform.npz "HTTP/1.1 302 Found"
+2026-05-12 06:29:02 [INFO] launcher: HTTP Request: GET https://cas-bridge.xethub.hf.co/xet-bridge-us/67fed0372c0d96649bf8830b/ca221eb0b091a589b70a6d1bfaa6009aa0b368846413ff5462a74ba68f45bd40?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260512%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260512T050124Z&X-Amz-Expires=3600&X-Amz-Signature=3cbdfb44f208f4c10e9f5ec929c9d59d2b44f52d816804e68875d532465db035&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=682718a1d7b648c3eb7188f2&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27xvec_transform.npz%3B+filename%3D%22xvec_transform.npz%22%3B&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1778565684&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODU2NTY4NH19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82N2ZlZDAzNzJjMGQ5NjY0OWJmODgzMGIvY2EyMjFlYjBiMDkxYTU4OWI3MGE2ZDFiZmFhNjAwOWFhMGIzNjg4NDY0MTNmZjU0NjJhNzRiYTY4ZjQ1YmQ0MCoifV19&Signature=Ts%7EBzu9eT64XwH9tzhljCEIZn146cgS8%7EHB5ul0%7E2XbC3r3eKHHb3aDrxI22%7Ecb6ChZlUzoipPd1pFIPdmf83YEsvg9uSzY6L7Q0HZthSCT5cMA-sjgaXInAAM0kUEhNdWaPhAxGOMKgKAQkfgxkSBBEh%7EH7U%7ETWM7tcuxjlRTUmY4H%7EBXafq07jPfBe2MV-8OiIey-riqMaRB8esorZVOI-jGUcHmYW-M6%7E41vYJ8AvaRU-2SkxNsGH1Zu82iy7Q%7E8dLh82eTGNFKrxyoML2geJqI0u0tWeRLGX-0cGChWpxk9d33mN2Lz0Q8l9oZyL52pfZ9HLJBGj9FjkHk87mw__&Key-Pair-Id=K2L8F4GPSG1IFC "HTTP/1.1 200 OK"
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/plda.npz "HTTP/1.1 302 Found"
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-12 06:29:03 [WARNING] launcher: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: GET https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/plda.npz "HTTP/1.1 302 Found"
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: GET https://cas-bridge.xethub.hf.co/xet-bridge-us/67fed0372c0d96649bf8830b/e5f31c78169dc3916a8aac05d8daa83705d7659515c5b34780edf09c3e5b9594?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260512%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260512T051132Z&X-Amz-Expires=3600&X-Amz-Signature=2abeac2d176aca2b289666831ad0a219c701a92ac06912281e38cd85676d3954&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=69852e076f43cdcb9b6d904f&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27plda.npz%3B+filename%3D%22plda.npz%22%3B&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1778566292&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODU2NjI5Mn19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82N2ZlZDAzNzJjMGQ5NjY0OWJmODgzMGIvZTVmMzFjNzgxNjlkYzM5MTZhOGFhYzA1ZDhkYWE4MzcwNWQ3NjU5NTE1YzViMzQ3ODBlZGYwOWMzZTViOTU5NCoifV19&Signature=dFQfv-kB-Ua2zDJtsYmoHUHpYJ3ubezAj91MVcbRdEosxYxzW7ybYx85x%7E9azFfIEX943iCJ%7E7wehClZDUQDhK3ftZoKlzGWI3x3-YK5lL1JtjSzPGmK37rHVRrKzKC5iMLNCDHSA9JhbK4VVc0EEgLrBNC4LW6cWSbV07-r9NuIHuhgiGbsqgRvsSCq6f4fdhPc3bkDkIn7eKOjbs%7E9X0An8mG2LdjSBIKV73TH9kio%7ElwWhyG0pEeaigEnxpTCT6Fo%7ETall%7EzZAgjt6NFobAGEpxbydnD7UjYp2St1me8i29ARe6wB1UgjUWw-Scq9MjE95a8MlRIXM%7EA01qwk9Q__&Key-Pair-Id=K2L8F4GPSG1IFC "HTTP/1.1 200 OK"
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-12 06:29:03 [WARNING] launcher: Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: GET https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-05-12 06:29:03 [INFO] launcher: HTTP Request: GET https://cas-bridge.xethub.hf.co/xet-bridge-us/6552418ff52a9bb9b72adc2a/dbae20d3c4f8fc381db5d514a7d4069c87d09feba054c2b248f7333b073e08cd?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20260512%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260512T050417Z&X-Amz-Expires=3600&X-Amz-Signature=150f122910a5f852d9c8560d42be6e2aab062d9d20d94261df3e1ca8f2262b9d&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=64c28227c0126fdf8a276bd1&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27pytorch_model.bin%3B+filename%3D%22pytorch_model.bin%22%3B&response-content-type=application%2Foctet-stream&x-amz-checksum-mode=ENABLED&x-id=GetObject&Expires=1778565857&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc3ODU2NTg1N319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NTUyNDE4ZmY1MmE5YmI5YjcyYWRjMmEvZGJhZTIwZDNjNGY4ZmMzODFkYjVkNTE0YTdkNDA2OWM4N2QwOWZlYmEwNTRjMmIyNDhmNzMzM2IwNzNlMDhjZCoifV19&Signature=G6KEs7AfAqjBF3J8eNAqGyOwKtIFDyd%7Eg%7EpZA%7El9q2i848WCVtSrMrAQZUR65xeUnqrsx6w7LjS-8n1aXcGNouZrAJFet539gIkD4OH8qvXVMpyoFzyzFs41o44DpatHTMwaLoLuA-iux4zH64fNeH0O%7EZBbmMGX-4Lim%7ELt8DJ%7EyEmpoGtWRGdouU4OmlrARZ4lU72Zi-A2MUpdYjlVWs36F7OvDkyc%7Eg6bJpn8xL3ZSR16hFVYC-3z2SAt%7E0sTcsYTl4ID50qCTxt-nGTE7xpaTF6NMBvSeSFU0cFYRthQk5veBNxJ0wgmg2N61-mrgzSftrhKwewvq2AjQaeGAA__&Key-Pair-Id=K2L8F4GPSG1IFC "HTTP/1.1 200 OK"
+2026-05-12 06:29:10 [INFO] launcher: Diarization pipeline loaded.
+2026-05-12 06:29:10 [INFO] launcher: [L] Running diarization on 1169.2s of audio...
+2026-05-12 06:29:10 [ERROR] launcher: [L] Diarization failed: name 'AudioDecoder' is not defined
 Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\shutdown.py", line 214, in _run_background_diarization
-    segments, speaker_data = run_full_diarization(loopback_audio, mic_audio, sample_rate)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 283, in run_full_diarization
-    loopback_segments = diarize_audio(loopback_audio, sample_rate, "L")
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 131, in diarize_audio
-    pipeline = _get_diarization_pipeline()
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 72, in _get_diarization_pipeline
-    _diarization_pipeline = Pipeline.from_pretrained(
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "pyannote\audio\core\pipeline.py", line 245, in from_pretrained
-  File "pyannote\audio\pipelines\speaker_diarization.py", line 222, in __init__
-  File "pyannote\audio\pipelines\utils\getter.py", line 115, in get_model
-  File "pyannote\audio\core\model.py", line 612, in from_pretrained
-  File "importlib\__init__.py", line 90, in import_module
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1310, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1324, in _find_and_load_unlocked
-ModuleNotFoundError: No module named 'pyannote.audio.models'
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 143, in diarize_audio
+    diarization = pipeline(tmp_path)
+                  ^^^^^^^^^^^^^^^^^^
+  File "pyannote\audio\core\pipeline.py", line 476, in __call__
+  File "pyannote\audio\telemetry\metrics.py", line 152, in track_pipeline_apply
+  File "pyannote\audio\core\io.py", line 273, in get_duration
+  File "pyannote\audio\core\io.py", line 86, in get_audio_metadata
+NameError: name 'AudioDecoder' is not defined
+2026-05-12 06:29:11 [INFO] launcher: [M] Running diarization on 1169.2s of audio...
+2026-05-12 06:29:11 [ERROR] launcher: [M] Diarization failed: name 'AudioDecoder' is not defined
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 143, in diarize_audio
+    diarization = pipeline(tmp_path)
+                  ^^^^^^^^^^^^^^^^^^
+  File "pyannote\audio\core\pipeline.py", line 476, in __call__
+  File "pyannote\audio\telemetry\metrics.py", line 152, in track_pipeline_apply
+  File "pyannote\audio\core\io.py", line 273, in get_duration
+  File "pyannote\audio\core\io.py", line 86, in get_audio_metadata
+NameError: name 'AudioDecoder' is not defined
+2026-05-12 06:29:11 [INFO] launcher: Full diarization complete: 0 total segments, 0 speakers with embeddings
+2026-05-12 06:29:11 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] No diarization segments produced, skipping upload
