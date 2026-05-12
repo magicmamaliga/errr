@@ -1,39 +1,25 @@
-2026-05-12 06:50:29 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
-2026-05-12 06:50:30 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
-2026-05-12 06:50:35 [WARNING] launcher: SpeechBrain could not find any working torchaudio backend. Audio files may fail to load. Follow this link for instructions and troubleshooting: https://speechbrain.readthedocs.io/en/latest/audioloading.html
-2026-05-12 06:50:35 [DEBUG] launcher: Registered checkpoint save hook for _speechbrain_save
-2026-05-12 06:50:35 [DEBUG] launcher: Registered checkpoint load hook for _speechbrain_load
-2026-05-12 06:50:35 [DEBUG] launcher: Registered checkpoint save hook for save
-2026-05-12 06:50:35 [DEBUG] launcher: Registered checkpoint load hook for load
-2026-05-12 06:50:36 [INFO] launcher: Applied quirks (see `speechbrain.utils.quirks`): [disable_jit_profiling, allow_tf32]
-2026-05-12 06:50:36 [INFO] launcher: Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
-2026-05-12 06:50:36 [DEBUG] launcher: Registered checkpoint save hook for _save
-2026-05-12 06:50:36 [DEBUG] launcher: Registered checkpoint load hook for _recover
-2026-05-12 06:50:36 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
-2026-05-12 06:50:37 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/xvec_transform.npz "HTTP/1.1 302 Found"
-2026-05-12 06:50:37 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/plda.npz "HTTP/1.1 302 Found"
-2026-05-12 06:50:39 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
-2026-05-12 06:50:39 [INFO] launcher: Diarization pipeline loaded.
-2026-05-12 06:50:39 [INFO] launcher: [L] Running diarization on 1169.2s of audio...
-2026-05-12 06:50:39 [ERROR] launcher: [L] Diarization failed: name 'AudioDecoder' is not defined
+2026-05-12 07:16:34 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
+2026-05-12 07:16:35 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
+2026-05-12 07:16:40 [WARNING] launcher: SpeechBrain could not find any working torchaudio backend. Audio files may fail to load. Follow this link for instructions and troubleshooting: https://speechbrain.readthedocs.io/en/latest/audioloading.html
+2026-05-12 07:16:40 [DEBUG] launcher: Registered checkpoint save hook for _speechbrain_save
+2026-05-12 07:16:40 [DEBUG] launcher: Registered checkpoint load hook for _speechbrain_load
+2026-05-12 07:16:40 [DEBUG] launcher: Registered checkpoint save hook for save
+2026-05-12 07:16:40 [DEBUG] launcher: Registered checkpoint load hook for load
+2026-05-12 07:16:41 [INFO] launcher: Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
+2026-05-12 07:16:41 [INFO] launcher: Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
+2026-05-12 07:16:41 [DEBUG] launcher: Registered checkpoint save hook for _save
+2026-05-12 07:16:41 [DEBUG] launcher: Registered checkpoint load hook for _recover
+2026-05-12 07:16:41 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-05-12 07:16:42 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/xvec_transform.npz "HTTP/1.1 302 Found"
+2026-05-12 07:16:42 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/plda.npz "HTTP/1.1 302 Found"
+2026-05-12 07:16:42 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
+2026-05-12 07:16:43 [INFO] launcher: Diarization pipeline loaded.
+2026-05-12 07:16:43 [INFO] launcher: [L] Running diarization on 1169.2s of audio...
+pyannote\audio\models\blocks\pooling.py:103: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\ReduceOps.cpp:1858.)
+2026-05-12 07:36:32 [ERROR] launcher: [L] Diarization failed: 'DiarizeOutput' object has no attribute 'itertracks'
 Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 143, in diarize_audio
-    diarization = pipeline(tmp_path)
-                  ^^^^^^^^^^^^^^^^^^
-  File "pyannote\audio\core\pipeline.py", line 476, in __call__
-  File "pyannote\audio\telemetry\metrics.py", line 152, in track_pipeline_apply
-  File "pyannote\audio\core\io.py", line 273, in get_duration
-  File "pyannote\audio\core\io.py", line 86, in get_audio_metadata
-NameError: name 'AudioDecoder' is not defined
-2026-05-12 06:50:39 [INFO] launcher: [M] Running diarization on 1169.2s of audio...
-2026-05-12 06:50:39 [ERROR] launcher: [M] Diarization failed: name 'AudioDecoder' is not defined
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 143, in diarize_audio
-    diarization = pipeline(tmp_path)
-                  ^^^^^^^^^^^^^^^^^^
-  File "pyannote\audio\core\pipeline.py", line 476, in __call__
-  File "pyannote\audio\telemetry\metrics.py", line 152, in track_pipeline_apply
-  File "pyannote\audio\core\io.py", line 273, in get_duration
-  File "pyannote\audio\core\io.py", line 86, in get_audio_metadata
-NameError: name 'AudioDecoder' is not defined
-2026-05-12 06:50:39 [INFO] launcher: Full diarization complete: 0 total segments, 0 speakers with embeddings
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 146, in diarize_audio
+    for turn, _, speaker in diarization.itertracks(yield_label=True):
+                            ^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'DiarizeOutput' object has no attribute 'itertracks'
+2026-05-12 07:36:32 [INFO] launcher: [M] Running diarization on 1169.2s of audio...
