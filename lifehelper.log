@@ -1,122 +1,54 @@
-2026-05-12 08:38:40 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Audio downloaded: 1169.2s loopback, 1169.2s mic
-2026-05-12 08:38:41 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
-pyannote\audio\core\io.py:47: UserWarning: 
-torchcodec is not installed correctly so built-in audio decoding will fail. Solutions are:
-* use audio preloaded in-memory as a {'waveform': (channel, time) torch.Tensor, 'sample_rate': int} dictionary;
-* fix torchcodec installation. Error message was:
 
-Could not load libtorchcodec. Likely causes:
-          1. FFmpeg is not properly installed in your environment. We support
-             versions 4, 5, 6, 7, and 8, and we attempt to load libtorchcodec
-             for each of those versions. Errors for versions not installed on
-             your system are expected; only the error for your installed FFmpeg
-             version is relevant. On Windows, ensure you've installed the
-             "full-shared" version which ships DLLs.
-          2. The PyTorch version (2.11.0+cpu) is not compatible with
-             this version of TorchCodec. Refer to the version compatibility
-             table:
-             https://github.com/pytorch/torchcodec?tab=readme-ov-file#installing-torchcodec.
-          3. Another runtime dependency; see exceptions below.
+    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
+    -MT-Release\bin
 
-        The following exceptions were raised as we tried to load libtorchcodec:
-        
-[start of libtorchcodec loading traceback]
-FFmpeg version 8:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core8
 
-FFmpeg version 7:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core7
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        08/05/2026     17:39       16036864 onnxruntime.dll
+-a----        08/05/2026     17:39         104960 onnxruntime_providers_shared.dll
+-a----        08/05/2026     17:44         831488 sherpa-onnx-keyword-spotter.exe
+-a----        08/05/2026     17:44         524288 sherpa-onnx-offline-audio-tagging.exe
+-a----        08/05/2026     17:46         527360 sherpa-onnx-offline-denoiser.exe
+-a----        08/05/2026     17:44         550912 sherpa-onnx-offline-language-identification.exe
+-a----        08/05/2026     17:46        2389504 sherpa-onnx-offline-parallel.exe
+-a----        08/05/2026     17:45         431616 sherpa-onnx-offline-punctuation.exe
+-a----        08/05/2026     17:45         525312 sherpa-onnx-offline-source-separation.exe
+-a----        08/05/2026     17:47         630272 sherpa-onnx-offline-speaker-diarization.exe
+-a----        08/05/2026     17:45        2719232 sherpa-onnx-offline-tts.exe
+-a----        08/05/2026     17:45        2714624 sherpa-onnx-offline-websocket-server.exe
+-a----        08/05/2026     17:46        2380800 sherpa-onnx-offline.exe
+-a----        08/05/2026     17:44         518144 sherpa-onnx-online-denoiser.exe
+-a----        08/05/2026     17:45         463360 sherpa-onnx-online-punctuation.exe
+-a----        08/05/2026     17:45         806400 sherpa-onnx-online-websocket-client.exe
+-a----        08/05/2026     17:46        2306048 sherpa-onnx-online-websocket-server.exe
+-a----        08/05/2026     17:46        2430464 sherpa-onnx-vad-with-offline-asr.exe
+-a----        08/05/2026     17:44        1990144 sherpa-onnx-vad-with-online-asr.exe
+-a----        08/05/2026     17:44         507392 sherpa-onnx-vad.exe
+-a----        08/05/2026     17:39         141312 sherpa-onnx-version.exe
+-a----        08/05/2026     17:47        1942016 sherpa-onnx.exe
 
-FFmpeg version 6:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core6
 
-FFmpeg version 5:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core5
+    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
+    -MT-Release\include\sherpa-onnx\c-api
 
-FFmpeg version 4:
-Traceback (most recent call last):
-  File "torchcodec\_internally_replaced_utils.py", line 92, in load_torchcodec_shared_libraries
-  File "torchcodec\_internally_replaced_utils.py", line 43, in _get_extension_path
-ImportError: No spec found for libtorchcodec_core4
-[end of libtorchcodec loading traceback].
-2026-05-12 08:39:04 [INFO] launcher: Loading pyannote diarization pipeline on cpu...
-2026-05-12 08:39:05 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-3.1/resolve/main/config.yaml "HTTP/1.1 200 OK"
-2026-05-12 08:39:10 [WARNING] launcher: SpeechBrain could not find any working torchaudio backend. Audio files may fail to load. Follow this link for instructions and troubleshooting: https://speechbrain.readthedocs.io/en/latest/audioloading.html
-2026-05-12 08:39:10 [DEBUG] launcher: Registered checkpoint save hook for _speechbrain_save
-2026-05-12 08:39:10 [DEBUG] launcher: Registered checkpoint load hook for _speechbrain_load
-2026-05-12 08:39:10 [DEBUG] launcher: Registered checkpoint save hook for save
-2026-05-12 08:39:10 [DEBUG] launcher: Registered checkpoint load hook for load
-2026-05-12 08:39:11 [INFO] launcher: Applied quirks (see `speechbrain.utils.quirks`): [allow_tf32, disable_jit_profiling]
-2026-05-12 08:39:11 [INFO] launcher: Excluded quirks specified by the `SB_DISABLE_QUIRKS` environment (comma-separated list): []
-2026-05-12 08:39:11 [DEBUG] launcher: Registered checkpoint save hook for _save
-2026-05-12 08:39:11 [DEBUG] launcher: Registered checkpoint load hook for _recover
-2026-05-12 08:39:11 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/segmentation-3.0/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
-2026-05-12 08:39:12 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/xvec_transform.npz "HTTP/1.1 302 Found"
-2026-05-12 08:39:12 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/speaker-diarization-community-1/resolve/main/plda/plda.npz "HTTP/1.1 302 Found"
-2026-05-12 08:39:12 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM/resolve/main/pytorch_model.bin "HTTP/1.1 302 Found"
-2026-05-12 08:39:13 [INFO] launcher: Diarization pipeline loaded.
-2026-05-12 08:39:13 [INFO] launcher: [L] Running diarization on 1169.2s of audio...
-pyannote\audio\models\blocks\pooling.py:103: UserWarning: std(): degrees of freedom is <= 0. Correction should be strictly less than the reduction factor (input numel divided by output numel). (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\aten\src\ATen\native\ReduceOps.cpp:1858.)
-2026-05-12 08:59:12 [INFO] launcher: [L] Diarization complete: 183 segments, 2 speakers detected
-2026-05-12 08:59:13 [INFO] launcher: HTTP Request: HEAD https://huggingface.co/pyannote/embedding/resolve/main/pytorch_model.bin "HTTP/1.1 403 Forbidden"
 
-Could not download Model from pyannote/embedding.
-It might be because the repository is private or gated:
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        08/05/2026     17:38         164860 c-api.h
+-a----        08/05/2026     17:38          57365 cxx-api.h
 
-* visit https://hf.co/pyannote/embedding to accept user conditions
-* visit https://hf.co/settings/tokens to create an authentication token
-* load the Model with the `token` argument:
-    >>> Model.from_pretrained('pyannote/embedding', token='hf_....')
 
-2026-05-12 08:59:13 [ERROR] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization failed for recording 69f8456ffa503bc48bbed097: 403 Client Error. (Request ID: Root=1-6a02ddd2-4376bf9c0c65238275d9fc8b;bb4745d4-3537-48f7-a5c1-7ab6020b7be2)
+    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
+    -MT-Release\lib
 
-Cannot access gated repo for url https://huggingface.co/pyannote/embedding/resolve/main/pytorch_model.bin.
-Access to model pyannote/embedding is restricted and you are not in the authorized list. Visit https://huggingface.co/pyannote/embedding to ask for access.
-Traceback (most recent call last):
-  File "huggingface_hub\utils\_http.py", line 761, in hf_raise_for_status
-  File "httpx\_models.py", line 829, in raise_for_status
-httpx.HTTPStatusError: Client error '403 Forbidden' for url 'https://huggingface.co/pyannote/embedding/resolve/main/pytorch_model.bin'
-For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
 
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\shutdown.py", line 214, in _run_background_diarization
-    segments, speaker_data = run_full_diarization(loopback_audio, mic_audio, sample_rate)
-                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 285, in run_full_diarization
-    speaker_data = extract_speaker_embeddings(loopback_audio, sample_rate, loopback_segments)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 188, in extract_speaker_embeddings
-    embedding_model = _get_embedding_model()
-                      ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization.py", line 102, in _get_embedding_model
-    model = Model.from_pretrained(
-            ^^^^^^^^^^^^^^^^^^^^^^
-  File "pyannote\audio\core\model.py", line 577, in from_pretrained
-  File "pyannote\audio\utils\hf_hub.py", line 80, in download_from_hf_hub
-  File "huggingface_hub\utils\_validators.py", line 89, in _inner_fn
-  File "huggingface_hub\file_download.py", line 986, in hf_hub_download
-  File "huggingface_hub\file_download.py", line 1137, in _hf_hub_download_to_cache_dir
-  File "huggingface_hub\file_download.py", line 1766, in _raise_on_head_call_error
-  File "huggingface_hub\file_download.py", line 1653, in _get_metadata_or_catch_error
-  File "huggingface_hub\utils\_validators.py", line 89, in _inner_fn
-  File "huggingface_hub\file_download.py", line 1576, in get_hf_file_metadata
-  File "huggingface_hub\utils\_http.py", line 692, in _httpx_follow_relative_redirects_with_backoff
-  File "huggingface_hub\utils\_http.py", line 796, in hf_raise_for_status
-huggingface_hub.errors.GatedRepoError: 403 Client Error. (Request ID: Root=1-6a02ddd2-4376bf9c0c65238275d9fc8b;bb4745d4-3537-48f7-a5c1-7ab6020b7be2)
-
-Cannot access gated repo for url https://huggingface.co/pyannote/embedding/resolve/main/pytorch_model.bin.
-Access to model pyannote/embedding is restricted and you are not in the authorized list. Visit https://huggingface.co/pyannote/embedding to ask for access.
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        08/05/2026     17:39       16036864 onnxruntime.dll
+-a----        08/05/2026     17:48           2124 onnxruntime.lib
+-a----        08/05/2026     17:39         104960 onnxruntime_providers_shared.dll
+-a----        08/05/2026     17:47        4417024 sherpa-onnx-c-api.dll
+-a----        08/05/2026     17:47          74006 sherpa-onnx-c-api.lib
+-a----        08/05/2026     17:48         237056 sherpa-onnx-cxx-api.dll
+-a----        08/05/2026     17:48         163472 sherpa-onnx-cxx-api.lib
