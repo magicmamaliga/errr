@@ -1,54 +1,30 @@
-
-    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
-    -MT-Release\bin
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----        08/05/2026     17:39       16036864 onnxruntime.dll
--a----        08/05/2026     17:39         104960 onnxruntime_providers_shared.dll
--a----        08/05/2026     17:44         831488 sherpa-onnx-keyword-spotter.exe
--a----        08/05/2026     17:44         524288 sherpa-onnx-offline-audio-tagging.exe
--a----        08/05/2026     17:46         527360 sherpa-onnx-offline-denoiser.exe
--a----        08/05/2026     17:44         550912 sherpa-onnx-offline-language-identification.exe
--a----        08/05/2026     17:46        2389504 sherpa-onnx-offline-parallel.exe
--a----        08/05/2026     17:45         431616 sherpa-onnx-offline-punctuation.exe
--a----        08/05/2026     17:45         525312 sherpa-onnx-offline-source-separation.exe
--a----        08/05/2026     17:47         630272 sherpa-onnx-offline-speaker-diarization.exe
--a----        08/05/2026     17:45        2719232 sherpa-onnx-offline-tts.exe
--a----        08/05/2026     17:45        2714624 sherpa-onnx-offline-websocket-server.exe
--a----        08/05/2026     17:46        2380800 sherpa-onnx-offline.exe
--a----        08/05/2026     17:44         518144 sherpa-onnx-online-denoiser.exe
--a----        08/05/2026     17:45         463360 sherpa-onnx-online-punctuation.exe
--a----        08/05/2026     17:45         806400 sherpa-onnx-online-websocket-client.exe
--a----        08/05/2026     17:46        2306048 sherpa-onnx-online-websocket-server.exe
--a----        08/05/2026     17:46        2430464 sherpa-onnx-vad-with-offline-asr.exe
--a----        08/05/2026     17:44        1990144 sherpa-onnx-vad-with-online-asr.exe
--a----        08/05/2026     17:44         507392 sherpa-onnx-vad.exe
--a----        08/05/2026     17:39         141312 sherpa-onnx-version.exe
--a----        08/05/2026     17:47        1942016 sherpa-onnx.exe
-
-
-    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
-    -MT-Release\include\sherpa-onnx\c-api
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----        08/05/2026     17:38         164860 c-api.h
--a----        08/05/2026     17:38          57365 cxx-api.h
-
-
-    Directory: C:\Users\Mate\Downloads\sherpa-onnx-v1.13.1-win-x64-shared-MT-Release\sherpa-onnx-v1.13.1-win-x64-shared
-    -MT-Release\lib
-
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
--a----        08/05/2026     17:39       16036864 onnxruntime.dll
--a----        08/05/2026     17:48           2124 onnxruntime.lib
--a----        08/05/2026     17:39         104960 onnxruntime_providers_shared.dll
--a----        08/05/2026     17:47        4417024 sherpa-onnx-c-api.dll
--a----        08/05/2026     17:47          74006 sherpa-onnx-c-api.lib
--a----        08/05/2026     17:48         237056 sherpa-onnx-cxx-api.dll
--a----        08/05/2026     17:48         163472 sherpa-onnx-cxx-api.lib
+2026-05-13 07:23:13 [INFO] launcher: Current app version: 1.0.16
+2026-05-13 07:23:14 [INFO] launcher: App is up to date.
+2026-05-13 07:23:15 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-13 07:23:15 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-13 07:23:16 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [10700]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+INFO:     127.0.0.1:59209 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59209 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-13 07:23:30 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
+2026-05-13 07:23:30 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-13 07:23:30 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:59209 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-13 07:23:30 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Starting re-diarization for recording 69f8456ffa503bc48bbed097
+2026-05-13 07:23:30 [INFO] launcher: Re-diarization thread spawned for recording 69f8456ffa503bc48bbed097
+INFO:     127.0.0.1:59209 - "POST /diarize/69f8456ffa503bc48bbed097 HTTP/1.1" 200 OK
+2026-05-13 07:23:40 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Audio downloaded: 1169.2s loopback, 1169.2s mic
+2026-05-13 07:23:40 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
+2026-05-13 07:23:42 [INFO] launcher: [L] Running sherpa-onnx diarization on 1169.2s of audio...
+2026-05-13 07:38:42 [ERROR] launcher: [L] sherpa-onnx diarization timed out after 900s
+2026-05-13 07:38:43 [INFO] launcher: [M] Running sherpa-onnx diarization on 1169.2s of audio...
+2026-05-13 07:44:35 [INFO] launcher: [M] Diarization complete: 17 segments, 3 speakers detected
+2026-05-13 07:44:37 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx
+2026-05-13 07:44:40 [INFO] launcher: Speaker SPEAKER_M_02: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-13 07:44:40 [WARNING] launcher: Speaker SPEAKER_M_04: only 0.4s of audio, skipping
+2026-05-13 07:44:42 [INFO] launcher: Speaker SPEAKER_M_07: embedding extracted from 17.6s, dim=512, sample=563820 bytes
+2026-05-13 07:44:42 [INFO] launcher: Full diarization complete: 17 total segments, 2 speakers with embeddings
+2026-05-13 07:44:46 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Diarization results uploaded for recording 69f8456ffa503bc48bbed097: 17 segments, 2 speakers
