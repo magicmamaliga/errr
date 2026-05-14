@@ -1,2 +1,16 @@
-[plugin vite:reporter]
-(!) C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/api/pythonApiClient.js is dynamically imported by C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/api/protocolLauncher.js but also statically imported by C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/api/protocolLauncher.js, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/marketing/pages/DownloadPage.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/components/DeviceSelector.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/hooks/useLocalServerSession.js, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/hooks/useRecordingDevices.js, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/pages/LiveRecording.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/pages/RecordingDetails.jsx, dynamic import will not move module into another chunk.
+ > [build 6/6] RUN npm run build:
+0.506
+0.506 > frontend@0.0.0 build
+0.506 > vite build
+0.506
+0.819 vite v7.3.3 building client environment for production...
+1.244 transforming...
+2.016 ✓ 113 modules transformed.
+2.019 ✗ Build failed in 1.17s
+2.019 error during build:
+2.019 Could not resolve "./LandingPage.css" from "src/features/marketing/pages/LandingPage.jsx"
+2.019 file: /app/src/features/marketing/pages/LandingPage.jsx
+2.019     at getRollupError (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:406:41)
+2.019     at error (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:402:42)
+2.019     at ModuleLoader.handleInvalidResolvedId (file:///app/node_modules/rollup/dist/es/shared/node-entry.js:22127:24)
+2.019     at file:///app/node_modules/rollup/dist/es/shared/node-entry.js:22087:26
