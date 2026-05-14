@@ -1,30 +1,36 @@
-2026-05-13 07:23:13 [INFO] launcher: Current app version: 1.0.16
-2026-05-13 07:23:14 [INFO] launcher: App is up to date.
-2026-05-13 07:23:15 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-13 07:23:15 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-13 07:23:16 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [10700]
-INFO:     Waiting for application startup.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-INFO:     127.0.0.1:59209 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59209 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-13 07:23:30 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
-2026-05-13 07:23:30 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-13 07:23:30 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:59209 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-13 07:23:30 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Starting re-diarization for recording 69f8456ffa503bc48bbed097
-2026-05-13 07:23:30 [INFO] launcher: Re-diarization thread spawned for recording 69f8456ffa503bc48bbed097
-INFO:     127.0.0.1:59209 - "POST /diarize/69f8456ffa503bc48bbed097 HTTP/1.1" 200 OK
-2026-05-13 07:23:40 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Audio downloaded: 1169.2s loopback, 1169.2s mic
-2026-05-13 07:23:40 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Background diarization started for recording 69f8456ffa503bc48bbed097
-2026-05-13 07:23:42 [INFO] launcher: [L] Running sherpa-onnx diarization on 1169.2s of audio...
-2026-05-13 07:38:42 [ERROR] launcher: [L] sherpa-onnx diarization timed out after 900s
-2026-05-13 07:38:43 [INFO] launcher: [M] Running sherpa-onnx diarization on 1169.2s of audio...
-2026-05-13 07:44:35 [INFO] launcher: [M] Diarization complete: 17 segments, 3 speakers detected
-2026-05-13 07:44:37 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx
-2026-05-13 07:44:40 [INFO] launcher: Speaker SPEAKER_M_02: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-13 07:44:40 [WARNING] launcher: Speaker SPEAKER_M_04: only 0.4s of audio, skipping
-2026-05-13 07:44:42 [INFO] launcher: Speaker SPEAKER_M_07: embedding extracted from 17.6s, dim=512, sample=563820 bytes
-2026-05-13 07:44:42 [INFO] launcher: Full diarization complete: 17 total segments, 2 speakers with embeddings
-2026-05-13 07:44:46 [INFO] launcher: [rediarize-69f8456ffa503bc48bbed097] Diarization results uploaded for recording 69f8456ffa503bc48bbed097: 17 segments, 2 speakers
+PS C:\Users\Mate\Desktop\Project\lifehelper\web-ui> npm run build
+
+> frontend@0.0.0 build
+> vite build
+
+vite v7.3.3 building client environment for production...
+[plugin vite:esbuild] src/features/marketing/pages/DownloadPage.jsx: The character ">" is not valid inside a JSX element
+123 |                                      <strong className="text-slate-100">SmartScreen warning:</strong>{' '}
+124 |                                      Windows may show <strong className="text-amber-300">Windows protected your PC</st...
+125 |  ...ck <strong className="text-slate-100">"More info"</strong> -> <strong className="text-slate-100">"Run anyway"</strong
+    |                                                                 ^
+126 |                                      This appears because the app isn't code-signed yet (it's safe).
+127 |                                  </p>
+
+[plugin vite:esbuild] src/features/marketing/pages/DownloadPage.jsx: The character ">" is not valid inside a JSX element
+130 |                                  <p className="text-slate-400 text-xs leading-[1.7]">
+131 |                                      <strong className="text-slate-300">Having trouble?</strong>{' '}
+132 |  ...                           Uninstall from Windows Settings -> Apps, re-download, and run the installer again – mak...
+    |                                                                 ^
+133 |                                  </p>
+134 |                              </div>
+
+✓ 201 modules transformed.
+[plugin vite:reporter]
+(!) C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/api/pythonApiClient.js is dynamically imported by C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/api/protocolLauncher.js but also statically imported by C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/marketing/pages/DownloadPage.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/components/DeviceSelector.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/hooks/useLocalServerSession.js, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/hooks/useRecordingDevices.js, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/pages/LiveRecording.jsx, C:/Users/Mate/Desktop/Project/lifehelper/web-ui/src/features/recordings/pages/RecordingDetails.jsx, dynamic import will not move module into another chunk.
+
+dist/index.html                   3.12 kB │ gzip:   1.33 kB
+dist/assets/index-1Sz7dafU.css   54.89 kB │ gzip:  10.90 kB
+dist/assets/index-sD2VtEaP.js   509.11 kB │ gzip: 155.50 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.18s
+PS C:\Users\Mate\Desktop\Project\lifehelper\web-ui>
