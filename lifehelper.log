@@ -1,16 +1,16 @@
- > [build 6/6] RUN npm run build:
-0.506
-0.506 > frontend@0.0.0 build
-0.506 > vite build
-0.506
-0.819 vite v7.3.3 building client environment for production...
-1.244 transforming...
-2.016 ✓ 113 modules transformed.
-2.019 ✗ Build failed in 1.17s
-2.019 error during build:
-2.019 Could not resolve "./LandingPage.css" from "src/features/marketing/pages/LandingPage.jsx"
-2.019 file: /app/src/features/marketing/pages/LandingPage.jsx
-2.019     at getRollupError (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:406:41)
-2.019     at error (file:///app/node_modules/rollup/dist/es/shared/parseAst.js:402:42)
-2.019     at ModuleLoader.handleInvalidResolvedId (file:///app/node_modules/rollup/dist/es/shared/node-entry.js:22127:24)
-2.019     at file:///app/node_modules/rollup/dist/es/shared/node-entry.js:22087:26
+Traceback (most recent call last):
+  File "launcher.py", line 255, in <module>
+  File "launcher.py", line 251, in main
+  File "<frozen importlib._bootstrap_external>", line 999, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\lifehelper.py", line 21, in <module>
+    from server.main import app
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\main.py", line 21, in <module>
+    from .audio.shutdown import save_transcript_and_audio_on_shutdown
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\shutdown.py", line 32, in <module>
+    from ..services import local_store
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\__init__.py", line 16, in <module>
+    from .store import (
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 22, in <module>
+    import sqlite3
+ModuleNotFoundError: No module named 'sqlite3'
