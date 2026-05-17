@@ -1,25 +1,25 @@
-backend-1  | 2026-05-17T11:13:55.804Z  INFO 1 --- [backend] [cat-handler-124] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@512718bc[id=69ea8c5e35b2640397710047,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-04-23T21:17:18.116Z,roles=[USER]]
-backend-1  | 2026-05-17T11:13:55.806Z  INFO 1 --- [backend] [cat-handler-124] u.m.backend.user.service.UserService     : User details UserDto(id=69ea8c5e35b2640397710047, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, wallet=WalletDto(amount=1.142661, currency=USD, updatedAt=Sun May 17 09:50:09 GMT 2026, isSuspended=false))
-backend-1  | 2026-05-17T11:13:55.881Z  INFO 1 --- [backend] [cat-handler-126] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a09a2e7a8185e33a8f438fa
-backend-1  | 2026-05-17T11:13:55.882Z  INFO 1 --- [backend] [cat-handler-126] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-17T11:13:56.864Z  WARN 1 --- [backend] [or-http-epoll-3] r.netty.http.client.HttpClientConnect    : [5e8f4229-1, L:/172.20.0.2:44338 - R:api.openai.com/162.159.140.245:443] The connection observed an error
-backend-1  |
-backend-1  | io.netty.handler.timeout.ReadTimeoutException
-backend-1  |
-backend-1  | 2026-05-17T11:13:56.870Z ERROR 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : AI transcription failed for user tornaimate95@gmail.com: I/O error on POST request for "https://api.openai.com/v1/audio/transcriptions": null
-backend-1  | 2026-05-17T11:13:56.872Z ERROR 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Auto-transcription failed for recording 6a09a2e7a8185e33a8f438fa
-backend-1  |
-backend-1  | uk.magicmamaliga.backend.record.ai.exception.ExternalAiException: AI transcription failed: I/O error on POST request for "https://api.openai.com/v1/audio/transcriptions": null
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribeBytesDetailed(AiTranscriptionService.java:174) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.event.RecordingEventListener.handleFinishedRecording(RecordingEventListener.java:54) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:112) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-backend-1  |
+backend-1  | 2026-05-17T11:27:54.690Z  INFO 1 --- [backend] [mcat-handler-39] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a09a633e246f7395545532d
+backend-1  | 2026-05-17T11:27:54.691Z  INFO 1 --- [backend] [mcat-handler-39] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:27:54.698Z  INFO 1 --- [backend] [mcat-handler-40] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:27:54.707Z  INFO 1 --- [backend] [mcat-handler-40] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@687df94b[id=69ea8c5e35b2640397710047,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-04-23T21:17:18.116Z,roles=[USER]]
+backend-1  | 2026-05-17T11:27:54.707Z  INFO 1 --- [backend] [mcat-handler-40] u.m.backend.user.service.UserService     : User details UserDto(id=69ea8c5e35b2640397710047, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, wallet=WalletDto(amount=1.142661, currency=USD, updatedAt=Sun May 17 09:50:09 GMT 2026, isSuspended=false))
+backend-1  | 2026-05-17T11:27:59.947Z  INFO 1 --- [backend] [mcat-handler-43] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:27:59.954Z  INFO 1 --- [backend] [mcat-handler-43] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@7a711760[id=69ea8c5e35b2640397710047,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-04-23T21:17:18.116Z,roles=[USER]]
+backend-1  | 2026-05-17T11:27:59.956Z  INFO 1 --- [backend] [mcat-handler-43] u.m.backend.user.service.UserService     : User details UserDto(id=69ea8c5e35b2640397710047, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, wallet=WalletDto(amount=1.142661, currency=USD, updatedAt=Sun May 17 09:50:09 GMT 2026, isSuspended=false))
+backend-1  | 2026-05-17T11:27:59.960Z  INFO 1 --- [backend] [mcat-handler-44] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a09a633e246f7395545532d
+backend-1  | 2026-05-17T11:27:59.962Z  INFO 1 --- [backend] [mcat-handler-44] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:28:03.840Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: text=3521 chars, segments=0, words=638
+backend-1  | 2026-05-17T11:28:03.858Z  WARN 1 --- [backend] [        async-1] u.m.b.r.a.s.TranscriptionCostCalculator  : Could not determine audio duration for 'Online Meeting Onboarding.mp3', using fallback cost $0.002: Stream of unsupported format
+backend-1  | 2026-05-17T11:28:03.859Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 69ea8c5e35b2640397710047 and amountChange -0.002
+backend-1  | 2026-05-17T11:28:03.865Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user tornaimate95@gmail.com (cost: $0.002, file: Online Meeting Onboarding.mp3, text length: 3517 chars, chunks: 1)
+backend-1  | 2026-05-17T11:28:03.929Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Auto-transcription complete for recording 6a09a633e246f7395545532d: 3517 chars, 1 chunks
+backend-1  | 2026-05-17T11:28:03.930Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering findById for userId 69ea8c5e35b2640397710047
+backend-1  | 2026-05-17T11:28:05.156Z  INFO 1 --- [backend] [mcat-handler-47] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:28:05.163Z  INFO 1 --- [backend] [mcat-handler-47] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@1e930907[id=69ea8c5e35b2640397710047,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-04-23T21:17:18.116Z,roles=[USER]]
+backend-1  | 2026-05-17T11:28:05.165Z  INFO 1 --- [backend] [mcat-handler-47] u.m.backend.user.service.UserService     : User details UserDto(id=69ea8c5e35b2640397710047, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, wallet=WalletDto(amount=1.140661, currency=USD, updatedAt=Sun May 17 11:28:03 GMT 2026, isSuspended=false))
+backend-1  | 2026-05-17T11:28:05.369Z  INFO 1 --- [backend] [mcat-handler-49] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a09a633e246f7395545532d
+backend-1  | 2026-05-17T11:28:05.371Z  INFO 1 --- [backend] [mcat-handler-49] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:28:10.660Z  INFO 1 --- [backend] [mcat-handler-51] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a09a633e246f7395545532d
+backend-1  | 2026-05-17T11:28:10.662Z  INFO 1 --- [backend] [mcat-handler-51] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:28:10.670Z  INFO 1 --- [backend] [mcat-handler-52] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-17T11:28:10.677Z  INFO 1 --- [backend] [mcat-handler-52] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@2f29488c[id=69ea8c5e35b2640397710047,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-04-23T21:17:18.116Z,roles=[USER]]
