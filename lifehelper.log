@@ -14,3 +14,4 @@ D:\a\sherpa-onnx\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:3
 [ort] dummy input shape=(1, 3000, 80)
 [ort+DML] 50 runs in 17.75s (354.9 ms/each)
 [ort+DML] GPU should have spiked during this loop
+ 
