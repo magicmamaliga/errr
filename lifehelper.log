@@ -1,44 +1,50 @@
-2026-05-18 19:57:26 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [28376]
+2026-05-18 21:23:16 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-18 21:23:16 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [15572]
 INFO:     Waiting for application startup.
-2026-05-18 19:57:26 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-18 19:57:27 [INFO] launcher: [sync_worker] started
+2026-05-18 21:23:16 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
+2026-05-18 21:23:16 [INFO] launcher: [sync_worker] started
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-INFO:     127.0.0.1:49286 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49286 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-18 19:57:28 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=512 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-18 19:57:28 [WARNING] launcher: Model pre-warm failed: module 'ntpath' has no attribute 'path'
-2026-05-18 19:57:29 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
-2026-05-18 19:57:29 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-18 19:57:29 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:49286 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-18 19:57:30 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] Starting re-diarization for recording 6a0b60efbd31a25ebd8bee50
-2026-05-18 19:57:30 [INFO] launcher: Re-diarization thread spawned for recording 6a0b60efbd31a25ebd8bee50
-INFO:     127.0.0.1:49286 - "POST /diarize/6a0b60efbd31a25ebd8bee50 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49286 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:49286 - "GET /session/status HTTP/1.1" 200 OK
-2026-05-18 19:57:35 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-18 19:57:36 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] Cached downloaded audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0b60efbd31a25ebd8bee50\session.m4a
-2026-05-18 19:57:36 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] Audio ready: 266.0s mono
-2026-05-18 19:57:36 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] Background diarization started for recording 6a0b60efbd31a25ebd8bee50
-2026-05-18 19:57:38 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] No word-timestamped chunks available, using legacy diarization
-2026-05-18 19:57:39 [INFO] launcher: OfflineSpeakerDiarization loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, provider=directml)
-2026-05-18 19:57:39 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
-2026-05-18 19:59:24 [INFO] launcher: [L] Diarization complete: 38 segments, 5 speakers detected
-2026-05-18 20:00:26 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-18 20:00:31 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 3.6s, dim=512, sample=115596 bytes
-2026-05-18 20:00:36 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 7.3s, dim=512, sample=234380 bytes
-2026-05-18 20:00:36 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-18 20:00:41 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 9.2s, dim=512, sample=295436 bytes
-2026-05-18 20:00:41 [INFO] launcher: Full diarization complete: 38 total segments, 5 speakers with embeddings
-2026-05-18 20:00:41 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
-2026-05-18 20:02:31 [INFO] launcher: [L] Diarization complete: 38 segments, 5 speakers detected
-2026-05-18 20:02:31 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-18 20:02:32 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 3.6s, dim=512, sample=115596 bytes
-2026-05-18 20:02:32 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 7.3s, dim=512, sample=234380 bytes
-2026-05-18 20:02:33 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-18 20:02:33 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 9.2s, dim=512, sample=295436 bytes
-2026-05-18 20:02:33 [INFO] launcher: Full diarization complete: 38 total segments, 5 speakers with embeddings
-2026-05-18 20:02:38 [INFO] launcher: [rediarize-6a0b60efbd31a25ebd8bee50] Diarization results uploaded for recording 6a0b60efbd31a25ebd8bee50: 38 segments, 5 speakers
-2026-05-18 20:02:38 [INFO] launcher: [samples] Wrote 115596 bytes for profile 6a0b624ebd31a25ebd8bee53
+INFO:     127.0.0.1:52670 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-18 21:23:16 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-05-18 21:23:16 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-05-18 21:23:16 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+INFO:     127.0.0.1:52670 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-18 21:23:17 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=512 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-18 21:23:17 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx backend=ort provider=directml
+2026-05-18 21:23:17 [INFO] launcher: OfflineSpeakerDiarization load plan: preferred=directml providers_to_try=['directml', 'cpu']
+2026-05-18 21:23:18 [INFO] launcher: OfflineSpeakerDiarization loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, requested_provider=directml, effective_provider=directml)
+2026-05-18 21:23:18 [INFO] launcher: Diarization models pre-warmed
+2026-05-18 21:23:19 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
+2026-05-18 21:23:19 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-18 21:23:19 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:52670 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-18 21:23:20 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Starting re-diarization for recording 6a0b74985185b88afed02cb3
+2026-05-18 21:23:20 [INFO] launcher: Re-diarization thread spawned for recording 6a0b74985185b88afed02cb3
+INFO:     127.0.0.1:52670 - "POST /diarize/6a0b74985185b88afed02cb3 HTTP/1.1" 200 OK
+2026-05-18 21:23:25 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
+2026-05-18 21:23:26 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Cached downloaded audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0b74985185b88afed02cb3\session.m4a
+2026-05-18 21:23:26 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Audio ready: 266.0s mono
+2026-05-18 21:23:26 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Background diarization started for recording 6a0b74985185b88afed02cb3
+2026-05-18 21:23:28 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Diarization path decision: chunks_with_words=no preferred_provider=directml active_provider=directml embedding_backend=ort
+2026-05-18 21:23:28 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] No word-timestamped chunks available, using legacy diarization
+2026-05-18 21:23:28 [INFO] launcher: run_full_diarization: active_provider=directml embedding_backend=ort on_gpu=True has_loopback=True has_mic=False parallel_channels=False
+2026-05-18 21:23:28 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
+2026-05-18 21:25:15 [INFO] launcher: [L] Diarization complete: 38 segments, 5 speakers detected
+2026-05-18 21:25:17 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-18 21:25:17 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 3.6s, dim=512, sample=115596 bytes
+2026-05-18 21:25:18 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 7.3s, dim=512, sample=234380 bytes
+2026-05-18 21:25:18 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-18 21:25:19 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 9.2s, dim=512, sample=295436 bytes
+2026-05-18 21:25:19 [INFO] launcher: Full diarization complete: 38 total segments, 5 speakers with embeddings
+2026-05-18 21:25:19 [INFO] launcher: run_full_diarization: active_provider=directml embedding_backend=ort on_gpu=True has_loopback=True has_mic=False parallel_channels=False
+2026-05-18 21:25:19 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
+2026-05-18 21:27:04 [INFO] launcher: [L] Diarization complete: 38 segments, 5 speakers detected
+2026-05-18 21:27:04 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-18 21:27:05 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 3.6s, dim=512, sample=115596 bytes
+2026-05-18 21:27:05 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 7.3s, dim=512, sample=234380 bytes
+2026-05-18 21:27:05 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-18 21:27:06 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 9.2s, dim=512, sample=295436 bytes
+2026-05-18 21:27:06 [INFO] launcher: Full diarization complete: 38 total segments, 5 speakers with embeddings
+2026-05-18 21:27:15 [INFO] launcher: [rediarize-6a0b74985185b88afed02cb3] Diarization results uploaded for recording 6a0b74985185b88afed02cb3: 38 segments, 5 speakers
