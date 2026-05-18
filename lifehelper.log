@@ -1,30 +1,16 @@
-2026-05-18 07:53:31 [INFO] launcher: Current app version: 1.0.31
-2026-05-18 07:53:32 [INFO] launcher: App is up to date.
-2026-05-18 07:53:32 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-18 07:53:32 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-18 07:53:33 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-18 07:53:33 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [9824]
-INFO:     Waiting for application startup.
-2026-05-18 07:53:33 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-18 07:53:33 [INFO] launcher: [sync_worker] started
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-INFO:     127.0.0.1:63266 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:63266 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-18 07:53:34 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx provider=directml
-2026-05-18 07:53:34 [INFO] launcher: OfflineSpeakerDiarization loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, provider=directml)
-2026-05-18 07:53:34 [INFO] launcher: Diarization models pre-warmed
-2026-05-18 07:53:35 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
-2026-05-18 07:53:35 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-18 07:53:35 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:63266 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-18 07:53:36 [INFO] launcher: [rediarize-6a0a1a642369f8ebbdd3c8c3] Starting re-diarization for recording 6a0a1a642369f8ebbdd3c8c3
-2026-05-18 07:53:36 [INFO] launcher: Re-diarization thread spawned for recording 6a0a1a642369f8ebbdd3c8c3
-INFO:     127.0.0.1:63266 - "POST /diarize/6a0a1a642369f8ebbdd3c8c3 HTTP/1.1" 200 OK
-2026-05-18 07:53:36 [INFO] launcher: [rediarize-6a0a1a642369f8ebbdd3c8c3] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0a1a642369f8ebbdd3c8c3\session.m4a
-2026-05-18 07:53:39 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-18 07:53:39 [INFO] launcher: [rediarize-6a0a1a642369f8ebbdd3c8c3] Audio ready: 266.0s mono
-2026-05-18 07:53:39 [INFO] launcher: [rediarize-6a0a1a642369f8ebbdd3c8c3] Background diarization started for recording 6a0a1a642369f8ebbdd3c8c3
-2026-05-18 07:53:41 [INFO] launcher: [rediarize-6a0a1a642369f8ebbdd3c8c3] No word-timestamped chunks available, using legacy diarization
-2026-05-18 07:53:41 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
+probe_dml.py 
+=== probing sherpa-onnx with provider=directml ===
+[sherpa] cfg.validate() = True
+D:\a\sherpa-onnx\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:341 DirectML is for Windows only. Fallback to cpu!
+[sherpa] dim=512
+[sherpa] 50 embeddings in 43.99s (879.7 ms/each)
+[sherpa] WATCH TASK MANAGER NOW vs. next test
+
+=== probing raw onnxruntime-directml ===
+[ort] version=1.24.4
+[ort] providers available = ['DmlExecutionProvider', 'CPUExecutionProvider']
+[ort] active providers = ['DmlExecutionProvider', 'CPUExecutionProvider']
+[ort] inputs: [('x', ['N', 'T', 80])]
+[ort] dummy input shape=(1, 3000, 80)
+[ort+DML] 50 runs in 17.75s (354.9 ms/each)
+[ort+DML] GPU should have spiked during this loop
