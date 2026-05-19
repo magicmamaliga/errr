@@ -1,68 +1,52 @@
-2026-05-19 08:43:00 [INFO] launcher: Current app version: 1.0.33
-2026-05-19 08:43:01 [INFO] launcher: App is up to date.
-2026-05-19 08:43:02 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-19 08:43:02 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-19 08:43:03 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-19 08:43:03 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [21656]
+2026-05-19 09:23:39 [INFO] launcher: Current app version: 1.0.33
+2026-05-19 09:23:39 [INFO] launcher: App is up to date.
+2026-05-19 09:23:40 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-19 09:23:40 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-19 09:23:41 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-19 09:23:41 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [18364]
 INFO:     Waiting for application startup.
-2026-05-19 08:43:03 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-19 08:43:03 [INFO] launcher: [sync_worker] started
+2026-05-19 09:23:41 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
+2026-05-19 09:23:41 [INFO] launcher: [sync_worker] started
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-05-19 08:43:04 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-05-19 08:43:04 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-05-19 08:43:04 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-19 08:43:04 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=512 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-19 08:43:04 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx backend=ort provider=directml
-2026-05-19 08:43:04 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-19 08:43:05 [WARNING] launcher: Diarizer failed to load with backend=ort provider=directml: Unsupported segmentation input shape ['N', 1, 'T']; expected (B, 1, N) with N as a concrete integer
+INFO:     127.0.0.1:61772 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61772 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61772 - "GET /session/status HTTP/1.1" 401 Unauthorized
+2026-05-19 09:23:41 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-05-19 09:23:41 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-05-19 09:23:41 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+INFO:     127.0.0.1:61772 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-19 09:23:42 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=512 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-19 09:23:42 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx backend=ort provider=directml
+2026-05-19 09:23:42 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-19 09:23:42 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-19 09:23:42 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-19 09:23:42 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=ort, requested_provider=directml, effective_provider=directml
+2026-05-19 09:23:42 [INFO] launcher: Diarization models pre-warmed
+2026-05-19 09:23:43 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
+2026-05-19 09:23:43 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-19 09:23:43 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:61772 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-19 09:23:45 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Starting re-diarization for recording 6a0c1a162ab71533a05892b5
+2026-05-19 09:23:45 [INFO] launcher: Re-diarization thread spawned for recording 6a0c1a162ab71533a05892b5
+INFO:     127.0.0.1:61772 - "POST /diarize/6a0c1a162ab71533a05892b5 HTTP/1.1" 200 OK
+2026-05-19 09:23:45 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0c1a162ab71533a05892b5\session.m4a
+2026-05-19 09:23:47 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
+2026-05-19 09:23:47 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Audio ready: 266.0s mono
+2026-05-19 09:23:48 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Background diarization started for recording 6a0c1a162ab71533a05892b5
+2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Diarization path decision: chunks_with_words=no preferred_provider=directml active_provider=directml embedding_backend=ort
+2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] No word-timestamped chunks available, using legacy diarization
+2026-05-19 09:23:50 [INFO] launcher: run_full_diarization: active_provider=directml embedding_backend=ort on_gpu=True has_loopback=True has_mic=False parallel_channels=False
+2026-05-19 09:23:50 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
+2026-05-19 09:23:50 [ERROR] launcher: [L] Diarization failed: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
 Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 151, in get_diarizer
-    diarizer = _try_build(backend, seg, emb, provider)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 91, in _try_build
-    return _build_ort(seg, emb, provider)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 69, in _build_ort
-    return DmlOfflineSpeakerDiarization(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\diarizer.py", line 121, in __init__
-    raise ValueError(
-ValueError: Unsupported segmentation input shape ['N', 1, 'T']; expected (B, 1, N) with N as a concrete integer
-2026-05-19 08:43:05 [WARNING] launcher: Diarizer unavailable for backend=ort provider=directml; trying next
-INFO:     127.0.0.1:63119 - "GET /api/ HTTP/1.1" 200 OK
-2026-05-19 08:43:05 [WARNING] launcher: Diarizer failed to load with backend=ort provider=cpu: Unsupported segmentation input shape ['N', 1, 'T']; expected (B, 1, N) with N as a concrete integer
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 151, in get_diarizer
-    diarizer = _try_build(backend, seg, emb, provider)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 91, in _try_build
-    return _build_ort(seg, emb, provider)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 69, in _build_ort
-    return DmlOfflineSpeakerDiarization(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\diarizer.py", line 121, in __init__
-    raise ValueError(
-ValueError: Unsupported segmentation input shape ['N', 1, 'T']; expected (B, 1, N) with N as a concrete integer
-2026-05-19 08:43:05 [WARNING] launcher: Diarizer unavailable for backend=ort provider=cpu; trying next
-INFO:     127.0.0.1:63119 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-19 08:43:06 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=sherpa, requested_provider=cpu, effective_provider=cpu
-2026-05-19 08:43:06 [INFO] launcher: Diarization models pre-warmed
-2026-05-19 08:43:07 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
-2026-05-19 08:43:07 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-19 08:43:07 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:63119 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-19 08:43:09 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] Starting re-diarization for recording 6a0c1034786290ca551dc96c
-2026-05-19 08:43:09 [INFO] launcher: Re-diarization thread spawned for recording 6a0c1034786290ca551dc96c
-INFO:     127.0.0.1:63119 - "POST /diarize/6a0c1034786290ca551dc96c HTTP/1.1" 200 OK
-2026-05-19 08:43:09 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0c1034786290ca551dc96c\session.m4a
-2026-05-19 08:43:11 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-19 08:43:12 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] Audio ready: 266.0s mono
-2026-05-19 08:43:12 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] Background diarization started for recording 6a0c1034786290ca551dc96c
-2026-05-19 08:43:15 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] Diarization path decision: chunks_with_words=no preferred_provider=directml active_provider=cpu embedding_backend=ort
-2026-05-19 08:43:15 [INFO] launcher: [rediarize-6a0c1034786290ca551dc96c] No word-timestamped chunks available, using legacy diarization
-2026-05-19 08:43:15 [INFO] launcher: run_full_diarization: active_provider=cpu embedding_backend=ort on_gpu=False has_loopback=True has_mic=False parallel_channels=False
-2026-05-19 08:43:15 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
-2026-05-19 08:45:01 [INFO] launcher: [L] Diarization complete: 38 segments, 5 speakers detected
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 110, in diarize_audio
+    result = diarizer.process(audio_np).sort_by_start_time()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\diarizer.py", line 192, in process
+    if not windows:
+           ^^^^^^^
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2026-05-19 09:23:50 [INFO] launcher: Full diarization complete: 0 total segments, 0 speakers with embeddings
+2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] No diarization segments produced, skipping upload
