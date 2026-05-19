@@ -106,3 +106,32 @@ C:\Users\Mate\Desktop\Project\sherpa-onnx\build\_deps\onnxruntime-src...
 C:\Users\Mate\Desktop\Project\sherpa-onnx\build\_deps\onnxruntime-src...
 C:\Users\Mate\Desktop\Project\sherpa-onnx\build\_deps\onnxruntime-src...
 C:\Users\Mate\Desktop\Project\sherpa-onnx\build\_deps\onnxruntime-src...
+
+ Select-String -Path C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt -Pattern "DIRECTML|ONNXRUNTIME"
+
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:329:// for directml
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:330:FETCHCONTENT_SOURCE_DIR_DIRECTML:PATH=
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:361:// for onnxruntime
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:362:FETCHCONTENT_SOURCE_DIR_ONNXRUNTIME:PATH=
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:386://Enables UPDATE_DISCONNECTED behavior just for
+population of directml
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:387:FETCHCONTENT_UPDATES_DISCONNECTED_DIRECTML:BOOL=OFF
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:410://Enables UPDATE_DISCONNECTED behavior just for
+population of onnxruntime
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:411:FETCHCONTENT_UPDATES_DISCONNECTED_ONNXRUNTIME:BOOL=O
+FF
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:625://Enable ONNX Runtime DirectML support
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:626:SHERPA_ONNX_ENABLE_DIRECTML:BOOL=ON
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:702:SHERPA_ONNX_LINUX_ARM64_GPU_ONNXRUNTIME_VERSION:STRI
+NG=1.11.0
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:704://True to use pre-installed onnxruntime if available
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:705:SHERPA_ONNX_USE_PRE_INSTALLED_ONNXRUNTIME_IF_AVAILAB
+LE:BOOL=ON
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:751:location_directml:FILEPATH=C:/Users/Mate/Desktop/Pro
+ject/sherpa-onnx/build/_deps/directml-src/bin/x64-win/DirectML.lib
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:754:location_onnxruntime:FILEPATH=C:/Users/Mate/Desktop/
+Project/sherpa-onnx/build/_deps/onnxruntime-src/runtimes/win-x64/native/onnxruntime.lib
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:757:location_onnxruntime_header_dir:PATH=location_onnxru
+ntime_header_dir-NOTFOUND
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\CMakeCache.txt:760:location_onnxruntime_lib:FILEPATH=location_onnxrunti
+me_lib-NOTFOUND
