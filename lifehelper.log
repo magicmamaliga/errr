@@ -1,14 +1,4 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import sherpa_onnx; print(sherpa_onnx.__version__)"
-
-1.13.2
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
->> import importlib.util, glob, os
->> spec = importlib.util.find_spec('sherpa_onnx_core')
->> root = list(spec.submodule_search_locations)[0]
->> dlls = glob.glob(os.path.join(root, '**/*dml*'), recursive=True)
->> print('DirectML DLLs found:', dlls)
->> "
-Traceback (most recent call last):
-  File "<string>", line 4, in <module>
-AttributeError: 'NoneType' object has no attribute 'submodule_search_locations'
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import sherpa_onnx, os, glob; r = os.path.dirname(sherpa_onnx.__file__); print('Root:', r); print('DML:', glob.glob(os.path.join(r, '**/*dml*'), recursive=True) + glob.glob(os.path.join(r, '**/*DirectML*'), recursive=True)); print('All DLLs:', [os.path.basename(f) for f in glob.glob(os.path.join(r, '**/*.dll'), recursive=True)])"
+Root: C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx
+DML: []
+All DLLs: ['onnxruntime.dll', 'onnxruntime_providers_shared.dll', 'sherpa-onnx-c-api.dll', 'sherpa-onnx-cxx-api.dll']
