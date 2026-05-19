@@ -1,77 +1,14 @@
-    Directory: C:\Users\Mate\Desktop\Project\sherpa-onnx
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import sherpa_onnx; print(sherpa_onnx.__version__)"
 
-
-Mode                 LastWriteTime         Length Name
-----                 -------------         ------ ----
-d-----        19/05/2026     23:51                .github
-d-----        19/05/2026     23:51                android
-d-----        19/05/2026     23:58                build
-d-----        19/05/2026     23:52                build-venv
-d-----        19/05/2026     23:51                c-api-examples
-d-----        19/05/2026     23:51                cmake
-d-----        19/05/2026     23:51                cxx-api-examples
-d-----        19/05/2026     23:51                dart-api-examples
-d-----        19/05/2026     23:51                dotnet-examples
-d-----        19/05/2026     23:51                ffmpeg-examples
-d-----        19/05/2026     23:51                flutter
-d-----        19/05/2026     23:51                flutter-examples
-d-----        19/05/2026     23:51                go-api-examples
-d-----        19/05/2026     23:51                harmony-os
-d-----        19/05/2026     23:51                ios-swift
-d-----        19/05/2026     23:51                ios-swiftui
-d-----        19/05/2026     23:51                java-api-examples
-d-----        19/05/2026     23:51                kotlin-api-examples
-d-----        19/05/2026     23:51                lazarus-examples
-d-----        19/05/2026     23:51                mfc-examples
-d-----        19/05/2026     23:51                nodejs-addon-examples
-d-----        19/05/2026     23:51                nodejs-examples
-d-----        19/05/2026     23:51                pascal-api-examples
-d-----        19/05/2026     23:51                python-api-examples
-d-----        19/05/2026     23:51                rust-api-examples
-d-----        19/05/2026     23:51                scripts
-d-----        19/05/2026     23:51                sherpa-onnx
-d-----        19/05/2026     23:51                swift-api-examples
-d-----        19/05/2026     23:51                tauri-examples
-d-----        19/05/2026     23:51                toolchains
-d-----        19/05/2026     23:51                wasm
--a----        19/05/2026     23:51           3245 .clang-format
--a----        19/05/2026     23:51           2561 .clang-tidy
--a----        19/05/2026     23:51            102 .flake8
--a----        19/05/2026     23:51           4660 .gitignore
--a----        19/05/2026     23:51           3963 build-aarch64-linux-gnu.sh
--a----        19/05/2026     23:51           8655 build-android-arm64-v8a.sh
--a----        19/05/2026     23:51           6740 build-android-armv7-eabi.sh
--a----        19/05/2026     23:51           5928 build-android-x86-64.sh
--a----        19/05/2026     23:51           4254 build-android-x86.sh
--a----        19/05/2026     23:51           1902 build-arm-linux-gnueabihf.sh
--a----        19/05/2026     23:51           3862 build-axcl-linux-aarch64.sh
--a----        19/05/2026     23:51           5554 build-axera-linux-aarch64.sh
--a----        19/05/2026     23:51           5871 build-ios-no-tts.sh
--a----        19/05/2026     23:51           8981 build-ios-shared.sh
--a----        19/05/2026     23:51           6042 build-ios.sh
--a----        19/05/2026     23:51           5777 build-ohos-arm64-v8a.sh
--a----        19/05/2026     23:51           4928 build-ohos-armeabi-v7a.sh
--a----        19/05/2026     23:51           5762 build-ohos-x86-64.sh
--a----        19/05/2026     23:51           2230 build-riscv64-linux-gnu-spacemit.sh
--a----        19/05/2026     23:51           2399 build-riscv64-linux-gnu.sh
--a----        19/05/2026     23:51           3436 build-rknn-linux-aarch64.sh
--a----        19/05/2026     23:51           1332 build-swift-macos.sh
--a----        19/05/2026     23:51           1877 build-wasm-simd-asr.sh
--a----        19/05/2026     23:51           1756 build-wasm-simd-kws.sh
--a----        19/05/2026     23:51           1888 build-wasm-simd-nodejs.sh
--a----        19/05/2026     23:51           1923 build-wasm-simd-speaker-diarization.sh
--a----        19/05/2026     23:51           1918 build-wasm-simd-speech-enhancement.sh
--a----        19/05/2026     23:51           1843 build-wasm-simd-tts.sh
--a----        19/05/2026     23:51           2095 build-wasm-simd-vad-asr.sh
--a----        19/05/2026     23:51           1877 build-wasm-simd-vad.sh
--a----        19/05/2026     23:51          59087 CHANGELOG.md
--a----        19/05/2026     23:51          24491 CMakeLists.txt
--a----        19/05/2026     23:51             24 CPPLINT.cfg
--a----        19/05/2026     23:51            336 jitpack.yml
--a----        19/05/2026     23:51          11560 LICENSE
--a----        19/05/2026     23:51            264 MANIFEST.in
--a----        19/05/2026     23:51           3778 new-release.sh
--a----        19/05/2026     23:51            814 pom.xml
--a----        19/05/2026     23:51          49320 README.md
--a----        19/05/2026     23:51           1328 release.sh
--a----        19/05/2026     23:51           3397 setup.py
+1.13.2
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
+>> import importlib.util, glob, os
+>> spec = importlib.util.find_spec('sherpa_onnx_core')
+>> root = list(spec.submodule_search_locations)[0]
+>> dlls = glob.glob(os.path.join(root, '**/*dml*'), recursive=True)
+>> print('DirectML DLLs found:', dlls)
+>> "
+Traceback (most recent call last):
+  File "<string>", line 4, in <module>
+AttributeError: 'NoneType' object has no attribute 'submodule_search_locations'
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
