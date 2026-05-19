@@ -1,35 +1,101 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\*" -Pattern "SHERPA_ONNX_ENABLE_DIRECTML" -Context 2
-Select-String : The file C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\__pycache__ cannot be read: Access to the
-path 'C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\__pycache__' is denied.
-At line:1 char:1
-+ Select-String -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\ ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : InvalidArgument: (:) [Select-String], ArgumentException
-    + FullyQualifiedErrorId : ProcessingFile,Microsoft.PowerShell.Commands.SelectStringCommand
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt" -Pattern "DIRECTML" -Context 2
+
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:351:
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:352:
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:353:if(TARGET directml)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:354:    target_link_libraries(sherpa-onnx-core directml)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:355:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\CMakeLists.txt:356:
 
 
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:16:endif()
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:17:
-> C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:18:if(NOT
-SHERPA_ONNX_ENABLE_DIRECTML)
-> C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:19:  message(FATAL_ERROR "This
-file is for DirectML. Given SHERPA_ONNX_ENABLE_DIRECTML: ${SHERPA_ONNX_ENABLE_DIRECTML}")
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:20:endif()
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake:21:
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:95:    else()
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:96:      # for 64-bit windows (x64)
-> C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:97:      if(SHERPA_ONNX_ENABLE_DIRECTML)
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:98:        message(STATUS "Use DirectML")
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:99:        include(onnxruntime-win-x64-directml)
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:149:      else()
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:150:        set(location_onnxruntime_lib
-$ENV{SHERPA_ONNXRUNTIME_LIB_DIR}/onnxruntime.lib)
-> C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:151:        if(SHERPA_ONNX_ENABLE_DIRECTML)
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:152:          include(onnxruntime-win-x64-directml)
-  C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime.cmake:153:        endif()
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt" -Pattern "add_definitions|target_compile_def" -Context 1 | Select-Object -First 30
+
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:277:  message(STATUS "TTS is enabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:278:  add_definitions(-DSHERPA_ONNX_ENABLE_TTS=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:279:else()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:280:  message(STATUS "TTS is disabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:281:  add_definitions(-DSHERPA_ONNX_ENABLE_TTS=0)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:282:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:285:  message(STATUS "speaker diarization is enabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:286:  add_definitions(-DSHERPA_ONNX_ENABLE_SPEAKER_DIARIZATION=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:287:else()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:288:  message(STATUS "speaker diarization is disabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:289:  add_definitions(-DSHERPA_ONNX_ENABLE_SPEAKER_DIARIZATION=0)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:290:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:293:  message(STATUS "DirectML is enabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:294:  add_definitions(-DSHERPA_ONNX_ENABLE_DIRECTML=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:295:else()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:296:  message(STATUS "DirectML is disabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:297:  add_definitions(-DSHERPA_ONNX_ENABLE_DIRECTML=0)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:298:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:329:  endif()
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:330:  add_definitions(-DSHERPA_ONNX_ENABLE_WASM_KWS=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:331:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:333:if(SHERPA_ONNX_ENABLE_WASM)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:334:  add_definitions(-DSHERPA_ONNX_ENABLE_WASM=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:335:  # Build every wasm artifact with pthread/atomics support so the .a files
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:346:  endif()
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:347:  add_definitions(-DSHERPA_ONNX_ENABLE_WASM_KWS=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:348:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:376:if(SHERPA_ONNX_ENABLE_RKNN)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:377:  add_definitions(-DSHERPA_ONNX_ENABLE_RKNN=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:378:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:380:if(SHERPA_ONNX_ENABLE_AXERA)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:381:  add_definitions(-DSHERPA_ONNX_ENABLE_AXERA=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:382:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:384:if(SHERPA_ONNX_ENABLE_AXCL)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:385:  add_definitions(-DSHERPA_ONNX_ENABLE_AXCL=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:386:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:388:if(SHERPA_ONNX_ENABLE_QNN)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:389:  add_definitions(-DSHERPA_ONNX_ENABLE_QNN=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:390:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:392:if(SHERPA_ONNX_ENABLE_SPACEMIT)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:393:  add_definitions(-DSHERPA_ONNX_ENABLE_SPACEMIT=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:394:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:426:
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:427:  add_definitions(-DSHERPA_ONNX_ENABLE_ASCEND_NPU=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:428:  message(STATUS "Build with Ascend NPU")
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:472:    message(STATUS "With Alsa")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:473:    add_definitions(-DSHERPA_ONNX_ENABLE_ALSA=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:474:  else()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:489:if(WIN32)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:490:  add_definitions(-DNOMINMAX) # Otherwise, std::max() and std::min() won't work
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:491:endif()
 
 
 PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Check if a config.h was generated with the define
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx" -Recurse -Filter "config.h" | ForEach-Object { Select-String -Path $_.FullName -Pattern "DIRECTML" }
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String -Path "C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt" -Pattern "SHERPA_ONNX_ENABLE_DIRECTML" -Context 3 | Select-Object -First 40
+
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:54:option(SHERPA_ONNX_ENABLE_C_API "Whether to build C API" ON)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:55:option(SHERPA_ONNX_ENABLE_WEBSOCKET "Whether to build webscoket server/client" ON)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:56:option(SHERPA_ONNX_ENABLE_GPU "Enable ONNX Runtime GPU support" OFF)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:57:option(SHERPA_ONNX_ENABLE_DIRECTML "Enable ONNX Runtime DirectML support" OFF)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:58:option(SHERPA_ONNX_LINK_D3D "Whether static ONNX runtime lib with DML" OFF)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:59:
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:60:option(SHERPA_ONNX_ENABLE_WASM "Whether to enable WASM" OFF)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:182:  endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:183:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:184:
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:185:if(SHERPA_ONNX_ENABLE_DIRECTML)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:186:  message(WARNING "\
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:187:Compiling with DirectML enabled. Please make sure Windows 10 SDK
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:188:is installed on your system. Otherwise, you will get errors at runtime.
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:190:  https://onnxruntime.ai/docs/execution-providers/DirectML-ExecutionProvider.html#requirements
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:191:to install Windows 10 SDK if you have not installed it.")
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:192:  if(NOT BUILD_SHARED_LIBS)
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:193:    message(STATUS "Set BUILD_SHARED_LIBS to ON since SHERPA_ONNX_ENABLE_DIRECTML is ON")
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:194:    set(BUILD_SHARED_LIBS ON CACHE BOOL "" FORCE)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:195:  endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:196:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:289:  add_definitions(-DSHERPA_ONNX_ENABLE_SPEAKER_DIARIZATION=0)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:290:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:291:
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:292:if(SHERPA_ONNX_ENABLE_DIRECTML)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:293:  message(STATUS "DirectML is enabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:294:  add_definitions(-DSHERPA_ONNX_ENABLE_DIRECTML=1)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:295:else()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:296:  message(STATUS "DirectML is disabled")
+> C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:297:  add_definitions(-DSHERPA_ONNX_ENABLE_DIRECTML=0)
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:298:endif()
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:299:
+  C:\Users\Mate\Desktop\Project\sherpa-onnx\CMakeLists.txt:300:if(SHERPA_ONNX_ENABLE_WASM_SPEAKER_DIARIZATION)
