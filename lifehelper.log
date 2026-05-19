@@ -1,52 +1,77 @@
-2026-05-19 09:23:39 [INFO] launcher: Current app version: 1.0.33
-2026-05-19 09:23:39 [INFO] launcher: App is up to date.
-2026-05-19 09:23:40 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-19 09:23:40 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-19 09:23:41 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-19 09:23:41 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [18364]
-INFO:     Waiting for application startup.
-2026-05-19 09:23:41 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-19 09:23:41 [INFO] launcher: [sync_worker] started
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-INFO:     127.0.0.1:61772 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:61772 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:61772 - "GET /session/status HTTP/1.1" 401 Unauthorized
-2026-05-19 09:23:41 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-05-19 09:23:41 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-05-19 09:23:41 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-INFO:     127.0.0.1:61772 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-19 09:23:42 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=512 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-19 09:23:42 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx backend=ort provider=directml
-2026-05-19 09:23:42 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-19 09:23:42 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-05-19 09:23:42 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-19 09:23:42 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=ort, requested_provider=directml, effective_provider=directml
-2026-05-19 09:23:42 [INFO] launcher: Diarization models pre-warmed
-2026-05-19 09:23:43 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 "
-2026-05-19 09:23:43 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-19 09:23:43 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:61772 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-19 09:23:45 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Starting re-diarization for recording 6a0c1a162ab71533a05892b5
-2026-05-19 09:23:45 [INFO] launcher: Re-diarization thread spawned for recording 6a0c1a162ab71533a05892b5
-INFO:     127.0.0.1:61772 - "POST /diarize/6a0c1a162ab71533a05892b5 HTTP/1.1" 200 OK
-2026-05-19 09:23:45 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a0c1a162ab71533a05892b5\session.m4a
-2026-05-19 09:23:47 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-19 09:23:47 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Audio ready: 266.0s mono
-2026-05-19 09:23:48 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Background diarization started for recording 6a0c1a162ab71533a05892b5
-2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] Diarization path decision: chunks_with_words=no preferred_provider=directml active_provider=directml embedding_backend=ort
-2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] No word-timestamped chunks available, using legacy diarization
-2026-05-19 09:23:50 [INFO] launcher: run_full_diarization: active_provider=directml embedding_backend=ort on_gpu=True has_loopback=True has_mic=False parallel_channels=False
-2026-05-19 09:23:50 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
-2026-05-19 09:23:50 [ERROR] launcher: [L] Diarization failed: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 110, in diarize_audio
-    result = diarizer.process(audio_np).sort_by_start_time()
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\diarizer.py", line 192, in process
-    if not windows:
-           ^^^^^^^
-ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
-2026-05-19 09:23:50 [INFO] launcher: Full diarization complete: 0 total segments, 0 speakers with embeddings
-2026-05-19 09:23:50 [INFO] launcher: [rediarize-6a0c1a162ab71533a05892b5] No diarization segments produced, skipping upload
+    Directory: C:\Users\Mate\Desktop\Project\sherpa-onnx
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        19/05/2026     23:51                .github
+d-----        19/05/2026     23:51                android
+d-----        19/05/2026     23:58                build
+d-----        19/05/2026     23:52                build-venv
+d-----        19/05/2026     23:51                c-api-examples
+d-----        19/05/2026     23:51                cmake
+d-----        19/05/2026     23:51                cxx-api-examples
+d-----        19/05/2026     23:51                dart-api-examples
+d-----        19/05/2026     23:51                dotnet-examples
+d-----        19/05/2026     23:51                ffmpeg-examples
+d-----        19/05/2026     23:51                flutter
+d-----        19/05/2026     23:51                flutter-examples
+d-----        19/05/2026     23:51                go-api-examples
+d-----        19/05/2026     23:51                harmony-os
+d-----        19/05/2026     23:51                ios-swift
+d-----        19/05/2026     23:51                ios-swiftui
+d-----        19/05/2026     23:51                java-api-examples
+d-----        19/05/2026     23:51                kotlin-api-examples
+d-----        19/05/2026     23:51                lazarus-examples
+d-----        19/05/2026     23:51                mfc-examples
+d-----        19/05/2026     23:51                nodejs-addon-examples
+d-----        19/05/2026     23:51                nodejs-examples
+d-----        19/05/2026     23:51                pascal-api-examples
+d-----        19/05/2026     23:51                python-api-examples
+d-----        19/05/2026     23:51                rust-api-examples
+d-----        19/05/2026     23:51                scripts
+d-----        19/05/2026     23:51                sherpa-onnx
+d-----        19/05/2026     23:51                swift-api-examples
+d-----        19/05/2026     23:51                tauri-examples
+d-----        19/05/2026     23:51                toolchains
+d-----        19/05/2026     23:51                wasm
+-a----        19/05/2026     23:51           3245 .clang-format
+-a----        19/05/2026     23:51           2561 .clang-tidy
+-a----        19/05/2026     23:51            102 .flake8
+-a----        19/05/2026     23:51           4660 .gitignore
+-a----        19/05/2026     23:51           3963 build-aarch64-linux-gnu.sh
+-a----        19/05/2026     23:51           8655 build-android-arm64-v8a.sh
+-a----        19/05/2026     23:51           6740 build-android-armv7-eabi.sh
+-a----        19/05/2026     23:51           5928 build-android-x86-64.sh
+-a----        19/05/2026     23:51           4254 build-android-x86.sh
+-a----        19/05/2026     23:51           1902 build-arm-linux-gnueabihf.sh
+-a----        19/05/2026     23:51           3862 build-axcl-linux-aarch64.sh
+-a----        19/05/2026     23:51           5554 build-axera-linux-aarch64.sh
+-a----        19/05/2026     23:51           5871 build-ios-no-tts.sh
+-a----        19/05/2026     23:51           8981 build-ios-shared.sh
+-a----        19/05/2026     23:51           6042 build-ios.sh
+-a----        19/05/2026     23:51           5777 build-ohos-arm64-v8a.sh
+-a----        19/05/2026     23:51           4928 build-ohos-armeabi-v7a.sh
+-a----        19/05/2026     23:51           5762 build-ohos-x86-64.sh
+-a----        19/05/2026     23:51           2230 build-riscv64-linux-gnu-spacemit.sh
+-a----        19/05/2026     23:51           2399 build-riscv64-linux-gnu.sh
+-a----        19/05/2026     23:51           3436 build-rknn-linux-aarch64.sh
+-a----        19/05/2026     23:51           1332 build-swift-macos.sh
+-a----        19/05/2026     23:51           1877 build-wasm-simd-asr.sh
+-a----        19/05/2026     23:51           1756 build-wasm-simd-kws.sh
+-a----        19/05/2026     23:51           1888 build-wasm-simd-nodejs.sh
+-a----        19/05/2026     23:51           1923 build-wasm-simd-speaker-diarization.sh
+-a----        19/05/2026     23:51           1918 build-wasm-simd-speech-enhancement.sh
+-a----        19/05/2026     23:51           1843 build-wasm-simd-tts.sh
+-a----        19/05/2026     23:51           2095 build-wasm-simd-vad-asr.sh
+-a----        19/05/2026     23:51           1877 build-wasm-simd-vad.sh
+-a----        19/05/2026     23:51          59087 CHANGELOG.md
+-a----        19/05/2026     23:51          24491 CMakeLists.txt
+-a----        19/05/2026     23:51             24 CPPLINT.cfg
+-a----        19/05/2026     23:51            336 jitpack.yml
+-a----        19/05/2026     23:51          11560 LICENSE
+-a----        19/05/2026     23:51            264 MANIFEST.in
+-a----        19/05/2026     23:51           3778 new-release.sh
+-a----        19/05/2026     23:51            814 pom.xml
+-a----        19/05/2026     23:51          49320 README.md
+-a----        19/05/2026     23:51           1328 release.sh
+-a----        19/05/2026     23:51           3397 setup.py
