@@ -1,11 +1,13 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Find the .pyd in the installed package
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\*.pyd" | Select-Object Name, Length
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Find the .pyd in your cmake build output
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\Desktop\Project\sherpa-onnx\build" -Recurse -Filter "*.pyd" | Select-Object FullName, Length
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx" -Recurse -Include "*.pyd","*.so" | Select-Object FullName, Length
 
-FullName                                                                                                                         Length
---------                                                                                                                         ------
-C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd                                    3725824
-C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib.win-amd64-cpython-312\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd      5575168
-C:\Users\Mate\Desktop\Project\sherpa-onnx\build\temp.win-amd64-cpython-312\Release\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd 5575168
+FullName                                                                                                                  Length
+--------                                                                                                                  ------
+C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd 5575168
+
+
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Also check how it loads the native code
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import sherpa_onnx._sherpa_onnx; print(sherpa_onnx._sherpa_onnx.__file__)"
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ModuleNotFoundError: No module named 'sherpa_onnx._sherpa_onnx'
