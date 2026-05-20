@@ -1,28 +1,43 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> $target = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib"
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Replace the .pyd with the DirectML-enabled one
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd" $target -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Copy the DLLs it links against into the same folder
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\*.dll" $target -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Verify
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem $target | Select-Object Name, Length
-
-Name                               Length
-----                               ------
-DirectML.dll                     18545584
-onnxruntime.dll                  11324824
-onnxruntime.lib                      2124
-onnxruntime_providers_shared.dll   104960
-sherpa-onnx-c-api.dll             2774016
-sherpa-onnx-c-api.lib               74006
-sherpa-onnx-cxx-api.dll            107008
-sherpa-onnx-cxx-api.lib            163472
-_sherpa_onnx.cp312-win_amd64.pyd  3725824
-
-
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+  offline-tts-supertonic-model-config.cc
+  offline-tts-vits-model-config.cc
+  offline-tts-zipvoice-model-config.cc
+  offline-tts.cc
+  sentence-piece-tokenizer.cc
+  fast-clustering.cc
+  offline-speaker-diarization-result.cc
+  offline-speaker-diarization.cc
+LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\python\csrc\_sherpa_onnx.vcxproj]
+     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/_sherpa_onnx.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/_sherpa_onnx.exp
+  Generating code
+  Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
+  Finished generating code
+  _sherpa_onnx.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd
+  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/sherpa-onnx/c-api/CMakeLists.txt
+  c-api.cc
+LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\c-api\sherpa-onnx-c-api.vcxproj]
+     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-c-api.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-c-api.exp
+  Generating code
+  Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
+  Finished generating code
+  sherpa-onnx-c-api.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-c-api.dll
+  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/sherpa-onnx/c-api/CMakeLists.txt
+  cxx-api.cc
+LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\c-api\sherpa-onnx-cxx-api.vcxproj]
+     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-cxx-api.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-cxx-api.exp
+  Generating code
+  0 of 1362 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  sherpa-onnx-cxx-api.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-cxx-api.dll
+  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/CMakeLists.txt
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> # Copy .pyd + DLLs to the installed package
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> $target = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib"
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd" $target -Force
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\*.dll" $target -Force
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build>
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> # Test
+PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> cd C:\Users\Mate\Desktop\Project\lifehelper\local-server
 PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
 >> import sherpa_onnx
 >> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
@@ -42,7 +57,5 @@ PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
 >> print('Success - diarizer created with provider=directml')
 >> "
 Traceback (most recent call last):
-  File "<string>", line 2, in <module>
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\__init__.py", line 1, in <module>
-    from sherpa_onnx.lib._sherpa_onnx import (
-ImportError: cannot import name 'GenerationConfig' from 'sherpa_onnx.lib._sherpa_onnx' (C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd)
+  File "<string>", line 16, in <module>
+RuntimeError: Load model from diarize/models/segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
