@@ -1,61 +1,13 @@
-  offline-tts-supertonic-model-config.cc
-  offline-tts-vits-model-config.cc
-  offline-tts-zipvoice-model-config.cc
-  offline-tts.cc
-  sentence-piece-tokenizer.cc
-  fast-clustering.cc
-  offline-speaker-diarization-result.cc
-  offline-speaker-diarization.cc
-LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\python\csrc\_sherpa_onnx.vcxproj]
-     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/_sherpa_onnx.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/_sherpa_onnx.exp
-  Generating code
-  Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
-  Finished generating code
-  _sherpa_onnx.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd
-  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/sherpa-onnx/c-api/CMakeLists.txt
-  c-api.cc
-LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\c-api\sherpa-onnx-c-api.vcxproj]
-     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-c-api.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-c-api.exp
-  Generating code
-  Not all modules are compiled with -Gy (function comdat), build without incremental LTCG.
-  Finished generating code
-  sherpa-onnx-c-api.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-c-api.dll
-  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/sherpa-onnx/c-api/CMakeLists.txt
-  cxx-api.cc
-LINK : warning LNK4044: unrecognized option '/Wl,-rpath,$ORIGIN'; ignored [C:\Users\Mate\Desktop\Project\sherpa-onnx\build\sherpa-onnx\c-api\sherpa-onnx-cxx-api.vcxproj]
-     Creating library C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-cxx-api.lib and object C:/Users/Mate/Desktop/Project/sherpa-onnx/build/lib/Release/sherpa-onnx-cxx-api.exp
-  Generating code
-  0 of 1362 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  sherpa-onnx-cxx-api.vcxproj -> C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-cxx-api.dll
-  Building Custom Rule C:/Users/Mate/Desktop/Project/sherpa-onnx/CMakeLists.txt
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> # Copy .pyd + DLLs to the installed package
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> $target = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib"
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd" $target -Force
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\*.dll" $target -Force
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build>
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> # Test
-PS C:\Users\Mate\Desktop\Project\sherpa-onnx\build> cd C:\Users\Mate\Desktop\Project\lifehelper\local-server
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
->> import sherpa_onnx
->> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
->>     segmentation=sherpa_onnx.OfflineSpeakerSegmentationModelConfig(
->>         pyannote=sherpa_onnx.OfflineSpeakerSegmentationPyannoteModelConfig(model='diarize/models/segmentation.onnx'),
->>         num_threads=1,
->>         provider='directml'
->>     ),
->>     embedding=sherpa_onnx.SpeakerEmbeddingExtractorConfig(
->>         model='diarize/models/embedding.onnx',
->>         num_threads=1,
->>         provider='directml'
->>     ),
->>     clustering=sherpa_onnx.FastClusteringConfig(num_clusters=-1, threshold=0.5)
->> )
->> d = sherpa_onnx.OfflineSpeakerDiarization(cfg)
->> print('Success - diarizer created with provider=directml')
->> "
-Traceback (most recent call last):
-  File "<string>", line 16, in <module>
-RuntimeError: Load model from diarize/models/segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\onnxruntime\capi\*.dll" | Select-Object Name, Length
+
+Name                               Length
+----                               ------
+DirectML.dll                     18527776
+onnxruntime.dll                  21111832
+onnxruntime_providers_shared.dll    21576
+
+
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Check its version
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import onnxruntime; print(onnxruntime.__version__)"
+1.24.4
