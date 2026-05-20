@@ -1,26 +1,21 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # What DLLs did the cmake build actually produce?
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\*.dll" | Select-Object Name, Length
-
-Name                      Length
-----                      ------
-DirectML.dll            18545584
-onnxruntime.dll         11324824
-sherpa-onnx-c-api.dll    2774016
-sherpa-onnx-cxx-api.dll   107008
-
-
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # What's installed?
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\*.dll" | Select-Object Name, Length
-
-Name           Length
-----           ------
-DirectML.dll 18545584
-
-
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-c-api.dll" "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\" -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\sherpa-onnx-cxx-api.dll" "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\" -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\onnxruntime.dll" "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\" -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\DirectML.dll" "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\" -Force
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
+>> import sherpa_onnx
+>> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
+>>     segmentation=sherpa_onnx.OfflineSpeakerSegmentationModelConfig(
+>>         pyannote=sherpa_onnx.OfflineSpeakerSegmentationPyannoteModelConfig(model='diarize/models/segmentation.onnx'),
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     embedding=sherpa_onnx.SpeakerEmbeddingExtractorConfig(
+>>         model='diarize/models/embedding.onnx',
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     clustering=sherpa_onnx.FastClusteringConfig(num_clusters=-1, threshold=0.5)
+>> )
+>> d = sherpa_onnx.OfflineSpeakerDiarization(cfg)
+>> print('Success - diarizer created with provider=directml')
+>> "
+C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:341 DirectML is for Windows only. Fallback to cpu!
+C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:341 DirectML is for Windows only. Fallback to cpu!
+Success - diarizer created with provider=directml
