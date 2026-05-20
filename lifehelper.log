@@ -1,13 +1,48 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx" -Recurse -Include "*.pyd","*.so" | Select-Object FullName, Length
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> $target = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib"
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Replace the .pyd with the DirectML-enabled one
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd" $target -Force
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Copy the DLLs it links against into the same folder
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "C:\Users\Mate\Desktop\Project\sherpa-onnx\build\bin\Release\*.dll" $target -Force
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Verify
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem $target | Select-Object Name, Length
 
-FullName                                                                                                                  Length
---------                                                                                                                  ------
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd 5575168
+Name                               Length
+----                               ------
+DirectML.dll                     18545584
+onnxruntime.dll                  11324824
+onnxruntime.lib                      2124
+onnxruntime_providers_shared.dll   104960
+sherpa-onnx-c-api.dll             2774016
+sherpa-onnx-c-api.lib               74006
+sherpa-onnx-cxx-api.dll            107008
+sherpa-onnx-cxx-api.lib            163472
+_sherpa_onnx.cp312-win_amd64.pyd  3725824
 
 
 PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Also check how it loads the native code
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import sherpa_onnx._sherpa_onnx; print(sherpa_onnx._sherpa_onnx.__file__)"
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
+>> import sherpa_onnx
+>> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
+>>     segmentation=sherpa_onnx.OfflineSpeakerSegmentationModelConfig(
+>>         pyannote=sherpa_onnx.OfflineSpeakerSegmentationPyannoteModelConfig(model='diarize/models/segmentation.onnx'),
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     embedding=sherpa_onnx.SpeakerEmbeddingExtractorConfig(
+>>         model='diarize/models/embedding.onnx',
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     clustering=sherpa_onnx.FastClusteringConfig(num_clusters=-1, threshold=0.5)
+>> )
+>> d = sherpa_onnx.OfflineSpeakerDiarization(cfg)
+>> print('Success - diarizer created with provider=directml')
+>> "
 Traceback (most recent call last):
-  File "<string>", line 1, in <module>
-ModuleNotFoundError: No module named 'sherpa_onnx._sherpa_onnx'
+  File "<string>", line 2, in <module>
+  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\__init__.py", line 1, in <module>
+    from sherpa_onnx.lib._sherpa_onnx import (
+ImportError: cannot import name 'GenerationConfig' from 'sherpa_onnx.lib._sherpa_onnx' (C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd)
