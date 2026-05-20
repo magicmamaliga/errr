@@ -1,13 +1,31 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\onnxruntime\capi\*.dll" | Select-Object Name, Length
-
-Name                               Length
-----                               ------
-DirectML.dll                     18527776
-onnxruntime.dll                  21111832
-onnxruntime_providers_shared.dll    21576
-
-
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> $target = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\lib"
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> $ortSrc = "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\onnxruntime\capi"
 PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Check its version
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "import onnxruntime; print(onnxruntime.__version__)"
-1.24.4
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "$ortSrc\onnxruntime.dll" $target -Force
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "$ortSrc\DirectML.dll" $target -Force
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Copy-Item "$ortSrc\onnxruntime_providers_shared.dll" $target -Force
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Test
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
+>> import sherpa_onnx
+>> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
+>>     segmentation=sherpa_onnx.OfflineSpeakerSegmentationModelConfig(
+>>         pyannote=sherpa_onnx.OfflineSpeakerSegmentationPyannoteModelConfig(model='diarize/models/segmentation.onnx'),
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     embedding=sherpa_onnx.SpeakerEmbeddingExtractorConfig(
+>>         model='diarize/models/embedding.onnx',
+>>         num_threads=1,
+>>         provider='directml'
+>>     ),
+>>     clustering=sherpa_onnx.FastClusteringConfig(num_clusters=-1, threshold=0.5)
+>> )
+>> d = sherpa_onnx.OfflineSpeakerDiarization(cfg)
+>> print('Success - diarizer created with provider=directml')
+>> "
+Traceback (most recent call last):
+  File "<string>", line 2, in <module>
+  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\__init__.py", line 1, in <module>
+    from sherpa_onnx.lib._sherpa_onnx import (
+ImportError: DLL load failed while importing _sherpa_onnx: The operating system cannot run %1.
