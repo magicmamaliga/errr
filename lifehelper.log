@@ -1,21 +1,11 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> python -c "
->> import sherpa_onnx
->> cfg = sherpa_onnx.OfflineSpeakerDiarizationConfig(
->>     segmentation=sherpa_onnx.OfflineSpeakerSegmentationModelConfig(
->>         pyannote=sherpa_onnx.OfflineSpeakerSegmentationPyannoteModelConfig(model='diarize/models/segmentation.onnx'),
->>         num_threads=1,
->>         provider='directml'
->>     ),
->>     embedding=sherpa_onnx.SpeakerEmbeddingExtractorConfig(
->>         model='diarize/models/embedding.onnx',
->>         num_threads=1,
->>         provider='directml'
->>     ),
->>     clustering=sherpa_onnx.FastClusteringConfig(num_clusters=-1, threshold=0.5)
->> )
->> d = sherpa_onnx.OfflineSpeakerDiarization(cfg)
->> print('Success - diarizer created with provider=directml')
->> "
-C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:341 DirectML is for Windows only. Fallback to cpu!
-C:\Users\Mate\Desktop\Project\sherpa-onnx\sherpa-onnx\csrc\session.cc:GetSessionOptionsImpl:341 DirectML is for Windows only. Fallback to cpu!
-Success - diarizer created with provider=directml
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Find the .pyd in the installed package
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\sherpa_onnx\*.pyd" | Select-Object Name, Length
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server>
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> # Find the .pyd in your cmake build output
+PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-ChildItem "C:\Users\Mate\Desktop\Project\sherpa-onnx\build" -Recurse -Filter "*.pyd" | Select-Object FullName, Length
+
+FullName                                                                                                                         Length
+--------                                                                                                                         ------
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd                                    3725824
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\lib.win-amd64-cpython-312\sherpa_onnx\lib\_sherpa_onnx.cp312-win_amd64.pyd      5575168
+C:\Users\Mate\Desktop\Project\sherpa-onnx\build\temp.win-amd64-cpython-312\Release\lib\Release\_sherpa_onnx.cp312-win_amd64.pyd 5575168
