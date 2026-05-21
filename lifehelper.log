@@ -1,168 +1,36 @@
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Get-Content "C:\Users\Mate\Desktop\Project\sherpa-onnx\cmake\onnxruntime-win-x64-directml.cmake"
-# Copyright (c)  2022-2023  Xiaomi Corporation
-message(STATUS "CMAKE_SYSTEM_NAME: ${CMAKE_SYSTEM_NAME}")
-message(STATUS "CMAKE_SYSTEM_PROCESSOR: ${CMAKE_SYSTEM_PROCESSOR}")
-message(STATUS "CMAKE_VS_PLATFORM_NAME: ${CMAKE_VS_PLATFORM_NAME}")
-
-if(NOT CMAKE_SYSTEM_NAME STREQUAL Windows)
-  message(FATAL_ERROR "This file is for Windows only. Given: ${CMAKE_SYSTEM_NAME}")
-endif()
-
-if(NOT (CMAKE_VS_PLATFORM_NAME STREQUAL X64 OR CMAKE_VS_PLATFORM_NAME STREQUAL x64))
-  message(FATAL_ERROR "This file is for Windows x64 only. Given: ${CMAKE_VS_PLATFORM_NAME}")
-endif()
-
-if(NOT BUILD_SHARED_LIBS)
-  message(FATAL_ERROR "This file is for building shared libraries. BUILD_SHARED_LIBS: ${BUILD_SHARED_LIBS}")
-endif()
-
-if(NOT SHERPA_ONNX_ENABLE_DIRECTML)
-  message(FATAL_ERROR "This file is for DirectML. Given SHERPA_ONNX_ENABLE_DIRECTML: ${SHERPA_ONNX_ENABLE_DIRECTML}")
-endif()
-
-if(location_onnxruntime_header_dir AND location_onnxruntime_lib)
-    message("Use preinstall onnxruntime with directml: ${location_onnxruntime_lib}")
-else()
-
-    set(onnxruntime_URL  "https://globalcdn.nuget.org/packages/microsoft.ml.onnxruntime.directml.1.14.1.nupkg")
-    set(onnxruntime_URL2 "https://hf-mirror.com/csukuangfj/sherpa-onnx-cmake-deps/resolve/main/microsoft.ml.onnxruntime.directml.1.14.1.nupkg")
-    set(onnxruntime_HASH "SHA256=c8ae7623385b19cd5de968d0df5383e13b97d1b3a6771c9177eac15b56013a5a")
-
-    # If you don't have access to the Internet,
-    # please download onnxruntime to one of the following locations.
-    # You can add more if you want.
-    set(possible_file_locations
-        $ENV{HOME}/Downloads/microsoft.ml.onnxruntime.directml.1.14.1.nupkg
-        ${PROJECT_SOURCE_DIR}/microsoft.ml.onnxruntime.directml.1.14.1.nupkg
-        ${PROJECT_BINARY_DIR}/microsoft.ml.onnxruntime.directml.1.14.1.nupkg
-        /tmp/microsoft.ml.onnxruntime.directml.1.14.1.nupkg
-    )
-
-    foreach(f IN LISTS possible_file_locations)
-      if(EXISTS ${f})
-        set(onnxruntime_URL  "${f}")
-        file(TO_CMAKE_PATH "${onnxruntime_URL}" onnxruntime_URL)
-        message(STATUS "Found local downloaded onnxruntime: ${onnxruntime_URL}")
-        set(onnxruntime_URL2)
-        break()
-      endif()
-    endforeach()
-
-    FetchContent_Declare(onnxruntime
-      URL
-        ${onnxruntime_URL}
-        ${onnxruntime_URL2}
-      URL_HASH          ${onnxruntime_HASH}
-    )
-
-    FetchContent_GetProperties(onnxruntime)
-    if(NOT onnxruntime_POPULATED)
-      message(STATUS "Downloading onnxruntime from ${onnxruntime_URL}")
-      FetchContent_Populate(onnxruntime)
-    endif()
-    message(STATUS "onnxruntime is downloaded to ${onnxruntime_SOURCE_DIR}")
-
-    find_library(location_onnxruntime onnxruntime
-      PATHS
-      "${onnxruntime_SOURCE_DIR}/runtimes/win-x64/native"
-      NO_CMAKE_SYSTEM_PATH
-    )
-
-    message(STATUS "location_onnxruntime: ${location_onnxruntime}")
-
-    add_library(onnxruntime SHARED IMPORTED)
-
-    set_target_properties(onnxruntime PROPERTIES
-      IMPORTED_LOCATION ${location_onnxruntime}
-      INTERFACE_INCLUDE_DIRECTORIES "${onnxruntime_SOURCE_DIR}/build/native/include"
-    )
-
-    set_property(TARGET onnxruntime
-      PROPERTY
-        IMPORTED_IMPLIB "${onnxruntime_SOURCE_DIR}/runtimes/win-x64/native/onnxruntime.lib"
-    )
-
-    file(COPY ${onnxruntime_SOURCE_DIR}/runtimes/win-x64/native/onnxruntime.dll
-      DESTINATION
-        ${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}
-    )
-
-    file(GLOB onnxruntime_lib_files "${onnxruntime_SOURCE_DIR}/runtimes/win-x64/native/onnxruntime.*")
-
-    message(STATUS "onnxruntime lib files: ${onnxruntime_lib_files}")
-
-    if(SHERPA_ONNX_ENABLE_PYTHON)
-      install(FILES ${onnxruntime_lib_files} DESTINATION ..)
-    else()
-      install(FILES ${onnxruntime_lib_files} DESTINATION lib)
-    endif()
-
-    install(FILES ${onnxruntime_lib_files} DESTINATION bin)
-
-endif()
-
-# Setup DirectML
-
-set(directml_URL "https://www.nuget.org/api/v2/package/Microsoft.AI.DirectML/1.15.0")
-set(directml_HASH "SHA256=10d175f8e97447712b3680e3ac020bbb8eafdf651332b48f09ffee2eec801c23")
-
-set(possible_directml_file_locations
-    $ENV{HOME}/Downloads/Microsoft.AI.DirectML.1.15.0.nupkg
-    ${PROJECT_SOURCE_DIR}/Microsoft.AI.DirectML.1.15.0.nupkg
-    ${PROJECT_BINARY_DIR}/Microsoft.AI.DirectML.1.15.0.nupkg
-    /tmp/Microsoft.AI.DirectML.1.15.0.nupkg
-)
-
-foreach(f IN LISTS possible_directml_file_locations)
-  if(EXISTS ${f})
-    set(directml_URL  "${f}")
-    file(TO_CMAKE_PATH "${directml_URL}" directml_URL)
-    message(STATUS "Found local downloaded DirectML: ${directml_URL}")
-    break()
-  endif()
-endforeach()
-
-FetchContent_Declare(directml
-  URL
-    ${directml_URL}
-  URL_HASH ${directml_HASH}
-)
-
-FetchContent_GetProperties(directml)
-if(NOT directml_POPULATED)
-  message(STATUS "Downloading DirectML from ${directml_URL}")
-  FetchContent_Populate(directml)
-endif()
-message(STATUS "DirectML is downloaded to ${directml_SOURCE_DIR}")
-
-find_library(location_directml DirectML
-  PATHS
-  "${directml_SOURCE_DIR}/bin/x64-win"
-  NO_CMAKE_SYSTEM_PATH
-)
-
-message(STATUS "location_directml: ${location_directml}")
-
-add_library(directml SHARED IMPORTED)
-
-set_target_properties(directml PROPERTIES
-  IMPORTED_LOCATION ${location_directml}
-  INTERFACE_INCLUDE_DIRECTORIES "${directml_SOURCE_DIR}/bin/x64-win"
-)
-
-set_property(TARGET directml
-  PROPERTY
-    IMPORTED_IMPLIB "${directml_SOURCE_DIR}/bin/x64-win/DirectML.lib"
-)
-
-file(COPY ${directml_SOURCE_DIR}/bin/x64-win/DirectML.dll
-  DESTINATION
-    ${CMAKE_BINARY_DIR}/bin/${CMAKE_BUILD_TYPE}
-)
-
-file(GLOB directml_lib_files "${directml_SOURCE_DIR}/bin/x64-win/DirectML.*")
-
-message(STATUS "DirectML lib files: ${directml_lib_files}")
-
-install(FILES ${directml_lib_files} DESTINATION lib)
-install(FILES ${directml_lib_files} DESTINATION bin)
+2026-05-21 08:46:23 [INFO] launcher: Starting new session with group: Default group, language: en
+2026-05-21 08:46:25 [INFO] launcher: Saving transcript and audio on shutdown...
+2026-05-21 08:46:25 [INFO] launcher: Found Loopback Device (Index: 22): Headphones (SoundCore 2) [Loopback], Native Rate: 48000 Hz, Channels: 2
+2026-05-21 08:46:25 [INFO] launcher: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-05-21 08:46:25 [INFO] launcher: Creating recording (token present: True)
+2026-05-21 08:46:26 [INFO] launcher:  Global config.RECORDING_ID: 6a0eb8530c2d8c9da31df0a2
+2026-05-21 08:46:26 [INFO] launcher: Recording session started with ID: 6a0eb8530c2d8c9da31df0a2
+2026-05-21 08:46:26 [INFO] launcher: Opening loopback stream (device 22) at 48000Hz
+2026-05-21 08:46:26 [INFO] launcher: Opening mic stream (device 1) at 44100Hz
+2026-05-21 08:46:26 [INFO] launcher: Transcription worker running. All audio resampled to 16000 Hz
+2026-05-21 08:46:26 [INFO] launcher: Transcription worker running. All audio resampled to 16000 Hz
+2026-05-21 08:46:26 [INFO] launcher: Session started.
+INFO:     127.0.0.1:50298 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+2026-05-21 08:46:35 [INFO] launcher: [local] Transcribed segment (mic, 23 chars)
+INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
+2026-05-21 08:46:44 [INFO] launcher: Capture loop finished.
+2026-05-21 08:46:44 [ERROR] launcher: Thread 'capture_loop' crashed (1/3): [Errno -9988] Stream closed
+2026-05-21 08:46:44 [INFO] launcher: Restarting thread 'capture_loop' in 1s...
+2026-05-21 08:46:44 [INFO] launcher: Switching loopback to device 23: Speakers (Realtek(R) Audio) [Loopback] @ 48000Hz
+INFO:     127.0.0.1:50298 - "POST /api/switch-device HTTP/1.1" 200 OK
+2026-05-21 08:46:47 [INFO] launcher: Opening loopback stream (device 23) at 48000Hz
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
