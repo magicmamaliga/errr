@@ -1,23 +1,10 @@
-2026-05-22 07:07:19 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
-2026-05-22 07:07:29 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
-2026-05-22 07:07:39 [INFO] launcher: Clustered 131 embeddings into 5 speakers (threshold=0.90)
-2026-05-22 07:07:39 [INFO] launcher: DmlOfflineSpeakerDiarization: 131 raw turns -> 131 embedded -> 5 clusters -> 40 final segments
-2026-05-22 07:07:39 [INFO] launcher: [L] Diarization complete: 40 segments, 5 speakers detected
-2026-05-22 07:07:41 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-22 07:07:41 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 11.3s, dim=512, sample=360782 bytes
-2026-05-22 07:07:42 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 14.2s, dim=512, sample=454220 bytes
-2026-05-22 07:07:42 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 4.0s, dim=512, sample=129068 bytes
-2026-05-22 07:07:43 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
-2026-05-22 07:07:43 [INFO] launcher: Full diarization complete: 40 total segments, 5 speakers with embeddings
-2026-05-22 07:07:52 [INFO] launcher: [rediarize-6a0ff24f784a12d61c3665c8] Diarization results uploaded for recording 6a0ff24f784a12d61c3665c8: 40 segments, 5 speakers
-2026-05-22 07:07:59 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
-2026-05-22 07:08:29 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
-INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59775 - "GET /session/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59775 - "GET /session/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
-2026-05-22 07:08:54 [WARNING] launcher: [auth] JWT verification failed: The token is not yet valid (iat)
-INFO:     127.0.0.1:59775 - "POST /api/token HTTP/1.1" 401 Unauthorized
-2026-05-22 07:08:59 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
+backend-1  | 2026-05-22T19:26:58.028Z  INFO 1 --- [backend] [mcat-handler-30] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a10ac3769c96aacc6a7bc17
+backend-1  | 2026-05-22T19:26:58.028Z  INFO 1 --- [backend] [mcat-handler-30] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-22T19:26:58.218Z  INFO 1 --- [backend] [mcat-handler-32] u.m.b.record.service.RecordingService    : Entering getRecordingAudioBytes() with user tornaimate95@gmail.com
+backend-1  | 2026-05-22T19:26:58.219Z  INFO 1 --- [backend] [mcat-handler-32] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-22T19:26:58.238Z  INFO 1 --- [backend] [mcat-handler-34] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
+backend-1  | 2026-05-22T19:26:58.586Z ERROR 1 --- [backend] [mcat-handler-36] u.m.b.b.exception.SystemExceptionAdvice  : Unhandled RuntimeException: get.sessionId: must match "^[a-f0-9]{8,64}$"
+backend-1  |
+backend-1  | jakarta.validation.ConstraintViolationException: get.sessionId: must match "^[a-f0-9]{8,64}$"
+backend-1  |    at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:168) ~[spring-context-7.0.7.jar!/:7.0.7]
+backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar!/:7.0.7]
