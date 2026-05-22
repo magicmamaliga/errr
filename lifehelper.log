@@ -1,36 +1,23 @@
-2026-05-21 08:46:23 [INFO] launcher: Starting new session with group: Default group, language: en
-2026-05-21 08:46:25 [INFO] launcher: Saving transcript and audio on shutdown...
-2026-05-21 08:46:25 [INFO] launcher: Found Loopback Device (Index: 22): Headphones (SoundCore 2) [Loopback], Native Rate: 48000 Hz, Channels: 2
-2026-05-21 08:46:25 [INFO] launcher: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
-2026-05-21 08:46:25 [INFO] launcher: Creating recording (token present: True)
-2026-05-21 08:46:26 [INFO] launcher:  Global config.RECORDING_ID: 6a0eb8530c2d8c9da31df0a2
-2026-05-21 08:46:26 [INFO] launcher: Recording session started with ID: 6a0eb8530c2d8c9da31df0a2
-2026-05-21 08:46:26 [INFO] launcher: Opening loopback stream (device 22) at 48000Hz
-2026-05-21 08:46:26 [INFO] launcher: Opening mic stream (device 1) at 44100Hz
-2026-05-21 08:46:26 [INFO] launcher: Transcription worker running. All audio resampled to 16000 Hz
-2026-05-21 08:46:26 [INFO] launcher: Transcription worker running. All audio resampled to 16000 Hz
-2026-05-21 08:46:26 [INFO] launcher: Session started.
-INFO:     127.0.0.1:50298 - "POST /session/start HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-2026-05-21 08:46:35 [INFO] launcher: [local] Transcribed segment (mic, 23 chars)
-INFO:     127.0.0.1:50298 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
-2026-05-21 08:46:44 [INFO] launcher: Capture loop finished.
-2026-05-21 08:46:44 [ERROR] launcher: Thread 'capture_loop' crashed (1/3): [Errno -9988] Stream closed
-2026-05-21 08:46:44 [INFO] launcher: Restarting thread 'capture_loop' in 1s...
-2026-05-21 08:46:44 [INFO] launcher: Switching loopback to device 23: Speakers (Realtek(R) Audio) [Loopback] @ 48000Hz
-INFO:     127.0.0.1:50298 - "POST /api/switch-device HTTP/1.1" 200 OK
-2026-05-21 08:46:47 [INFO] launcher: Opening loopback stream (device 23) at 48000Hz
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50298 - "GET /api/live?since=2026-05-21T08%3A46%3A35 HTTP/1.1" 200 OK
+2026-05-22 07:07:19 [INFO] launcher: [L] Running sherpa-onnx diarization on 266.0s of audio...
+2026-05-22 07:07:29 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-22 07:07:39 [INFO] launcher: Clustered 131 embeddings into 5 speakers (threshold=0.90)
+2026-05-22 07:07:39 [INFO] launcher: DmlOfflineSpeakerDiarization: 131 raw turns -> 131 embedded -> 5 clusters -> 40 final segments
+2026-05-22 07:07:39 [INFO] launcher: [L] Diarization complete: 40 segments, 5 speakers detected
+2026-05-22 07:07:41 [INFO] launcher: Speaker SPEAKER_L_00: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-22 07:07:41 [INFO] launcher: Speaker SPEAKER_L_02: embedding extracted from 11.3s, dim=512, sample=360782 bytes
+2026-05-22 07:07:42 [INFO] launcher: Speaker SPEAKER_L_01: embedding extracted from 14.2s, dim=512, sample=454220 bytes
+2026-05-22 07:07:42 [INFO] launcher: Speaker SPEAKER_L_03: embedding extracted from 4.0s, dim=512, sample=129068 bytes
+2026-05-22 07:07:43 [INFO] launcher: Speaker SPEAKER_L_04: embedding extracted from 30.0s, dim=512, sample=960044 bytes
+2026-05-22 07:07:43 [INFO] launcher: Full diarization complete: 40 total segments, 5 speakers with embeddings
+2026-05-22 07:07:52 [INFO] launcher: [rediarize-6a0ff24f784a12d61c3665c8] Diarization results uploaded for recording 6a0ff24f784a12d61c3665c8: 40 segments, 5 speakers
+2026-05-22 07:07:59 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-22 07:08:29 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
+INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59775 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59775 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59775 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-22 07:08:54 [WARNING] launcher: [auth] JWT verification failed: The token is not yet valid (iat)
+INFO:     127.0.0.1:59775 - "POST /api/token HTTP/1.1" 401 Unauthorized
+2026-05-22 07:08:59 [WARNING] launcher: [sync_worker] voice-profile pull failed: 'AuthedClient' object has no attribute 'get'
