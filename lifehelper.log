@@ -1,113 +1,40 @@
-[
-  {
-    _id: ObjectId('6a113b6492c2da7e9aa9b5c6'),
-    userId: '6a10ac1569c96aacc6a7bc15',
-    group: 'Default group',
-    language: 'en',
-    audioUrl: '6a113b6492c2da7e9aa9b5c6_audio.mp3',
-    originalAudioFileName: 'Online Meeting Onboarding (mp3cut.net).mp3',
-    transcript: 'this meeting to introduce our new team members to our training process. Tarek requested to be part of this meeting because he has some information for you as well. Tarek, would you like to begin? Sure, thank you Angela. So Maria, Ken, welcome to LOCK18.',
-    uploadedAt: ISODate('2026-05-23T05:30:29.849Z'),
-    createdAt: ISODate('2026-05-23T05:30:12.708Z'),
-    deleted: false,
-    chatSessions: [],
-    transcriptChunks: [
-      {
-        start: 0,
-        end: 4.199999809265137,
-        text: 'this meeting to introduce our new team members to our training process.',
-        words: [
-          { start: 0, end: 0.3199999928474426, text: 'this' },
-          { start: 0.3199999928474426, end: 0.6399999856948853, text: 'meeting' },
-          { start: 0.6399999856948853, end: 0.8600000143051147, text: 'to' },
-          {
-            start: 0.8600000143051147,
-            end: 1.2799999713897705,
-            text: 'introduce'
-          },
-          { start: 1.2799999713897705, end: 1.6200000047683716, text: 'our' },
-          { start: 1.6200000047683716, end: 1.9600000381469727, text: 'new' },
-          { start: 1.9600000381469727, end: 2.4200000762939453, text: 'team' },
-          { start: 2.4200000762939453, end: 2.700000047683716, text: 'members' },
-          { start: 2.700000047683716, end: 2.9200000762939453, text: 'to' },
-          { start: 2.9200000762939453, end: 3.200000047683716, text: 'our' },
-          { start: 3.200000047683716, end: 3.5199999809265137, text: 'training' },
-          { start: 3.5199999809265137, end: 4.199999809265137, text: 'process' }
-        ]
-      },
-      {
-        start: 4.860000133514404,
-        end: 8.5600004196167,
-        text: 'Tarek requested to be part of this meeting because he has some information for you as well.',
-        words: [
-          { start: 4.860000133514404, end: 4.860000133514404, text: 'Tarek' },
-          { start: 4.860000133514404, end: 5.260000228881836, text: 'requested' },
-          { start: 5.260000228881836, end: 5.420000076293945, text: 'to' },
-          { start: 5.420000076293945, end: 5.579999923706055, text: 'be' },
-          { start: 5.579999923706055, end: 5.78000020980835, text: 'part' },
-          { start: 5.78000020980835, end: 5.880000114440918, text: 'of' },
-          { start: 5.880000114440918, end: 6.099999904632568, text: 'this' },
-          { start: 6.099999904632568, end: 6.300000190734863, text: 'meeting' },
-          { start: 6.300000190734863, end: 6.739999771118164, text: 'because' },
-          { start: 6.739999771118164, end: 6.940000057220459, text: 'he' },
-          { start: 6.940000057220459, end: 7.059999942779541, text: 'has' },
-          { start: 7.059999942779541, end: 7.579999923706055, text: 'some' },
-          {
-            start: 7.579999923706055,
-            end: 7.579999923706055,
-            text: 'information'
-          },
-          { start: 7.579999923706055, end: 7.920000076293945, text: 'for' },
-          { start: 7.920000076293945, end: 8, text: 'you' },
-          { start: 8, end: 8.260000228881836, text: 'as' },
-          { start: 8.260000228881836, end: 8.5600004196167, text: 'well' }
-        ]
-      },
-      {
-        start: 9.180000305175781,
-        end: 10.039999961853027,
-        text: 'Tarek, would you like to begin?',
-        words: [
-          { start: 9.180000305175781, end: 9.220000267028809, text: 'Tarek' },
-          { start: 9.34000015258789, end: 9.359999656677246, text: 'would' },
-          { start: 9.359999656677246, end: 9.460000038146973, text: 'you' },
-          { start: 9.460000038146973, end: 9.579999923706055, text: 'like' },
-          { start: 9.579999923706055, end: 10.039999961853027, text: 'to' },
-          { start: 10.039999961853027, end: 10.039999961853027, text: 'begin' }
-        ]
-      },
-      {
-        start: 11.039999961853027,
-        end: 12.600000381469727,
-        text: 'Sure, thank you Angela.',
-        words: [
-          { start: 11.039999961853027, end: 11.279999732971191, text: 'Sure' },
-          { start: 11.899999618530273, end: 12.15999984741211, text: 'thank' },
-          { start: 12.15999984741211, end: 12.300000190734863, text: 'you' },
-          { start: 12.300000190734863, end: 12.600000381469727, text: 'Angela' }
-        ]
-      },
-      {
-        start: 13.5600004196167,
-        end: 16.479999542236328,
-        text: 'So Maria, Ken, welcome to LOCK18.',
-        words: [
-          { start: 13.5600004196167, end: 14.15999984741211, text: 'So' },
-          { start: 14.15999984741211, end: 14.15999984741211, text: 'Maria' },
-          { start: 14.880000114440918, end: 15, text: 'Ken' },
-          { start: 15.380000114440918, end: 15.680000305175781, text: 'welcome' },
-          { start: 15.680000305175781, end: 16.059999465942383, text: 'to' },
-          { start: 16.059999465942383, end: 16.479999542236328, text: 'LOCK18' }
-        ]
-      }
-    ],
-    diarizationStatus: 'NONE',
-    _class: 'uk.magicmamaliga.backend.record.model.Recording',
-    summary: 'Summary:\n' +
-      '\n' +
-      'The meeting was initiated to introduce new team members to LOCK18’s training process. Angela set the purpose and invited participation. Tarek requested to join because he has information to share and thanked Angela for the inclusion. He then opened with a welcome, addressing Maria and Ken: “So Maria, Ken, welcome to LOCK18.” \n' +
-      '\n' +
-      'No specific decisions or action items are recorded in this snippet; the discussion appears to be a preliminary onboarding moment, with Tarek indicating there will be information about the training process to come.',
-    title: 'Introducing new team members to the training process'
-  }
-]
+2026-05-23 12:14:48 [INFO] launcher: Current app version: 1.0.44
+2026-05-23 12:14:48 [INFO] launcher: App is up to date.
+2026-05-23 12:14:48 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-23 12:14:48 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+2026-05-23 12:14:49 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [20896]
+INFO:     Waiting for application startup.
+2026-05-23 12:14:49 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
+2026-05-23 12:14:49 [WARNING] launcher: [local_store] Eviction sweep failed: module 'ntpath' has no attribute 'path'
+2026-05-23 12:14:49 [INFO] launcher: [sync_worker] started
+2026-05-23 12:14:49 [INFO] launcher: [local_presence] Heartbeat thread started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-05-23 12:14:49 [INFO] launcher: Preferred provider: cpu (onnxruntime imported OK but DmlExecutionProvider NOT in available providers (['OpenVINOExecutionProvider', 'CPUExecutionProvider']); install onnxruntime-directml)
+2026-05-23 12:14:49 [INFO] launcher: Embedding backend preference: sherpa (auto, based on preferred provider=cpu)
+2026-05-23 12:14:49 [INFO] launcher: Embedding extractor load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
+2026-05-23 12:14:49 [INFO] launcher: Speaker embedding extractor loaded: dim=512 model=embedding.onnx backend=sherpa provider=cpu
+2026-05-23 12:14:49 [INFO] launcher: Diarizer load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
+2026-05-23 12:14:49 [WARNING] launcher: Diarizer failed to load with backend=sherpa provider=cpu: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 151, in get_diarizer
+    diarizer = _try_build(backend, seg, emb, provider)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 98, in _try_build
+    return _build_sherpa(seg, emb, provider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 79, in _build_sherpa
+    return build_sherpa_diarizer(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\cpu.py", line 85, in build_sherpa_diarizer
+    return sherpa_onnx.OfflineSpeakerDiarization(cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
+
+2026-05-23 12:14:49 [WARNING] launcher: Diarizer unavailable for backend=sherpa provider=cpu; trying next
+2026-05-23 12:14:49 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-23 12:14:49 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['CPUExecutionProvider']
+2026-05-23 12:14:49 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=ort, requested_provider=cpu, effective_provider=cpu
+2026-05-23 12:14:49 [INFO] launcher: Diarization models pre-warmed
