@@ -1,130 +1,113 @@
-ckend-1  | 2026-05-22T19:39:37.930Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.service.PricingService           : For recordingId: 6a10ac3769c96aacc6a7bc17, the total cost is 0.0013
-backend-1  | 2026-05-22T19:39:37.939Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a10b0f94af42b9ec59d99f7
-backend-1  | 2026-05-22T19:39:37.942Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a10ac1569c96aacc6a7bc15 and amountChange -0.0013
-backend-1  | 2026-05-22T19:39:37.950Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a10ac1569c96aacc6a7bc15
-backend-1  | 2026-05-22T19:39:37.970Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.a.s.AiInteractionDeduplicator    : Saving 3 interactions to session bf70d634-f2f0-4d4a-ab7c-c2b8c0ee241e of recording 6a10ac3769c96aacc6a7bc17
-backend-1  | 2026-05-22T19:39:38.221Z  INFO 1 --- [backend] [mcat-handler-22] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:38.237Z  INFO 1 --- [backend] [mcat-handler-22] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@327e5077[id=6a10ac1569c96aacc6a7bc15,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-05-22T19:18:45.289Z,roles=[USER]]
-backend-1  | 2026-05-22T19:39:38.243Z  INFO 1 --- [backend] [mcat-handler-22] u.m.backend.user.service.UserService     : User details UserDto(id=6a10ac1569c96aacc6a7bc15, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, createdAt=2026-05-22T19:18:45.289Z, wallet=WalletDto(amount=0.9907, currency=USD, updatedAt=Fri May 22 19:39:37 GMT 2026, isSuspended=false))
-backend-1  | 2026-05-22T19:39:53.684Z  INFO 1 --- [backend] [mcat-handler-25] u.m.backend.record.RecordingController   : Entering getRecordingHistory() with user tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:53.688Z  INFO 1 --- [backend] [mcat-handler-25] u.m.backend.user.service.UserService     : Entering getUserDetails for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:53.696Z  INFO 1 --- [backend] [mcat-handler-25] u.m.backend.user.service.UserService     : User uk.magicmamaliga.backend.user.model.User@162f3a46[id=6a10ac1569c96aacc6a7bc15,email=tornaimate95@gmail.com,firstName=<null>,lastName=<null>,createdAt=2026-05-22T19:18:45.289Z,roles=[USER]]
-backend-1  | 2026-05-22T19:39:53.700Z  INFO 1 --- [backend] [mcat-handler-25] u.m.backend.user.service.UserService     : User details UserDto(id=6a10ac1569c96aacc6a7bc15, firstName=null, lastName=null, email=tornaimate95@gmail.com, roles=[USER], defaultLanguage=en, groupLanguages=null, createdAt=2026-05-22T19:18:45.289Z, wallet=WalletDto(amount=0.9907, currency=USD, updatedAt=Fri May 22 19:39:37 GMT 2026, isSuspended=false))
-backend-1  | 2026-05-22T19:39:53.715Z  INFO 1 --- [backend] [mcat-handler-25] u.m.b.record.service.RecordingService    : getRecordingHistory() with user tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:53.716Z  INFO 1 --- [backend] [mcat-handler-25] u.m.backend.record.RecordingController   : Exiting getRecordingHistory() with history [uk.magicmamaliga.backend.record.dto.RecordingDto@5414693a[id=6a10ac3769c96aacc6a7bc17,title=Onboarding and Training for New Logiteam Staff,userId=6a10ac1569c96aacc6a7bc15,group=Default group,audioUrl=6a10ac3769c96aacc6a7bc17_audio.mp3,originalAudioFileName=Online Meeting Onboarding.mp3,transcript=Thank you al,summary=Angela opens,uploadedAt=2026-05-22T19:19:54.054Z,createdAt=2026-05-22T19:19:19.844Z]]
-backend-1  | 2026-05-22T19:39:55.323Z  INFO 1 --- [backend] [mcat-handler-30] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:55.331Z  INFO 1 --- [backend] [mcat-handler-31] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a10ac3769c96aacc6a7bc17
-backend-1  | 2026-05-22T19:39:55.332Z  INFO 1 --- [backend] [mcat-handler-31] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:55.365Z  INFO 1 --- [backend] [mcat-handler-32] u.m.b.record.service.RecordingService    : Entering getRecordingAudioBytes() with user tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:55.368Z  INFO 1 --- [backend] [mcat-handler-32] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-22T19:39:55.506Z ERROR 1 --- [backend] [mcat-handler-34] u.m.b.b.exception.SystemExceptionAdvice  : Unhandled RuntimeException: get.sessionId: must match "^[a-f0-9]{8,64}$"
-backend-1  |
-backend-1  | jakarta.validation.ConstraintViolationException: get.sessionId: must match "^[a-f0-9]{8,64}$"
-backend-1  |    at org.springframework.validation.beanvalidation.MethodValidationInterceptor.invoke(MethodValidationInterceptor.java:168) ~[spring-context-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.proceed(AuthorizationManagerBeforeMethodInterceptor.java:271) ~[spring-security-core-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.attemptAuthorization(AuthorizationManagerBeforeMethodInterceptor.java:266) ~[spring-security-core-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor.invoke(AuthorizationManagerBeforeMethodInterceptor.java:197) ~[spring-security-core-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.config.annotation.method.configuration.DeferringMethodInterceptor.invoke(DeferringMethodInterceptor.java:44) ~[spring-security-config-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:719) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at uk.magicmamaliga.backend.record.ai.AIChatSessionController$$SpringCGLIB$$0.get(<generated>) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:934) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:853) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:622) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874) ~[spring-webmvc-7.0.7.jar!/:7.0.7]
-backend-1  |    at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:108) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:235) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:376) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:101) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:132) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:86) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:181) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.authentication.AuthenticationFilter.doFilterInternal(AuthenticationFilter.java:194) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.authentication.BearerTokenAuthenticationFilter.doFilterInternal(BearerTokenAuthenticationFilter.java:207) ~[spring-security-oauth2-resource-server-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.oauth2.server.resource.web.OAuth2ProtectedResourceMetadataFilter.doFilterInternal(OAuth2ProtectedResourceMetadataFilter.java:97) ~[spring-security-oauth2-resource-server-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:110) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:96) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.csrf.CsrfFilter.doFilterInternal(CsrfFilter.java:118) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:385) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:237) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:195) ~[spring-security-web-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.ServletRequestPathFilter.doFilter(ServletRequestPathFilter.java:52) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.CompositeFilter$VirtualFilterChain.doFilter(CompositeFilter.java:113) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.CompositeFilter.doFilter(CompositeFilter.java:74) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$CompositeFilterChainProxy.doFilter(WebSecurityConfiguration.java:317) ~[spring-security-config-7.0.5.jar!/:7.0.5]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:355) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:272) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-11.0.21.jar!/:na]
-backend-1  |    at java.base/java.lang.VirtualThread.run(Unknown Source) ~[na:na]
-backend-1  |
+[
+  {
+    _id: ObjectId('6a113b6492c2da7e9aa9b5c6'),
+    userId: '6a10ac1569c96aacc6a7bc15',
+    group: 'Default group',
+    language: 'en',
+    audioUrl: '6a113b6492c2da7e9aa9b5c6_audio.mp3',
+    originalAudioFileName: 'Online Meeting Onboarding (mp3cut.net).mp3',
+    transcript: 'this meeting to introduce our new team members to our training process. Tarek requested to be part of this meeting because he has some information for you as well. Tarek, would you like to begin? Sure, thank you Angela. So Maria, Ken, welcome to LOCK18.',
+    uploadedAt: ISODate('2026-05-23T05:30:29.849Z'),
+    createdAt: ISODate('2026-05-23T05:30:12.708Z'),
+    deleted: false,
+    chatSessions: [],
+    transcriptChunks: [
+      {
+        start: 0,
+        end: 4.199999809265137,
+        text: 'this meeting to introduce our new team members to our training process.',
+        words: [
+          { start: 0, end: 0.3199999928474426, text: 'this' },
+          { start: 0.3199999928474426, end: 0.6399999856948853, text: 'meeting' },
+          { start: 0.6399999856948853, end: 0.8600000143051147, text: 'to' },
+          {
+            start: 0.8600000143051147,
+            end: 1.2799999713897705,
+            text: 'introduce'
+          },
+          { start: 1.2799999713897705, end: 1.6200000047683716, text: 'our' },
+          { start: 1.6200000047683716, end: 1.9600000381469727, text: 'new' },
+          { start: 1.9600000381469727, end: 2.4200000762939453, text: 'team' },
+          { start: 2.4200000762939453, end: 2.700000047683716, text: 'members' },
+          { start: 2.700000047683716, end: 2.9200000762939453, text: 'to' },
+          { start: 2.9200000762939453, end: 3.200000047683716, text: 'our' },
+          { start: 3.200000047683716, end: 3.5199999809265137, text: 'training' },
+          { start: 3.5199999809265137, end: 4.199999809265137, text: 'process' }
+        ]
+      },
+      {
+        start: 4.860000133514404,
+        end: 8.5600004196167,
+        text: 'Tarek requested to be part of this meeting because he has some information for you as well.',
+        words: [
+          { start: 4.860000133514404, end: 4.860000133514404, text: 'Tarek' },
+          { start: 4.860000133514404, end: 5.260000228881836, text: 'requested' },
+          { start: 5.260000228881836, end: 5.420000076293945, text: 'to' },
+          { start: 5.420000076293945, end: 5.579999923706055, text: 'be' },
+          { start: 5.579999923706055, end: 5.78000020980835, text: 'part' },
+          { start: 5.78000020980835, end: 5.880000114440918, text: 'of' },
+          { start: 5.880000114440918, end: 6.099999904632568, text: 'this' },
+          { start: 6.099999904632568, end: 6.300000190734863, text: 'meeting' },
+          { start: 6.300000190734863, end: 6.739999771118164, text: 'because' },
+          { start: 6.739999771118164, end: 6.940000057220459, text: 'he' },
+          { start: 6.940000057220459, end: 7.059999942779541, text: 'has' },
+          { start: 7.059999942779541, end: 7.579999923706055, text: 'some' },
+          {
+            start: 7.579999923706055,
+            end: 7.579999923706055,
+            text: 'information'
+          },
+          { start: 7.579999923706055, end: 7.920000076293945, text: 'for' },
+          { start: 7.920000076293945, end: 8, text: 'you' },
+          { start: 8, end: 8.260000228881836, text: 'as' },
+          { start: 8.260000228881836, end: 8.5600004196167, text: 'well' }
+        ]
+      },
+      {
+        start: 9.180000305175781,
+        end: 10.039999961853027,
+        text: 'Tarek, would you like to begin?',
+        words: [
+          { start: 9.180000305175781, end: 9.220000267028809, text: 'Tarek' },
+          { start: 9.34000015258789, end: 9.359999656677246, text: 'would' },
+          { start: 9.359999656677246, end: 9.460000038146973, text: 'you' },
+          { start: 9.460000038146973, end: 9.579999923706055, text: 'like' },
+          { start: 9.579999923706055, end: 10.039999961853027, text: 'to' },
+          { start: 10.039999961853027, end: 10.039999961853027, text: 'begin' }
+        ]
+      },
+      {
+        start: 11.039999961853027,
+        end: 12.600000381469727,
+        text: 'Sure, thank you Angela.',
+        words: [
+          { start: 11.039999961853027, end: 11.279999732971191, text: 'Sure' },
+          { start: 11.899999618530273, end: 12.15999984741211, text: 'thank' },
+          { start: 12.15999984741211, end: 12.300000190734863, text: 'you' },
+          { start: 12.300000190734863, end: 12.600000381469727, text: 'Angela' }
+        ]
+      },
+      {
+        start: 13.5600004196167,
+        end: 16.479999542236328,
+        text: 'So Maria, Ken, welcome to LOCK18.',
+        words: [
+          { start: 13.5600004196167, end: 14.15999984741211, text: 'So' },
+          { start: 14.15999984741211, end: 14.15999984741211, text: 'Maria' },
+          { start: 14.880000114440918, end: 15, text: 'Ken' },
+          { start: 15.380000114440918, end: 15.680000305175781, text: 'welcome' },
+          { start: 15.680000305175781, end: 16.059999465942383, text: 'to' },
+          { start: 16.059999465942383, end: 16.479999542236328, text: 'LOCK18' }
+        ]
+      }
+    ],
+    diarizationStatus: 'NONE',
+    _class: 'uk.magicmamaliga.backend.record.model.Recording',
+    summary: 'Summary:\n' +
+      '\n' +
+      'The meeting was initiated to introduce new team members to LOCK18’s training process. Angela set the purpose and invited participation. Tarek requested to join because he has information to share and thanked Angela for the inclusion. He then opened with a welcome, addressing Maria and Ken: “So Maria, Ken, welcome to LOCK18.” \n' +
+      '\n' +
+      'No specific decisions or action items are recorded in this snippet; the discussion appears to be a preliminary onboarding moment, with Tarek indicating there will be information about the training process to come.',
+    title: 'Introducing new team members to the training process'
+  }
+]
