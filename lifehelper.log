@@ -1,77 +1,17 @@
-2026-05-25 21:21:29 [INFO] launcher: Current app version: 1.0.48
-2026-05-25 21:21:29 [INFO] launcher: App is up to date.
-2026-05-25 21:21:30 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-25 21:21:30 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
-2026-05-25 21:21:30 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-25 21:21:31 [INFO] launcher: [local_presence] Announced port 8066 via nonce
-2026-05-25 21:21:31 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [11020]
-INFO:     Waiting for application startup.
-2026-05-25 21:21:31 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-25 21:21:31 [WARNING] launcher: [local_store] Samples eviction failed: no such table: speaker_prototypes
-2026-05-25 21:21:31 [INFO] launcher: [sync_worker] started
-2026-05-25 21:21:31 [INFO] launcher: [local_presence] Heartbeat thread started
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-05-25 21:21:32 [INFO] launcher: Preferred provider: cpu (onnxruntime imported OK but DmlExecutionProvider NOT in available providers (['OpenVINOExecutionProvider', 'CPUExecutionProvider']); install onnxruntime-directml)
-2026-05-25 21:21:32 [INFO] launcher: Embedding backend preference: sherpa (auto, based on preferred provider=cpu)
-2026-05-25 21:21:32 [INFO] launcher: Embedding extractor load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
-INFO:     127.0.0.1:52825 - "GET /api/ HTTP/1.1" 200 OK
-2026-05-25 21:21:32 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=sherpa provider=cpu
-2026-05-25 21:21:32 [INFO] launcher: Diarizer load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
-2026-05-25 21:21:32 [WARNING] launcher: Diarizer failed to load with backend=sherpa provider=cpu: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 151, in get_diarizer
-    diarizer = _try_build(backend, seg, emb, provider)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 98, in _try_build
-    return _build_sherpa(seg, emb, provider)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 79, in _build_sherpa
-    return build_sherpa_diarizer(
-           ^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\cpu.py", line 85, in build_sherpa_diarizer
-    return sherpa_onnx.OfflineSpeakerDiarization(cfg)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-RuntimeError: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
+PS C:\Users\Mate\AppData\Local\Programs\LifeHelper> ls
 
-2026-05-25 21:21:32 [WARNING] launcher: Diarizer unavailable for backend=sherpa provider=cpu; trying next
-2026-05-25 21:21:32 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-05-25 21:21:32 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['CPUExecutionProvider']
-2026-05-25 21:21:32 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=ort, requested_provider=cpu, effective_provider=cpu
-2026-05-25 21:21:32 [INFO] launcher: Diarization models pre-warmed
-2026-05-25 21:21:33 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-05-25 21:21:33 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-25 21:21:33 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:52829 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-25 21:21:35 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Starting re-diarization for recording 6a14ab0d39481828624389b0
-2026-05-25 21:21:35 [INFO] launcher: Re-diarization thread spawned for recording 6a14ab0d39481828624389b0
-INFO:     127.0.0.1:52831 - "POST /diarize/6a14ab0d39481828624389b0 HTTP/1.1" 200 OK
-2026-05-25 21:21:35 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a14ab0d39481828624389b0\session.m4a
-2026-05-25 21:21:37 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-25 21:21:38 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Audio ready: 266.0s mono
-2026-05-25 21:21:38 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Background diarization started for recording 6a14ab0d39481828624389b0
-2026-05-25 21:21:40 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization path decision: chunks_with_words=yes preferred_provider=cpu active_provider=cpu embedding_backend=sherpa
-2026-05-25 21:21:40 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Running ASR-driven diarization (76 chunks with word timestamps)
-2026-05-25 21:21:40 [INFO] launcher: embed_segments: 76 segments, workers=1, active_provider=cpu, embedding_backend=sherpa
-2026-05-25 21:21:48 [INFO] launcher: Clustered 76 embeddings into 2 speakers (threshold=0.90)
-2026-05-25 21:21:52 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization results uploaded for recording 6a14ab0d39481828624389b0: 1 segments, 1 speakers
-2026-05-25 21:21:52 [ERROR] launcher: [local_store] Failed to persist diarization for 6a14ab0d39481828624389b0: table segments has no column named speaker_id
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\diarization_worker.py", line 175, in _persist_diarization_locally
-    local_store.queries.replace_segments(recording_id, local_segments)
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 41, in replace_segments
-    store.write(_w)
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 164, in write
-    return future.result()
-           ^^^^^^^^^^^^^^^
-  File "concurrent\futures\_base.py", line 456, in result
-  File "concurrent\futures\_base.py", line 401, in __get_result
-  File "concurrent\futures\thread.py", line 58, in run
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 170, in _run_write
-    return fn(conn)
-           ^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 18, in _w
-    conn.executemany(
-sqlite3.OperationalError: table segments has no column named speaker_id
+
+    Directory: C:\Users\Mate\AppData\Local\Programs\LifeHelper
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        25/05/2026     21:20                app
+d-----        25/05/2026     21:20                _internal
+-a----        18/05/2026     08:40           2883 .env
+-a----        25/05/2026     21:21              0 .lifehelper.lock
+-a----        25/05/2026     21:18       12034972 LifeHelper.exe
+-a----        19/04/2026     17:00         173682 lifehelper.ico
+-a----        25/05/2026     21:21           8453 lifehelper.log
+-a----        25/05/2026     21:21         662373 unins000.dat
+-a----        25/05/2026     21:20        4532994 unins000.exe
