@@ -1,21 +1,80 @@
+2026-05-25 21:04:04 [INFO] launcher: Current app version: 1.0.48
+2026-05-25 21:04:04 [INFO] launcher: App is up to date.
+2026-05-25 21:04:05 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-25 21:04:05 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+requests\__init__.py:86: RequestsDependencyWarning: Unable to find acceptable character detection dependency (chardet or charset_normalizer).
+2026-05-25 21:04:05 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-25 21:04:06 [INFO] launcher: [local_presence] Announced port 8066 via nonce
+2026-05-25 21:04:06 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [17188]
+INFO:     Waiting for application startup.
+2026-05-25 21:04:06 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
+2026-05-25 21:04:06 [WARNING] launcher: [local_store] Samples eviction failed: no such table: speaker_prototypes
+2026-05-25 21:04:06 [INFO] launcher: [sync_worker] started
+2026-05-25 21:04:06 [INFO] launcher: [local_presence] Heartbeat thread started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-05-25 21:04:06 [INFO] launcher: Preferred provider: cpu (onnxruntime imported OK but DmlExecutionProvider NOT in available providers (['OpenVINOExecutionProvider', 'CPUExecutionProvider']); install onnxruntime-directml)
+2026-05-25 21:04:06 [INFO] launcher: Embedding backend preference: sherpa (auto, based on preferred provider=cpu)
+2026-05-25 21:04:06 [INFO] launcher: Embedding extractor load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
+INFO:     127.0.0.1:53905 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-25 21:04:07 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=sherpa provider=cpu
+2026-05-25 21:04:07 [INFO] launcher: Diarizer load plan: preferred=(sherpa,cpu) attempts=[('sherpa', 'cpu'), ('ort', 'cpu')]
+2026-05-25 21:04:07 [WARNING] launcher: Diarizer failed to load with backend=sherpa provider=cpu: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 151, in get_diarizer
+    diarizer = _try_build(backend, seg, emb, provider)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 98, in _try_build
+    return _build_sherpa(seg, emb, provider)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\diarizer_loader.py", line 79, in _build_sherpa
+    return build_sherpa_diarizer(
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\cpu.py", line 85, in build_sherpa_diarizer
+    return sherpa_onnx.OfflineSpeakerDiarization(cfg)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Load model from C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\diarize\models\segmentation.onnx failed:D:\a\_work\1\s\onnxruntime\core/graph/model_load_utils.h:56 onnxruntime::model_load_utils::ValidateOpsetForDomain ONNX Runtime only *guarantees* support for models stamped with official released onnx opset versions. Opset 19 is under development and support for this is limited. The operator schemas and or other functionality may change before next ONNX release and in this case ONNX Runtime will not guarantee backward compatibility. Current official support for domain com.ms.internal.nhwc is till opset 18.
 
-Content-Security-Policy: The page's settings blocked the loading of a resource (connect-src) at https://region1.analytics.google.com/g/collect?v=2&tid=G-2DK0GP32X0&gtm=45je65k1v9251210731za200zd9251210731&_p=1779617497761 d=131313131111&npa=0&dma=0&ecid=693783565&_eu=AAAAAGQ&cid=411819011.1779177622&ec_mode=a&frm=0&pscd1=noapi&rcb=17&sr=1600x1000&ul=en-us&gaf=2&_s=1&tag_exp=0~115938466~115938468~118689381&sid=1779616528&sct=24&seg=1&dl=htt s%3A%2F%2Flifehelper.uk%2Frecordings%2F6a12cb389d53b8523ad4abbc&dt=LifeHelper&en=page_view&_ee=1&tfd=1215 because it violates the following directive: "connect-src 'self' https://api.stripe.com http://localhost:* https://
-w.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net"
-Content-Security-Policy: The page's settings blocked the loading of a resource (connect-src) at https://region1.analytics.google.com/g/collect?v=2&tid=G-2DK0GP32X0&gtm=45je65k1v9251210731za200zd9251210731&_p=1779617497761 d4abbc&sid=1779616528&sct=24&seg=1&dl=https%3A%2F%2Flifehelper.uk%2Frecordings%2F6a12cb389d53b8523ad4abbc&dt=LifeHelper&en=page_view&_ee=1&tfd=1220 because it violates the following directive: "connect-src 'self' https://
-d=131313131111&npa=0&dma=0&ecid=693783565&_eu=AAAAAGQ&cid=411819011.1779177622&ec_mode=a&frm=0&pscd1=noapi&rcb=17&sr=1600x1000&ul=en-us&gaf=2&_s=2&tag_exp=0~115938466~115938468~118689381&dp=%2Frecordings%2F6a12cb389d53b85
-i.stripe.com http://localhost:* https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://pagead2.googlesyndication.com https://googleads.g.doubleclick.net"
-A Partitioned cookie or storage access was provided to "https://js.stripe.com/v3/controller-with-preconnect-11ca320c749af4c34fba54d67f234b76.html#___shared_params [version]=clover&___shared_params___[light_experiment_assignments]=%7B%22token%22%3A%22a8eeac3e-
-a2b0-409e-82a3-7fe257530176%22%2C%22assignments%22%3A%7B%22habanero_aa_v1%22%3A%22treatment%22%7D%7D&apiKey=pk_live_51TAqS847Sfwzy24zL8AEBZRzr0i2IyJitfAGZibkoUiysqOnJbJxHtyaSEPt
-NVOqIEt7RcYyud06pZkk3rygSrj500sT8pA3b6&apiVersion=2025-09-30.clover&stripeJsId=a8eeac3e-a2b0-409e-82a3-7fe257530176&stripeObjId=sobj-10fe88ab-d80b-4e9f-
-b059-743cee7ca9f8&firstStripeInstanceCreated Latency=6&controllerCount=1&isCheckout=false&stripeJsLoadTime=1779617498159&manualBrowserDeprecationRollout=false&mids [guid] =NA&mids [ muid]=NA&mids [sid] =NA&referrer=https%3A%2F%2Flifehelper.uk%2Frecordings%2F6a12cb389d53b8523ad4abbc&controllerId=__privateStripeController7501" because it is loaded in the third- party context and dynamic state partitioning is enabled. [Learn More]
-controller-with-preconnect-a056239bcb83cd9
-Fingerprinting Protection is altering screen.availWidth and screen.availHeight. These values may not match your actual screen dimensions. This protection helps prevent websites building a fingerprint that can be used to track users. Learn more: https://support.mozilla.org/kb/firefox-protection-against-fingerprinting
-sh
-Content-Security-Policy: The page's settings blocked the loading of a resource (frame-src) at https://pagead2.googlesyndication.com/pagead/html/r20260520/r20190131/zrt_lookup_fy2021.html because it violates the following directive: "frame-src https://js.stripe.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com"
-Content-Security-Policy: The page's settings blocked the loading of a resource (frame-src) at https://pagead2.googlesyndication.com/pagead/ads?client=ca-pub-7468862533837387&output=html&adk=1812271804&adf=3025194257&lmt=1
-615239&plat=1%3A1024%2C2%3A1024%2C3%3A2097152%2C4%3A2097152%2C9%3A134250504%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Flifehelper.uk%2F ordings%2F6a12cb389d53b8523ad4abbc&pra=5&asro=0&itsi=-1&aiactd=0&aicctd=0&ailctd=0&aimartd=4&aieuf=1&aicrs=1&abgtt=6&dt=1779617498377&bpp=2&bdt=1026&idt=629&shv=r20260520&mjsv=m202605200101&ptt=9&saldr=aa&abxe=1&eoidce=18 s=1&correlator=6303000900433&frm=20&pv=2&u_tz=60&u_his=5&u_h=1000&u_w=1600&u_ah=952&u_aw=1600&u_cd=24&u_sd=2&adx=-12245933&ady=-12245933&biw=1550&bih=165&scr_x=0&scr_y=0&eid=31098744%2C42533293%2C95391808%2C95391218&oid=2 sid=6945917761789323&tmod=161745545&uas=0&nvt=2&fsapi=1&fc=1920&brdim=1274%2C327%2C1274%2C327%2C1600%2C0%2C1613%2C965%2C1550%2C165&vis=1&rsz=%7C%7Cs%7C&ab1=NS&fu=32768&bc=31&bz=1.04&pgls=CAK.&ifi=1&uci=a!1&fsb=1&dtd=652
-because it violates the following directive: "frame-src https://js.stripe.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com"
-→ Content-Security-Policy: The page's settings blocked the loading of a resource (connect-src) at https://ep1.adtrafficquality.google/getconfig/sodar?sv=200&tid=gda&tv=r20260520&st=env&sjk=6945917761789323 because it violates the following directive: "connect-src 'self' https://api.stripe.com http://localhost:* https://www.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://pagead2.googlesyndi cation.com https://googleads.g.doubleclick.net"
-▲ The resource at "https://m.stripe.network/inner.html#url=https%3A%2F%2Flifehelper.uk%2Frecordings%2F6a12cb389d53b8523ad4abbc&title=LifeHelper&referrer=&muid=NA&sid=NA&version=6&preview=false&____shared_par ams [version]=clover" was blocked because Enhanced Tracking Protection is enabled. [Learn More]
-sh
-m-outer-3437aadd
+2026-05-25 21:04:07 [WARNING] launcher: Diarizer unavailable for backend=sherpa provider=cpu; trying next
+2026-05-25 21:04:07 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-25 21:04:07 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['CPUExecutionProvider']
+2026-05-25 21:04:07 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.9, backend=ort, requested_provider=cpu, effective_provider=cpu
+2026-05-25 21:04:07 [INFO] launcher: Diarization models pre-warmed
+INFO:     127.0.0.1:53909 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-25 21:04:08 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-05-25 21:04:08 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-25 21:04:08 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:53910 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-25 21:04:09 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Starting re-diarization for recording 6a14ab0d39481828624389b0
+2026-05-25 21:04:09 [INFO] launcher: Re-diarization thread spawned for recording 6a14ab0d39481828624389b0
+INFO:     127.0.0.1:53912 - "POST /diarize/6a14ab0d39481828624389b0 HTTP/1.1" 200 OK
+2026-05-25 21:04:16 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
+2026-05-25 21:04:17 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Cached downloaded audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a14ab0d39481828624389b0\session.m4a
+2026-05-25 21:04:17 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Audio ready: 266.0s mono
+2026-05-25 21:04:17 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Background diarization started for recording 6a14ab0d39481828624389b0
+2026-05-25 21:04:19 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization path decision: chunks_with_words=yes preferred_provider=cpu active_provider=cpu embedding_backend=sherpa
+2026-05-25 21:04:19 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Running ASR-driven diarization (76 chunks with word timestamps)
+2026-05-25 21:04:19 [INFO] launcher: embed_segments: 76 segments, workers=1, active_provider=cpu, embedding_backend=sherpa
+2026-05-25 21:04:27 [INFO] launcher: Clustered 76 embeddings into 2 speakers (threshold=0.90)
+2026-05-25 21:04:30 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization results uploaded for recording 6a14ab0d39481828624389b0: 1 segments, 1 speakers
+2026-05-25 21:04:30 [ERROR] launcher: [local_store] Failed to persist diarization for 6a14ab0d39481828624389b0: 'sqlite3.Connection' object has no attribute 'executeMany'
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\diarization_worker.py", line 175, in _persist_diarization_locally
+    local_store.queries.replace_segments(recording_id, local_segments)
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 41, in replace_segments
+    store.write(_w)
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 164, in write
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "concurrent\futures\_base.py", line 456, in result
+  File "concurrent\futures\_base.py", line 401, in __get_result
+  File "concurrent\futures\thread.py", line 58, in run
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 170, in _run_write
+    return fn(conn)
+           ^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 18, in _w
+    conn.executeMany(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'sqlite3.Connection' object has no attribute 'executeMany'. Did you mean: 'executemany'?
+2026-05-25 21:04:36 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
