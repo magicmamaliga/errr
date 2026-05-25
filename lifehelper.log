@@ -78,3 +78,42 @@ Traceback (most recent call last):
     ^^^^^^^^^^^^^^^^
 AttributeError: 'sqlite3.Connection' object has no attribute 'executeMany'. Did you mean: 'executemany'?
 2026-05-25 21:04:36 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-25 21:05:06 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-25 21:05:36 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-25 21:06:06 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
+2026-05-25 21:06:36 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
+INFO:     127.0.0.1:53939 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-25 21:06:49 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:53941 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-25 21:06:51 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Starting re-diarization for recording 6a14ab0d39481828624389b0
+2026-05-25 21:06:51 [INFO] launcher: Re-diarization thread spawned for recording 6a14ab0d39481828624389b0
+INFO:     127.0.0.1:53942 - "POST /diarize/6a14ab0d39481828624389b0 HTTP/1.1" 200 OK
+2026-05-25 21:06:51 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a14ab0d39481828624389b0\session.m4a
+2026-05-25 21:06:52 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
+2026-05-25 21:06:53 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Audio ready: 266.0s mono
+2026-05-25 21:06:53 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Background diarization started for recording 6a14ab0d39481828624389b0
+2026-05-25 21:06:55 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization path decision: chunks_with_words=yes preferred_provider=cpu active_provider=cpu embedding_backend=sherpa
+2026-05-25 21:06:55 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Running ASR-driven diarization (76 chunks with word timestamps)
+2026-05-25 21:06:55 [INFO] launcher: embed_segments: 76 segments, workers=1, active_provider=cpu, embedding_backend=sherpa
+2026-05-25 21:07:03 [INFO] launcher: Clustered 76 embeddings into 2 speakers (threshold=0.90)
+2026-05-25 21:07:06 [INFO] launcher: [rediarize-6a14ab0d39481828624389b0] Diarization results uploaded for recording 6a14ab0d39481828624389b0: 1 segments, 1 speakers
+2026-05-25 21:07:06 [ERROR] launcher: [local_store] Failed to persist diarization for 6a14ab0d39481828624389b0: 'sqlite3.Connection' object has no attribute 'executeMany'
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\diarization_worker.py", line 175, in _persist_diarization_locally
+    local_store.queries.replace_segments(recording_id, local_segments)
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 41, in replace_segments
+    store.write(_w)
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 164, in write
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "concurrent\futures\_base.py", line 456, in result
+  File "concurrent\futures\_base.py", line 401, in __get_result
+  File "concurrent\futures\thread.py", line 58, in run
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\store.py", line 170, in _run_write
+    return fn(conn)
+           ^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\services\local_store\queries\segments.py", line 18, in _w
+    conn.executeMany(
+    ^^^^^^^^^^^^^^^^
+AttributeError: 'sqlite3.Connection' object has no attribute 'executeMany'. Did you mean: 'executemany'?
+2026-05-25 21:07:06 [WARNING] launcher: [sync_worker] speaker pull failed: 'AuthedClient' object has no attribute 'get'
