@@ -1,70 +1,85 @@
-2026-05-26 07:49:16 [INFO] launcher: Current app version: 1.0.49
-2026-05-26 07:49:17 [INFO] launcher: App is up to date.
-2026-05-26 07:49:17 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-26 07:49:17 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-26 07:49:17 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-26 07:49:18 [INFO] launcher: [local_presence] Announced port 8066 via nonce
-2026-05-26 07:49:18 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [26352]
+2026-05-26 08:01:30 [INFO] launcher: Current app version: 1.0.50
+2026-05-26 08:01:31 [INFO] launcher: App is up to date.
+2026-05-26 08:01:31 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-26 08:01:31 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-26 08:01:32 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-26 08:01:32 [INFO] launcher: [local_presence] Announced port 8066 via nonce
+2026-05-26 08:01:32 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [20016]
 INFO:     Waiting for application startup.
-2026-05-26 07:49:18 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
-2026-05-26 07:49:18 [INFO] launcher: [sync_worker] started
-2026-05-26 07:49:18 [INFO] launcher: [local_presence] Heartbeat thread started
+2026-05-26 08:01:32 [INFO] launcher: [local_store] Ready at C:\Users\Mate\AppData\Local\LifeHelper\lifehelper.db
+2026-05-26 08:01:32 [INFO] launcher: [sync_worker] started
+2026-05-26 08:01:32 [INFO] launcher: [local_presence] Heartbeat thread started
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-05-26 07:49:18 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-05-26 07:49:18 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-05-26 07:49:18 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-26 07:49:18 [WARNING] launcher: SpeakerEmbeddingExtractor failed to load with backend=ort provider=directml: Expected the embedding model to have exactly 1 input, got 2
+2026-05-26 08:01:33 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-05-26 08:01:33 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-05-26 08:01:33 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-26 08:01:33 [INFO] launcher: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-05-26 08:01:33 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=16681 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-26 08:01:33 [INFO] launcher: Speaker embedding extractor loaded: dim=16681 model=embedding.onnx backend=ort provider=directml
+2026-05-26 08:01:33 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-26 08:01:33 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-26 08:01:33 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-26 08:01:33 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.78, backend=ort, requested_provider=directml, effective_provider=directml
+2026-05-26 08:01:33 [INFO] launcher: Diarization models pre-warmed
+INFO:     127.0.0.1:56202 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56203 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-26 08:01:35 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-05-26 08:01:35 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-26 08:01:35 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:56204 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-26 08:01:36 [INFO] launcher: [rediarize-6a15358939481828624389d6] Starting re-diarization for recording 6a15358939481828624389d6
+2026-05-26 08:01:36 [INFO] launcher: Re-diarization thread spawned for recording 6a15358939481828624389d6
+INFO:     127.0.0.1:56206 - "POST /diarize/6a15358939481828624389d6 HTTP/1.1" 200 OK
+2026-05-26 08:01:36 [INFO] launcher: [rediarize-6a15358939481828624389d6] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a15358939481828624389d6\session.m4a
+2026-05-26 08:01:39 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
+2026-05-26 08:01:40 [INFO] launcher: [rediarize-6a15358939481828624389d6] Audio ready: 266.0s mono
+2026-05-26 08:01:40 [INFO] launcher: [rediarize-6a15358939481828624389d6] Background diarization started for recording 6a15358939481828624389d6
+2026-05-26 08:01:42 [INFO] launcher: [rediarize-6a15358939481828624389d6] Diarization path decision: chunks_with_words=yes preferred_provider=directml active_provider=directml embedding_backend=ort
+2026-05-26 08:01:42 [INFO] launcher: [rediarize-6a15358939481828624389d6] Running ASR-driven diarization (76 chunks with word timestamps)
+2026-05-26 08:01:42 [INFO] launcher: embed_segments: 76 segments, workers=4, active_provider=directml, embedding_backend=ort
+2026-05-26 08:01:45 [ERROR] launcher: Embedding inference failed: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Conv node. Name:'/encoder/encoder/encoder.0/mconv.1/conv/Conv' Status Message: E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(2508)\onnxruntime_pybind11_state.pyd!00007FF82A1FB705: (caller: 00007FF82A1FCB5C) Exception(10) tid(2ddc) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
 Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 169, in get_embedding_extractor
-    extractor = _try_build(backend, emb_model, provider)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 110, in _try_build
-    return _build_ort(emb_model, provider)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 91, in _build_ort
-    return DmlSpeakerEmbeddingExtractor(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 159, in __init__
-    raise ValueError(
-ValueError: Expected the embedding model to have exactly 1 input, got 2
-2026-05-26 07:49:18 [WARNING] launcher: Embedding extractor unavailable for backend=ort provider=directml; trying next
-2026-05-26 07:49:18 [WARNING] launcher: SpeakerEmbeddingExtractor failed to load with backend=ort provider=cpu: Expected the embedding model to have exactly 1 input, got 2
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 68, in _run_embedding
+    emb = extractor.compute(stream)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 258, in compute
+    out = self._sess.run(None, feed)[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "onnxruntime\capi\onnxruntime_inference_collection.py", line 296, in run
+onnxruntime.capi.onnxruntime_pybind11_state.RuntimeException: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Conv node. Name:'/encoder/encoder/encoder.0/mconv.1/conv/Conv' Status Message: E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(2508)\onnxruntime_pybind11_state.pyd!00007FF82A1FB705: (caller: 00007FF82A1FCB5C) Exception(10) tid(2ddc) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
+
+2026-05-26 08:01:45 [ERROR] launcher: Embedding inference failed: [ONNXRuntimeError] : 1 : FAIL : E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\DmlCommandRecorder.cpp(342)\onnxruntime_pybind11_state.pyd!00007FF82A1B23E6: (caller: 00007FF82A19A984) Exception(11) tid(2878) 80004005 Unspecified error
 Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 169, in get_embedding_extractor
-    extractor = _try_build(backend, emb_model, provider)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 110, in _try_build
-    return _build_ort(emb_model, provider)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\embedding_loader.py", line 91, in _build_ort
-    return DmlSpeakerEmbeddingExtractor(
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 159, in __init__
-    raise ValueError(
-ValueError: Expected the embedding model to have exactly 1 input, got 2
-2026-05-26 07:49:18 [WARNING] launcher: Embedding extractor unavailable for backend=ort provider=cpu; trying next
-INFO:     127.0.0.1:60767 - "GET /api/ HTTP/1.1" 200 OK
-2026-05-26 07:49:19 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=sherpa provider=cpu
-2026-05-26 07:49:19 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-26 07:49:19 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-05-26 07:49:19 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-26 07:49:19 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.78, backend=ort, requested_provider=directml, effective_provider=directml
-2026-05-26 07:49:19 [INFO] launcher: Diarization models pre-warmed
-2026-05-26 07:49:20 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-05-26 07:49:20 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-26 07:49:20 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:60768 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-26 07:49:21 [INFO] launcher: [rediarize-6a15358939481828624389d6] Starting re-diarization for recording 6a15358939481828624389d6
-2026-05-26 07:49:21 [INFO] launcher: Re-diarization thread spawned for recording 6a15358939481828624389d6
-INFO:     127.0.0.1:60770 - "POST /diarize/6a15358939481828624389d6 HTTP/1.1" 200 OK
-2026-05-26 07:49:21 [INFO] launcher: [rediarize-6a15358939481828624389d6] Using cached audio at C:\Users\Mate\AppData\Local\LifeHelper\audio\6a15358939481828624389d6\session.m4a
-2026-05-26 07:49:23 [INFO] launcher: Stereo input has identical L/R channels – treating as mono to avoid duplicate diarization
-2026-05-26 07:49:23 [INFO] launcher: [rediarize-6a15358939481828624389d6] Audio ready: 266.0s mono
-2026-05-26 07:49:23 [INFO] launcher: [rediarize-6a15358939481828624389d6] Background diarization started for recording 6a15358939481828624389d6
-2026-05-26 07:49:25 [INFO] launcher: [rediarize-6a15358939481828624389d6] Diarization path decision: chunks_with_words=yes preferred_provider=directml active_provider=directml embedding_backend=sherpa
-2026-05-26 07:49:25 [INFO] launcher: [rediarize-6a15358939481828624389d6] Running ASR-driven diarization (76 chunks with word timestamps)
-2026-05-26 07:49:25 [INFO] launcher: embed_segments: 76 segments, workers=4, active_provider=directml, embedding_backend=sherpa
-2026-05-26 07:49:30 [INFO] launcher: Clustered 76 embeddings into 8 speakers (threshold=0.78)
-2026-05-26 07:49:35 [INFO] launcher: [rediarize-6a15358939481828624389d6] Diarization results uploaded for recording 6a15358939481828624389d6: 24 segments, 7 speakers
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 68, in _run_embedding
+    emb = extractor.compute(stream)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 258, in compute
+    out = self._sess.run(None, feed)[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "onnxruntime\capi\onnxruntime_inference_collection.py", line 296, in run
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\DmlCommandRecorder.cpp(342)\onnxruntime_pybind11_state.pyd!00007FF82A1B23E6: (caller: 00007FF82A19A984) Exception(11) tid(2878) 80004005 Unspecified error
+
+2026-05-26 08:01:45 [ERROR] launcher: Embedding inference failed: [ONNXRuntimeError] : 1 : FAIL : E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\DmlCommandRecorder.cpp(371)\onnxruntime_pybind11_state.pyd!00007FF82A1B2403: (caller: 00007FF82A19A984) Exception(12) tid(355c) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 68, in _run_embedding
+    emb = extractor.compute(stream)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 258, in compute
+    out = self._sess.run(None, feed)[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "onnxruntime\capi\onnxruntime_inference_collection.py", line 296, in run
+onnxruntime.capi.onnxruntime_pybind11_state.Fail: [ONNXRuntimeError] : 1 : FAIL : E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\DmlCommandRecorder.cpp(371)\onnxruntime_pybind11_state.pyd!00007FF82A1B2403: (caller: 00007FF82A19A984) Exception(12) tid(355c) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
+
+2026-05-26 08:01:45 [ERROR] launcher: Embedding inference failed: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Conv node. Name:'/encoder/encoder/encoder.0/mconv.1/conv/Conv' Status Message: E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(2508)\onnxruntime_pybind11_state.pyd!00007FF82A1FB705: (caller: 00007FF82A1FCB5C) Exception(15) tid(5af4) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
+Traceback (most recent call last):
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 68, in _run_embedding
+    emb = extractor.compute(stream)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\gpu\embedding.py", line 258, in compute
+    out = self._sess.run(None, feed)[0]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "onnxruntime\capi\onnxruntime_inference_collection.py", line 296, in run
+onnxruntime.capi.onnxruntime_pybind11_state.RuntimeException: [ONNXRuntimeError] : 6 : RUNTIME_EXCEPTION : Non-zero status code returned while running Conv node. Name:'/encoder/encoder/encoder.0/mconv.1/conv/Conv' Status Message: E:\_work\1\s\onnxruntime\core\providers\dml\DmlExecutionProvider\src\MLOperatorAuthorImpl.cpp(2508)\onnxruntime_pybind11_state.pyd!00007FF82A1FB705: (caller: 00007FF82A1FCB5C) Exception(15) tid(5af4) 887A0005 The GPU device instance has been suspended. Use GetDeviceRemovedReason to determine the appropriate action.
+
