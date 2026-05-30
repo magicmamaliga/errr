@@ -1,115 +1,127 @@
-2026-05-30 14:21:03 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-05-30 14:21:03 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-05-30 14:21:03 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-30 14:21:04 [INFO] launcher: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
-2026-05-30 14:21:04 [INFO] launcher: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
-2026-05-30 14:21:04 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-30 14:21:04 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
-2026-05-30 14:21:04 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-INFO:     127.0.0.1:63063 - "GET /api/ HTTP/1.1" 200 OK
-2026-05-30 14:21:04 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-30 14:21:04 [INFO] launcher: cluster_threshold(): env override -> 0.500
-2026-05-30 14:21:04 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-05-30 14:21:04 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-30 14:21:04 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-30 14:21:04 [INFO] launcher: cluster_threshold(): env override -> 0.500
-2026-05-30 14:21:04 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.5, backend=ort, requested_provider=directml, effective_provider=directml
-2026-05-30 14:21:04 [INFO] launcher: Diarization models pre-warmed
-2026-05-30 14:21:06 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-05-30 14:21:06 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-30 14:21:06 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:63064 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-30 14:21:07 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Starting diarization for recording 6a1ace328e2742dda827e4aa
-2026-05-30 14:21:07 [INFO] launcher: Diarization thread spawned for recording 6a1ace328e2742dda827e4aa
-INFO:     127.0.0.1:63067 - "POST /diarize/6a1ace328e2742dda827e4aa HTTP/1.1" 200 OK
-2026-05-30 14:21:12 [INFO] launcher: Stereo input has identical L/R channels - treating as mono to avoid duplicate diarization
-2026-05-30 14:21:13 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Audio ready: 266.0s mono
-2026-05-30 14:21:13 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Background diarization started for recording 6a1ace328e2742dda827e4aa
-2026-05-30 14:21:15 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Diarization path decision: chunks_with_words=yes preferred_provider=directml active_provider=directml embedding_backend=ort
-2026-05-30 14:21:15 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Running ASR-driven diarization (76 chunks with word timestamps)
-2026-05-30 14:21:15 [INFO] launcher: embed_segments: 81 segments, workers=4, active_provider=directml, embedding_backend=ort
-2026-05-30 14:21:21 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-30 14:21:21 [INFO] launcher: cluster_threshold(): env override -> 0.500
-2026-05-30 14:21:24 [INFO] launcher: Clustered 81 embeddings into 16 speakers (threshold=0.50)
-2026-05-30 14:21:24 [INFO] launcher:   seg[00] 12.4-15.9s (3.4s) -> SPEAKER_L_00 | Thank you all for joining
-2026-05-30 14:21:24 [INFO] launcher:   seg[01] 16.4-21.0s (4.5s) -> SPEAKER_L_01 | If you haven't met yet we have our two newly hired customer care team members
-2026-05-30 14:21:24 [INFO] launcher:   seg[02] 21.5-22.2s (0.7s) -> SPEAKER_L_01 | Ken and Maria
-2026-05-30 14:21:24 [INFO] launcher:   seg[03] 22.6-23.9s (1.3s) -> SPEAKER_L_01 | Hi guys Welcome to the team
-2026-05-30 14:21:24 [INFO] launcher:   seg[04] 24.9-25.3s (0.4s) -> SPEAKER_L_03 | Thanks Angela
-2026-05-30 14:21:24 [INFO] launcher:   seg[05] 25.4-26.4s (1.0s) -> SPEAKER_L_04 | It's great to be here
-2026-05-30 14:21:24 [INFO] launcher:   seg[06] 26.9-27.8s (0.9s) -> SPEAKER_L_05 | Hi everyone
-2026-05-30 14:21:24 [INFO] launcher:   seg[07] 29.0-30.0s (1.0s) -> SPEAKER_L_06 | And Tarek from the customer care team
-2026-05-30 14:21:24 [INFO] launcher:   seg[08] 30.0-33.0s (3.0s) -> SPEAKER_L_01 | Maria from human resources is joining us for a brief period of time
-2026-05-30 14:21:24 [INFO] launcher:   seg[09] 33.3-35.7s (2.4s) -> SPEAKER_L_07 | Hi Tarek Morning everyone
-2026-05-30 14:21:24 [INFO] launcher:   seg[10] 37.1-41.4s (4.3s) -> SPEAKER_L_01 | I scheduled this meeting to introduce our new team members to our training proce
-2026-05-30 14:21:24 [INFO] launcher:   seg[11] 42.2-45.8s (3.6s) -> SPEAKER_L_01 | Tarek requested to be part of this meeting because he has some information for y
-2026-05-30 14:21:24 [INFO] launcher:   seg[12] 46.2-47.7s (1.5s) -> SPEAKER_L_01 | Tarek would you like to begin
-2026-05-30 14:21:24 [INFO] launcher:   seg[13] 48.1-48.6s (0.5s) -> SPEAKER_L_07 | Sure
-2026-05-30 14:21:24 [INFO] launcher:   seg[14] 49.2-49.9s (0.7s) -> SPEAKER_L_08 | Thank you Angela
-2026-05-30 14:21:24 [INFO] launcher:   seg[15] 50.9-51.4s (0.5s) -> SPEAKER_L_09 | So Maria
-2026-05-30 14:21:24 [INFO] launcher:   seg[16] 52.3-53.9s (1.6s) -> SPEAKER_L_07 | Ken welcome to Lock A team
-2026-05-30 14:21:24 [INFO] launcher:   seg[17] 53.9-59.8s (5.8s) -> SPEAKER_L_07 | I want to talk to you about some forms that you need to fill out before you can 
-2026-05-30 14:21:24 [INFO] launcher:   seg[18] 60.0-66.4s (6.4s) -> SPEAKER_L_07 | You have received an email last week with our liability policy and our confident
-2026-05-30 14:21:24 [INFO] launcher:   seg[19] 66.7-73.6s (6.8s) -> SPEAKER_L_07 | The one about you agreeing not to share any confidential information about our c
-2026-05-30 14:21:24 [INFO] launcher:   seg[20] 74.5-75.6s (1.1s) -> SPEAKER_L_07 | Have you received it
-2026-05-30 14:21:24 [INFO] launcher:   seg[21] 76.1-77.2s (1.1s) -> SPEAKER_L_01 | Yes I have
-2026-05-30 14:21:24 [INFO] launcher:   seg[22] 78.0-79.8s (1.8s) -> SPEAKER_L_03 | I don't think I received that
-2026-05-30 14:21:24 [INFO] launcher:   seg[23] 79.8-80.4s (0.6s) -> SPEAKER_L_03 | I'm sorry
-2026-05-30 14:21:24 [INFO] launcher:   seg[24] 81.2-81.9s (0.7s) -> SPEAKER_L_07 | No problem
-2026-05-30 14:21:24 [INFO] launcher:   seg[25] 82.1-83.8s (1.6s) -> SPEAKER_L_07 | I will send it to you today
-2026-05-30 14:21:24 [INFO] launcher:   seg[26] 84.6-85.7s (1.1s) -> SPEAKER_L_08 | Once you have the document
-2026-05-30 14:21:24 [INFO] launcher:   seg[27] 86.4-89.3s (2.9s) -> SPEAKER_L_07 | please read it carefully and sign electronically
-2026-05-30 14:21:24 [INFO] launcher:   seg[28] 89.8-96.4s (6.6s) -> SPEAKER_L_07 | There are four places where you will need to insert your initials and two where 
-2026-05-30 14:21:24 [INFO] launcher:   seg[29] 97.1-99.0s (1.8s) -> SPEAKER_L_07 | Once signed and saved
-2026-05-30 14:21:24 [INFO] launcher:   seg[30] 99.5-101.7s (2.2s) -> SPEAKER_L_07 | please send the document directly to me
-2026-05-30 14:21:24 [INFO] launcher:   seg[31] 102.3-107.8s (5.5s) -> SPEAKER_L_07 | My email address is Tarek godas at mail ca
-2026-05-30 14:21:24 [INFO] launcher:   seg[32] 108.4-120.1s (11.6s) -> SPEAKER_L_07 | That is T A R E K dot G U L D U Z at mail ca
-2026-05-30 14:21:24 [INFO] launcher:   seg[33] 120.4-126.6s (6.1s) -> SPEAKER_L_07 | This is very important because you cannot work until I have the signed document 
-2026-05-30 14:21:24 [INFO] launcher:   seg[34] 127.1-128.7s (1.6s) -> SPEAKER_L_07 | Do you have any questions
-2026-05-30 14:21:24 [INFO] launcher:   seg[35] 129.5-132.1s (2.6s) -> SPEAKER_L_01 | No I'll send it to you this afternoon
-2026-05-30 14:21:24 [INFO] launcher:   seg[36] 132.6-134.0s (1.4s) -> SPEAKER_L_07 | Perfect Thank you
-2026-05-30 14:21:24 [INFO] launcher:   seg[37] 134.7-139.1s (4.4s) -> SPEAKER_L_07 | Ken please send me an email so I can double check the email address I have in yo
-2026-05-30 14:21:24 [INFO] launcher:   seg[38] 140.1-140.5s (0.4s) -> SPEAKER_L_10 | Absolutely
-2026-05-30 14:21:24 [INFO] launcher:   seg[39] 140.9-141.4s (0.4s) -> SPEAKER_L_11 | Thanks
-2026-05-30 14:21:24 [INFO] launcher:   seg[40] 142.3-144.0s (1.7s) -> SPEAKER_L_07 | Okay that's it
-2026-05-30 14:21:24 [INFO] launcher:   seg[41] 144.1-145.7s (1.5s) -> SPEAKER_L_08 | Thank you Angela for giving me the time
-2026-05-30 14:21:24 [INFO] launcher:   seg[42] 146.3-147.6s (1.3s) -> SPEAKER_L_07 | I will leave the meeting now
-2026-05-30 14:21:24 [INFO] launcher:   seg[43] 148.4-149.3s (0.9s) -> SPEAKER_L_08 | Have a good day everyone
-2026-05-30 14:21:24 [INFO] launcher:   seg[44] 149.7-150.1s (0.4s) -> SPEAKER_L_12 | Maria
-2026-05-30 14:21:24 [INFO] launcher:   seg[45] 150.6-152.3s (1.7s) -> SPEAKER_L_07 | Ken good luck with your training
-2026-05-30 14:21:24 [INFO] launcher:   seg[46] 153.6-154.2s (0.6s) -> SPEAKER_L_06 | Thanks Tarek
-2026-05-30 14:21:24 [INFO] launcher:   seg[47] 154.3-154.9s (0.6s) -> SPEAKER_L_13 | Speak to you soon
-2026-05-30 14:21:24 [INFO] launcher:   seg[48] 155.6-156.1s (0.4s) -> SPEAKER_L_14 | Thanks
-2026-05-30 14:21:24 [INFO] launcher:   seg[49] 156.3-156.7s (0.4s) -> SPEAKER_L_15 | Thanks
-2026-05-30 14:21:24 [INFO] launcher:   seg[50] 156.7-157.9s (1.2s) -> SPEAKER_L_11 | Bye Great
-2026-05-30 14:21:24 [INFO] launcher:   seg[51] 158.4-160.4s (2.1s) -> SPEAKER_L_01 | So let's get back to our business
-2026-05-30 14:21:24 [INFO] launcher:   seg[52] 161.1-164.6s (3.4s) -> SPEAKER_L_01 | Maria and Ken you were both hired for the customer care positions
-2026-05-30 14:21:24 [INFO] launcher:   seg[53] 165.2-167.0s (1.8s) -> SPEAKER_L_01 | This means that you'll deal with our clients
-2026-05-30 14:21:24 [INFO] launcher:   seg[54] 167.5-170.0s (2.5s) -> SPEAKER_L_01 | team leads and other companies who have purchased our software
-2026-05-30 14:21:24 [INFO] launcher:   seg[55] 170.7-176.6s (5.8s) -> SPEAKER_L_01 | You will answer some of their questions or provide a short demo of how our softw
-2026-05-30 14:21:24 [INFO] launcher:   seg[56] 177.1-179.9s (2.8s) -> SPEAKER_L_01 | First let me tell you a little bit about our product and our company
-2026-05-30 14:21:24 [INFO] launcher:   seg[57] 180.4-183.0s (2.5s) -> SPEAKER_L_01 | Then we'll go through your duties and responsibilities
-2026-05-30 14:21:24 [INFO] launcher:   seg[58] 183.3-185.9s (2.6s) -> SPEAKER_L_01 | And finally you can ask me questions if you have any
-2026-05-30 14:21:24 [INFO] launcher:   seg[59] 186.7-187.8s (1.1s) -> SPEAKER_L_11 | Sounds good
-2026-05-30 14:21:24 [INFO] launcher:   seg[60] 188.9-190.6s (1.7s) -> SPEAKER_L_01 | So the two owners
-2026-05-30 14:21:24 [INFO] launcher:   seg[61] 191.0-193.3s (2.3s) -> SPEAKER_L_01 | Jen and Nina created our company three years ago
-2026-05-30 14:21:24 [INFO] launcher:   seg[62] 194.0-197.0s (3.1s) -> SPEAKER_L_01 | They created software for training work teams called Logiteam
-2026-05-30 14:21:24 [INFO] launcher:   seg[63] 197.5-201.8s (4.3s) -> SPEAKER_L_01 | It became an instant success and now we have 43 employees
-2026-05-30 14:21:24 [INFO] launcher:   seg[64] 202.5-205.6s (3.1s) -> SPEAKER_L_01 | 82 customers and five different product packages
-2026-05-30 14:21:24 [INFO] launcher:   seg[65] 206.0-210.9s (4.9s) -> SPEAKER_L_01 | Our product is simple to use with some training and that's where you come into t
-2026-05-30 14:21:24 [INFO] launcher:   seg[66] 211.1-214.4s (3.3s) -> SPEAKER_L_01 | In the next two weeks you'll become experts of Logiteam
-2026-05-30 14:21:24 [INFO] launcher:   seg[67] 214.4-217.5s (3.1s) -> SPEAKER_L_01 | We'll make sure that you're familiar with all basic functions
-2026-05-30 14:21:24 [INFO] launcher:   seg[68] 218.0-221.6s (3.6s) -> SPEAKER_L_01 | security features add ons and the most common glitches too
-2026-05-30 14:21:24 [INFO] launcher:   seg[69] 221.9-227.7s (5.7s) -> SPEAKER_L_01 | By the end of this training you'll be able to assist our clients with using the 
-2026-05-30 14:21:24 [INFO] launcher:   seg[70] 228.1-229.8s (1.7s) -> SPEAKER_L_01 | Do you guys have any questions so far
-2026-05-30 14:21:24 [INFO] launcher:   seg[71] 230.7-231.8s (1.1s) -> SPEAKER_L_03 | Yes I have a question
-2026-05-30 14:21:24 [INFO] launcher:   seg[72] 232.0-235.7s (3.7s) -> SPEAKER_L_03 | Do we use our own devices or the company's laptop during the training
-2026-05-30 14:21:24 [INFO] launcher:   seg[73] 236.5-237.1s (0.6s) -> SPEAKER_L_01 | Great question
-2026-05-30 14:21:24 [INFO] launcher:   seg[74] 237.3-239.0s (1.8s) -> SPEAKER_L_01 | You don't need your own device
-2026-05-30 14:21:24 [INFO] launcher:   seg[75] 239.0-244.7s (5.7s) -> SPEAKER_L_01 | We will set up your account on the computer you'll be using for work so it's bet
-2026-05-30 14:21:24 [INFO] launcher:   seg[76] 245.3-245.9s (0.6s) -> SPEAKER_L_01 | Great thanks
-2026-05-30 14:21:24 [INFO] launcher:   seg[77] 246.9-248.0s (1.2s) -> SPEAKER_L_01 | I have a question
-2026-05-30 14:21:24 [INFO] launcher:   seg[78] 248.4-251.9s (3.5s) -> SPEAKER_L_01 | Will I be interacting with clients over the phone or video conference
-2026-05-30 14:21:24 [INFO] launcher:   seg[79] 252.6-256.1s (3.5s) -> SPEAKER_L_01 | We use a video conferencing tool that will be covered during your training
-2026-05-30 14:21:24 [INFO] launcher:   seg[80] 256.7-258.2s (1.5s) -> SPEAKER_L_14 | Okay thank you
-2026-05-30 14:21:32 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Diarization results uploaded for recording 6a1ace328e2742dda827e4aa: 39 segments, 15 speakers
+2026-05-30 14:38:40 [INFO] launcher: Current app version: 1.0.66
+2026-05-30 14:38:40 [INFO] launcher: App is up to date.
+2026-05-30 14:38:40 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-05-30 14:38:40 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-30 14:38:41 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-30 14:38:42 [INFO] launcher: [local_presence] Announced port 8066 via nonce
+2026-05-30 14:38:42 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [6608]
+INFO:     Waiting for application startup.
+2026-05-30 14:38:42 [INFO] launcher: [local_presence] Heartbeat thread started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-05-30 14:38:42 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-05-30 14:38:42 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-05-30 14:38:42 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-30 14:38:43 [INFO] launcher: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-05-30 14:38:43 [INFO] launcher: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-05-30 14:38:43 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-30 14:38:43 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-05-30 14:38:43 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-30 14:38:43 [INFO] launcher: cluster_threshold(): backend='ort'
+2026-05-30 14:38:43 [INFO] launcher: cluster_threshold(): env override -> 0.580
+2026-05-30 14:38:43 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-30 14:38:43 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-30 14:38:43 [INFO] launcher: cluster_threshold(): backend='ort'
+2026-05-30 14:38:43 [INFO] launcher: cluster_threshold(): env override -> 0.580
+2026-05-30 14:38:43 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.58, backend=ort, requested_provider=directml, effective_provider=directml
+2026-05-30 14:38:43 [INFO] launcher: Diarization models pre-warmed
+INFO:     127.0.0.1:49206 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-30 14:38:45 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-05-30 14:38:45 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-30 14:38:45 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:49211 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-30 14:38:46 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Starting diarization for recording 6a1ace328e2742dda827e4aa
+2026-05-30 14:38:46 [INFO] launcher: Diarization thread spawned for recording 6a1ace328e2742dda827e4aa
+INFO:     127.0.0.1:49213 - "POST /diarize/6a1ace328e2742dda827e4aa HTTP/1.1" 200 OK
+2026-05-30 14:38:52 [INFO] launcher: Stereo input has identical L/R channels - treating as mono to avoid duplicate diarization
+2026-05-30 14:38:53 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Audio ready: 266.0s mono
+2026-05-30 14:38:53 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Background diarization started for recording 6a1ace328e2742dda827e4aa
+2026-05-30 14:38:55 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Diarization path decision: chunks_with_words=yes preferred_provider=directml active_provider=directml embedding_backend=ort
+2026-05-30 14:38:55 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Running ASR-driven diarization (76 chunks with word timestamps)
+2026-05-30 14:38:55 [INFO] launcher: embed_segments: 81 segments, workers=4, active_provider=directml, embedding_backend=ort
+2026-05-30 14:39:01 [INFO] launcher: cluster_threshold(): backend='ort'
+2026-05-30 14:39:01 [INFO] launcher: cluster_threshold(): env override -> 0.580
+2026-05-30 14:39:04 [INFO] launcher: Clustered 81 embeddings into 9 speakers (threshold=0.58)
+2026-05-30 14:39:04 [INFO] launcher:   seg[00] 12.4-15.9s (3.4s) -> SPEAKER_L_00 | Thank you all for joining
+2026-05-30 14:39:04 [INFO] launcher:   seg[01] 16.4-21.0s (4.5s) -> SPEAKER_L_01 | If you haven't met yet we have our two newly hired customer care team members
+2026-05-30 14:39:04 [INFO] launcher:   seg[02] 21.5-22.2s (0.7s) -> SPEAKER_L_01 | Ken and Maria
+2026-05-30 14:39:04 [INFO] launcher:   seg[03] 22.6-23.9s (1.3s) -> SPEAKER_L_01 | Hi guys Welcome to the team
+2026-05-30 14:39:04 [INFO] launcher:   seg[04] 24.9-25.3s (0.4s) -> SPEAKER_L_00 | Thanks Angela
+2026-05-30 14:39:04 [INFO] launcher:   seg[05] 25.4-26.4s (1.0s) -> SPEAKER_L_00 | It's great to be here
+2026-05-30 14:39:04 [INFO] launcher:   seg[06] 26.9-27.8s (0.9s) -> SPEAKER_L_02 | Hi everyone
+2026-05-30 14:39:04 [INFO] launcher:   seg[07] 29.0-30.0s (1.0s) -> SPEAKER_L_01 | And Tarek from the customer care team
+2026-05-30 14:39:04 [INFO] launcher:   seg[08] 30.0-33.0s (3.0s) -> SPEAKER_L_01 | Maria from human resources is joining us for a brief period of time
+2026-05-30 14:39:04 [INFO] launcher:   seg[09] 33.3-35.7s (2.4s) -> SPEAKER_L_03 | Hi Tarek Morning everyone
+2026-05-30 14:39:04 [INFO] launcher:   seg[10] 37.1-41.4s (4.3s) -> SPEAKER_L_01 | I scheduled this meeting to introduce our new team members to our training proce
+2026-05-30 14:39:04 [INFO] launcher:   seg[11] 42.2-45.8s (3.6s) -> SPEAKER_L_01 | Tarek requested to be part of this meeting because he has some information for y
+2026-05-30 14:39:04 [INFO] launcher:   seg[12] 46.2-47.7s (1.5s) -> SPEAKER_L_01 | Tarek would you like to begin
+2026-05-30 14:39:04 [INFO] launcher:   seg[13] 48.1-48.6s (0.5s) -> SPEAKER_L_03 | Sure
+2026-05-30 14:39:04 [INFO] launcher:   seg[14] 49.2-49.9s (0.7s) -> SPEAKER_L_03 | Thank you Angela
+2026-05-30 14:39:04 [INFO] launcher:   seg[15] 50.9-51.4s (0.5s) -> SPEAKER_L_03 | So Maria
+2026-05-30 14:39:04 [INFO] launcher:   seg[16] 52.3-53.9s (1.6s) -> SPEAKER_L_03 | Ken welcome to Lock A team
+2026-05-30 14:39:04 [INFO] launcher:   seg[17] 53.9-59.8s (5.8s) -> SPEAKER_L_03 | I want to talk to you about some forms that you need to fill out before you can 
+2026-05-30 14:39:04 [INFO] launcher:   seg[18] 60.0-66.4s (6.4s) -> SPEAKER_L_03 | You have received an email last week with our liability policy and our confident
+2026-05-30 14:39:04 [INFO] launcher:   seg[19] 66.7-73.6s (6.8s) -> SPEAKER_L_03 | The one about you agreeing not to share any confidential information about our c
+2026-05-30 14:39:04 [INFO] launcher:   seg[20] 74.5-75.6s (1.1s) -> SPEAKER_L_03 | Have you received it
+2026-05-30 14:39:04 [INFO] launcher:   seg[21] 76.1-77.2s (1.1s) -> SPEAKER_L_01 | Yes I have
+2026-05-30 14:39:04 [INFO] launcher:   seg[22] 78.0-79.8s (1.8s) -> SPEAKER_L_00 | I don't think I received that
+2026-05-30 14:39:04 [INFO] launcher:   seg[23] 79.8-80.4s (0.6s) -> SPEAKER_L_00 | I'm sorry
+2026-05-30 14:39:04 [INFO] launcher:   seg[24] 81.2-81.9s (0.7s) -> SPEAKER_L_03 | No problem
+2026-05-30 14:39:04 [INFO] launcher:   seg[25] 82.1-83.8s (1.6s) -> SPEAKER_L_03 | I will send it to you today
+2026-05-30 14:39:04 [INFO] launcher:   seg[26] 84.6-85.7s (1.1s) -> SPEAKER_L_03 | Once you have the document
+2026-05-30 14:39:04 [INFO] launcher:   seg[27] 86.4-89.3s (2.9s) -> SPEAKER_L_03 | please read it carefully and sign electronically
+2026-05-30 14:39:04 [INFO] launcher:   seg[28] 89.8-96.4s (6.6s) -> SPEAKER_L_03 | There are four places where you will need to insert your initials and two where 
+2026-05-30 14:39:04 [INFO] launcher:   seg[29] 97.1-99.0s (1.8s) -> SPEAKER_L_03 | Once signed and saved
+2026-05-30 14:39:04 [INFO] launcher:   seg[30] 99.5-101.7s (2.2s) -> SPEAKER_L_03 | please send the document directly to me
+2026-05-30 14:39:04 [INFO] launcher:   seg[31] 102.3-107.8s (5.5s) -> SPEAKER_L_03 | My email address is Tarek godas at mail ca
+2026-05-30 14:39:04 [INFO] launcher:   seg[32] 108.4-120.1s (11.6s) -> SPEAKER_L_03 | That is T A R E K dot G U L D U Z at mail ca
+2026-05-30 14:39:04 [INFO] launcher:   seg[33] 120.4-126.6s (6.1s) -> SPEAKER_L_03 | This is very important because you cannot work until I have the signed document 
+2026-05-30 14:39:04 [INFO] launcher:   seg[34] 127.1-128.7s (1.6s) -> SPEAKER_L_03 | Do you have any questions
+2026-05-30 14:39:04 [INFO] launcher:   seg[35] 129.5-132.1s (2.6s) -> SPEAKER_L_01 | No I'll send it to you this afternoon
+2026-05-30 14:39:04 [INFO] launcher:   seg[36] 132.6-134.0s (1.4s) -> SPEAKER_L_03 | Perfect Thank you
+2026-05-30 14:39:04 [INFO] launcher:   seg[37] 134.7-139.1s (4.4s) -> SPEAKER_L_03 | Ken please send me an email so I can double check the email address I have in yo
+2026-05-30 14:39:04 [INFO] launcher:   seg[38] 140.1-140.5s (0.4s) -> SPEAKER_L_04 | Absolutely
+2026-05-30 14:39:04 [INFO] launcher:   seg[39] 140.9-141.4s (0.4s) -> SPEAKER_L_05 | Thanks
+2026-05-30 14:39:04 [INFO] launcher:   seg[40] 142.3-144.0s (1.7s) -> SPEAKER_L_03 | Okay that's it
+2026-05-30 14:39:04 [INFO] launcher:   seg[41] 144.1-145.7s (1.5s) -> SPEAKER_L_03 | Thank you Angela for giving me the time
+2026-05-30 14:39:04 [INFO] launcher:   seg[42] 146.3-147.6s (1.3s) -> SPEAKER_L_03 | I will leave the meeting now
+2026-05-30 14:39:04 [INFO] launcher:   seg[43] 148.4-149.3s (0.9s) -> SPEAKER_L_03 | Have a good day everyone
+2026-05-30 14:39:04 [INFO] launcher:   seg[44] 149.7-150.1s (0.4s) -> SPEAKER_L_03 | Maria
+2026-05-30 14:39:04 [INFO] launcher:   seg[45] 150.6-152.3s (1.7s) -> SPEAKER_L_03 | Ken good luck with your training
+2026-05-30 14:39:04 [INFO] launcher:   seg[46] 153.6-154.2s (0.6s) -> SPEAKER_L_01 | Thanks Tarek
+2026-05-30 14:39:04 [INFO] launcher:   seg[47] 154.3-154.9s (0.6s) -> SPEAKER_L_01 | Speak to you soon
+2026-05-30 14:39:04 [INFO] launcher:   seg[48] 155.6-156.1s (0.4s) -> SPEAKER_L_07 | Thanks
+2026-05-30 14:39:04 [INFO] launcher:   seg[49] 156.3-156.7s (0.4s) -> SPEAKER_L_08 | Thanks
+2026-05-30 14:39:04 [INFO] launcher:   seg[50] 156.7-157.9s (1.2s) -> SPEAKER_L_05 | Bye Great
+2026-05-30 14:39:04 [INFO] launcher:   seg[51] 158.4-160.4s (2.1s) -> SPEAKER_L_01 | So let's get back to our business
+2026-05-30 14:39:04 [INFO] launcher:   seg[52] 161.1-164.6s (3.4s) -> SPEAKER_L_01 | Maria and Ken you were both hired for the customer care positions
+2026-05-30 14:39:04 [INFO] launcher:   seg[53] 165.2-167.0s (1.8s) -> SPEAKER_L_01 | This means that you'll deal with our clients
+2026-05-30 14:39:04 [INFO] launcher:   seg[54] 167.5-170.0s (2.5s) -> SPEAKER_L_01 | team leads and other companies who have purchased our software
+2026-05-30 14:39:04 [INFO] launcher:   seg[55] 170.7-176.6s (5.8s) -> SPEAKER_L_01 | You will answer some of their questions or provide a short demo of how our softw
+2026-05-30 14:39:04 [INFO] launcher:   seg[56] 177.1-179.9s (2.8s) -> SPEAKER_L_01 | First let me tell you a little bit about our product and our company
+2026-05-30 14:39:04 [INFO] launcher:   seg[57] 180.4-183.0s (2.5s) -> SPEAKER_L_01 | Then we'll go through your duties and responsibilities
+2026-05-30 14:39:04 [INFO] launcher:   seg[58] 183.3-185.9s (2.6s) -> SPEAKER_L_01 | And finally you can ask me questions if you have any
+2026-05-30 14:39:04 [INFO] launcher:   seg[59] 186.7-187.8s (1.1s) -> SPEAKER_L_05 | Sounds good
+2026-05-30 14:39:04 [INFO] launcher:   seg[60] 188.9-190.6s (1.7s) -> SPEAKER_L_01 | So the two owners
+2026-05-30 14:39:04 [INFO] launcher:   seg[61] 191.0-193.3s (2.3s) -> SPEAKER_L_01 | Jen and Nina created our company three years ago
+2026-05-30 14:39:04 [INFO] launcher:   seg[62] 194.0-197.0s (3.1s) -> SPEAKER_L_01 | They created software for training work teams called Logiteam
+2026-05-30 14:39:04 [INFO] launcher:   seg[63] 197.5-201.8s (4.3s) -> SPEAKER_L_01 | It became an instant success and now we have 43 employees
+2026-05-30 14:39:04 [INFO] launcher:   seg[64] 202.5-205.6s (3.1s) -> SPEAKER_L_01 | 82 customers and five different product packages
+2026-05-30 14:39:04 [INFO] launcher:   seg[65] 206.0-210.9s (4.9s) -> SPEAKER_L_01 | Our product is simple to use with some training and that's where you come into t
+2026-05-30 14:39:04 [INFO] launcher:   seg[66] 211.1-214.4s (3.3s) -> SPEAKER_L_01 | In the next two weeks you'll become experts of Logiteam
+2026-05-30 14:39:04 [INFO] launcher:   seg[67] 214.4-217.5s (3.1s) -> SPEAKER_L_01 | We'll make sure that you're familiar with all basic functions
+2026-05-30 14:39:04 [INFO] launcher:   seg[68] 218.0-221.6s (3.6s) -> SPEAKER_L_01 | security features add ons and the most common glitches too
+2026-05-30 14:39:04 [INFO] launcher:   seg[69] 221.9-227.7s (5.7s) -> SPEAKER_L_01 | By the end of this training you'll be able to assist our clients with using the 
+2026-05-30 14:39:04 [INFO] launcher:   seg[70] 228.1-229.8s (1.7s) -> SPEAKER_L_01 | Do you guys have any questions so far
+2026-05-30 14:39:04 [INFO] launcher:   seg[71] 230.7-231.8s (1.1s) -> SPEAKER_L_00 | Yes I have a question
+2026-05-30 14:39:04 [INFO] launcher:   seg[72] 232.0-235.7s (3.7s) -> SPEAKER_L_00 | Do we use our own devices or the company's laptop during the training
+2026-05-30 14:39:04 [INFO] launcher:   seg[73] 236.5-237.1s (0.6s) -> SPEAKER_L_01 | Great question
+2026-05-30 14:39:04 [INFO] launcher:   seg[74] 237.3-239.0s (1.8s) -> SPEAKER_L_01 | You don't need your own device
+2026-05-30 14:39:04 [INFO] launcher:   seg[75] 239.0-244.7s (5.7s) -> SPEAKER_L_01 | We will set up your account on the computer you'll be using for work so it's bet
+2026-05-30 14:39:04 [INFO] launcher:   seg[76] 245.3-245.9s (0.6s) -> SPEAKER_L_01 | Great thanks
+2026-05-30 14:39:04 [INFO] launcher:   seg[77] 246.9-248.0s (1.2s) -> SPEAKER_L_01 | I have a question
+2026-05-30 14:39:04 [INFO] launcher:   seg[78] 248.4-251.9s (3.5s) -> SPEAKER_L_01 | Will I be interacting with clients over the phone or video conference
+2026-05-30 14:39:04 [INFO] launcher:   seg[79] 252.6-256.1s (3.5s) -> SPEAKER_L_01 | We use a video conferencing tool that will be covered during your training
+2026-05-30 14:39:04 [INFO] launcher:   seg[80] 256.7-258.2s (1.5s) -> SPEAKER_L_07 | Okay thank you
+2026-05-30 14:39:12 [INFO] launcher: [rediarize-6a1ace328e2742dda827e4aa] Diarization results uploaded for recording 6a1ace328e2742dda827e4aa: 26 segments, 8 speakers
