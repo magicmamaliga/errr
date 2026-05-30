@@ -1,32 +1,5 @@
-backend-1  | 2026-05-29T08:42:33.286Z  INFO 1 --- [backend] [cat-handler-313] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:42:33.294Z  INFO 1 --- [backend] [cat-handler-313] u.m.b.record.TranscriptAppendController  : Transcript append for recording 6a1950ac81492da34aa577aa by tornaimate95@gmail.com: offset=201.8708062171936s, text=24 chars, chunks=5
-backend-1  | 2026-05-29T08:42:53.024Z  INFO 1 --- [backend] [cat-handler-319] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a1950ac81492da34aa577aa
-backend-1  | 2026-05-29T08:42:53.024Z  INFO 1 --- [backend] [cat-handler-319] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:42:53.189Z  INFO 1 --- [backend] [cat-handler-323] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:42:57.325Z  INFO 1 --- [backend] [cat-handler-327] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:42:57.333Z  INFO 1 --- [backend] [cat-handler-327] u.m.b.record.service.FileStorageService  : Buffered chunk 3 for 6a1950ac81492da34aa577aa_audio (2164160 bytes total)
-backend-1  | 2026-05-29T08:42:58.302Z  INFO 1 --- [backend] [cat-handler-328] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:42:58.985Z  INFO 1 --- [backend] [cat-handler-328] .m.b.r.s.s.R2MultipartUploadOrchestrator : Uploaded 6a1950ac81492da34aa577aa_audio.aac (2164160 bytes) via single PutObject
-backend-1  | 2026-05-29T08:42:58.985Z  INFO 1 --- [backend] [cat-handler-328] u.m.b.record.service.FileStorageService  : Uploaded 6a1950ac81492da34aa577aa_audio.aac to R2 (2164160 bytes)
-backend-1  | 2026-05-29T08:42:58.991Z  INFO 1 --- [backend] [cat-handler-328] u.m.b.record.service.RecordingService    : Finalised live recording 6a1950ac81492da34aa577aa (4 chunks, .aac) -> 6a1950ac81492da34aa577aa_audio.aac
-backend-1  | 2026-05-29T08:42:58.991Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a1950ac81492da34aa577aa]
-backend-1  | 2026-05-29T08:42:58.995Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : No transcript found for recording 6a1950ac81492da34aa577aa - attempting AI transcription from audio
-backend-1  | 2026-05-29T08:42:58.995Z  INFO 1 --- [backend] [        async-2] u.m.backend.user.service.UserService     : Entering findById for userId 6a181418d827e331bae44c39
-backend-1  | 2026-05-29T08:42:59.483Z  INFO 1 --- [backend] [        async-2] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-29T08:43:00.654Z ERROR 1 --- [backend] [        async-2] u.m.b.r.a.s.AiTranscriptionService       : AI transcription failed for user tornaimate95@gmail.com: 400 - {"error":{"message":"Invalid file format. Supported formats: ['flac', 'm4a', 'mp3', 'mp4', 'mpeg', 'mpga', 'oga', 'ogg', 'wav', 'webm']","type":"invalid_request_error","param":null,"code":null},"usage":{"type":"duration","seconds":0}}
-backend-1  | 2026-05-29T08:43:00.655Z ERROR 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : Auto-transcription failed for recording 6a1950ac81492da34aa577aa
-backend-1  |
-backend-1  | uk.magicmamaliga.backend.record.ai.exception.ExternalAiException: AI transcription failed: 400 - {"error":{"message":"Invalid file format. Supported formats: ['flac', 'm4a', 'mp3', 'mp4', 'mpeg', 'mpga', 'oga', 'ogg', 'wav', 'webm']","type":"invalid_request_error","param":null,"code":null},"usage":{"type":"duration","seconds":0}}
-backend-1  |    at uk.magicmamaliga.backend.record.ai.service.AiTranscriptionService.transcribeBytesDetailed(AiTranscriptionService.java:202) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at uk.magicmamaliga.backend.record.event.RecordingEventListener.handleFinishedRecording(RecordingEventListener.java:54) ~[!/:0.0.1-SNAPSHOT]
-backend-1  |    at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
-backend-1  |    at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:190) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:158) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at org.springframework.aop.interceptor.AsyncExecutionInterceptor.lambda$invoke$0(AsyncExecutionInterceptor.java:112) ~[spring-aop-7.0.7.jar!/:7.0.7]
-backend-1  |    at java.base/java.util.concurrent.FutureTask.run(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.lang.Thread.run(Unknown Source) ~[na:na]
-backend-1  |
+ .m.b.r.s.s.R2MultipartUploadOrchestrator : Completed multipart upload for 6a1a910481492da34aa577ab_audio.mp3 (2 parts, 11238300 bytes)
+backend-1  | 2026-05-30T07:37:42.001Z  INFO 1 --- [backend] [at-handler-8126] u.m.b.record.service.FileStorageService  : Uploaded 6a1a910481492da34aa577ab_audio.mp3 to R2 (11238300 bytes)
+backend-1  | 2026-05-30T07:37:42.012Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a1a910481492da34aa577ab]
+backend-1  | 2026-05-30T07:37:42.014Z  INFO 1 --- [backend] [at-handler-8126] u.m.b.record.service.RecordingService    : Finalised live recording 6a1a910481492da34aa577ab (12 chunks, .mp3) -> 6a1a910481492da34aa577ab_audio.mp3
+backend-1  | 2026-05-30T07:37:42.016Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : No transcript found for recording 6a1a910481492da34aa577ab - attempting AI transcription from audio
