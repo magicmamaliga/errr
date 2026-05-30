@@ -1,5 +1,724 @@
- .m.b.r.s.s.R2MultipartUploadOrchestrator : Completed multipart upload for 6a1a910481492da34aa577ab_audio.mp3 (2 parts, 11238300 bytes)
-backend-1  | 2026-05-30T07:37:42.001Z  INFO 1 --- [backend] [at-handler-8126] u.m.b.record.service.FileStorageService  : Uploaded 6a1a910481492da34aa577ab_audio.mp3 to R2 (11238300 bytes)
-backend-1  | 2026-05-30T07:37:42.012Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a1a910481492da34aa577ab]
-backend-1  | 2026-05-30T07:37:42.014Z  INFO 1 --- [backend] [at-handler-8126] u.m.b.record.service.RecordingService    : Finalised live recording 6a1a910481492da34aa577ab (12 chunks, .mp3) -> 6a1a910481492da34aa577ab_audio.mp3
-backend-1  | 2026-05-30T07:37:42.016Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : No transcript found for recording 6a1a910481492da34aa577ab - attempting AI transcription from audio
+2026-05-30 09:35:18 [INFO] launcher: [live_uploader] Started for recording 6a1aa14681492da34aa577b9 at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-05-30 09:35:18 [INFO] launcher: Session started.
+INFO:     127.0.0.1:59784 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59792 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59793 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59794 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59795 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59796 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59797 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59799 - "GET /api/live HTTP/1.1" 200 OK
+2026-05-30 09:35:29 [INFO] launcher: [local] Transcribed segment (mic), 29 chars, 8 word-chunks, offset=7.17s, persisted=yes
+INFO:     127.0.0.1:59801 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59803 - "GET /api/live?since=2026-05-30T08%3A35%3A29Z HTTP/1.1" 200 OK
+2026-05-30 09:35:31 [INFO] launcher: [local] Transcribed segment (mic), 19 chars, 7 word-chunks, offset=10.46s, persisted=yes
+INFO:     127.0.0.1:59807 - "GET /api/live?since=2026-05-30T08%3A35%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59808 - "GET /api/live?since=2026-05-30T08%3A35%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59811 - "GET /api/live?since=2026-05-30T08%3A35%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59812 - "GET /api/live?since=2026-05-30T08%3A35%3A31Z HTTP/1.1" 200 OK
+2026-05-30 09:35:39 [INFO] launcher: [local] Transcribed segment (mic), 19 chars, 7 word-chunks, offset=17.59s, persisted=yes
+INFO:     127.0.0.1:59815 - "GET /api/live?since=2026-05-30T08%3A35%3A31Z HTTP/1.1" 200 OK
+2026-05-30 09:35:40 [INFO] launcher: [local] Transcribed segment (speaker), 55 chars, 11 word-chunks, offset=18.95s, persisted=yes
+INFO:     127.0.0.1:59816 - "GET /api/live?since=2026-05-30T08%3A35%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59819 - "GET /api/live?since=2026-05-30T08%3A35%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59824 - "GET /api/live?since=2026-05-30T08%3A35%3A40Z HTTP/1.1" 200 OK
+2026-05-30 09:35:44 [INFO] launcher: [local] Transcribed segment (speaker), 55 chars, 13 word-chunks, offset=22.32s, persisted=yes
+2026-05-30 09:35:44 [INFO] launcher: [local] Transcribed segment (mic), 38 chars, 8 word-chunks, offset=22.35s, persisted=yes
+INFO:     127.0.0.1:59826 - "GET /api/live?since=2026-05-30T08%3A35%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59828 - "GET /api/live?since=2026-05-30T08%3A35%3A44Z HTTP/1.1" 200 OK
+2026-05-30 09:35:48 [INFO] launcher: [local] Transcribed segment (speaker), 31 chars, 6 word-chunks, offset=26.09s, persisted=yes
+INFO:     127.0.0.1:59831 - "GET /api/live?since=2026-05-30T08%3A35%3A44Z HTTP/1.1" 200 OK
+2026-05-30 09:35:48 [INFO] launcher: [local] Transcribed segment (mic), 31 chars, 6 word-chunks, offset=26.30s, persisted=yes
+INFO:     127.0.0.1:59832 - "GET /api/live?since=2026-05-30T08%3A35%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59833 - "GET /api/live?since=2026-05-30T08%3A35%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59835 - "GET /api/live?since=2026-05-30T08%3A35%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:35:53 [INFO] launcher: [local] Transcribed segment (mic), 95 chars, 19 word-chunks, offset=31.17s, persisted=yes
+INFO:     127.0.0.1:59837 - "GET /api/live?since=2026-05-30T08%3A35%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:35:54 [INFO] launcher: [local] Transcribed segment (speaker), 105 chars, 22 word-chunks, offset=32.04s, persisted=yes
+INFO:     127.0.0.1:59838 - "GET /api/live?since=2026-05-30T08%3A35%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:35:56 [INFO] launcher: [local] Transcribed segment (mic), 59 chars, 14 word-chunks, offset=35.07s, persisted=yes
+INFO:     127.0.0.1:59841 - "GET /api/live?since=2026-05-30T08%3A35%3A54Z HTTP/1.1" 200 OK
+2026-05-30 09:35:57 [INFO] launcher: [local] Transcribed segment (speaker), 43 chars, 7 word-chunks, offset=35.69s, persisted=yes
+INFO:     127.0.0.1:59842 - "GET /api/live?since=2026-05-30T08%3A35%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59843 - "OPTIONS /api/microphone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59844 - "POST /api/microphone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59846 - "GET /api/live?since=2026-05-30T08%3A35%3A57Z HTTP/1.1" 200 OK
+2026-05-30 09:36:00 [INFO] launcher: [local] Transcribed segment (mic), 55 chars, 14 word-chunks, offset=39.07s, persisted=yes
+INFO:     127.0.0.1:59848 - "GET /api/live?since=2026-05-30T08%3A35%3A57Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59850 - "GET /api/live?since=2026-05-30T08%3A36%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59852 - "GET /api/live?since=2026-05-30T08%3A36%3A00Z HTTP/1.1" 200 OK
+2026-05-30 09:36:04 [INFO] launcher: [local] Transcribed segment (speaker), 125 chars, 29 word-chunks, offset=42.10s, persisted=yes
+INFO:     127.0.0.1:59853 - "GET /api/live?since=2026-05-30T08%3A36%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59855 - "GET /api/live?since=2026-05-30T08%3A36%3A04Z HTTP/1.1" 200 OK
+2026-05-30 09:36:07 [INFO] launcher: [local] Transcribed segment (speaker), 44 chars, 8 word-chunks, offset=45.59s, persisted=yes
+INFO:     127.0.0.1:59856 - "GET /api/live?since=2026-05-30T08%3A36%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59858 - "GET /api/live?since=2026-05-30T08%3A36%3A07Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61848 - "GET /api/live?since=2026-05-30T08%3A36%3A07Z HTTP/1.1" 200 OK
+2026-05-30 09:36:11 [INFO] launcher: [local] Transcribed segment (speaker), 61 chars, 12 word-chunks, offset=49.87s, persisted=yes
+INFO:     127.0.0.1:61849 - "GET /api/live?since=2026-05-30T08%3A36%3A07Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61851 - "GET /api/live?since=2026-05-30T08%3A36%3A11Z HTTP/1.1" 200 OK
+2026-05-30 09:36:14 [INFO] launcher: [local] Transcribed segment (speaker), 27 chars, 5 word-chunks, offset=52.90s, persisted=yes
+INFO:     127.0.0.1:61852 - "GET /api/live?since=2026-05-30T08%3A36%3A11Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61854 - "GET /api/live?since=2026-05-30T08%3A36%3A14Z HTTP/1.1" 200 OK
+2026-05-30 09:36:17 [INFO] launcher: [local] Transcribed segment (speaker), 41 chars, 10 word-chunks, offset=55.53s, persisted=yes
+INFO:     127.0.0.1:61856 - "GET /api/live?since=2026-05-30T08%3A36%3A14Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61858 - "GET /api/live?since=2026-05-30T08%3A36%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:36:19 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 6 word-chunks, offset=58.53s, persisted=yes
+INFO:     127.0.0.1:61860 - "GET /api/live?since=2026-05-30T08%3A36%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61862 - "GET /api/live?since=2026-05-30T08%3A36%3A19Z HTTP/1.1" 200 OK
+2026-05-30 09:36:22 [INFO] launcher: [live_uploader] Uploaded seq=0 (935469 bytes MP3) for 6a1aa14681492da34aa577b9
+2026-05-30 09:36:23 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 12 word-chunks, offset=61.55s, persisted=yes
+INFO:     127.0.0.1:61863 - "GET /api/live?since=2026-05-30T08%3A36%3A19Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61864 - "GET /api/live?since=2026-05-30T08%3A36%3A23Z HTTP/1.1" 200 OK
+2026-05-30 09:36:26 [INFO] launcher: [local] Transcribed segment (speaker), 36 chars, 6 word-chunks, offset=64.58s, persisted=yes
+INFO:     127.0.0.1:61866 - "GET /api/live?since=2026-05-30T08%3A36%3A23Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61868 - "GET /api/live?since=2026-05-30T08%3A36%3A26Z HTTP/1.1" 200 OK
+2026-05-30 09:36:29 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=67.57s, persisted=yes
+INFO:     127.0.0.1:61869 - "GET /api/live?since=2026-05-30T08%3A36%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61870 - "GET /api/live?since=2026-05-30T08%3A36%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61871 - "GET /api/live?since=2026-05-30T08%3A36%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61872 - "GET /api/live?since=2026-05-30T08%3A36%3A29Z HTTP/1.1" 200 OK
+2026-05-30 09:36:34 [INFO] launcher: [local] Transcribed segment (speaker), 114 chars, 23 word-chunks, offset=73.37s, persisted=yes
+INFO:     127.0.0.1:61874 - "GET /api/live?since=2026-05-30T08%3A36%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61875 - "GET /api/live?since=2026-05-30T08%3A36%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61877 - "GET /api/live?since=2026-05-30T08%3A36%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61878 - "GET /api/live?since=2026-05-30T08%3A36%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61879 - "GET /api/live?since=2026-05-30T08%3A36%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:36:42 [INFO] launcher: [local] Transcribed segment (speaker), 135 chars, 26 word-chunks, offset=80.37s, persisted=yes
+INFO:     127.0.0.1:61881 - "GET /api/live?since=2026-05-30T08%3A36%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61883 - "GET /api/live?since=2026-05-30T08%3A36%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61884 - "GET /api/live?since=2026-05-30T08%3A36%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61885 - "GET /api/live?since=2026-05-30T08%3A36%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61888 - "GET /api/live?since=2026-05-30T08%3A36%3A42Z HTTP/1.1" 200 OK
+2026-05-30 09:36:48 [INFO] launcher: [local] Transcribed segment (speaker), 106 chars, 23 word-chunks, offset=86.51s, persisted=yes
+INFO:     127.0.0.1:61890 - "GET /api/live?since=2026-05-30T08%3A36%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61892 - "GET /api/live?since=2026-05-30T08%3A36%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:36:50 [INFO] launcher: [local] Transcribed segment (speaker), 28 chars, 8 word-chunks, offset=89.54s, persisted=yes
+INFO:     127.0.0.1:61893 - "GET /api/live?since=2026-05-30T08%3A36%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61895 - "GET /api/live?since=2026-05-30T08%3A36%3A50Z HTTP/1.1" 200 OK
+2026-05-30 09:36:53 [INFO] launcher: [local] Transcribed segment (speaker), 27 chars, 6 word-chunks, offset=92.38s, persisted=yes
+INFO:     127.0.0.1:61896 - "GET /api/live?since=2026-05-30T08%3A36%3A50Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61898 - "GET /api/live?since=2026-05-30T08%3A36%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:36:57 [INFO] launcher: [local] Transcribed segment (speaker), 30 chars, 7 word-chunks, offset=95.28s, persisted=yes
+INFO:     127.0.0.1:61899 - "GET /api/live?since=2026-05-30T08%3A36%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61901 - "GET /api/live?since=2026-05-30T08%3A36%3A57Z HTTP/1.1" 200 OK
+2026-05-30 09:37:00 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 13 word-chunks, offset=99.06s, persisted=yes
+INFO:     127.0.0.1:61903 - "GET /api/live?since=2026-05-30T08%3A36%3A57Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61904 - "GET /api/live?since=2026-05-30T08%3A37%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61905 - "GET /api/live?since=2026-05-30T08%3A37%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61906 - "GET /api/live?since=2026-05-30T08%3A37%3A00Z HTTP/1.1" 200 OK
+2026-05-30 09:37:06 [INFO] launcher: [local] Transcribed segment (speaker), 120 chars, 25 word-chunks, offset=104.66s, persisted=yes
+INFO:     127.0.0.1:61908 - "GET /api/live?since=2026-05-30T08%3A37%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61909 - "GET /api/live?since=2026-05-30T08%3A37%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:37:09 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=107.69s, persisted=yes
+INFO:     127.0.0.1:61911 - "GET /api/live?since=2026-05-30T08%3A37%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61912 - "GET /api/live?since=2026-05-30T08%3A37%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61914 - "GET /api/live?since=2026-05-30T08%3A37%3A09Z HTTP/1.1" 200 OK
+2026-05-30 09:37:12 [INFO] launcher: [local] Transcribed segment (speaker), 45 chars, 9 word-chunks, offset=111.26s, persisted=yes
+INFO:     127.0.0.1:61915 - "GET /api/live?since=2026-05-30T08%3A37%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61917 - "GET /api/live?since=2026-05-30T08%3A37%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:37:15 [INFO] launcher: [local] Transcribed segment (speaker), 18 chars, 3 word-chunks, offset=113.93s, persisted=yes
+INFO:     127.0.0.1:61918 - "GET /api/live?since=2026-05-30T08%3A37%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61920 - "GET /api/live?since=2026-05-30T08%3A37%3A15Z HTTP/1.1" 200 OK
+2026-05-30 09:37:18 [INFO] launcher: [local] Transcribed segment (speaker), 44 chars, 8 word-chunks, offset=116.66s, persisted=yes
+INFO:     127.0.0.1:61922 - "GET /api/live?since=2026-05-30T08%3A37%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61923 - "GET /api/live?since=2026-05-30T08%3A37%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61924 - "GET /api/live?since=2026-05-30T08%3A37%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61925 - "GET /api/live?since=2026-05-30T08%3A37%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61928 - "GET /api/live?since=2026-05-30T08%3A37%3A18Z HTTP/1.1" 200 OK
+2026-05-30 09:37:25 [INFO] launcher: [local] Transcribed segment (speaker), 169 chars, 41 word-chunks, offset=123.10s, persisted=yes
+2026-05-30 09:37:25 [INFO] launcher: [live_uploader] Uploaded seq=1 (1026477 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:61929 - "GET /api/live?since=2026-05-30T08%3A37%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61930 - "GET /api/live?since=2026-05-30T08%3A37%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61933 - "GET /api/live?since=2026-05-30T08%3A37%3A25Z HTTP/1.1" 200 OK
+2026-05-30 09:37:29 [INFO] launcher: [local] Transcribed segment (speaker), 61 chars, 13 word-chunks, offset=127.73s, persisted=yes
+INFO:     127.0.0.1:61934 - "GET /api/live?since=2026-05-30T08%3A37%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61796 - "GET /api/live?since=2026-05-30T08%3A37%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61797 - "GET /api/live?since=2026-05-30T08%3A37%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61798 - "GET /api/live?since=2026-05-30T08%3A37%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61800 - "GET /api/live?since=2026-05-30T08%3A37%3A29Z HTTP/1.1" 200 OK
+2026-05-30 09:37:36 [INFO] launcher: [local] Transcribed segment (speaker), 124 chars, 26 word-chunks, offset=134.73s, persisted=yes
+INFO:     127.0.0.1:61801 - "GET /api/live?since=2026-05-30T08%3A37%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61802 - "GET /api/live?since=2026-05-30T08%3A37%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61803 - "GET /api/live?since=2026-05-30T08%3A37%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61804 - "GET /api/live?since=2026-05-30T08%3A37%3A36Z HTTP/1.1" 200 OK
+2026-05-30 09:37:42 [INFO] launcher: [local] Transcribed segment (speaker), 100 chars, 18 word-chunks, offset=141.21s, persisted=yes
+INFO:     127.0.0.1:61806 - "GET /api/live?since=2026-05-30T08%3A37%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61807 - "GET /api/live?since=2026-05-30T08%3A37%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61808 - "GET /api/live?since=2026-05-30T08%3A37%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61809 - "GET /api/live?since=2026-05-30T08%3A37%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61811 - "GET /api/live?since=2026-05-30T08%3A37%3A42Z HTTP/1.1" 200 OK
+2026-05-30 09:37:49 [INFO] launcher: [local] Transcribed segment (speaker), 128 chars, 27 word-chunks, offset=148.20s, persisted=yes
+INFO:     127.0.0.1:61813 - "GET /api/live?since=2026-05-30T08%3A37%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61814 - "GET /api/live?since=2026-05-30T08%3A37%3A49Z HTTP/1.1" 200 OK
+2026-05-30 09:37:52 [INFO] launcher: [local] Transcribed segment (speaker), 23 chars, 6 word-chunks, offset=151.38s, persisted=yes
+INFO:     127.0.0.1:61816 - "GET /api/live?since=2026-05-30T08%3A37%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61819 - "GET /api/live?since=2026-05-30T08%3A37%3A52Z HTTP/1.1" 200 OK
+2026-05-30 09:37:55 [INFO] launcher: [local] Transcribed segment (speaker), 17 chars, 4 word-chunks, offset=154.17s, persisted=yes
+INFO:     127.0.0.1:61821 - "GET /api/live?since=2026-05-30T08%3A37%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61822 - "GET /api/live?since=2026-05-30T08%3A37%3A55Z HTTP/1.1" 200 OK
+2026-05-30 09:37:58 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 4 word-chunks, offset=156.89s, persisted=yes
+INFO:     127.0.0.1:61824 - "GET /api/live?since=2026-05-30T08%3A37%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61825 - "GET /api/live?since=2026-05-30T08%3A37%3A58Z HTTP/1.1" 200 OK
+2026-05-30 09:38:01 [INFO] launcher: [local] Transcribed segment (speaker), 14 chars, 4 word-chunks, offset=159.60s, persisted=yes
+INFO:     127.0.0.1:61827 - "GET /api/live?since=2026-05-30T08%3A37%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61828 - "GET /api/live?since=2026-05-30T08%3A38%3A01Z HTTP/1.1" 200 OK
+2026-05-30 09:38:04 [INFO] launcher: [local] Transcribed segment (speaker), 39 chars, 10 word-chunks, offset=162.46s, persisted=yes
+INFO:     127.0.0.1:61830 - "GET /api/live?since=2026-05-30T08%3A38%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61831 - "GET /api/live?since=2026-05-30T08%3A38%3A04Z HTTP/1.1" 200 OK
+2026-05-30 09:38:06 [INFO] launcher: [local] Transcribed segment (speaker), 18 chars, 4 word-chunks, offset=165.47s, persisted=yes
+INFO:     127.0.0.1:61833 - "GET /api/live?since=2026-05-30T08%3A38%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61834 - "GET /api/live?since=2026-05-30T08%3A38%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:38:09 [INFO] launcher: [local] Transcribed segment (speaker), 24 chars, 5 word-chunks, offset=168.12s, persisted=yes
+INFO:     127.0.0.1:61836 - "GET /api/live?since=2026-05-30T08%3A38%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61837 - "GET /api/live?since=2026-05-30T08%3A38%3A09Z HTTP/1.1" 200 OK
+2026-05-30 09:38:12 [INFO] launcher: [local] Transcribed segment (speaker), 83 chars, 17 word-chunks, offset=170.92s, persisted=yes
+INFO:     127.0.0.1:61839 - "GET /api/live?since=2026-05-30T08%3A38%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61843 - "GET /api/live?since=2026-05-30T08%3A38%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61844 - "GET /api/live?since=2026-05-30T08%3A38%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61845 - "GET /api/live?since=2026-05-30T08%3A38%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:38:17 [INFO] launcher: [local] Transcribed segment (speaker), 116 chars, 23 word-chunks, offset=175.99s, persisted=yes
+INFO:     127.0.0.1:61847 - "GET /api/live?since=2026-05-30T08%3A38%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61850 - "GET /api/live?since=2026-05-30T08%3A38%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:38:21 [INFO] launcher: [local] Transcribed segment (speaker), 30 chars, 5 word-chunks, offset=179.37s, persisted=yes
+INFO:     127.0.0.1:61851 - "GET /api/live?since=2026-05-30T08%3A38%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61852 - "GET /api/live?since=2026-05-30T08%3A38%3A21Z HTTP/1.1" 200 OK
+2026-05-30 09:38:24 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 15 word-chunks, offset=182.49s, persisted=yes
+INFO:     127.0.0.1:61854 - "GET /api/live?since=2026-05-30T08%3A38%3A21Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61855 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61857 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61858 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+2026-05-30 09:38:29 [INFO] launcher: [live_uploader] Uploaded seq=2 (1010925 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:61860 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61861 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61862 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+2026-05-30 09:38:33 [INFO] launcher: [local] Transcribed segment (speaker), 79 chars, 15 word-chunks, offset=189.15s, persisted=yes
+INFO:     127.0.0.1:61863 - "GET /api/live?since=2026-05-30T08%3A38%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61865 - "GET /api/live?since=2026-05-30T08%3A38%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:38:36 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=195.09s, persisted=yes
+INFO:     127.0.0.1:61868 - "GET /api/live?since=2026-05-30T08%3A38%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61870 - "GET /api/live?since=2026-05-30T08%3A38%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61871 - "GET /api/live?since=2026-05-30T08%3A38%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61873 - "GET /api/live?since=2026-05-30T08%3A38%3A36Z HTTP/1.1" 200 OK
+2026-05-30 09:38:41 [INFO] launcher: [local] Transcribed segment (speaker), 127 chars, 34 word-chunks, offset=197.97s, persisted=yes
+INFO:     127.0.0.1:61876 - "GET /api/live?since=2026-05-30T08%3A38%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61878 - "GET /api/live?since=2026-05-30T08%3A38%3A41Z HTTP/1.1" 200 OK
+2026-05-30 09:38:44 [INFO] launcher: [local] Transcribed segment (speaker), 121 chars, 24 word-chunks, offset=203.29s, persisted=yes
+INFO:     127.0.0.1:61879 - "GET /api/live?since=2026-05-30T08%3A38%3A41Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61880 - "GET /api/live?since=2026-05-30T08%3A38%3A44Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61881 - "GET /api/live?since=2026-05-30T08%3A38%3A44Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61883 - "GET /api/live?since=2026-05-30T08%3A38%3A44Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61885 - "GET /api/live?since=2026-05-30T08%3A38%3A44Z HTTP/1.1" 200 OK
+2026-05-30 09:38:51 [INFO] launcher: [local] Transcribed segment (speaker), 87 chars, 19 word-chunks, offset=208.22s, persisted=yes
+INFO:     127.0.0.1:54407 - "GET /api/live?since=2026-05-30T08%3A38%3A44Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54408 - "GET /api/live?since=2026-05-30T08%3A38%3A51Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54409 - "GET /api/live?since=2026-05-30T08%3A38%3A51Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54411 - "GET /api/live?since=2026-05-30T08%3A38%3A51Z HTTP/1.1" 200 OK
+2026-05-30 09:38:56 [INFO] launcher: [local] Transcribed segment (speaker), 82 chars, 16 word-chunks, offset=215.21s, persisted=yes
+INFO:     127.0.0.1:63056 - "GET /api/live?since=2026-05-30T08%3A38%3A51Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63057 - "GET /api/live?since=2026-05-30T08%3A38%3A56Z HTTP/1.1" 200 OK
+2026-05-30 09:39:00 [INFO] launcher: [local] Transcribed segment (speaker), 56 chars, 14 word-chunks, offset=219.37s, persisted=yes
+INFO:     127.0.0.1:63059 - "GET /api/live?since=2026-05-30T08%3A38%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63060 - "GET /api/live?since=2026-05-30T08%3A39%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63062 - "GET /api/live?since=2026-05-30T08%3A39%3A00Z HTTP/1.1" 200 OK
+2026-05-30 09:39:04 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 16 word-chunks, offset=222.80s, persisted=yes
+INFO:     127.0.0.1:63063 - "GET /api/live?since=2026-05-30T08%3A39%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63064 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63065 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63066 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63067 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63069 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+2026-05-30 09:39:13 [INFO] launcher: [local] Transcribed segment (speaker), 146 chars, 31 word-chunks, offset=229.80s, persisted=yes
+INFO:     127.0.0.1:63070 - "GET /api/live?since=2026-05-30T08%3A39%3A04Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63072 - "GET /api/live?since=2026-05-30T08%3A39%3A13Z HTTP/1.1" 200 OK
+2026-05-30 09:39:16 [INFO] launcher: [local] Transcribed segment (speaker), 81 chars, 18 word-chunks, offset=234.49s, persisted=yes
+INFO:     127.0.0.1:63073 - "GET /api/live?since=2026-05-30T08%3A39%3A13Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63075 - "GET /api/live?since=2026-05-30T08%3A39%3A16Z HTTP/1.1" 200 OK
+2026-05-30 09:39:18 [INFO] launcher: [local] Transcribed segment (speaker), 47 chars, 10 word-chunks, offset=237.58s, persisted=yes
+INFO:     127.0.0.1:63079 - "GET /api/live?since=2026-05-30T08%3A39%3A16Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63081 - "GET /api/live?since=2026-05-30T08%3A39%3A18Z HTTP/1.1" 200 OK
+2026-05-30 09:39:21 [INFO] launcher: [local] Transcribed segment (speaker), 39 chars, 6 word-chunks, offset=240.36s, persisted=yes
+INFO:     127.0.0.1:63082 - "GET /api/live?since=2026-05-30T08%3A39%3A18Z HTTP/1.1" 200 OK
+2026-05-30 09:39:25 [INFO] launcher: [local] Transcribed segment (speaker), 17 chars, 3 word-chunks, offset=243.39s, persisted=yes
+INFO:     127.0.0.1:63085 - "GET /api/live?since=2026-05-30T08%3A39%3A21Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63086 - "GET /api/live?since=2026-05-30T08%3A39%3A25Z HTTP/1.1" 200 OK
+2026-05-30 09:39:27 [INFO] launcher: [local] Transcribed segment (speaker), 13 chars, 4 word-chunks, offset=246.52s, persisted=yes
+INFO:     127.0.0.1:63090 - "GET /api/live?since=2026-05-30T08%3A39%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63093 - "GET /api/live?since=2026-05-30T08%3A39%3A27Z HTTP/1.1" 200 OK
+2026-05-30 09:39:30 [INFO] launcher: [local] Transcribed segment (speaker), 13 chars, 4 word-chunks, offset=249.12s, persisted=yes
+INFO:     127.0.0.1:63094 - "GET /api/live?since=2026-05-30T08%3A39%3A27Z HTTP/1.1" 200 OK
+2026-05-30 09:39:31 [INFO] launcher: [live_uploader] Uploaded seq=3 (1014381 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:63096 - "GET /api/live?since=2026-05-30T08%3A39%3A30Z HTTP/1.1" 200 OK
+2026-05-30 09:39:33 [INFO] launcher: [local] Transcribed segment (speaker), 40 chars, 11 word-chunks, offset=251.89s, persisted=yes
+INFO:     127.0.0.1:63097 - "GET /api/live?since=2026-05-30T08%3A39%3A30Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63099 - "GET /api/live?since=2026-05-30T08%3A39%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:39:36 [INFO] launcher: [local] Transcribed segment (speaker), 24 chars, 9 word-chunks, offset=254.81s, persisted=yes
+INFO:     127.0.0.1:63101 - "GET /api/live?since=2026-05-30T08%3A39%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63102 - "GET /api/live?since=2026-05-30T08%3A39%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63104 - "GET /api/live?since=2026-05-30T08%3A39%3A36Z HTTP/1.1" 200 OK
+2026-05-30 09:39:41 [INFO] launcher: [local] Transcribed segment (speaker), 81 chars, 15 word-chunks, offset=260.10s, persisted=yes
+INFO:     127.0.0.1:63105 - "GET /api/live?since=2026-05-30T08%3A39%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63106 - "GET /api/live?since=2026-05-30T08%3A39%3A41Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63108 - "GET /api/live?since=2026-05-30T08%3A39%3A41Z HTTP/1.1" 200 OK
+2026-05-30 09:39:45 [INFO] launcher: [local] Transcribed segment (speaker), 46 chars, 10 word-chunks, offset=264.21s, persisted=yes
+INFO:     127.0.0.1:63109 - "GET /api/live?since=2026-05-30T08%3A39%3A41Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63111 - "GET /api/live?since=2026-05-30T08%3A39%3A45Z HTTP/1.1" 200 OK
+2026-05-30 09:39:48 [INFO] launcher: [local] Transcribed segment (speaker), 26 chars, 6 word-chunks, offset=267.30s, persisted=yes
+INFO:     127.0.0.1:63112 - "GET /api/live?since=2026-05-30T08%3A39%3A45Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63114 - "GET /api/live?since=2026-05-30T08%3A39%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63116 - "GET /api/live?since=2026-05-30T08%3A39%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:39:52 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 14 word-chunks, offset=271.04s, persisted=yes
+INFO:     127.0.0.1:63117 - "GET /api/live?since=2026-05-30T08%3A39%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63118 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63119 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63120 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63122 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63123 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+2026-05-30 09:40:00 [INFO] launcher: [local] Transcribed segment (speaker), 173 chars, 40 word-chunks, offset=278.05s, persisted=yes
+INFO:     127.0.0.1:63124 - "GET /api/live?since=2026-05-30T08%3A39%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63126 - "GET /api/live?since=2026-05-30T08%3A40%3A00Z HTTP/1.1" 200 OK
+2026-05-30 09:40:03 [INFO] launcher: [local] Transcribed segment (speaker), 38 chars, 8 word-chunks, offset=282.13s, persisted=yes
+INFO:     127.0.0.1:63127 - "GET /api/live?since=2026-05-30T08%3A40%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63128 - "GET /api/live?since=2026-05-30T08%3A40%3A03Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63130 - "GET /api/live?since=2026-05-30T08%3A40%3A03Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63132 - "GET /api/live?since=2026-05-30T08%3A40%3A03Z HTTP/1.1" 200 OK
+2026-05-30 09:40:09 [INFO] launcher: [local] Transcribed segment (speaker), 156 chars, 39 word-chunks, offset=287.69s, persisted=yes
+INFO:     127.0.0.1:63133 - "GET /api/live?since=2026-05-30T08%3A40%3A03Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63134 - "GET /api/live?since=2026-05-30T08%3A40%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62305 - "GET /api/live?since=2026-05-30T08%3A40%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62307 - "GET /api/live?since=2026-05-30T08%3A40%3A09Z HTTP/1.1" 200 OK
+2026-05-30 09:40:14 [INFO] launcher: [local] Transcribed segment (speaker), 91 chars, 20 word-chunks, offset=293.41s, persisted=yes
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-05-30T08%3A40%3A09Z HTTP/1.1" 200 OK
+2026-05-30 09:40:17 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 4 word-chunks, offset=296.40s, persisted=yes
+INFO:     127.0.0.1:62310 - "GET /api/live?since=2026-05-30T08%3A40%3A14Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62311 - "GET /api/live?since=2026-05-30T08%3A40%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:40:20 [INFO] launcher: [local] Transcribed segment (speaker), 34 chars, 6 word-chunks, offset=299.05s, persisted=yes
+INFO:     127.0.0.1:62313 - "GET /api/live?since=2026-05-30T08%3A40%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62316 - "GET /api/live?since=2026-05-30T08%3A40%3A20Z HTTP/1.1" 200 OK
+2026-05-30 09:40:22 [INFO] launcher: [local] Transcribed segment (speaker), 17 chars, 5 word-chunks, offset=301.61s, persisted=yes
+INFO:     127.0.0.1:62317 - "GET /api/live?since=2026-05-30T08%3A40%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62319 - "GET /api/live?since=2026-05-30T08%3A40%3A22Z HTTP/1.1" 200 OK
+2026-05-30 09:40:25 [INFO] launcher: [local] Transcribed segment (speaker), 18 chars, 3 word-chunks, offset=304.24s, persisted=yes
+INFO:     127.0.0.1:62320 - "GET /api/live?since=2026-05-30T08%3A40%3A22Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62321 - "GET /api/live?since=2026-05-30T08%3A40%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62323 - "GET /api/live?since=2026-05-30T08%3A40%3A25Z HTTP/1.1" 200 OK
+2026-05-30 09:40:30 [INFO] launcher: [local] Transcribed segment (speaker), 41 chars, 8 word-chunks, offset=308.49s, persisted=yes
+INFO:     127.0.0.1:62324 - "GET /api/live?since=2026-05-30T08%3A40%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62326 - "GET /api/live?since=2026-05-30T08%3A40%3A30Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62328 - "GET /api/live?since=2026-05-30T08%3A40%3A30Z HTTP/1.1" 200 OK
+2026-05-30 09:40:33 [INFO] launcher: [local] Transcribed segment (speaker), 35 chars, 7 word-chunks, offset=311.53s, persisted=yes
+2026-05-30 09:40:34 [INFO] launcher: [live_uploader] Uploaded seq=4 (1006893 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:62329 - "GET /api/live?since=2026-05-30T08%3A40%3A30Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62330 - "GET /api/live?since=2026-05-30T08%3A40%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62332 - "GET /api/live?since=2026-05-30T08%3A40%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62334 - "GET /api/live?since=2026-05-30T08%3A40%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:40:39 [INFO] launcher: [local] Transcribed segment (speaker), 87 chars, 21 word-chunks, offset=317.65s, persisted=yes
+INFO:     127.0.0.1:62335 - "GET /api/live?since=2026-05-30T08%3A40%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62336 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62337 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62338 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62339 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62340 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62342 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+2026-05-30 09:40:49 [INFO] launcher: [local] Transcribed segment (speaker), 86 chars, 20 word-chunks, offset=326.49s, persisted=yes
+INFO:     127.0.0.1:62343 - "GET /api/live?since=2026-05-30T08%3A40%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62346 - "GET /api/live?since=2026-05-30T08%3A40%3A49Z HTTP/1.1" 200 OK
+2026-05-30 09:40:52 [INFO] launcher: [local] Transcribed segment (speaker), 43 chars, 10 word-chunks, offset=331.00s, persisted=yes
+INFO:     127.0.0.1:62347 - "GET /api/live?since=2026-05-30T08%3A40%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62349 - "GET /api/live?since=2026-05-30T08%3A40%3A52Z HTTP/1.1" 200 OK
+2026-05-30 09:40:54 [INFO] launcher: [local] Transcribed segment (speaker), 7 chars, 3 word-chunks, offset=333.64s, persisted=yes
+INFO:     127.0.0.1:62350 - "GET /api/live?since=2026-05-30T08%3A40%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62351 - "GET /api/live?since=2026-05-30T08%3A40%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62353 - "GET /api/live?since=2026-05-30T08%3A40%3A54Z HTTP/1.1" 200 OK
+2026-05-30 09:40:59 [INFO] launcher: [local] Transcribed segment (speaker), 63 chars, 15 word-chunks, offset=337.81s, persisted=yes
+INFO:     127.0.0.1:62354 - "GET /api/live?since=2026-05-30T08%3A40%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62356 - "GET /api/live?since=2026-05-30T08%3A40%3A59Z HTTP/1.1" 200 OK
+2026-05-30 09:41:02 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=340.84s, persisted=yes
+INFO:     127.0.0.1:62357 - "GET /api/live?since=2026-05-30T08%3A40%3A59Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62358 - "GET /api/live?since=2026-05-30T08%3A41%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62359 - "GET /api/live?since=2026-05-30T08%3A41%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62360 - "GET /api/live?since=2026-05-30T08%3A41%3A02Z HTTP/1.1" 200 OK
+2026-05-30 09:41:08 [INFO] launcher: [local] Transcribed segment (speaker), 65 chars, 14 word-chunks, offset=347.49s, persisted=yes
+INFO:     127.0.0.1:62362 - "GET /api/live?since=2026-05-30T08%3A41%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62363 - "GET /api/live?since=2026-05-30T08%3A41%3A08Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62365 - "GET /api/live?since=2026-05-30T08%3A41%3A08Z HTTP/1.1" 200 OK
+2026-05-30 09:41:12 [INFO] launcher: [local] Transcribed segment (speaker), 73 chars, 17 word-chunks, offset=350.85s, persisted=yes
+INFO:     127.0.0.1:62366 - "GET /api/live?since=2026-05-30T08%3A41%3A08Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62367 - "GET /api/live?since=2026-05-30T08%3A41%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62368 - "GET /api/live?since=2026-05-30T08%3A41%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62370 - "GET /api/live?since=2026-05-30T08%3A41%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:41:17 [INFO] launcher: [local] Transcribed segment (speaker), 48 chars, 10 word-chunks, offset=356.53s, persisted=yes
+INFO:     127.0.0.1:62371 - "GET /api/live?since=2026-05-30T08%3A41%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62375 - "GET /api/live?since=2026-05-30T08%3A41%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:41:20 [INFO] launcher: [local] Transcribed segment (speaker), 10 chars, 3 word-chunks, offset=359.28s, persisted=yes
+INFO:     127.0.0.1:62376 - "GET /api/live?since=2026-05-30T08%3A41%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62378 - "GET /api/live?since=2026-05-30T08%3A41%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62379 - "GET /api/live?since=2026-05-30T08%3A41%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62381 - "GET /api/live?since=2026-05-30T08%3A41%3A20Z HTTP/1.1" 200 OK
+2026-05-30 09:41:26 [INFO] launcher: [local] Transcribed segment (speaker), 92 chars, 18 word-chunks, offset=364.40s, persisted=yes
+INFO:     127.0.0.1:62382 - "GET /api/live?since=2026-05-30T08%3A41%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62384 - "GET /api/live?since=2026-05-30T08%3A41%3A26Z HTTP/1.1" 200 OK
+2026-05-30 09:41:28 [INFO] launcher: [local] Transcribed segment (speaker), 56 chars, 13 word-chunks, offset=367.61s, persisted=yes
+INFO:     127.0.0.1:62385 - "GET /api/live?since=2026-05-30T08%3A41%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62386 - "GET /api/live?since=2026-05-30T08%3A41%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50802 - "GET /api/live?since=2026-05-30T08%3A41%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50804 - "GET /api/live?since=2026-05-30T08%3A41%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:41:34 [INFO] launcher: [local] Transcribed segment (speaker), 73 chars, 15 word-chunks, offset=373.41s, persisted=yes
+INFO:     127.0.0.1:50807 - "GET /api/live?since=2026-05-30T08%3A41%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50808 - "GET /api/live?since=2026-05-30T08%3A41%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:41:37 [INFO] launcher: [live_uploader] Uploaded seq=5 (1004589 bytes MP3) for 6a1aa14681492da34aa577b9
+2026-05-30 09:41:38 [INFO] launcher: [local] Transcribed segment (speaker), 46 chars, 14 word-chunks, offset=377.00s, persisted=yes
+INFO:     127.0.0.1:50810 - "GET /api/live?since=2026-05-30T08%3A41%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50811 - "GET /api/live?since=2026-05-30T08%3A41%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50812 - "GET /api/live?since=2026-05-30T08%3A41%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50814 - "GET /api/live?since=2026-05-30T08%3A41%3A38Z HTTP/1.1" 200 OK
+2026-05-30 09:41:43 [INFO] launcher: [local] Transcribed segment (speaker), 139 chars, 30 word-chunks, offset=382.11s, persisted=yes
+INFO:     127.0.0.1:50815 - "GET /api/live?since=2026-05-30T08%3A41%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50817 - "GET /api/live?since=2026-05-30T08%3A41%3A43Z HTTP/1.1" 200 OK
+2026-05-30 09:41:46 [INFO] launcher: [local] Transcribed segment (speaker), 32 chars, 8 word-chunks, offset=385.13s, persisted=yes
+INFO:     127.0.0.1:50818 - "GET /api/live?since=2026-05-30T08%3A41%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50819 - "GET /api/live?since=2026-05-30T08%3A41%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50820 - "GET /api/live?since=2026-05-30T08%3A41%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50821 - "GET /api/live?since=2026-05-30T08%3A41%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50824 - "GET /api/live?since=2026-05-30T08%3A41%3A46Z HTTP/1.1" 200 OK
+2026-05-30 09:41:53 [INFO] launcher: [local] Transcribed segment (speaker), 118 chars, 24 word-chunks, offset=391.93s, persisted=yes
+INFO:     127.0.0.1:50825 - "GET /api/live?since=2026-05-30T08%3A41%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50827 - "GET /api/live?since=2026-05-30T08%3A41%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:41:56 [INFO] launcher: [local] Transcribed segment (speaker), 13 chars, 4 word-chunks, offset=394.83s, persisted=yes
+INFO:     127.0.0.1:50829 - "GET /api/live?since=2026-05-30T08%3A41%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50832 - "GET /api/live?since=2026-05-30T08%3A41%3A56Z HTTP/1.1" 200 OK
+2026-05-30 09:41:58 [INFO] launcher: [local] Transcribed segment (speaker), 30 chars, 5 word-chunks, offset=397.56s, persisted=yes
+INFO:     127.0.0.1:50834 - "GET /api/live?since=2026-05-30T08%3A41%3A56Z HTTP/1.1" 200 OK
+2026-05-30 09:42:01 [INFO] launcher: [local] Transcribed segment (speaker), 39 chars, 7 word-chunks, offset=400.40s, persisted=yes
+INFO:     127.0.0.1:50835 - "GET /api/live?since=2026-05-30T08%3A41%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50836 - "GET /api/live?since=2026-05-30T08%3A42%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50838 - "GET /api/live?since=2026-05-30T08%3A42%3A01Z HTTP/1.1" 200 OK
+2026-05-30 09:42:06 [INFO] launcher: [local] Transcribed segment (speaker), 86 chars, 17 word-chunks, offset=404.59s, persisted=yes
+INFO:     127.0.0.1:50839 - "GET /api/live?since=2026-05-30T08%3A42%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50841 - "GET /api/live?since=2026-05-30T08%3A42%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:42:10 [INFO] launcher: [local] Transcribed segment (speaker), 15 chars, 4 word-chunks, offset=407.60s, persisted=yes
+INFO:     127.0.0.1:50842 - "GET /api/live?since=2026-05-30T08%3A42%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50844 - "GET /api/live?since=2026-05-30T08%3A42%3A10Z HTTP/1.1" 200 OK
+2026-05-30 09:42:12 [INFO] launcher: [local] Transcribed segment (speaker), 84 chars, 15 word-chunks, offset=411.51s, persisted=yes
+INFO:     127.0.0.1:50845 - "GET /api/live?since=2026-05-30T08%3A42%3A10Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50846 - "GET /api/live?since=2026-05-30T08%3A42%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50848 - "GET /api/live?since=2026-05-30T08%3A42%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:42:18 [INFO] launcher: [local] Transcribed segment (speaker), 63 chars, 12 word-chunks, offset=416.58s, persisted=yes
+INFO:     127.0.0.1:50849 - "GET /api/live?since=2026-05-30T08%3A42%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50850 - "GET /api/live?since=2026-05-30T08%3A42%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50851 - "GET /api/live?since=2026-05-30T08%3A42%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50854 - "GET /api/live?since=2026-05-30T08%3A42%3A18Z HTTP/1.1" 200 OK
+2026-05-30 09:42:24 [INFO] launcher: [local] Transcribed segment (speaker), 82 chars, 18 word-chunks, offset=422.80s, persisted=yes
+INFO:     127.0.0.1:50855 - "GET /api/live?since=2026-05-30T08%3A42%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50856 - "GET /api/live?since=2026-05-30T08%3A42%3A24Z HTTP/1.1" 200 OK
+2026-05-30 09:42:28 [INFO] launcher: [local] Transcribed segment (speaker), 75 chars, 14 word-chunks, offset=427.15s, persisted=yes
+INFO:     127.0.0.1:50858 - "GET /api/live?since=2026-05-30T08%3A42%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50860 - "GET /api/live?since=2026-05-30T08%3A42%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:42:31 [INFO] launcher: [local] Transcribed segment (speaker), 27 chars, 7 word-chunks, offset=430.11s, persisted=yes
+INFO:     127.0.0.1:50861 - "GET /api/live?since=2026-05-30T08%3A42%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50863 - "GET /api/live?since=2026-05-30T08%3A42%3A31Z HTTP/1.1" 200 OK
+2026-05-30 09:42:34 [INFO] launcher: [local] Transcribed segment (speaker), 45 chars, 11 word-chunks, offset=433.04s, persisted=yes
+INFO:     127.0.0.1:50864 - "GET /api/live?since=2026-05-30T08%3A42%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50866 - "GET /api/live?since=2026-05-30T08%3A42%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:42:37 [INFO] launcher: [local] Transcribed segment (speaker), 38 chars, 11 word-chunks, offset=436.35s, persisted=yes
+INFO:     127.0.0.1:50868 - "GET /api/live?since=2026-05-30T08%3A42%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:42:40 [INFO] launcher: [live_uploader] Uploaded seq=6 (1008621 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:50869 - "GET /api/live?since=2026-05-30T08%3A42%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50870 - "GET /api/live?since=2026-05-30T08%3A42%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50872 - "GET /api/live?since=2026-05-30T08%3A42%3A37Z HTTP/1.1" 200 OK
+2026-05-30 09:42:45 [INFO] launcher: [local] Transcribed segment (speaker), 106 chars, 19 word-chunks, offset=443.35s, persisted=yes
+INFO:     127.0.0.1:50873 - "GET /api/live?since=2026-05-30T08%3A42%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50875 - "GET /api/live?since=2026-05-30T08%3A42%3A45Z HTTP/1.1" 200 OK
+2026-05-30 09:42:48 [INFO] launcher: [local] Transcribed segment (speaker), 7 chars, 2 word-chunks, offset=447.19s, persisted=yes
+INFO:     127.0.0.1:50876 - "GET /api/live?since=2026-05-30T08%3A42%3A45Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50877 - "GET /api/live?since=2026-05-30T08%3A42%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50878 - "GET /api/live?since=2026-05-30T08%3A42%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:42:53 [INFO] launcher: [local] Transcribed segment (speaker), 159 chars, 32 word-chunks, offset=452.15s, persisted=yes
+INFO:     127.0.0.1:50881 - "GET /api/live?since=2026-05-30T08%3A42%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50882 - "GET /api/live?since=2026-05-30T08%3A42%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50883 - "GET /api/live?since=2026-05-30T08%3A42%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50885 - "GET /api/live?since=2026-05-30T08%3A42%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:42:59 [INFO] launcher: [local] Transcribed segment (speaker), 92 chars, 19 word-chunks, offset=457.48s, persisted=yes
+INFO:     127.0.0.1:50886 - "GET /api/live?since=2026-05-30T08%3A42%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50888 - "GET /api/live?since=2026-05-30T08%3A42%3A59Z HTTP/1.1" 200 OK
+2026-05-30 09:43:02 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=461.13s, persisted=yes
+INFO:     127.0.0.1:50889 - "GET /api/live?since=2026-05-30T08%3A42%3A59Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50890 - "GET /api/live?since=2026-05-30T08%3A43%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50892 - "GET /api/live?since=2026-05-30T08%3A43%3A02Z HTTP/1.1" 200 OK
+2026-05-30 09:43:06 [INFO] launcher: [local] Transcribed segment (speaker), 56 chars, 16 word-chunks, offset=464.82s, persisted=yes
+INFO:     127.0.0.1:50893 - "GET /api/live?since=2026-05-30T08%3A43%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50894 - "GET /api/live?since=2026-05-30T08%3A43%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50896 - "GET /api/live?since=2026-05-30T08%3A43%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:43:12 [INFO] launcher: [local] Transcribed segment (speaker), 88 chars, 23 word-chunks, offset=471.00s, persisted=yes
+INFO:     127.0.0.1:50897 - "GET /api/live?since=2026-05-30T08%3A43%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50898 - "GET /api/live?since=2026-05-30T08%3A43%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50899 - "GET /api/live?since=2026-05-30T08%3A43%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50900 - "GET /api/live?since=2026-05-30T08%3A43%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:43:19 [INFO] launcher: [local] Transcribed segment (speaker), 67 chars, 13 word-chunks, offset=478.18s, persisted=yes
+INFO:     127.0.0.1:50902 - "GET /api/live?since=2026-05-30T08%3A43%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50903 - "GET /api/live?since=2026-05-30T08%3A43%3A19Z HTTP/1.1" 200 OK
+2026-05-30 09:43:23 [INFO] launcher: [local] Transcribed segment (speaker), 36 chars, 6 word-chunks, offset=482.03s, persisted=yes
+INFO:     127.0.0.1:50905 - "GET /api/live?since=2026-05-30T08%3A43%3A19Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50907 - "GET /api/live?since=2026-05-30T08%3A43%3A23Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50908 - "GET /api/live?since=2026-05-30T08%3A43%3A23Z HTTP/1.1" 200 OK
+2026-05-30 09:43:28 [INFO] launcher: [local] Transcribed segment (speaker), 28 chars, 8 word-chunks, offset=486.73s, persisted=yes
+INFO:     127.0.0.1:50910 - "GET /api/live?since=2026-05-30T08%3A43%3A23Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50911 - "GET /api/live?since=2026-05-30T08%3A43%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:43:30 [INFO] launcher: [local] Transcribed segment (speaker), 40 chars, 5 word-chunks, offset=489.58s, persisted=yes
+INFO:     127.0.0.1:50913 - "GET /api/live?since=2026-05-30T08%3A43%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50915 - "GET /api/live?since=2026-05-30T08%3A43%3A30Z HTTP/1.1" 200 OK
+2026-05-30 09:43:34 [INFO] launcher: [local] Transcribed segment (speaker), 39 chars, 9 word-chunks, offset=492.89s, persisted=yes
+INFO:     127.0.0.1:50916 - "GET /api/live?since=2026-05-30T08%3A43%3A30Z HTTP/1.1" 200 OK
+2026-05-30 09:43:37 [INFO] launcher: [local] Transcribed segment (speaker), 15 chars, 4 word-chunks, offset=495.70s, persisted=yes
+INFO:     127.0.0.1:50919 - "GET /api/live?since=2026-05-30T08%3A43%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50920 - "GET /api/live?since=2026-05-30T08%3A43%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50922 - "GET /api/live?since=2026-05-30T08%3A43%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50927 - "GET /api/live?since=2026-05-30T08%3A43%3A37Z HTTP/1.1" 200 OK
+2026-05-30 09:43:43 [INFO] launcher: [live_uploader] Uploaded seq=7 (1001709 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:50929 - "GET /api/live?since=2026-05-30T08%3A43%3A37Z HTTP/1.1" 200 OK
+2026-05-30 09:43:44 [INFO] launcher: [local] Transcribed segment (speaker), 111 chars, 24 word-chunks, offset=502.32s, persisted=yes
+INFO:     127.0.0.1:50930 - "GET /api/live?since=2026-05-30T08%3A43%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50932 - "GET /api/live?since=2026-05-30T08%3A43%3A44Z HTTP/1.1" 200 OK
+2026-05-30 09:43:47 [INFO] launcher: [local] Transcribed segment (speaker), 23 chars, 6 word-chunks, offset=505.84s, persisted=yes
+INFO:     127.0.0.1:50933 - "GET /api/live?since=2026-05-30T08%3A43%3A44Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50935 - "GET /api/live?since=2026-05-30T08%3A43%3A47Z HTTP/1.1" 200 OK
+2026-05-30 09:43:50 [INFO] launcher: [local] Transcribed segment (speaker), 14 chars, 3 word-chunks, offset=508.90s, persisted=yes
+INFO:     127.0.0.1:50936 - "GET /api/live?since=2026-05-30T08%3A43%3A47Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50938 - "GET /api/live?since=2026-05-30T08%3A43%3A50Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50942 - "GET /api/live?since=2026-05-30T08%3A43%3A50Z HTTP/1.1" 200 OK
+2026-05-30 09:43:54 [INFO] launcher: [local] Transcribed segment (speaker), 28 chars, 6 word-chunks, offset=512.39s, persisted=yes
+INFO:     127.0.0.1:60014 - "GET /api/live?since=2026-05-30T08%3A43%3A50Z HTTP/1.1" 200 OK
+2026-05-30 09:43:58 [INFO] launcher: [local] Transcribed segment (speaker), 13 chars, 4 word-chunks, offset=516.40s, persisted=yes
+INFO:     127.0.0.1:61826 - "GET /api/live?since=2026-05-30T08%3A43%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61827 - "GET /api/live?since=2026-05-30T08%3A43%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61829 - "GET /api/live?since=2026-05-30T08%3A43%3A58Z HTTP/1.1" 200 OK
+2026-05-30 09:44:03 [INFO] launcher: [local] Transcribed segment (speaker), 140 chars, 31 word-chunks, offset=522.06s, persisted=yes
+INFO:     127.0.0.1:61830 - "GET /api/live?since=2026-05-30T08%3A43%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61832 - "GET /api/live?since=2026-05-30T08%3A44%3A03Z HTTP/1.1" 200 OK
+2026-05-30 09:44:06 [INFO] launcher: [local] Transcribed segment (speaker), 36 chars, 8 word-chunks, offset=525.18s, persisted=yes
+INFO:     127.0.0.1:61833 - "GET /api/live?since=2026-05-30T08%3A44%3A03Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61835 - "GET /api/live?since=2026-05-30T08%3A44%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:44:09 [INFO] launcher: [local] Transcribed segment (speaker), 52 chars, 11 word-chunks, offset=528.16s, persisted=yes
+INFO:     127.0.0.1:61836 - "GET /api/live?since=2026-05-30T08%3A44%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:44:12 [INFO] launcher: [local] Transcribed segment (speaker), 37 chars, 9 word-chunks, offset=530.95s, persisted=yes
+INFO:     127.0.0.1:61838 - "GET /api/live?since=2026-05-30T08%3A44%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52746 - "GET /api/live?since=2026-05-30T08%3A44%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52747 - "GET /api/live?since=2026-05-30T08%3A44%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:44:17 [INFO] launcher: [local] Transcribed segment (speaker), 11 chars, 4 word-chunks, offset=535.97s, persisted=yes
+INFO:     127.0.0.1:52749 - "GET /api/live?since=2026-05-30T08%3A44%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52751 - "GET /api/live?since=2026-05-30T08%3A44%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:44:20 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=538.75s, persisted=yes
+INFO:     127.0.0.1:52752 - "GET /api/live?since=2026-05-30T08%3A44%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:44:22 [INFO] launcher: [local] Transcribed segment (speaker), 4 chars, 2 word-chunks, offset=541.46s, persisted=yes
+INFO:     127.0.0.1:52754 - "GET /api/live?since=2026-05-30T08%3A44%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52756 - "GET /api/live?since=2026-05-30T08%3A44%3A22Z HTTP/1.1" 200 OK
+2026-05-30 09:44:25 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=544.11s, persisted=yes
+INFO:     127.0.0.1:52760 - "GET /api/live?since=2026-05-30T08%3A44%3A22Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61681 - "GET /api/live?since=2026-05-30T08%3A44%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61683 - "GET /api/live?since=2026-05-30T08%3A44%3A25Z HTTP/1.1" 200 OK
+2026-05-30 09:44:29 [INFO] launcher: [local] Transcribed segment (speaker), 138 chars, 30 word-chunks, offset=548.00s, persisted=yes
+INFO:     127.0.0.1:61684 - "GET /api/live?since=2026-05-30T08%3A44%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61685 - "GET /api/live?since=2026-05-30T08%3A44%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61686 - "GET /api/live?since=2026-05-30T08%3A44%3A29Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61688 - "GET /api/live?since=2026-05-30T08%3A44%3A29Z HTTP/1.1" 200 OK
+2026-05-30 09:44:36 [INFO] launcher: [local] Transcribed segment (speaker), 175 chars, 36 word-chunks, offset=555.01s, persisted=yes
+INFO:     127.0.0.1:61690 - "GET /api/live?since=2026-05-30T08%3A44%3A29Z HTTP/1.1" 200 OK
+2026-05-30 09:44:39 [INFO] launcher: [local] Transcribed segment (speaker), 23 chars, 5 word-chunks, offset=558.03s, persisted=yes
+INFO:     127.0.0.1:61692 - "GET /api/live?since=2026-05-30T08%3A44%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61694 - "GET /api/live?since=2026-05-30T08%3A44%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61695 - "GET /api/live?since=2026-05-30T08%3A44%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61698 - "GET /api/live?since=2026-05-30T08%3A44%3A39Z HTTP/1.1" 200 OK
+2026-05-30 09:44:45 [INFO] launcher: [local] Transcribed segment (speaker), 101 chars, 20 word-chunks, offset=563.17s, persisted=yes
+INFO:     127.0.0.1:61699 - "GET /api/live?since=2026-05-30T08%3A44%3A39Z HTTP/1.1" 200 OK
+2026-05-30 09:44:47 [INFO] launcher: [live_uploader] Uploaded seq=8 (991341 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:61701 - "GET /api/live?since=2026-05-30T08%3A44%3A45Z HTTP/1.1" 200 OK
+2026-05-30 09:44:48 [INFO] launcher: [local] Transcribed segment (speaker), 31 chars, 8 word-chunks, offset=567.01s, persisted=yes
+INFO:     127.0.0.1:61702 - "GET /api/live?since=2026-05-30T08%3A44%3A45Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61703 - "GET /api/live?since=2026-05-30T08%3A44%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:44:52 [INFO] launcher: [local] Transcribed segment (speaker), 35 chars, 9 word-chunks, offset=570.04s, persisted=yes
+INFO:     127.0.0.1:61705 - "GET /api/live?since=2026-05-30T08%3A44%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61706 - "GET /api/live?since=2026-05-30T08%3A44%3A52Z HTTP/1.1" 200 OK
+2026-05-30 09:44:55 [INFO] launcher: [local] Transcribed segment (speaker), 81 chars, 18 word-chunks, offset=574.46s, persisted=yes
+INFO:     127.0.0.1:61709 - "GET /api/live?since=2026-05-30T08%3A44%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63749 - "GET /api/live?since=2026-05-30T08%3A44%3A55Z HTTP/1.1" 200 OK
+2026-05-30 09:44:58 [INFO] launcher: [local] Transcribed segment (speaker), 34 chars, 7 word-chunks, offset=577.28s, persisted=yes
+INFO:     127.0.0.1:63750 - "GET /api/live?since=2026-05-30T08%3A44%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63752 - "GET /api/live?since=2026-05-30T08%3A44%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63753 - "GET /api/live?since=2026-05-30T08%3A44%3A58Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63755 - "GET /api/live?since=2026-05-30T08%3A44%3A58Z HTTP/1.1" 200 OK
+2026-05-30 09:45:05 [INFO] launcher: [local] Transcribed segment (speaker), 147 chars, 33 word-chunks, offset=583.39s, persisted=yes
+INFO:     127.0.0.1:63756 - "GET /api/live?since=2026-05-30T08%3A44%3A58Z HTTP/1.1" 200 OK
+2026-05-30 09:45:08 [INFO] launcher: [local] Transcribed segment (speaker), 33 chars, 7 word-chunks, offset=586.72s, persisted=yes
+INFO:     127.0.0.1:63758 - "GET /api/live?since=2026-05-30T08%3A45%3A05Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63760 - "GET /api/live?since=2026-05-30T08%3A45%3A08Z HTTP/1.1" 200 OK
+2026-05-30 09:45:10 [INFO] launcher: [local] Transcribed segment (speaker), 38 chars, 7 word-chunks, offset=589.54s, persisted=yes
+INFO:     127.0.0.1:63761 - "GET /api/live?since=2026-05-30T08%3A45%3A08Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63762 - "GET /api/live?since=2026-05-30T08%3A45%3A10Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63764 - "GET /api/live?since=2026-05-30T08%3A45%3A10Z HTTP/1.1" 200 OK
+2026-05-30 09:45:15 [INFO] launcher: [local] Transcribed segment (speaker), 90 chars, 18 word-chunks, offset=593.61s, persisted=yes
+INFO:     127.0.0.1:63765 - "GET /api/live?since=2026-05-30T08%3A45%3A10Z HTTP/1.1" 200 OK
+2026-05-30 09:45:18 [INFO] launcher: [local] Transcribed segment (speaker), 38 chars, 10 word-chunks, offset=596.66s, persisted=yes
+INFO:     127.0.0.1:63767 - "GET /api/live?since=2026-05-30T08%3A45%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63769 - "GET /api/live?since=2026-05-30T08%3A45%3A18Z HTTP/1.1" 200 OK
+2026-05-30 09:45:20 [INFO] launcher: [local] Transcribed segment (speaker), 27 chars, 7 word-chunks, offset=599.47s, persisted=yes
+INFO:     127.0.0.1:63770 - "GET /api/live?since=2026-05-30T08%3A45%3A18Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63772 - "GET /api/live?since=2026-05-30T08%3A45%3A20Z HTTP/1.1" 200 OK
+2026-05-30 09:45:24 [INFO] launcher: [local] Transcribed segment (speaker), 21 chars, 6 word-chunks, offset=602.18s, persisted=yes
+INFO:     127.0.0.1:63773 - "GET /api/live?since=2026-05-30T08%3A45%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63775 - "GET /api/live?since=2026-05-30T08%3A45%3A24Z HTTP/1.1" 200 OK
+2026-05-30 09:45:28 [INFO] launcher: [local] Transcribed segment (speaker), 26 chars, 6 word-chunks, offset=605.50s, persisted=yes
+INFO:     127.0.0.1:63777 - "GET /api/live?since=2026-05-30T08%3A45%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63779 - "GET /api/live?since=2026-05-30T08%3A45%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:45:30 [INFO] launcher: [local] Transcribed segment (speaker), 74 chars, 15 word-chunks, offset=609.49s, persisted=yes
+INFO:     127.0.0.1:63780 - "GET /api/live?since=2026-05-30T08%3A45%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:45:33 [INFO] launcher: [local] Transcribed segment (speaker), 9 chars, 3 word-chunks, offset=612.26s, persisted=yes
+INFO:     127.0.0.1:63782 - "GET /api/live?since=2026-05-30T08%3A45%3A30Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64227 - "GET /api/live?since=2026-05-30T08%3A45%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64229 - "GET /api/live?since=2026-05-30T08%3A45%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:45:37 [INFO] launcher: [local] Transcribed segment (speaker), 16 chars, 4 word-chunks, offset=615.05s, persisted=yes
+INFO:     127.0.0.1:64231 - "GET /api/live?since=2026-05-30T08%3A45%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:45:40 [INFO] launcher: [local] Transcribed segment (speaker), 17 chars, 4 word-chunks, offset=618.73s, persisted=yes
+INFO:     127.0.0.1:64233 - "GET /api/live?since=2026-05-30T08%3A45%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64234 - "GET /api/live?since=2026-05-30T08%3A45%3A40Z HTTP/1.1" 200 OK
+2026-05-30 09:45:42 [INFO] launcher: [local] Transcribed segment (speaker), 27 chars, 6 word-chunks, offset=621.46s, persisted=yes
+INFO:     127.0.0.1:64237 - "GET /api/live?since=2026-05-30T08%3A45%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64239 - "GET /api/live?since=2026-05-30T08%3A45%3A42Z HTTP/1.1" 200 OK
+2026-05-30 09:45:45 [INFO] launcher: [local] Transcribed segment (speaker), 57 chars, 10 word-chunks, offset=624.31s, persisted=yes
+INFO:     127.0.0.1:64240 - "GET /api/live?since=2026-05-30T08%3A45%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64243 - "GET /api/live?since=2026-05-30T08%3A45%3A45Z HTTP/1.1" 200 OK
+2026-05-30 09:45:48 [INFO] launcher: [local] Transcribed segment (speaker), 112 chars, 23 word-chunks, offset=627.08s, persisted=yes
+INFO:     127.0.0.1:64244 - "GET /api/live?since=2026-05-30T08%3A45%3A45Z HTTP/1.1" 200 OK
+2026-05-30 09:45:50 [INFO] launcher: [live_uploader] Uploaded seq=9 (1001133 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:64245 - "GET /api/live?since=2026-05-30T08%3A45%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64247 - "GET /api/live?since=2026-05-30T08%3A45%3A48Z HTTP/1.1" 200 OK
+2026-05-30 09:45:54 [INFO] launcher: [local] Transcribed segment (speaker), 122 chars, 25 word-chunks, offset=632.43s, persisted=yes
+INFO:     127.0.0.1:64248 - "GET /api/live?since=2026-05-30T08%3A45%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64249 - "GET /api/live?since=2026-05-30T08%3A45%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64251 - "GET /api/live?since=2026-05-30T08%3A45%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64252 - "GET /api/live?since=2026-05-30T08%3A45%3A54Z HTTP/1.1" 200 OK
+2026-05-30 09:46:01 [INFO] launcher: [local] Transcribed segment (speaker), 208 chars, 45 word-chunks, offset=639.41s, persisted=yes
+INFO:     127.0.0.1:64254 - "GET /api/live?since=2026-05-30T08%3A45%3A54Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64255 - "GET /api/live?since=2026-05-30T08%3A46%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64256 - "GET /api/live?since=2026-05-30T08%3A46%3A01Z HTTP/1.1" 200 OK
+2026-05-30 09:46:06 [INFO] launcher: [local] Transcribed segment (speaker), 110 chars, 24 word-chunks, offset=645.08s, persisted=yes
+INFO:     127.0.0.1:64258 - "GET /api/live?since=2026-05-30T08%3A46%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64260 - "GET /api/live?since=2026-05-30T08%3A46%3A06Z HTTP/1.1" 200 OK
+2026-05-30 09:46:09 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=648.15s, persisted=yes
+INFO:     127.0.0.1:64261 - "GET /api/live?since=2026-05-30T08%3A46%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64263 - "GET /api/live?since=2026-05-30T08%3A46%3A09Z HTTP/1.1" 200 OK
+2026-05-30 09:46:12 [INFO] launcher: [local] Transcribed segment (speaker), 37 chars, 9 word-chunks, offset=650.84s, persisted=yes
+INFO:     127.0.0.1:64264 - "GET /api/live?since=2026-05-30T08%3A46%3A09Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64265 - "GET /api/live?since=2026-05-30T08%3A46%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64267 - "GET /api/live?since=2026-05-30T08%3A46%3A12Z HTTP/1.1" 200 OK
+2026-05-30 09:46:17 [INFO] launcher: [local] Transcribed segment (speaker), 77 chars, 18 word-chunks, offset=655.25s, persisted=yes
+INFO:     127.0.0.1:64268 - "GET /api/live?since=2026-05-30T08%3A46%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64269 - "GET /api/live?since=2026-05-30T08%3A46%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64270 - "GET /api/live?since=2026-05-30T08%3A46%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64272 - "GET /api/live?since=2026-05-30T08%3A46%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:46:24 [INFO] launcher: [local] Transcribed segment (speaker), 126 chars, 23 word-chunks, offset=662.56s, persisted=yes
+INFO:     127.0.0.1:64273 - "GET /api/live?since=2026-05-30T08%3A46%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:46:26 [INFO] launcher: [local] Transcribed segment (speaker), 8 chars, 2 word-chunks, offset=665.68s, persisted=yes
+INFO:     127.0.0.1:64275 - "GET /api/live?since=2026-05-30T08%3A46%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64277 - "GET /api/live?since=2026-05-30T08%3A46%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64278 - "GET /api/live?since=2026-05-30T08%3A46%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64279 - "GET /api/live?since=2026-05-30T08%3A46%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64281 - "GET /api/live?since=2026-05-30T08%3A46%3A26Z HTTP/1.1" 200 OK
+2026-05-30 09:46:34 [INFO] launcher: [local] Transcribed segment (speaker), 168 chars, 40 word-chunks, offset=671.53s, persisted=yes
+INFO:     127.0.0.1:64282 - "GET /api/live?since=2026-05-30T08%3A46%3A26Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64284 - "GET /api/live?since=2026-05-30T08%3A46%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:46:37 [INFO] launcher: [local] Transcribed segment (speaker), 104 chars, 21 word-chunks, offset=675.97s, persisted=yes
+INFO:     127.0.0.1:64285 - "GET /api/live?since=2026-05-30T08%3A46%3A34Z HTTP/1.1" 200 OK
+2026-05-30 09:46:40 [INFO] launcher: [local] Transcribed segment (speaker), 10 chars, 3 word-chunks, offset=678.82s, persisted=yes
+INFO:     127.0.0.1:64287 - "GET /api/live?since=2026-05-30T08%3A46%3A37Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64288 - "GET /api/live?since=2026-05-30T08%3A46%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64289 - "GET /api/live?since=2026-05-30T08%3A46%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64291 - "GET /api/live?since=2026-05-30T08%3A46%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64292 - "GET /api/live?since=2026-05-30T08%3A46%3A40Z HTTP/1.1" 200 OK
+2026-05-30 09:46:46 [INFO] launcher: [local] Transcribed segment (speaker), 150 chars, 31 word-chunks, offset=684.85s, persisted=yes
+INFO:     127.0.0.1:64293 - "GET /api/live?since=2026-05-30T08%3A46%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64294 - "GET /api/live?since=2026-05-30T08%3A46%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64296 - "GET /api/live?since=2026-05-30T08%3A46%3A46Z HTTP/1.1" 200 OK
+2026-05-30 09:46:52 [INFO] launcher: [live_uploader] Uploaded seq=10 (1001133 bytes MP3) for 6a1aa14681492da34aa577b9
+2026-05-30 09:46:53 [INFO] launcher: [local] Transcribed segment (speaker), 135 chars, 34 word-chunks, offset=691.85s, persisted=yes
+INFO:     127.0.0.1:64298 - "GET /api/live?since=2026-05-30T08%3A46%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49323 - "GET /api/live?since=2026-05-30T08%3A46%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49324 - "GET /api/live?since=2026-05-30T08%3A46%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49326 - "GET /api/live?since=2026-05-30T08%3A46%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:47:00 [INFO] launcher: [local] Transcribed segment (speaker), 123 chars, 25 word-chunks, offset=698.74s, persisted=yes
+INFO:     127.0.0.1:49328 - "GET /api/live?since=2026-05-30T08%3A46%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49329 - "GET /api/live?since=2026-05-30T08%3A47%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49331 - "GET /api/live?since=2026-05-30T08%3A47%3A00Z HTTP/1.1" 200 OK
+2026-05-30 09:47:04 [INFO] launcher: [local] Transcribed segment (speaker), 93 chars, 24 word-chunks, offset=703.13s, persisted=yes
+INFO:     127.0.0.1:49332 - "GET /api/live?since=2026-05-30T08%3A47%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49334 - "GET /api/live?since=2026-05-30T08%3A47%3A04Z HTTP/1.1" 200 OK
+2026-05-30 09:47:07 [INFO] launcher: [local] Transcribed segment (speaker), 30 chars, 6 word-chunks, offset=706.01s, persisted=yes
+INFO:     127.0.0.1:49336 - "GET /api/live?since=2026-05-30T08%3A47%3A04Z HTTP/1.1" 200 OK
+2026-05-30 09:47:10 [INFO] launcher: [local] Transcribed segment (speaker), 10 chars, 3 word-chunks, offset=708.84s, persisted=yes
+INFO:     127.0.0.1:49337 - "GET /api/live?since=2026-05-30T08%3A47%3A07Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49338 - "GET /api/live?since=2026-05-30T08%3A47%3A10Z HTTP/1.1" 200 OK
+2026-05-30 09:47:14 [INFO] launcher: [local] Transcribed segment (speaker), 135 chars, 27 word-chunks, offset=712.65s, persisted=yes
+INFO:     127.0.0.1:49340 - "GET /api/live?since=2026-05-30T08%3A47%3A10Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49341 - "GET /api/live?since=2026-05-30T08%3A47%3A14Z HTTP/1.1" 200 OK
+2026-05-30 09:47:17 [INFO] launcher: [local] Transcribed segment (speaker), 29 chars, 7 word-chunks, offset=715.60s, persisted=yes
+INFO:     127.0.0.1:49343 - "GET /api/live?since=2026-05-30T08%3A47%3A14Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49346 - "GET /api/live?since=2026-05-30T08%3A47%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49347 - "GET /api/live?since=2026-05-30T08%3A47%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49349 - "GET /api/live?since=2026-05-30T08%3A47%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:47:23 [INFO] launcher: [local] Transcribed segment (speaker), 161 chars, 36 word-chunks, offset=721.52s, persisted=yes
+INFO:     127.0.0.1:49350 - "GET /api/live?since=2026-05-30T08%3A47%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:47:25 [INFO] launcher: [local] Transcribed segment (speaker), 16 chars, 5 word-chunks, offset=724.55s, persisted=yes
+INFO:     127.0.0.1:49352 - "GET /api/live?since=2026-05-30T08%3A47%3A23Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49353 - "GET /api/live?since=2026-05-30T08%3A47%3A25Z HTTP/1.1" 200 OK
+2026-05-30 09:47:28 [INFO] launcher: [local] Transcribed segment (speaker), 19 chars, 7 word-chunks, offset=727.25s, persisted=yes
+INFO:     127.0.0.1:49356 - "GET /api/live?since=2026-05-30T08%3A47%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49357 - "GET /api/live?since=2026-05-30T08%3A47%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49360 - "GET /api/live?since=2026-05-30T08%3A47%3A28Z HTTP/1.1" 200 OK
+2026-05-30 09:47:33 [INFO] launcher: [local] Transcribed segment (speaker), 135 chars, 24 word-chunks, offset=732.12s, persisted=yes
+INFO:     127.0.0.1:49362 - "GET /api/live?since=2026-05-30T08%3A47%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49363 - "GET /api/live?since=2026-05-30T08%3A47%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49364 - "GET /api/live?since=2026-05-30T08%3A47%3A33Z HTTP/1.1" 200 OK
+2026-05-30 09:47:39 [INFO] launcher: [local] Transcribed segment (speaker), 103 chars, 22 word-chunks, offset=737.56s, persisted=yes
+INFO:     127.0.0.1:49366 - "GET /api/live?since=2026-05-30T08%3A47%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49367 - "GET /api/live?since=2026-05-30T08%3A47%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49368 - "GET /api/live?since=2026-05-30T08%3A47%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49369 - "GET /api/live?since=2026-05-30T08%3A47%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49371 - "GET /api/live?since=2026-05-30T08%3A47%3A39Z HTTP/1.1" 200 OK
+2026-05-30 09:47:46 [INFO] launcher: [local] Transcribed segment (speaker), 127 chars, 26 word-chunks, offset=744.56s, persisted=yes
+INFO:     127.0.0.1:49372 - "GET /api/live?since=2026-05-30T08%3A47%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49373 - "GET /api/live?since=2026-05-30T08%3A47%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49374 - "GET /api/live?since=2026-05-30T08%3A47%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49378 - "GET /api/live?since=2026-05-30T08%3A47%3A46Z HTTP/1.1" 200 OK
+2026-05-30 09:47:53 [INFO] launcher: [local] Transcribed segment (speaker), 247 chars, 52 word-chunks, offset=751.58s, persisted=yes
+INFO:     127.0.0.1:49380 - "GET /api/live?since=2026-05-30T08%3A47%3A46Z HTTP/1.1" 200 OK
+2026-05-30 09:47:55 [INFO] launcher: [live_uploader] Uploaded seq=11 (1001133 bytes MP3) for 6a1aa14681492da34aa577b9
+INFO:     127.0.0.1:49382 - "GET /api/live?since=2026-05-30T08%3A47%3A53Z HTTP/1.1" 200 OK
+2026-05-30 09:47:56 [INFO] launcher: [local] Transcribed segment (speaker), 29 chars, 5 word-chunks, offset=754.90s, persisted=yes
+INFO:     127.0.0.1:49383 - "GET /api/live?since=2026-05-30T08%3A47%3A53Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49385 - "GET /api/live?since=2026-05-30T08%3A47%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49386 - "GET /api/live?since=2026-05-30T08%3A47%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49388 - "GET /api/live?since=2026-05-30T08%3A47%3A56Z HTTP/1.1" 200 OK
+2026-05-30 09:48:02 [INFO] launcher: [local] Transcribed segment (speaker), 117 chars, 20 word-chunks, offset=761.18s, persisted=yes
+INFO:     127.0.0.1:49389 - "GET /api/live?since=2026-05-30T08%3A47%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49391 - "GET /api/live?since=2026-05-30T08%3A48%3A02Z HTTP/1.1" 200 OK
+2026-05-30 09:48:06 [INFO] launcher: [local] Transcribed segment (speaker), 40 chars, 6 word-chunks, offset=764.46s, persisted=yes
+INFO:     127.0.0.1:49392 - "GET /api/live?since=2026-05-30T08%3A48%3A02Z HTTP/1.1" 200 OK
+2026-05-30 09:48:08 [INFO] launcher: [local] Transcribed segment (speaker), 30 chars, 8 word-chunks, offset=767.47s, persisted=yes
+INFO:     127.0.0.1:49394 - "GET /api/live?since=2026-05-30T08%3A48%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49396 - "GET /api/live?since=2026-05-30T08%3A48%3A08Z HTTP/1.1" 200 OK
+2026-05-30 09:48:11 [INFO] launcher: [local] Transcribed segment (speaker), 8 chars, 2 word-chunks, offset=770.15s, persisted=yes
+INFO:     127.0.0.1:49397 - "GET /api/live?since=2026-05-30T08%3A48%3A08Z HTTP/1.1" 200 OK
+2026-05-30 09:48:14 [INFO] launcher: [local] Transcribed segment (speaker), 71 chars, 16 word-chunks, offset=772.94s, persisted=yes
+INFO:     127.0.0.1:49399 - "GET /api/live?since=2026-05-30T08%3A48%3A11Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58764 - "GET /api/live?since=2026-05-30T08%3A48%3A14Z HTTP/1.1" 200 OK
+2026-05-30 09:48:17 [INFO] launcher: [local] Transcribed segment (speaker), 28 chars, 7 word-chunks, offset=775.83s, persisted=yes
+INFO:     127.0.0.1:58766 - "GET /api/live?since=2026-05-30T08%3A48%3A14Z HTTP/1.1" 200 OK
+2026-05-30 09:48:19 [INFO] launcher: Stopping session...
+2026-05-30 09:48:19 [INFO] launcher: [live_uploader] Thread exiting (rec=6a1aa14681492da34aa577b9)
+2026-05-30 09:48:19 [INFO] launcher: Microphone capture loop finished.
+2026-05-30 09:48:19 [INFO] launcher: Capture loop finished.
+INFO:     127.0.0.1:58769 - "GET /api/live?since=2026-05-30T08%3A48%3A17Z HTTP/1.1" 200 OK
+2026-05-30 09:48:21 [INFO] launcher: [live_uploader] Uploaded seq=12 (418797 bytes MP3) for 6a1aa14681492da34aa577b9
+2026-05-30 09:48:24 [INFO] launcher: [live_uploader] Finalised recording 6a1aa14681492da34aa577b9
+2026-05-30 09:48:25 [INFO] launcher: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-05-30 09:48:25 [INFO] launcher: Session stopped. Server stays alive for new sessions and background diarization.
+INFO:     127.0.0.1:58767 - "POST /session/stop HTTP/1.1" 200 OK
