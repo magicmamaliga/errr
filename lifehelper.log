@@ -1366,7 +1366,7 @@ lifehelper> db.recordings.find()
     userId: '6a181418d827e331bae44c39',
     group: 'Default group',
     language: 'en',
-    uploadedAt: ISODate('2026-05-30T10:17:20.019Z'),
+    uploadedAt: ISODate('2026-05-30T10:17:50.170Z'),
     createdAt: ISODate('2026-05-30T10:12:09.579Z'),
     deleted: false,
     chatSessions: [],
@@ -8129,6 +8129,12 @@ lifehelper> db.recordings.find()
     audioExtension: 'mp3',
     lastChunkAt: ISODate('2026-05-30T10:17:18.294Z'),
     audioUrl: '6a1ab7f9668a21f66e5de43a_audio.mp3',
-    originalAudioFileName: 'session_audio.mp3'
+    originalAudioFileName: 'session_audio.mp3',
+    summary: 'Angela opened the meeting to welcome two new customer care team members, Maria and Ken, and announced Tarak from Human Resources would join briefly to cover training-related items. Tarak explained that Maria and Ken must complete a liability policy and a confidentiality agreement before starting. The documents will be sent by email, must be read and signed electronically with four initials and two signatures, and the signed file should be sent to Tarak’s work email. Tarak asked Ken to confirm the email address on file. Maria and Ken indicated they would review and respond, and Tarak noted he would send the documents this afternoon.\n' +
+      '\n' +
+      'After the HR portion, Tarak outlined the practical aspects of the roles. Maria and Ken will handle client inquiries, liaise with team leads, and provide demos of Log a Team. He provided a quick company/product overview: Log a Team was created by owners Jen and Mina three years ago, is a simple training platform for teams, and now supports 43 employees, 82 customers, and five product packages. Over the next two weeks, the new hires will become product experts, covering basic functions, security features, add-ons, and common glitches, so they can assist clients effectively.\n' +
+      '\n' +
+      'Q&A followed: the trainees asked whether they would use their own devices. Tarak answered that company laptops will be provided and accounts set up on the work computer. They also asked about the mode of client interaction; Tarak explained that the team uses a video conferencing tool, which will be covered in training.',
+    title: 'Onboarding new customer care team members'
   }
 ]
