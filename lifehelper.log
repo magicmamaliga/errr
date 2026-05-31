@@ -1,34 +1,10 @@
-Traceback (most recent call last):
-  File "launcher.py", line 283, in <module>
-  File "launcher.py", line 279, in main
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\lifehelper.py", line 131, in <module>
-    main()
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\lifehelper.py", line 121, in main
-    uvicorn.run(
-  File "uvicorn\main.py", line 606, in run
-  File "uvicorn\server.py", line 75, in run
-  File "asyncio\runners.py", line 194, in run
-  File "asyncio\runners.py", line 118, in run
-  File "asyncio\base_events.py", line 687, in run_until_complete
-  File "uvicorn\server.py", line 79, in serve
-  File "uvicorn\server.py", line 86, in _serve
-  File "uvicorn\config.py", line 441, in load
-  File "uvicorn\importer.py", line 19, in import_from_string
-  File "importlib\__init__.py", line 90, in import_module
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\main.py", line 25, in <module>
-    from .routes import devices, diarization as diarization_routes, live, microphone, root, token
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\routes\diarization.py", line 10, in <module>
-    from ..audio.diarization import get_model_status, _get_embedding_extractor
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\__init__.py", line 32, in <module>
-    from .inference import (  # noqa: F401
-  File "C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\inference.py", line 28, in <module>
-    from .models import (  # # noqa: F401
-ImportError: cannot import name '_get_diarizer' from 'server.audio.diarization.models' (C:\Users\Mate\AppData\Local\Programs\LifeHelper\app\server\audio\diarization\models.py)
+[
+  {
+    "role": "system",
+    "content": "You are an AI assistant helping the user understand a recording. Answer questions about its content.\n\nTranscript:\n[] System audio: \"Thank you all for joining.\"\n[] Angela (System audio): \"If you haven't met yet, we have our two newly hired customer care team members, Ken and Maria.\nHi, guys.\nWelcome to the team.\"\n[] System audio: \"Thanks, Angela.\nIt's great to be here.\"\n[] System audio: \"Hi, everyone.\"\n[] Angela (System audio): \"And Tarek from the customer care team.\nMaria from human resources is joining us for a brief period of time.\nHi, Tarek.\"\n[] System audio: \"Morning, everyone.\"\n[] Angela (System audio): \"I scheduled this meeting to introduce our new team members to our training process.\nTarek requested to be part of this meeting because he has some information for you as well.\nTarek, would you like to begin?\"\n[] System audio: \"Sure.\"\n[] System audio: \"Thank you, Angela.\"\n[] System audio: \"So Maria, Ken, welcome to Lock A team.\nI want to talk to you about some forms that you need to fill out before you can begin work.\nYou have received an email last week with our liability policy and our confidentiality agreement.\nThe one about you agreeing not to share any confidential information about our company with any third parties.\nHave you received it?\"\n[] Angela (System audio): \"Yes, I have.\"\n[] System audio: \"I don't think I received that.\nI'm sorry.\"\n[] System audio: \"No problem.\nI will send it to you today.\nOnce you have the document, please read it carefully and sign electronically.\nThere are four places where you will need to insert your initials and two where we need your signature.\nOnce signed and saved, please send the document directly to me.\nMy email address is Tarek.godas at mail.ca.\nThat is T-A-R-E-K dot G-U-L-D-U-Z at mail.ca.\nThis is very important because you cannot work until I have the signed document on file.\nDo you have any questions?\"\n[] Angela (System audio): \"No, I'll send it to you this afternoon.\"\n[] System audio: \"Perfect.\"\n[] System audio: \"Thank you.\nKen, please send me an email so I can double check the email address I have in your file.\"\n[] System audio: \"Absolutely.\nThanks.\"\n[] System audio: \"Okay, that's it.\"\n[] System audio: \"Thank you, Angela, for giving me the time.\"\n[] System audio: \"I will leave the meeting now.\"\n[] System audio: \"Have a good day, everyone.\"\n[] System audio: \"Maria, Ken, good luck with your training.\"\n[] Angela (System audio): \"Thanks, Tarek.\nSpeak to you soon.\nThanks.\"\n[] System audio: \"Thanks.\"\n[] System audio: \"Bye.\"\n[] System audio: \"Great.\"\n[] Angela (System audio): \"So let's get back to our business.\nMaria and Ken, you were both hired for the customer care positions.\nThis means that you'll deal with our clients, team leads, and other companies who have purchased our software.\nYou will answer some of their questions or provide a short demo of how our software and its features work.\nFirst, let me tell you a little bit about our product and our company.\nThen we'll go through your duties and responsibilities.\nAnd finally, you can ask me questions if you have any.\"\n[] System audio: \"Sounds good.\"\n[] Angela (System audio): \"So the two owners, Jen and Nina, created our company three years ago.\nThey created software for training work teams called Logiteam.\nIt became an instant success, and now we have 43 employees, 82 customers, and five different product packages.\nOur product is simple to use with some training, and that's where you come into the picture.\nIn the next two weeks, you'll become experts of Logiteam.\nWe'll make sure that you're familiar with all basic functions, security features, add-ons, and the most common glitches too.\nBy the end of this training, you'll be able to assist our clients with using the software to its full potential.\nDo you guys have any questions so far?\"\n[] System audio: \"Yes, I have a question.\nDo we use our own devices or the company's laptop during the training?\"\n[] Angela (System audio): \"Great question.\nYou don't need your own device.\nWe will set up your account on the computer you'll be using for work, so it's better to start working on that.\"\n[] System audio: \"Great, thanks.\"\n[] Angela (System audio): \"I have a question.\nWill I be interacting with clients over the phone or video conference?\nWe use a video conferencing tool that will be covered during your training.\nOkay, thank you.\""
+  },
+  {
+    "role": "user",
+    "content": "what are the action items been dicussed in this conversation?"
+  }
+]
