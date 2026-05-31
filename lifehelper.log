@@ -1,188 +1,100 @@
-2026-05-31 18:01:12 [INFO] launcher: Current app version: 1.0.72
-2026-05-31 18:01:12 [INFO] launcher: App is up to date.
-2026-05-31 18:01:12 [INFO] launcher: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-05-31 18:01:12 [INFO] launcher: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\ffmpeg\ffmpeg.exe
-2026-05-31 18:01:13 [INFO] launcher: Launched via protocol handler (action: launch)
-2026-05-31 18:01:13 [INFO] launcher: [local_presence] Announced port 8066 via nonce
-2026-05-31 18:01:14 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [15936]
+2026-05-31 20:01:46 [INFO] launcher: Current app version: 1.0.73
+2026-05-31 20:01:46 [INFO] launcher: App is up to date.
+2026-05-31 20:01:46 [INFO] launcher: [config] Loaded .env from: T:\Program\LifeHelper\.env
+2026-05-31 20:01:46 [INFO] launcher: [config] Using bundled ffmpeg: T:\Program\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-31 20:01:46 [INFO] launcher: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [13096]
 INFO:     Waiting for application startup.
-2026-05-31 18:01:14 [INFO] launcher: [local_presence] Heartbeat thread started
+2026-05-31 20:01:47 [INFO] launcher: [local_presence] Heartbeat thread started
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-05-31 18:01:15 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-05-31 18:01:15 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-05-31 18:01:15 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-31 18:01:15 [INFO] launcher: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
-2026-05-31 18:01:15 [INFO] launcher: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
-2026-05-31 18:01:15 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-31 18:01:15 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
-2026-05-31 18:01:15 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-05-31 18:01:15 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-31 18:01:15 [INFO] launcher: cluster_threshold(): env override -> 0.520
-2026-05-31 18:01:16 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-05-31 18:01:16 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-05-31 18:01:16 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-31 18:01:16 [INFO] launcher: cluster_threshold(): env override -> 0.520
-2026-05-31 18:01:16 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
-2026-05-31 18:01:16 [INFO] launcher: Diarization models pre-warmed
-INFO:     127.0.0.1:59256 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:59257 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-05-31 18:01:17 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-05-31 18:01:17 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-05-31 18:01:17 [INFO] launcher: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:59258 - "POST /api/token HTTP/1.1" 200 OK
-2026-05-31 18:01:19 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Starting diarization for recording 6a1b02558e2742dda827e5df
-2026-05-31 18:01:19 [INFO] launcher: Diarization thread spawned for recording 6a1b02558e2742dda827e5df
-INFO:     127.0.0.1:59260 - "POST /diarize/6a1b02558e2742dda827e5df HTTP/1.1" 200 OK
-2026-05-31 18:01:26 [INFO] launcher: Stereo input has identical L/R channels - treating as mono to avoid duplicate diarization
-2026-05-31 18:01:27 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Audio ready: 266.0s mono
-2026-05-31 18:01:27 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Background diarization started for recording 6a1b02558e2742dda827e5df
-2026-05-31 18:01:29 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Diarization path decision: chunks_with_words=yes preferred_provider=directml active_provider=directml embedding_backend=ort
-2026-05-31 18:01:29 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Running ASR-driven diarization (76 chunks with word timestamps)
-2026-05-31 18:01:29 [INFO] launcher: embed_segments: 76 segments, workers=4, active_provider=directml, embedding_backend=ort
-2026-05-31 18:01:35 [INFO] launcher: cluster_threshold(): backend='ort'
-2026-05-31 18:01:35 [INFO] launcher: cluster_threshold(): env override -> 0.520
-2026-05-31 18:01:37 [INFO] launcher: Pre-reattach: 19 clusters with sizes [28, 20, 6, 3, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-2026-05-31 18:01:37 [INFO] launcher: Pre-reattach centroid distance matrix:
-2026-05-31 18:01:37 [INFO] launcher:   c0   (n=1  ):  -  0.500 0.738 0.563 0.476 0.473 0.790 0.595 0.722 0.556 0.809 1.013 0.789 0.722 0.772 0.579 0.745 0.780 0.741
-2026-05-31 18:01:37 [INFO] launcher:   c1   (n=28 ): 0.500  -  0.420 0.326 0.652 0.778 0.623 0.394 0.431 0.571 0.808 0.856 0.817 0.800 0.980 0.443 0.905 0.827 0.891
-2026-05-31 18:01:37 [INFO] launcher:   c2   (n=1  ): 0.738 0.420  -  0.581 0.865 0.965 0.822 0.568 0.697 0.810 0.925 0.848 0.897 0.918 1.065 0.731 1.053 0.883 0.950
-2026-05-31 18:01:37 [INFO] launcher:   c3   (n=2  ): 0.563 0.326 0.581  -  0.725 0.757 0.727 0.486 0.452 0.665 0.802 0.935 0.829 0.760 0.927 0.457 0.796 0.850 0.788
-2026-05-31 18:01:37 [INFO] launcher:   c4   (n=6  ): 0.476 0.652 0.865 0.725  -  0.343 0.778 0.729 0.782 0.566 0.680 0.721 0.741 0.582 0.572 0.673 0.525 0.734 0.792
-2026-05-31 18:01:37 [INFO] launcher:   c5   (n=2  ): 0.473 0.778 0.965 0.757 0.343  -  0.897 0.887 0.847 0.540 0.801 0.817 0.614 0.670 0.467 0.747 0.529 0.619 0.639
-2026-05-31 18:01:37 [INFO] launcher:   c6   (n=1  ): 0.790 0.623 0.822 0.727 0.778 0.897  -  0.586 0.717 0.752 0.827 0.962 0.907 0.881 0.966 0.608 0.942 0.749 1.018
-2026-05-31 18:01:37 [INFO] launcher:   c7   (n=2  ): 0.595 0.394 0.568 0.486 0.729 0.887 0.586  -  0.689 0.727 0.793 0.947 0.879 0.909 0.987 0.548 0.884 0.819 0.996
-2026-05-31 18:01:37 [INFO] launcher:   c9   (n=1  ): 0.722 0.431 0.697 0.452 0.782 0.847 0.717 0.689  -  0.747 0.944 0.885 0.804 0.770 0.971 0.515 0.905 0.971 0.939
-2026-05-31 18:01:37 [INFO] launcher:   c10  (n=20 ): 0.556 0.571 0.810 0.665 0.566 0.540 0.752 0.727 0.747  -  0.384 0.700 0.487 0.740 0.764 0.608 0.698 0.701 0.633
-2026-05-31 18:01:37 [INFO] launcher:   c15  (n=3  ): 0.809 0.808 0.925 0.802 0.680 0.801 0.827 0.793 0.944 0.384  -  0.846 0.741 0.761 0.874 0.755 0.729 0.810 0.846
-2026-05-31 18:01:37 [INFO] launcher:   c34  (n=1  ): 1.013 0.856 0.848 0.935 0.721 0.817 0.962 0.947 0.885 0.700 0.846  -  0.679 0.856 0.723 0.941 0.800 0.801 0.792
-2026-05-31 18:01:37 [INFO] launcher:   c35  (n=1  ): 0.789 0.817 0.897 0.829 0.741 0.614 0.907 0.879 0.804 0.487 0.741 0.679  -  0.835 0.808 0.826 0.825 0.784 0.649
-2026-05-31 18:01:37 [INFO] launcher:   c37  (n=1  ): 0.722 0.800 0.918 0.760 0.582 0.670 0.881 0.909 0.770 0.740 0.761 0.856 0.835  -  0.811 0.799 0.738 0.856 0.815
-2026-05-31 18:01:37 [INFO] launcher:   c38  (n=1  ): 0.772 0.980 1.065 0.927 0.572 0.467 0.966 0.987 0.971 0.764 0.874 0.723 0.808 0.811  -  0.839 0.701 0.653 0.683
-2026-05-31 18:01:37 [INFO] launcher:   c46  (n=2  ): 0.579 0.443 0.731 0.457 0.673 0.747 0.608 0.548 0.515 0.608 0.755 0.941 0.826 0.799 0.839  -  0.794 0.826 0.838
-2026-05-31 18:01:37 [INFO] launcher:   c47  (n=1  ): 0.745 0.905 1.053 0.796 0.525 0.529 0.942 0.884 0.905 0.698 0.729 0.800 0.825 0.738 0.701 0.794  -  0.836 0.749
-2026-05-31 18:01:37 [INFO] launcher:   c48  (n=1  ): 0.780 0.827 0.883 0.850 0.734 0.619 0.749 0.819 0.971 0.701 0.810 0.801 0.784 0.856 0.653 0.826 0.836  -  0.651
-2026-05-31 18:01:37 [INFO] launcher:   c49  (n=1  ): 0.741 0.891 0.950 0.788 0.792 0.639 1.018 0.996 0.939 0.633 0.846 0.792 0.649 0.815 0.683 0.838 0.749 0.651  - 
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c3 (n=2) -> c1 (dist=0.326, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c5 (n=2) -> c4 (dist=0.343, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c7 (n=2) -> c1 (dist=0.394, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c46 (n=2) -> c1 (dist=0.443, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c0 (n=1) -> c4 (dist=0.476, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c2 (n=1) -> c1 (dist=0.420, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Tiny cluster c6 (n=1) kept as own speaker (nearest large c1 dist=0.623 > 0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c9 (n=1) -> c1 (dist=0.431, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Tiny cluster c34 (n=1) kept as own speaker (nearest large c10 dist=0.700 > 0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c35 (n=1) -> c10 (dist=0.487, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c37 (n=1) -> c4 (dist=0.582, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c38 (n=1) -> c4 (dist=0.572, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Reattaching tiny cluster c47 (n=1) -> c4 (dist=0.525, threshold=0.620)
-2026-05-31 18:01:37 [INFO] launcher: Tiny cluster c48 (n=1) kept as own speaker (nearest large c10 dist=0.701 > 0.620)
-2026-05-31 18:01:37 [INFO] launcher: Tiny cluster c49 (n=1) kept as own speaker (nearest large c10 dist=0.633 > 0.620)
-2026-05-31 18:01:37 [INFO] launcher: Clustered 76 embeddings into 8 speakers (threshold=0.52) sizes=[36, 21, 12, 3, 1, 1, 1, 1]
-2026-05-31 18:01:37 [INFO] launcher:   seg[00] 12.4-15.9s (3.4s) -> SPEAKER_L_00 | Thank you all for joining.
-2026-05-31 18:01:37 [INFO] launcher:   seg[01] 16.4-22.2s (5.7s) -> SPEAKER_L_01 | If you haven't met yet, we have our two newly hired customer care team members, 
-2026-05-31 18:01:37 [INFO] launcher:   seg[02] 22.6-22.9s (0.4s) -> SPEAKER_L_01 | Hi, guys.
-2026-05-31 18:01:37 [INFO] launcher:   seg[03] 23.1-23.9s (0.8s) -> SPEAKER_L_01 | Welcome to the team.
-2026-05-31 18:01:37 [INFO] launcher:   seg[04] 24.9-25.3s (0.4s) -> SPEAKER_L_00 | Thanks, Angela.
-2026-05-31 18:01:37 [INFO] launcher:   seg[05] 25.4-26.4s (1.0s) -> SPEAKER_L_00 | It's great to be here.
-2026-05-31 18:01:37 [INFO] launcher:   seg[06] 26.9-27.8s (0.9s) -> SPEAKER_L_02 | Hi, everyone.
-2026-05-31 18:01:37 [INFO] launcher:   seg[07] 29.0-30.0s (1.0s) -> SPEAKER_L_01 | And Tarek from the customer care team.
-2026-05-31 18:01:37 [INFO] launcher:   seg[08] 30.0-33.0s (3.0s) -> SPEAKER_L_01 | Maria from human resources is joining us for a brief period of time.
-2026-05-31 18:01:37 [INFO] launcher:   seg[09] 33.3-33.6s (0.3s) -> SPEAKER_L_01 | Hi, Tarek.
-2026-05-31 18:01:37 [INFO] launcher:   seg[10] 34.6-35.7s (1.0s) -> SPEAKER_L_03 | Morning, everyone.
-2026-05-31 18:01:37 [INFO] launcher:   seg[11] 37.1-41.4s (4.3s) -> SPEAKER_L_01 | I scheduled this meeting to introduce our new team members to our training proce
-2026-05-31 18:01:37 [INFO] launcher:   seg[12] 42.2-45.8s (3.6s) -> SPEAKER_L_01 | Tarek requested to be part of this meeting because he has some information for y
-2026-05-31 18:01:37 [INFO] launcher:   seg[13] 46.2-47.7s (1.5s) -> SPEAKER_L_01 | Tarek, would you like to begin?
-2026-05-31 18:01:37 [INFO] launcher:   seg[14] 48.1-48.6s (0.5s) -> SPEAKER_L_03 | Sure.
-2026-05-31 18:01:37 [INFO] launcher:   seg[15] 49.2-49.9s (0.7s) -> SPEAKER_L_04 | Thank you, Angela.
-2026-05-31 18:01:37 [INFO] launcher:   seg[16] 50.9-53.9s (3.0s) -> SPEAKER_L_03 | So Maria, Ken, welcome to Lock A team.
-2026-05-31 18:01:37 [INFO] launcher:   seg[17] 53.9-59.8s (5.8s) -> SPEAKER_L_03 | I want to talk to you about some forms that you need to fill out before you can 
-2026-05-31 18:01:37 [INFO] launcher:   seg[18] 60.0-66.4s (6.4s) -> SPEAKER_L_03 | You have received an email last week with our liability policy and our confident
-2026-05-31 18:01:37 [INFO] launcher:   seg[19] 66.7-73.6s (6.8s) -> SPEAKER_L_03 | The one about you agreeing not to share any confidential information about our c
-2026-05-31 18:01:37 [INFO] launcher:   seg[20] 74.5-75.6s (1.1s) -> SPEAKER_L_03 | Have you received it?
-2026-05-31 18:01:37 [INFO] launcher:   seg[21] 76.1-77.2s (1.1s) -> SPEAKER_L_01 | Yes, I have.
-2026-05-31 18:01:37 [INFO] launcher:   seg[22] 78.0-79.8s (1.8s) -> SPEAKER_L_00 | I don't think I received that.
-2026-05-31 18:01:37 [INFO] launcher:   seg[23] 79.8-80.4s (0.6s) -> SPEAKER_L_00 | I'm sorry.
-2026-05-31 18:01:37 [INFO] launcher:   seg[24] 81.2-81.9s (0.7s) -> SPEAKER_L_03 | No problem.
-2026-05-31 18:01:37 [INFO] launcher:   seg[25] 82.1-83.8s (1.6s) -> SPEAKER_L_03 | I will send it to you today.
-2026-05-31 18:01:37 [INFO] launcher:   seg[26] 84.6-89.3s (4.7s) -> SPEAKER_L_03 | Once you have the document, please read it carefully and sign electronically.
-2026-05-31 18:01:37 [INFO] launcher:   seg[27] 89.8-96.4s (6.6s) -> SPEAKER_L_03 | There are four places where you will need to insert your initials and two where 
-2026-05-31 18:01:37 [INFO] launcher:   seg[28] 97.1-101.7s (4.5s) -> SPEAKER_L_03 | Once signed and saved, please send the document directly to me.
-2026-05-31 18:01:37 [INFO] launcher:   seg[29] 102.3-107.8s (5.5s) -> SPEAKER_L_03 | My email address is Tarek.godas at mail.ca.
-2026-05-31 18:01:37 [INFO] launcher:   seg[30] 108.4-120.1s (11.6s) -> SPEAKER_L_03 | That is T-A-R-E-K dot G-U-L-D-U-Z at mail.ca.
-2026-05-31 18:01:37 [INFO] launcher:   seg[31] 120.4-126.6s (6.1s) -> SPEAKER_L_03 | This is very important because you cannot work until I have the signed document 
-2026-05-31 18:01:37 [INFO] launcher:   seg[32] 127.1-128.7s (1.6s) -> SPEAKER_L_03 | Do you have any questions?
-2026-05-31 18:01:37 [INFO] launcher:   seg[33] 129.5-132.1s (2.6s) -> SPEAKER_L_01 | No, I'll send it to you this afternoon.
-2026-05-31 18:01:37 [INFO] launcher:   seg[34] 132.6-132.7s (0.1s) -> SPEAKER_L_05 | Perfect.
-2026-05-31 18:01:37 [INFO] launcher:   seg[35] 133.3-134.0s (0.7s) -> SPEAKER_L_03 | Thank you.
-2026-05-31 18:01:37 [INFO] launcher:   seg[36] 134.7-139.1s (4.4s) -> SPEAKER_L_03 | Ken, please send me an email so I can double check the email address I have in y
-2026-05-31 18:01:37 [INFO] launcher:   seg[37] 140.1-140.5s (0.4s) -> SPEAKER_L_00 | Absolutely.
-2026-05-31 18:01:37 [INFO] launcher:   seg[38] 140.9-141.4s (0.4s) -> SPEAKER_L_00 | Thanks.
-2026-05-31 18:01:37 [INFO] launcher:   seg[39] 142.3-144.0s (1.7s) -> SPEAKER_L_03 | Okay, that's it.
-2026-05-31 18:01:37 [INFO] launcher:   seg[40] 144.1-145.7s (1.5s) -> SPEAKER_L_04 | Thank you, Angela, for giving me the time.
-2026-05-31 18:01:37 [INFO] launcher:   seg[41] 146.3-147.6s (1.3s) -> SPEAKER_L_03 | I will leave the meeting now.
-2026-05-31 18:01:37 [INFO] launcher:   seg[42] 148.4-149.3s (0.9s) -> SPEAKER_L_04 | Have a good day, everyone.
-2026-05-31 18:01:37 [INFO] launcher:   seg[43] 149.7-152.3s (2.6s) -> SPEAKER_L_03 | Maria, Ken, good luck with your training.
-2026-05-31 18:01:37 [INFO] launcher:   seg[44] 153.6-154.2s (0.6s) -> SPEAKER_L_01 | Thanks, Tarek.
-2026-05-31 18:01:37 [INFO] launcher:   seg[45] 154.3-154.9s (0.6s) -> SPEAKER_L_01 | Speak to you soon.
-2026-05-31 18:01:37 [INFO] launcher:   seg[46] 155.6-156.1s (0.4s) -> SPEAKER_L_01 | Thanks.
-2026-05-31 18:01:37 [INFO] launcher:   seg[47] 156.3-156.7s (0.4s) -> SPEAKER_L_00 | Thanks.
-2026-05-31 18:01:37 [INFO] launcher:   seg[48] 156.7-157.0s (0.3s) -> SPEAKER_L_06 | Bye.
-2026-05-31 18:01:37 [INFO] launcher:   seg[49] 157.0-157.9s (0.9s) -> SPEAKER_L_07 | Great.
-2026-05-31 18:01:37 [INFO] launcher:   seg[50] 158.4-160.4s (2.1s) -> SPEAKER_L_01 | So let's get back to our business.
-2026-05-31 18:01:37 [INFO] launcher:   seg[51] 161.1-164.6s (3.4s) -> SPEAKER_L_01 | Maria and Ken, you were both hired for the customer care positions.
-2026-05-31 18:01:37 [INFO] launcher:   seg[52] 165.2-170.0s (4.7s) -> SPEAKER_L_01 | This means that you'll deal with our clients, team leads, and other companies wh
-2026-05-31 18:01:37 [INFO] launcher:   seg[53] 170.7-176.6s (5.8s) -> SPEAKER_L_01 | You will answer some of their questions or provide a short demo of how our softw
-2026-05-31 18:01:37 [INFO] launcher:   seg[54] 177.1-179.9s (2.8s) -> SPEAKER_L_01 | First, let me tell you a little bit about our product and our company.
-2026-05-31 18:01:37 [INFO] launcher:   seg[55] 180.4-183.0s (2.5s) -> SPEAKER_L_01 | Then we'll go through your duties and responsibilities.
-2026-05-31 18:01:37 [INFO] launcher:   seg[56] 183.3-185.9s (2.6s) -> SPEAKER_L_01 | And finally, you can ask me questions if you have any.
-2026-05-31 18:01:37 [INFO] launcher:   seg[57] 186.7-187.8s (1.1s) -> SPEAKER_L_00 | Sounds good.
-2026-05-31 18:01:37 [INFO] launcher:   seg[58] 188.9-193.3s (4.4s) -> SPEAKER_L_01 | So the two owners, Jen and Nina, created our company three years ago.
-2026-05-31 18:01:37 [INFO] launcher:   seg[59] 194.0-197.0s (3.1s) -> SPEAKER_L_01 | They created software for training work teams called Logiteam.
-2026-05-31 18:01:37 [INFO] launcher:   seg[60] 197.5-205.6s (8.1s) -> SPEAKER_L_01 | It became an instant success, and now we have 43 employees, 82 customers, and fi
-2026-05-31 18:01:37 [INFO] launcher:   seg[61] 206.0-210.9s (4.9s) -> SPEAKER_L_01 | Our product is simple to use with some training, and that's where you come into 
-2026-05-31 18:01:37 [INFO] launcher:   seg[62] 211.1-214.4s (3.3s) -> SPEAKER_L_01 | In the next two weeks, you'll become experts of Logiteam.
-2026-05-31 18:01:37 [INFO] launcher:   seg[63] 214.4-221.6s (7.2s) -> SPEAKER_L_01 | We'll make sure that you're familiar with all basic functions, security features
-2026-05-31 18:01:37 [INFO] launcher:   seg[64] 221.9-227.7s (5.7s) -> SPEAKER_L_01 | By the end of this training, you'll be able to assist our clients with using the
-2026-05-31 18:01:37 [INFO] launcher:   seg[65] 228.1-229.8s (1.7s) -> SPEAKER_L_01 | Do you guys have any questions so far?
-2026-05-31 18:01:37 [INFO] launcher:   seg[66] 230.7-231.8s (1.1s) -> SPEAKER_L_00 | Yes, I have a question.
-2026-05-31 18:01:37 [INFO] launcher:   seg[67] 232.0-235.7s (3.7s) -> SPEAKER_L_00 | Do we use our own devices or the company's laptop during the training?
-2026-05-31 18:01:37 [INFO] launcher:   seg[68] 236.5-237.1s (0.6s) -> SPEAKER_L_01 | Great question.
-2026-05-31 18:01:37 [INFO] launcher:   seg[69] 237.3-239.0s (1.8s) -> SPEAKER_L_01 | You don't need your own device.
-2026-05-31 18:01:37 [INFO] launcher:   seg[70] 239.0-244.7s (5.7s) -> SPEAKER_L_01 | We will set up your account on the computer you'll be using for work, so it's be
-2026-05-31 18:01:37 [INFO] launcher:   seg[71] 245.3-245.9s (0.6s) -> SPEAKER_L_00 | Great, thanks.
-2026-05-31 18:01:37 [INFO] launcher:   seg[72] 246.9-248.0s (1.2s) -> SPEAKER_L_01 | I have a question.
-2026-05-31 18:01:37 [INFO] launcher:   seg[73] 248.4-251.9s (3.5s) -> SPEAKER_L_01 | Will I be interacting with clients over the phone or video conference?
-2026-05-31 18:01:37 [INFO] launcher:   seg[74] 252.6-256.1s (3.5s) -> SPEAKER_L_01 | We use a video conferencing tool that will be covered during your training.
-2026-05-31 18:01:37 [INFO] launcher:   seg[75] 256.7-258.2s (1.5s) -> SPEAKER_L_01 | Okay, thank you.
-2026-05-31 18:01:48 [INFO] launcher: [rediarize-6a1b02558e2742dda827e5df] Diarization results uploaded for recording 6a1b02558e2742dda827e5df: 33 segments, 8 speakers
-
-
-1  | 2026-05-31T17:01:48.045Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_01 -> speaker 6a1b37968e2742dda827e5f9 (Angela) sim=0.9257384544921171 ingested=true
-backend-1  | 2026-05-31T17:01:48.049Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_02 unmatched (best existing sim=0.39007094107791507)
-backend-1  | 2026-05-31T17:01:48.049Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PENDING-INGEST] About to ingest PENDING prototype for speaker 6a1c68d9b5c4fe33f511f24d (Tarek) from diar SPEAKER_L_03 (sim=0.9139617154731573)
-backend-1  | 2026-05-31T17:01:48.063Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f264 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.068Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f265 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.073Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f266 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.078Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f267 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.080Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f268 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.084Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f269 source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.087Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f26a source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.090Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f26b source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.094Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f26c source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.097Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Saved prototype id=6a1c697cb5c4fe33f511f26d source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.098Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_03 -> speaker 6a1c68d9b5c4fe33f511f24d (Tarek) sim=0.9139617154731573 ingested=true
-backend-1  | 2026-05-31T17:01:48.099Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PENDING-INGEST] About to ingest PENDING prototype for speaker 6a1c68d9b5c4fe33f511f24d (Tarek) from diar SPEAKER_L_04 (sim=1.0)
-backend-1  | 2026-05-31T17:01:48.122Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Dedup: removed 10 stale pending prototype(s) for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.126Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : [PROTO-SAVED] Fallback Saved prototype id=6a1c697cb5c4fe33f511f26e source='pending' for speaker 6a1c68d9b5c4fe33f511f24d from recording 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:48.126Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_04 -> speaker 6a1c68d9b5c4fe33f511f24d (Tarek) sim=1.0 ingested=true
-backend-1  | 2026-05-31T17:01:48.127Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_05 unmatched (best existing sim=0.2878737815848355)
-backend-1  | 2026-05-31T17:01:48.128Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_06 unmatched (best existing sim=0.2959419574723314)
-backend-1  | 2026-05-31T17:01:48.130Z  INFO 1 --- [backend] [cat-handler-342] u.m.b.d.service.SpeakerMatcher           : Diar speaker SPEAKER_L_07 unmatched (best existing sim=0.3176997140272474)
-backend-1  | 2026-05-31T17:01:52.295Z  INFO 1 --- [backend] [cat-handler-346] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a1b02558e2742dda827e5df
-backend-1  | 2026-05-31T17:01:52.295Z  INFO 1 --- [backend] [cat-handler-346] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-31T17:01:56.586Z  INFO 1 --- [backend] [cat-handler-348] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-31T17:01:56.593Z  WARN 1 --- [backend] [cat-handler-348] u.m.b.b.e.BusinessExceptionAdvice        : 404 Not Found (uri=/api/v1/recordings/6a1b02558e2742dda827e5df/speakers/local/SPEAKER_L_02/audio): No audio sample for orphan: 6a1b02558e2742dda827e5df/SPEAKER_L_02
-backend-1  | 2026-05-31T17:02:01.823Z  INFO 1 --- [backend] [cat-handler-350] u.m.backend.user.service.UserService     : Entering findByEmail for userEmail tornaimate95@gmail.com
-backend-1  | 2026-05-31T17:02:01.849Z  WARN 1 --- [backend] [cat-handler-350] u.m.b.b.e.BusinessExceptionAdvice        : 404 Not Found (uri=/api/v1/recordings/6a1b02558e2742dda827e5df/speakers/local/SPEAKER_L_05/audio): No audio sample for orphan: 6a1b02558e2742dda827e5df/SPEAKER_L_05
+2026-05-31 20:01:47 [INFO] launcher: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-05-31 20:01:47 [INFO] launcher: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-05-31 20:01:47 [INFO] launcher: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-31 20:01:48 [INFO] launcher: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-05-31 20:01:48 [INFO] launcher: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-05-31 20:01:48 [INFO] launcher: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-31 20:01:48 [INFO] launcher: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-05-31 20:01:48 [INFO] launcher: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-05-31 20:01:48 [INFO] launcher: cluster_threshold(): backend='ort'
+2026-05-31 20:01:48 [INFO] launcher: cluster_threshold(): env override -> 0.520
+2026-05-31 20:01:48 [INFO] launcher: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-05-31 20:01:48 [INFO] launcher: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-05-31 20:01:48 [INFO] launcher: cluster_threshold(): backend='ort'
+2026-05-31 20:01:48 [INFO] launcher: cluster_threshold(): env override -> 0.520
+2026-05-31 20:01:48 [INFO] launcher: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
+2026-05-31 20:01:48 [INFO] launcher: Diarization models pre-warmed
+2026-05-31 20:02:10 [INFO] launcher: Current app version: 1.0.73
+2026-05-31 20:02:10 [INFO] launcher: App is up to date.
+2026-05-31 20:02:10 [INFO] launcher: [config] Loaded .env from: T:\Program\LifeHelper\.env
+2026-05-31 20:02:10 [INFO] launcher: [config] Using bundled ffmpeg: T:\Program\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-31 20:02:10 [WARNING] launcher: Another LifeHelper instance is already running. Exiting.
+2026-05-31 20:02:45 [INFO] launcher: Current app version: 1.0.73
+2026-05-31 20:02:45 [INFO] launcher: App is up to date.
+2026-05-31 20:02:45 [INFO] launcher: [config] Loaded .env from: T:\Program\LifeHelper\.env
+2026-05-31 20:02:45 [INFO] launcher: [config] Using bundled ffmpeg: T:\Program\LifeHelper\_internal\ffmpeg\ffmpeg.exe
+2026-05-31 20:02:45 [INFO] launcher: Launched via protocol handler (action: launch)
+2026-05-31 20:02:45 [WARNING] launcher: Another LifeHelper instance is already running. Exiting.
+2026-05-31 20:02:45 [INFO] launcher: Wrote pending nonce to T:\Program\LifeHelper\.lifehelper.pending_nonce
+2026-05-31 20:02:47 [INFO] launcher: [local_presence] Announced port 8066 via nonce
+INFO:     127.0.0.1:60675 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60675 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-05-31 20:02:51 [INFO] launcher: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-05-31 20:02:51 [INFO] launcher: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-05-31 20:02:51 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:60675 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-31 20:02:52 [INFO] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Starting diarization for recording 6a1c7619546a82eaa9a94dab
+2026-05-31 20:02:52 [INFO] launcher: Diarization thread spawned for recording 6a1c7619546a82eaa9a94dab
+INFO:     127.0.0.1:60675 - "POST /diarize/6a1c7619546a82eaa9a94dab HTTP/1.1" 200 OK
+pydub\utils.py:198: RuntimeWarning: Couldn't find ffprobe or avprobe - defaulting to ffprobe, but may not work
+2026-05-31 20:02:54 [ERROR] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Diarization prep failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 681, in _worker
+    loopback_audio, mic_audio, sample_rate = _decode_audio_to_channels(tmp_audio_path)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 181, in _decode_audio_to_channels
+    audio_seg = AudioSegment.from_file(audio_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub\audio_segment.py", line 728, in from_file
+  File "pydub\utils.py", line 274, in mediainfo_json
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+INFO:     127.0.0.1:57217 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-31 20:02:59 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:57217 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-31 20:03:00 [INFO] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Starting diarization for recording 6a1c7619546a82eaa9a94dab
+2026-05-31 20:03:00 [INFO] launcher: Diarization thread spawned for recording 6a1c7619546a82eaa9a94dab
+INFO:     127.0.0.1:57217 - "POST /diarize/6a1c7619546a82eaa9a94dab HTTP/1.1" 200 OK
+2026-05-31 20:03:02 [ERROR] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Diarization prep failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 681, in _worker
+    loopback_audio, mic_audio, sample_rate = _decode_audio_to_channels(tmp_audio_path)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 181, in _decode_audio_to_channels
+    audio_seg = AudioSegment.from_file(audio_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub\audio_segment.py", line 728, in from_file
+  File "pydub\utils.py", line 274, in mediainfo_json
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+INFO:     127.0.0.1:61705 - "GET /api/ HTTP/1.1" 200 OK
+2026-05-31 20:03:08 [INFO] launcher: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:61705 - "POST /api/token HTTP/1.1" 200 OK
+2026-05-31 20:03:09 [INFO] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Starting diarization for recording 6a1c7619546a82eaa9a94dab
+2026-05-31 20:03:09 [INFO] launcher: Diarization thread spawned for recording 6a1c7619546a82eaa9a94dab
+INFO:     127.0.0.1:61705 - "POST /diarize/6a1c7619546a82eaa9a94dab HTTP/1.1" 200 OK
+2026-05-31 20:03:10 [ERROR] launcher: [rediarize-6a1c7619546a82eaa9a94dab] Diarization prep failed: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 681, in _worker
+    loopback_audio, mic_audio, sample_rate = _decode_audio_to_channels(tmp_audio_path)
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "T:\Program\LifeHelper\app\server\services\diarization_worker.py", line 181, in _decode_audio_to_channels
+    audio_seg = AudioSegment.from_file(audio_path)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "pydub\audio_segment.py", line 728, in from_file
+  File "pydub\utils.py", line 274, in mediainfo_json
+  File "subprocess.py", line 1026, in __init__
+  File "subprocess.py", line 1538, in _execute_child
+FileNotFoundError: [WinError 2] The system cannot find the file specified
