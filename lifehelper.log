@@ -1,235 +1,44 @@
-pyinstaller lifehelper.spec --clean --noconfirm 2>&1 | Tee-Object pyi.log
-pyinstaller : 250 INFO: PyInstaller: 6.20.0, contrib hooks: 2026.5
-At line:1 char:1
-+ pyinstaller lifehelper.spec --clean --noconfirm 2>&1 | Tee-Object pyi ...
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (250 INFO: PyIns...b hooks: 2026.5:String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
-
-251 INFO: Python: 3.12.7
-297 INFO: Platform: Windows-11-10.0.26200-SP0
-297 INFO: Python environment: C:\Users\Mate\AppData\Local\Programs\Python\Python312
-300 INFO: Removing temporary files and cleaning cache in C:\Users\Mate\AppData\Local\pyinstaller
-341 INFO: Module search paths (PYTHONPATH):
-['C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Scripts\\pyinstaller.exe',
- 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\python312.zip',
- 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\DLLs',
- 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib',
- 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312',
- 'C:\\Users\\Mate\\AppData\\Roaming\\Python\\Python312\\site-packages',
- 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages',
- 'C:\\Users\\Mate\\Desktop\\Project\\lifehelper\\local-server']
-915 INFO: Appending 'binaries' from .spec
-916 INFO: Appending 'datas' from .spec
-917 INFO: checking Analysis
-917 INFO: Building Analysis because Analysis-00.toc is non existent
-917 INFO: Looking for Python shared library...
-917 INFO: Using Python shared library: C:\Users\Mate\AppData\Local\Programs\Python\Python312\python312.dll
-917 INFO: Running Analysis Analysis-00.toc
-917 INFO: Target bytecode optimization level: 0
-917 INFO: Initializing module dependency graph...
-919 INFO: Initializing module graph hook caches...
-935 INFO: Analyzing modules for base_library.zip ...
-2180 INFO: Processing standard module hook 'hook-heapq.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-2446 INFO: Processing standard module hook 'hook-encodings.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-4062 INFO: Processing standard module hook 'hook-pickle.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-5530 INFO: Caching module dependency graph...
-5568 INFO: Analyzing C:\Users\Mate\Desktop\Project\lifehelper\local-server\lifehelper.py
-C:\Users\Mate\Desktop\Project\lifehelper\local-server\server\utils\asset_paths.py:1: SyntaxWarning: invalid escape sequence '\L'
-  """Runtime asset path resolver (whisper, ffmpeg, diarize models).
-C:\Users\Mate\Desktop\Project\lifehelper\local-server\server\utils\asset_paths.py:30: SyntaxWarning: invalid escape sequence '\L'
-  """Directory containing `whisper/`, `ffmpeg/`, `diarize/`.
-5710 INFO: Processing standard module hook 'hook-platform.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:300: SyntaxWarning: invalid escape sequence '\('
-  m = re.match('([su]([0-9]{1,2})p?) \(([0-9]{1,2}) bit\)$', token)
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:301: SyntaxWarning: invalid escape sequence '\('
-  m2 = re.match('([su]([0-9]{1,2})p?)( \(default\))?$', token)
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:310: SyntaxWarning: invalid escape sequence '\('
-  elif re.match('(flt)p?( \(default\))?$', token):
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:314: SyntaxWarning: invalid escape sequence '\('
-  elif re.match('(dbl)p?( \(default\))?$', token):
-5792 INFO: Processing standard module hook 'hook-_ctypes.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-5885 INFO: Processing standard module hook 'hook-numpy.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-6383 INFO: Processing standard module hook 'hook-difflib.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-6584 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-6797 INFO: Processing standard module hook 'hook-xml.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-7904 INFO: Processing standard module hook 'hook-sysconfig.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-9036 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-9039 INFO: SetuptoolsInfo: initializing cached setuptools info...
-10412 INFO: Processing standard module hook 'hook-charset_normalizer.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-10747 INFO: Processing standard module hook 'hook-urllib3.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-10828 INFO: Processing pre-safe-import-module hook 'hook-backports.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-10829 INFO: Setuptools: 'backports' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.backports'!
-10834 INFO: Processing standard module hook 'hook-setuptools.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-10844 INFO: Processing pre-safe-import-module hook 'hook-distutils.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-10872 INFO: Processing pre-safe-import-module hook 'hook-jaraco.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-10873 INFO: Setuptools: 'jaraco' appears to be a full setuptools-vendored copy - creating alias to 'setuptools._vendor.jaraco'!
-10920 INFO: Processing pre-safe-import-module hook 'hook-more_itertools.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-10921 INFO: Setuptools: 'more_itertools' appears to be a setuptools-vendored copy - creating alias to
-'setuptools._vendor.more_itertools'!
-11181 INFO: Processing pre-safe-import-module hook 'hook-packaging.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-11434 INFO: Processing standard module hook 'hook-setuptools._vendor.jaraco.text.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-11436 INFO: Processing pre-safe-import-module hook 'hook-importlib_resources.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-11596 INFO: Processing pre-safe-import-module hook 'hook-importlib_metadata.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-11596 INFO: Setuptools: 'importlib_metadata' appears to be a setuptools-vendored copy - creating alias to
-'setuptools._vendor.importlib_metadata'!
-11638 INFO: Processing standard module hook 'hook-setuptools._vendor.importlib_metadata.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-11675 INFO: Processing pre-safe-import-module hook 'hook-zipp.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-11676 INFO: Setuptools: 'zipp' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.zipp'!
-11967 INFO: Processing pre-safe-import-module hook 'hook-tomli.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-11968 INFO: Setuptools: 'tomli' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.tomli'!
-12465 INFO: Processing pre-safe-import-module hook 'hook-wheel.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-12465 INFO: Setuptools: 'wheel' appears to be a setuptools-vendored copy - creating alias to 'setuptools._vendor.wheel'!
-13062 INFO: Processing standard module hook 'hook-cryptography.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-14475 INFO: hook-cryptography: cryptography does not seem to be using dynamically linked OpenSSL.
-14772 INFO: Processing standard module hook 'hook-certifi.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-14899 INFO: Processing standard module hook 'hook-soundfile.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-14970 INFO: Processing standard module hook 'hook-uvicorn.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-16049 INFO: Processing pre-find-module-path hook 'hook-tkinter.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_find_module_path'
-16051 INFO: TclTkInfo: initializing cached Tcl/Tk info...
-16415 INFO: Processing standard module hook 'hook-_tkinter.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-16473 INFO: Processing standard module hook 'hook-pystray.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-16959 INFO: Processing pre-safe-import-module hook 'hook-six.moves.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-17041 INFO: Processing pre-safe-import-module hook 'hook-gi.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-17068 INFO: Processing standard module hook 'hook-PIL.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-17204 INFO: Processing standard module hook 'hook-PIL.Image.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-17640 INFO: Processing standard module hook 'hook-xml.etree.cElementTree.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-17854 INFO: Processing standard module hook 'hook-PIL.ImageFilter.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-18168 INFO: Analyzing hidden import 'uvicorn.loops'
-18169 INFO: Analyzing hidden import 'uvicorn.loops.auto'
-18172 INFO: Analyzing hidden import 'uvicorn.protocols.http.auto'
-18173 INFO: Analyzing hidden import 'uvicorn.protocols.websockets.auto'
-18175 INFO: Analyzing hidden import 'uvicorn.lifespan'
-18175 INFO: Analyzing hidden import 'uvicorn.lifespan.on'
-18180 INFO: Analyzing hidden import 'fastapi'
-18325 INFO: Processing standard module hook 'hook-anyio.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-19225 INFO: Processing standard module hook 'hook-pydantic.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-20244 INFO: Processing standard module hook 'hook-zoneinfo.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-21577 INFO: Analyzing hidden import 'fastapi.middleware.cors'
-21583 INFO: Analyzing hidden import 'httpx'
-22120 INFO: Analyzing hidden import 'jwt'
-22175 INFO: Analyzing hidden import 'charset_normalizer.md__mypyc'
-22175 ERROR: Hidden import 'charset_normalizer.md__mypyc' not found
-22175 INFO: Analyzing hidden import 'sqlite3'
-22176 INFO: Processing standard module hook 'hook-sqlite3.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-22526 INFO: Analyzing hidden import 'sherpa_onnx'
-22570 INFO: Analyzing hidden import 'onnxruntime'
-22584 INFO: Processing standard module hook 'hook-onnxruntime.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-22676 INFO: Processing pre-safe-import-module hook 'hook-tensorflow.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\pre_safe_import_module'
-22679 INFO: Analyzing hidden import 'kaldi_native_fbank'
-22679 INFO: Analyzing hidden import 'server.audio.diarization'
-22786 INFO: Analyzing hidden import 'server.routes.update'
-22801 INFO: Processing module hooks (post-graph stage)...
-23145 WARNING: Hidden import "tzdata" not found!
-23421 INFO: Processing standard module hook 'hook-PIL.SpiderImagePlugin.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-23688 INFO: Processing standard module hook 'hook-_tkinter.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-23705 INFO: Performing binary vs. data reclassification (960 entries)
-23794 INFO: Looking for ctypes DLLs
-23846 INFO: Analyzing run-time hooks ...
-23852 INFO: Including run-time hook 'pyi_rth_inspect.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23856 INFO: Including run-time hook 'pyi_rth_pkgutil.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23858 INFO: Including run-time hook 'pyi_rth_multiprocessing.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23861 INFO: Including run-time hook 'pyi_rth_setuptools.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23863 INFO: Including run-time hook 'pyi_rth_cryptography_openssl.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\rthooks'
-23864 INFO: Including run-time hook 'pyi_rth__tkinter.py' from
-'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\rthooks'
-23904 INFO: Creating base_library.zip...
-23922 INFO: Looking for dynamic libraries
-25436 INFO: Extra DLL search directories (AddDllDirectory):
-['C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\numpy.libs']
-25436 INFO: Extra DLL search directories (PATH): []
-26544 INFO: Warnings written to C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\warn-lifehelper.txt
-26671 INFO: Graph cross-reference written to C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\xref-lifehelper.html
-26732 INFO: checking PYZ
-26732 INFO: Building PYZ because PYZ-00.toc is non existent
-26732 INFO: Building PYZ (ZlibArchive) C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\PYZ-00.pyz
-27943 INFO: Building PYZ (ZlibArchive) C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\PYZ-00.pyz completed
-successfully.
-27971 INFO: checking PKG
-27971 INFO: Building PKG because PKG-00.toc is non existent
-27971 INFO: Building PKG (CArchive) LifeHelper.pkg
-28019 INFO: Building PKG (CArchive) LifeHelper.pkg completed successfully.
-28020 INFO: Bootloader
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\bootloader\Windows-64bit-intel\runw.exe
-28021 INFO: checking EXE
-28021 INFO: Building EXE because EXE-00.toc is non existent
-28021 INFO: Building EXE from EXE-00.toc
-28021 INFO: Copying bootloader EXE to C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\LifeHelper.exe
-28111 INFO: Copying icon to EXE
-28200 INFO: Copying 0 resources to EXE
-28200 INFO: Embedding manifest in EXE
-28294 INFO: Appending PKG archive to EXE
-28498 INFO: Fixing EXE headers
-29675 INFO: Building EXE from EXE-00.toc completed successfully.
-29694 INFO: checking COLLECT
-29695 INFO: Building COLLECT because COLLECT-00.toc is non existent
-29695 INFO: Removing dir C:\Users\Mate\Desktop\Project\lifehelper\local-server\dist\LifeHelper
-29932 INFO: Building COLLECT COLLECT-00.toc
-31755 INFO: Building COLLECT COLLECT-00.toc completed successfully.
-31774 INFO: Build complete! The results are available in: C:\Users\Mate\Desktop\Project\lifehelper\local-server\dist
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String pyi.log -Pattern "server\.(main|services|routes)" -Context 0,0
-
-pyi.log:165:22786 INFO: Analyzing hidden import 'server.routes.update'
-
-
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String pyi.log -Pattern "WARNING.*server" -Context 0,0
-
-pyi.log:192:26544 INFO: Warnings written to C:\Users\Mate\Desktop\Project\lifehelper\local-server\build\lifehelper\warn-lifehelper.txt
-
-
-PS C:\Users\Mate\Desktop\Project\lifehelper\local-server> Select-String pyi.log -Pattern "Hidden import .* not found"
-
-pyi.log:153:22175 ERROR: Hidden import 'charset_normalizer.md__mypyc' not found
-pyi.log:167:23145 WARNING: Hidden import "tzdata" not found!
+2026-06-02 19:32:51 [INFO] lifehelper: [config] No .env file found. Searched: ['C:\\Users\\Mate\\Desktop\\Project\\lifehelper\\local-server\\dist\\LifeHelper\\.env', 'C:\\Users\\Mate\\Desktop\\Project\\lifehelper\\local-server\\dist\\LifeHelper\\_internal\\.env']
+2026-06-02 19:32:51 [INFO] lifehelper: [config] Using OS environment variables / defaults.
+2026-06-02 19:32:51 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
+2026-06-02 19:32:51 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
+2026-06-02 19:32:51 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
+2026-06-02 19:32:51 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
+Exception in thread Thread-1 (run):
+Traceback (most recent call last):
+  File "threading.py", line 1075, in _bootstrap_inner
+  File "threading.py", line 1012, in run
+  File "pystray\_base.py", line 212, in run
+  File "pystray\_win32.py", line 124, in _run
+  File "pystray\_base.py", line 310, in _mark_ready
+  File "pystray\_base.py", line 275, in update_menu
+  File "pystray\_win32.py", line 107, in _update_menu
+  File "pystray\_win32.py", line 284, in _create_menu
+  File "pystray\_win32.py", line 313, in _create_menu_item
+  File "pystray\_base.py", line 465, in text
+  File "server\tray.py", line 142, in _update_label
+ModuleNotFoundError: No module named 'server.services.updater'
+Traceback (most recent call last):
+  File "lifehelper.py", line 159, in <module>
+  File "lifehelper.py", line 150, in main
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 687, in run_until_complete
+  File "uvicorn\server.py", line 79, in serve
+  File "uvicorn\server.py", line 86, in _serve
+  File "uvicorn\config.py", line 441, in load
+  File "uvicorn\importer.py", line 19, in import_from_string
+  File "importlib\__init__.py", line 90, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\main.py", line 20, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\thread_starter.py", line 40, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\transcribe.py", line 16, in <module>
+ImportError: cannot import name 'asset_paths' from 'server' (C:\Users\Mate\Desktop\Project\lifehelper\local-server\dist\LifeHelper\_internal\server\__init__.py)
