@@ -1,10 +1,3 @@
-2026-06-02 19:32:51 [INFO] lifehelper: [config] No .env file found. Searched: ['C:\\Users\\Mate\\Desktop\\Project\\lifehelper\\local-server\\dist\\LifeHelper\\.env', 'C:\\Users\\Mate\\Desktop\\Project\\lifehelper\\local-server\\dist\\LifeHelper\\_internal\\.env']
-2026-06-02 19:32:51 [INFO] lifehelper: [config] Using OS environment variables / defaults.
-2026-06-02 19:32:51 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-02 19:32:51 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-02 19:32:51 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
-2026-06-02 19:32:51 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
-Exception in thread Thread-1 (run):
 Traceback (most recent call last):
   File "threading.py", line 1075, in _bootstrap_inner
   File "threading.py", line 1012, in run
