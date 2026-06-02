@@ -1,17 +1,4 @@
 Traceback (most recent call last):
-  File "threading.py", line 1075, in _bootstrap_inner
-  File "threading.py", line 1012, in run
-  File "pystray\_base.py", line 212, in run
-  File "pystray\_win32.py", line 124, in _run
-  File "pystray\_base.py", line 310, in _mark_ready
-  File "pystray\_base.py", line 275, in update_menu
-  File "pystray\_win32.py", line 107, in _update_menu
-  File "pystray\_win32.py", line 284, in _create_menu
-  File "pystray\_win32.py", line 313, in _create_menu_item
-  File "pystray\_base.py", line 465, in text
-  File "server\tray.py", line 142, in _update_label
-ModuleNotFoundError: No module named 'server.services.updater'
-Traceback (most recent call last):
   File "lifehelper.py", line 159, in <module>
   File "lifehelper.py", line 150, in main
   File "uvicorn\main.py", line 606, in run
@@ -30,8 +17,11 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\main.py", line 20, in <module>
+    from .audio import thread_starter
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\thread_starter.py", line 40, in <module>
+    from .transcribe import transcribe_worker
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\transcribe.py", line 16, in <module>
-ImportError: cannot import name 'asset_paths' from 'server' (C:\Users\Mate\Desktop\Project\lifehelper\local-server\dist\LifeHelper\_internal\server\__init__.py)
+    from .. import asset_paths
+ImportError: cannot import name 'asset_paths' from 'server' (C:\Users\Mate\Desktop\Project\lifehelper\local-server\dist\LifeHelper\_internal\server\__init__.py
