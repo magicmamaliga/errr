@@ -1,7 +1,13 @@
-2026-06-02 09:10:20 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-02 09:10:20 [INFO] lifehelper: [config] Bundled ffmpeg not found at C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe, relying on system PATH
-2026-06-02 09:10:20 [INFO] lifehelper: [config] Using ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
-2026-06-02 09:10:20 [INFO] lifehelper: Launched via protocol handler (action: launch)
-2026-06-02 09:10:20 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=1) - downloading
-2026-06-02 09:10:21 [ERROR] lifehelper.asset_bootstrap: [bootstrap] Could not fetch manifest: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
-2026-06-02 09:10:21 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
+2026-06-02 09:21:01 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-02 09:21:01 [INFO] lifehelper: [config] Bundled ffmpeg not found at C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe, relying on system PATH
+2026-06-02 09:21:01 [INFO] lifehelper: [config] Using ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-06-02 09:21:01 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=1) - downloading
+2026-06-02 09:22:03 [ERROR] lifehelper.asset_bootstrap: [bootstrap] sha256 mismatch: expected 8cdf98f3d1d1fd7def47d6aaf68de1a4940a11f3eb6e48d7d98741406432b8d0, got ccb938f40ae607b534f36c5e450e839221e27b6dec469beefa6dd1fa2591f024
+2026-06-02 09:22:03 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
+2026-06-02 09:22:15 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-02 09:22:15 [INFO] lifehelper: [config] Bundled ffmpeg not found at C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe, relying on system PATH
+2026-06-02 09:22:15 [INFO] lifehelper: [config] Using ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-06-02 09:22:15 [INFO] lifehelper: Launched via protocol handler (action: launch)
+2026-06-02 09:22:15 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=1) - downloading
+2026-06-02 09:23:21 [ERROR] lifehelper.asset_bootstrap: [bootstrap] sha256 mismatch: expected 8cdf98f3d1d1fd7def47d6aaf68de1a4940a11f3eb6e48d7d98741406432b8d0, got 8122b27ca41e2c746ae2b62eed9e50fd5199e945bdebfe5b18db2c7cc767eaf5
+2026-06-02 09:23:21 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
