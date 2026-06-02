@@ -1,1 +1,7 @@
-Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://download.lifehelper.uk/latest.json. (Reason: CORS header ‘Access-Control-Allow-Origin’ missing). Status code: 200.
+2026-06-02 09:10:20 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-02 09:10:20 [INFO] lifehelper: [config] Bundled ffmpeg not found at C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe, relying on system PATH
+2026-06-02 09:10:20 [INFO] lifehelper: [config] Using ffprobe: C:\ProgramData\chocolatey\bin\ffprobe.EXE
+2026-06-02 09:10:20 [INFO] lifehelper: Launched via protocol handler (action: launch)
+2026-06-02 09:10:20 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=1) - downloading
+2026-06-02 09:10:21 [ERROR] lifehelper.asset_bootstrap: [bootstrap] Could not fetch manifest: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+2026-06-02 09:10:21 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
