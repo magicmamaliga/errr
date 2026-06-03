@@ -1,19 +1,13 @@
-2026-06-03 07:36:26 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-03 07:36:26 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-03 07:36:26 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
 Traceback (most recent call last):
   File "lifehelper.py", line 22, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
   File "pyimod02_importers.py", line 457, in exec_module
-  File "server\__init__.py", line 13, in <module>
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "server\__init__.py", line 14, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
-  File "server\services\__init__.py", line 3, in <module>
-  File "LifeHelper\_internal\server\services\updater.py", line 1
-    """In-app updater for LifeHelper.
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 473-474: truncated \uXXXX escape
+  File "server\audio\__init__.py", line 3, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\capture.py", line 8, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\thread_starter.py", line 39, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\transcribe.py", line 16, in <module>
+ImportError: cannot import name 'asset_paths' from partially initialized module 'server' (most likely due to a circular import) (LifeHelper\_internal\server\__init__.py)
