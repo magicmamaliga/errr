@@ -1,63 +1,87 @@
-PS C:\Users\Mate> $ttmp = [IO.Path]::Combine($env:TEMP, "lh_test_" + [Guid]::NewGuid().ToString("N"))
-PS C:\Users\Mate> $wav  = "$ttmp.wav"
-PS C:\Users\Mate> ffmpeg -y -f lavfi -i "anullsrc=r=16000:cl=mono" -t 2 $wav 2>$null
-PS C:\Users\Mate> & "$env:LOCALAPPDATA\LifeHelper\assets\whisper\whisper-cli.exe" `
->>   -m "$env:LOCALAPPDATA\LifeHelper\assets\whisper\models\ggml-base.en.bin" `
->>   -f $wav -oj -ml 1 -of $ttmp -t 8 2>&1
-whisper-cli.exe : whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base.en.bin'
-At line:1 char:1
-+ & "$env:LOCALAPPDATA\LifeHelper\assets\whisper\whisper-cli.exe" `
-+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    + CategoryInfo          : NotSpecified: (whisper_init_fr...ml-base.en.bin':String) [], RemoteException
-    + FullyQualifiedErrorId : NativeCommandError
-
-whisper_init_with_params_no_state: use gpu    = 1
-whisper_init_with_params_no_state: flash attn = 1
-whisper_init_with_params_no_state: gpu_device = 0
-whisper_init_with_params_no_state: dtw        = 0
-whisper_init_with_params_no_state: devices    = 1
-whisper_init_with_params_no_state: backends   = 1
-whisper_model_load: loading model
-whisper_model_load: n_vocab       = 51864
-whisper_model_load: n_audio_ctx   = 1500
-whisper_model_load: n_audio_state = 512
-whisper_model_load: n_audio_head  = 8
-whisper_model_load: n_audio_layer = 6
-whisper_model_load: n_text_ctx    = 448
-whisper_model_load: n_text_state  = 512
-whisper_model_load: n_text_head   = 8
-whisper_model_load: n_text_layer  = 6
-whisper_model_load: n_mels        = 80
-whisper_model_load: ftype         = 1
-whisper_model_load: qntvr         = 0
-whisper_model_load: type          = 2 (base)
-whisper_model_load: adding 1607 extra tokens
-whisper_model_load: n_langs       = 99
-whisper_model_load:          CPU total size =   147.37 MB
-whisper_model_load: model size    =  147.37 MB
-whisper_backend_init_gpu: device 0: CPU (type: 0)
-whisper_backend_init_gpu: no GPU found
-whisper_init_state: kv self size  =    6.29 MB
-whisper_init_state: kv cross size =   18.87 MB
-whisper_init_state: kv pad  size  =    3.15 MB
-whisper_init_state: compute buffer (conv)   =   16.28 MB
-whisper_init_state: compute buffer (encode) =   23.09 MB
-whisper_init_state: compute buffer (cross)  =    4.66 MB
-whisper_init_state: compute buffer (decode) =   96.37 MB
-system_info: n_threads = 8 / 16 | WHISPER : COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | OPENMP = 1 | REPACK =
-1 |
-main: processing 'C:\Users\Mate\AppData\Local\Temp\lh_test_69ca1312d54a4d36bd9f3813bfc88c2d.wav' (32000 samples, 2.0 sec), 8 threads, 1 processors, 5 beams + best
-of 5, lang = en, task = transcribe, timestamps = 1 ...
-
-[00:00:00.000 --> 00:00:00.000]
-[00:00:00.000 --> 00:00:02.000]   You
-output_json: saving output to 'C:\Users\Mate\AppData\Local\Temp\lh_test_69ca1312d54a4d36bd9f3813bfc88c2d.json'
-whisper_print_timings:     load time =   239.27 ms
-whisper_print_timings:     fallbacks =   0 p /   0 h
-whisper_print_timings:      mel time =     4.83 ms
-whisper_print_timings:   sample time =    23.26 ms /    23 runs (     1.01 ms per run)
-whisper_print_timings:   encode time =  1202.35 ms /     1 runs (  1202.35 ms per run)
-whisper_print_timings:   decode time =    17.50 ms /     5 runs (     3.50 ms per run)
-whisper_print_timings:   batchd time =    27.01 ms /    14 runs (     1.93 ms per run)
-whisper_print_timings:   prompt time =     0.00 ms /     1 runs (     0.00 ms per run)
-whisper_print_timings:    total time =  1564.38 ms
+2026-06-03 21:06:32 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-03 21:06:32 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
+2026-06-03 21:06:32 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
+2026-06-03 21:06:32 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
+2026-06-03 21:06:32 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [3096]
+INFO:     Waiting for application startup.
+2026-06-03 21:06:33 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-03 21:06:33 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
+2026-06-03 21:06:33 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
+INFO:     127.0.0.1:51198 - "GET /api/update/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:51199 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51199 - "GET /session/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:61639 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-06-03 21:06:38 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-06-03 21:06:38 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-06-03 21:06:38 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:61640 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61644 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61640 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61649 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61651 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61647 - "POST /api/update/check HTTP/1.1" 200 OK
+2026-06-03 21:06:39 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:61651 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61652 - "OPTIONS /session/start HTTP/1.1" 200 OK
+2026-06-03 21:06:39 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
+2026-06-03 21:06:39 [INFO] server.services.live_uploader: [live_uploader] Stopped without finalise (rec=None)
+2026-06-03 21:06:40 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-03 21:06:40 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 22): Headphones (SoundCore 2) [Loopback], Native Rate: 48000 Hz, Channels: 2
+2026-06-03 21:06:40 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-03 21:06:40 [INFO] server.services.recordings: Creating recording (token present: True)
+2026-06-03 21:06:42 [INFO] server.services.recordings: Recording created with ID: 6a208953ccbcc3d6b8b50da5
+2026-06-03 21:06:42 [INFO] server.audio.thread_starter: Recording session started with ID: 6a208953ccbcc3d6b8b50da5
+2026-06-03 21:06:42 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-03 21:06:42 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-03 21:06:42 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-03 21:06:42 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-03 21:06:42 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a208953ccbcc3d6b8b50da5 at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-03 21:06:42 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:61653 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61656 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61660 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61661 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-03 21:06:47 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 20 chars, offset=2.02s)
+2026-06-03 21:06:47 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 13 chars, offset=1.83s)
+INFO:     127.0.0.1:61664 - "OPTIONS /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61665 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61666 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61667 - "GET /api/live?since=2026-06-03T20%3A06%3A47Z HTTP/1.1" 200 OK
+2026-06-03 21:06:50 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 43 chars, offset=5.17s)
+2026-06-03 21:06:50 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+error: failed to initialize whisper context
+INFO:     127.0.0.1:61668 - "GET /api/live?since=2026-06-03T20%3A06%3A47Z HTTP/1.1" 200 OK
+2026-06-03 21:06:52 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 32 chars, offset=5.29s)
+2026-06-03 21:06:52 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+error: failed to initialize whisper context
+INFO:     127.0.0.1:61669 - "GET /api/live?since=2026-06-03T20%3A06%3A50Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61670 - "GET /api/live?since=2026-06-03T20%3A06%3A52Z HTTP/1.1" 200 OK
+2026-06-03 21:06:54 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+error: failed to initialize whisper context
+2026-06-03 21:06:55 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
+error: failed to initialize whisper context
+INFO:     127.0.0.1:61671 - "GET /api/live?since=2026-06-03T20%3A06%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61672 - "GET /api/live?since=2026-06-03T20%3A06%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61673 - "GET /api/live?since=2026-06-03T20%3A06%3A52Z HTTP/1.1" 200 OK
