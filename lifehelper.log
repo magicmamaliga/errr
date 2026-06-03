@@ -1,16 +1,15 @@
-2026-06-02 20:06:15 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
-Exception in thread Thread-1 (run):
 Traceback (most recent call last):
-  File "threading.py", line 1075, in _bootstrap_inner
-  File "threading.py", line 1012, in run
-  File "pystray\_base.py", line 212, in run
-  File "pystray\_win32.py", line 124, in _run
-  File "pystray\_base.py", line 310, in _mark_ready
-  File "pystray\_base.py", line 275, in update_menu
-  File "pystray\_win32.py", line 107, in _update_menu
-  File "pystray\_win32.py", line 284, in _create_menu
-  File "pystray\_win32.py", line 313, in _create_menu_item
-  File "pystray\_base.py", line 465, in text
-  File "server\tray.py", line 142, in _update_label
-ModuleNotFoundError: No module named 'server.services.updater'
-ERROR:    Error loading ASGI app. Could not import module "server.main".
+  File "lifehelper.py", line 22, in <module>
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\__init__.py", line 3, in <module>
+    from . import (
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\__init__.py", line 3, in <module>
+    from . import (
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\capture.py", line 8, in <module>
+    from ..audio import thread_starter as thread_starter
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\thread_starter.py", line 39, in <module>
+    from .capture import capture_loop, capture_microphone_loop
+ImportError: cannot import name 'capture_loop' from partially initialized module 'server.audio.capture' (most likely due to a circular import)
