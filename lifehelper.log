@@ -1,8 +1,8 @@
-2026-06-03 08:26:11 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-03 08:26:11 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-03 08:26:11 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-03 08:26:11 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
-2026-06-03 08:26:11 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
+2026-06-03 08:37:48 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-03 08:37:48 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
+2026-06-03 08:37:48 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
+2026-06-03 08:37:49 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
+2026-06-03 08:37:49 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
 Traceback (most recent call last):
   File "lifehelper.py", line 159, in <module>
   File "lifehelper.py", line 150, in main
@@ -23,7 +23,81 @@ Traceback (most recent call last):
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\main.py", line 20, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
-  File "server\audio\thread_starter.py", line 39, in <module>
+  File "server\audio\thread_starter.py", line 40, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\transcribe.py", line 16, in <module>
 ImportError: cannot import name 'asset_paths' from 'server' (C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\server\__init__.py)
+
+
+and here is the tree -f
+
+
+PS C:\Users\Mate\AppData\Local\Programs\LifeHelper\_internal\server> tree /f
+Folder PATH listing
+Volume serial number is 00000054 600C:C629
+C:.
+│   auth.py
+│   config.py
+│   lifecycle.py
+│   main.py
+│   tray.py
+│   _version.py
+│   __init__.py
+│
+├───audio
+│   │   asr_attribution.py
+│   │   asr_clustering.py
+│   │   capture.py
+│   │   devices.py
+│   │   finalize_session.py
+│   │   thread_starter.py
+│   │   transcribe.py
+│   │   __init__.py
+│   │
+│   └───diarization
+│       │   cpu.py
+│       │   diarizer_loader.py
+│       │   embedding_loader.py
+│       │   inference.py
+│       │   models.py
+│       │   paths.py
+│       │   providers.py
+│       │   status.py
+│       │   tuning.py
+│       │   __init__.py
+│       │
+│       └───gpu
+│               diarizer.py
+│               embedding.py
+│               __init__.py
+│
+├───routes
+│       devices.py
+│       diarization.py
+│       live.py
+│       microphone.py
+│       root.py
+│       token.py
+│       update.py
+│       __init__.py
+│
+├───services
+│       asset_bootstrap.py
+│       authed_client.py
+│       diarization_worker.py
+│       live_uploader.py
+│       local_presence.py
+│       recordings.py
+│       updater.py
+│       upload_service.py
+│       __init__.py
+│
+└───utils
+        asset_paths.py
+        setup_window.py
+        single_instance.py
+        state.py
+        static.py
+        whisper_cpp.py
+        __init__.py
+
