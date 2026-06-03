@@ -1,7 +1,24 @@
+2026-06-03 08:08:48 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
+2026-06-03 08:08:48 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
 Traceback (most recent call last):
-  File "lifehelper.py", line 22, in <module>
+  File "lifehelper.py", line 159, in <module>
+  File "lifehelper.py", line 150, in main
+  File "uvicorn\main.py", line 606, in run
+  File "uvicorn\server.py", line 75, in run
+  File "asyncio\runners.py", line 194, in run
+  File "asyncio\runners.py", line 118, in run
+  File "asyncio\base_events.py", line 687, in run_until_complete
+  File "uvicorn\server.py", line 79, in serve
+  File "uvicorn\server.py", line 86, in _serve
+  File "uvicorn\config.py", line 441, in load
+  File "uvicorn\importer.py", line 19, in import_from_string
+  File "importlib\__init__.py", line 90, in import_module
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
   File "pyimod02_importers.py", line 457, in exec_module
-  File "server\__init__.py", line 14, in <module>
+  File "server\main.py", line 20, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\__init__.py", line 3, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
@@ -10,4 +27,4 @@ Traceback (most recent call last):
   File "server\audio\thread_starter.py", line 39, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\transcribe.py", line 16, in <module>
-ImportError: cannot import name 'asset_paths' from partially initialized module 'server' (most likely due to a circular import) (LifeHelper\_internal\server\__init__.py)
+ImportError: cannot import name 'asset_paths' from 'server' (LifeHelper\_internal\server\__init__.py)
