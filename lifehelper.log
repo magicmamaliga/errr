@@ -2,14 +2,12 @@ Traceback (most recent call last):
   File "lifehelper.py", line 22, in <module>
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\__init__.py", line 3, in <module>
-    from . import (
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\__init__.py", line 3, in <module>
-    from . import (
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\capture.py", line 8, in <module>
-    from ..audio import thread_starter as thread_starter
   File "pyimod02_importers.py", line 457, in exec_module
   File "server\audio\thread_starter.py", line 39, in <module>
-    from .capture import capture_loop, capture_microphone_loop
-ImportError: cannot import name 'capture_loop' from partially initialized module 'server.audio.capture' (most likely due to a circular import)
+  File "pyimod02_importers.py", line 457, in exec_module
+  File "server\audio\transcribe.py", line 16, in <module>
+ImportError: cannot import name 'asset_paths' from partially initialized module 'server' (most likely due to a circular import)
