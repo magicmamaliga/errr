@@ -1,12 +1,69 @@
-INFO:     127.0.0.1:54328 - "GET /api/live?since=2026-06-03T19%3A39%3A35Z HTTP/1.1" 200 OK
-2026-06-03 20:39:51 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-error: failed to initialize whisper context
-2026-06-03 20:39:52 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-error: failed to initialize whisper context
-INFO:     127.0.0.1:54329 - "GET /api/live?since=2026-06-03T19%3A39%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54330 - "GET /api/live?since=2026-06-03T19%3A39%3A35Z HTTP/1.1" 200 OK
-2026-06-03 20:39:55 [ERROR] lifehelper.whisper: Whisper failed with exit code 3: whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-whisper_init_from_file_with_params_no_state: failed to open 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base-en.bin'
-error: failed to initialize whisper context
+PS C:\Users\Mate> Get-Item "$env:LOCALAPPDATA\LifeHelper\assets\whisper\models\ggml-base.en.bin" | Select-Object Name,Length,LastWriteTime
+
+Name                Length LastWriteTime
+----                ------ -------------
+ggml-base.en.bin 147964211 03/06/2026 18:59:03
+
+
+PS C:\Users\Mate> (Get-FileHash "$env:LOCALAPPDATA\LifeHelper\assets\whisper\models\ggml-base.en.bin" -Algorithm SHA256).Hash
+A03779C86DF3323075F5E796CB2CE5029F00EC8869EEE3FDFB897AFE36C6D002
+PS C:\Users\Mate> $wavPath = "C:\Users\Mate\Downloads\Online Meeting Onboarding (mp3cut.net).mp3"
+PS C:\Users\Mate> ffmpeg -y -f lavfi -i "anullsrc=r=16000:cl=mono" -t 1 $wavPath 2>$null
+PS C:\Users\Mate> & "$env:LOCALAPPDATA\LifeHelper\assets\whisper\whisper-cli.exe" `
+>>   -m "$env:LOCALAPPDATA\LifeHelper\assets\whisper\models\ggml-base.en.bin" `
+>>   -f $wavPath 2>&1
+whisper-cli.exe : whisper_init_from_file_with_params_no_state: loading model from 'C:\Users\Mate\AppData\Local\LifeHelper\assets\whisper\models\ggml-base.en.bin'
+At line:1 char:1
++ & "$env:LOCALAPPDATA\LifeHelper\assets\whisper\whisper-cli.exe" `
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (whisper_init_fr...ml-base.en.bin':String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+whisper_init_with_params_no_state: use gpu    = 1
+whisper_init_with_params_no_state: flash attn = 1
+whisper_init_with_params_no_state: gpu_device = 0
+whisper_init_with_params_no_state: dtw        = 0
+whisper_init_with_params_no_state: devices    = 1
+whisper_init_with_params_no_state: backends   = 1
+whisper_model_load: loading model
+whisper_model_load: n_vocab       = 51864
+whisper_model_load: n_audio_ctx   = 1500
+whisper_model_load: n_audio_state = 512
+whisper_model_load: n_audio_head  = 8
+whisper_model_load: n_audio_layer = 6
+whisper_model_load: n_text_ctx    = 448
+whisper_model_load: n_text_state  = 512
+whisper_model_load: n_text_head   = 8
+whisper_model_load: n_text_layer  = 6
+whisper_model_load: n_mels        = 80
+whisper_model_load: ftype         = 1
+whisper_model_load: qntvr         = 0
+whisper_model_load: type          = 2 (base)
+whisper_model_load: adding 1607 extra tokens
+whisper_model_load: n_langs       = 99
+whisper_model_load:          CPU total size =   147.37 MB
+whisper_model_load: model size    =  147.37 MB
+whisper_backend_init_gpu: device 0: CPU (type: 0)
+whisper_backend_init_gpu: no GPU found
+whisper_init_state: kv self size  =    6.29 MB
+whisper_init_state: kv cross size =   18.87 MB
+whisper_init_state: kv pad  size  =    3.15 MB
+whisper_init_state: compute buffer (conv)   =   16.28 MB
+whisper_init_state: compute buffer (encode) =   23.09 MB
+whisper_init_state: compute buffer (cross)  =    4.66 MB
+whisper_init_state: compute buffer (decode) =   96.37 MB
+system_info: n_threads = 4 / 16 | WHISPER : COREML = 0 | OPENVINO = 0 | CPU : SSE3 = 1 | SSSE3 = 1 | AVX = 1 | AVX2 = 1 | F16C = 1 | FMA = 1 | OPENMP = 1 | REPACK =
+1 |
+main: processing 'C:\Users\Mate\Downloads\Online Meeting Onboarding (mp3cut.net).mp3' (17856 samples, 1.1 sec), 4 threads, 1 processors, 5 beams + best of 5, lang =
+en, task = transcribe, timestamps = 1 ...
+
+[00:00:00.000 --> 00:00:02.000]   You
+whisper_print_timings:     load time =   224.34 ms
+whisper_print_timings:     fallbacks =   0 p /   0 h
+whisper_print_timings:      mel time =     3.32 ms
+whisper_print_timings:   sample time =    19.12 ms /    23 runs (     0.83 ms per run)
+whisper_print_timings:   encode time =  1499.17 ms /     1 runs (  1499.17 ms per run)
+whisper_print_timings:   decode time =    18.64 ms /     5 runs (     3.73 ms per run)
+whisper_print_timings:   batchd time =    29.32 ms /    14 runs (     2.09 ms per run)
+whisper_print_timings:   prompt time =     0.00 ms /     1 runs (     0.00 ms per run)
+whisper_print_timings:    total time =  1839.42 ms
