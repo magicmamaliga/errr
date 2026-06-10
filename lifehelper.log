@@ -1,1 +1,7 @@
-when the user is creating a new recording there and they don't have any funds in their account I would like the UI to switch to local mode or maybe because we fetch the users balance and they create a new recording It should use local transcription mode The other thing I'm thinking of is file upload like the user should be able to upload the file an audio file But if they don't have money in their balance It should not do anything to add money and we need to show the user add the money to transcribe or transcribe locally in this such case the user should be able to like once the money is added the user should be able to choose between Transcribe with AI or transcribe locally
+2026-06-10 11:21:48 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 95 chars, offset=56.05s)
+INFO:     127.0.0.1:54947 - "GET /api/live?since=2026-06-10T10%3A21%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54948 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
+2026-06-10 11:21:50 [ERROR] server.audio.thread_starter: Device 21 ('Headset (SoundCore 2)') disappeared between probe and swap: [Errno -9996] Invalid device info. Rolling back to previous selection.
+2026-06-10 11:21:50 [ERROR] server.routes.devices: Failed to switch device: [Errno -9996] Invalid device info
+INFO:     127.0.0.1:54949 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-06-10 11:21:50 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
