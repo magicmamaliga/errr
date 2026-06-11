@@ -1,7 +1,7 @@
-2026-06-10 11:21:48 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 95 chars, offset=56.05s)
-INFO:     127.0.0.1:54947 - "GET /api/live?since=2026-06-10T10%3A21%3A39Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54948 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
-2026-06-10 11:21:50 [ERROR] server.audio.thread_starter: Device 21 ('Headset (SoundCore 2)') disappeared between probe and swap: [Errno -9996] Invalid device info. Rolling back to previous selection.
-2026-06-10 11:21:50 [ERROR] server.routes.devices: Failed to switch device: [Errno -9996] Invalid device info
-INFO:     127.0.0.1:54949 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-06-10 11:21:50 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: Device 23 ('Speakers (Realtek(R) Audio) [Loopback]') disappeared between probe and swap: [Errno -9996] Invalid device info. Rolling back to previous selection on the new PA.
+2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: No loopback device found with any method.
+2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: Could not restore any loopback device after failed switch
+2026-06-11 22:02:05 [INFO] server.audio.thread_starter: Restored previous microphone 'Microphone Array (Intel® Smart ' at index 1 on new PA
+2026-06-11 22:02:05 [ERROR] server.routes.devices: Failed to switch device: [Errno -9996] Invalid device info
+INFO:     127.0.0.1:51116 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
+2026-06-11 22:02:05 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
