@@ -1,207 +1,487 @@
-INFO:     Application shutdown complete.
-INFO:     Finished server process [17220]
-2026-06-12 08:30:48 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-12 08:30:48 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-12 08:30:48 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-12 08:30:48 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
-2026-06-12 08:30:48 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [30892]
-INFO:     Waiting for application startup.
-2026-06-12 08:30:49 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
-2026-06-12 08:30:49 [INFO] server.audio.default_watcher: Default-device watcher started (poll=1.0s, debounce=2.0s)
 INFO:     Application startup complete.
 INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-06-12 08:30:49 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-06-12 08:30:49 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-06-12 08:30:49 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-12 08:30:50 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
-2026-06-12 08:30:50 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
-2026-06-12 08:31:36 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-12 08:31:36 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-12 08:31:36 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-12 08:31:36 [INFO] lifehelper: Launched via protocol handler (action: launch)
-2026-06-12 08:31:36 [WARNING] lifehelper: Another LifeHelper instance is already running. Exiting.
-2026-06-12 08:31:36 [INFO] lifehelper: Wrote pending nonce to C:\Users\Mate\AppData\Local\Programs\LifeHelper\.lifehelper.pending_nonce
-2026-06-12 08:31:38 [INFO] server.services.local_presence: [local_presence] Announced port 8066 via nonce
-INFO:     127.0.0.1:50139 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50140 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50141 - "GET /api/update/status HTTP/1.1" 401 Unauthorized
-INFO:     127.0.0.1:50142 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-06-12 08:31:40 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-06-12 08:31:40 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-06-12 08:31:40 [INFO] server.routes.token: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:50143 - "POST /api/token HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50147 - "GET /api/update/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50149 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50150 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50151 - "GET /session/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50152 - "OPTIONS /api/transcription-mode HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50153 - "POST /api/transcription-mode HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50154 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-12 08:31:45 [INFO] server.routes.token: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:50155 - "POST /api/token HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50156 - "OPTIONS /session/start HTTP/1.1" 200 OK
-2026-06-12 08:31:45 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
-2026-06-12 08:31:46 [INFO] server.services.live_uploader: [live_uploader] Stopped without finalise (rec=None)
-2026-06-12 08:31:46 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-12 08:31:46 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 16): Speakers (Realtek(R) Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2
-2026-06-12 08:31:46 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
-2026-06-12 08:31:46 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
-2026-06-12 08:31:47 [INFO] server.services.recordings: Recording created with ID: 6a2bb5e46cd73d53d7371cb9
-2026-06-12 08:31:47 [INFO] server.audio.thread_starter: Recording session started with ID: 6a2bb5e46cd73d53d7371cb9
-2026-06-12 08:31:47 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-12 08:31:47 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
-2026-06-12 08:31:47 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-06-12 08:31:47 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-06-12 08:31:47 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a2bb5e46cd73d53d7371cb9 at 16000 Hz (interval=60s, codec=mp3@128k)
-2026-06-12 08:31:47 [INFO] lifehelper.main: Session started.
-INFO:     127.0.0.1:50157 - "POST /session/start HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50159 - "POST /api/transcription-mode HTTP/1.1" 200 OK
-2026-06-12 08:31:48 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
-2026-06-12 08:31:48 [INFO] server.audio.wasapi_defaults: [wasapi-defaults] pycaw available - default detection uses MMDevice API
-INFO:     127.0.0.1:50160 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-12 08:31:49 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=60 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50161 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50162 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50164 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-12 08:31:54 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 18 chars, 1 word-chunks, offset=3.47s, persisted=yes
-INFO:     127.0.0.1:50165 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50166 - "GET /api/live?since=2026-06-12T07%3A31%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50167 - "GET /api/live?since=2026-06-12T07%3A31%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50168 - "GET /api/live?since=2026-06-12T07%3A31%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50170 - "GET /api/live?since=2026-06-12T07%3A31%3A54Z HTTP/1.1" 200 OK
-2026-06-12 08:32:01 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 49 chars, 2 word-chunks, offset=7.03s, persisted=yes
-INFO:     127.0.0.1:50171 - "GET /api/live?since=2026-06-12T07%3A31%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50173 - "GET /api/live?since=2026-06-12T07%3A32%3A01Z HTTP/1.1" 200 OK
-2026-06-12 08:32:03 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 90 chars, 2 word-chunks, offset=10.47s, persisted=yes
-2026-06-12 08:32:04 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=75 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50175 - "GET /api/live?since=2026-06-12T07%3A32%3A01Z HTTP/1.1" 200 OK
-2026-06-12 08:32:04 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 27 chars, 1 word-chunks, offset=14.04s, persisted=yes
-INFO:     127.0.0.1:50176 - "GET /api/live?since=2026-06-12T07%3A32%3A03Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50178 - "GET /api/live?since=2026-06-12T07%3A32%3A04Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50179 - "GET /api/devices HTTP/1.1" 200 OK
-2026-06-12 08:32:08 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 98 chars, 3 word-chunks, offset=16.88s, persisted=yes
-INFO:     127.0.0.1:50180 - "GET /api/live?since=2026-06-12T07%3A32%3A04Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50181 - "GET /api/live?since=2026-06-12T07%3A32%3A08Z HTTP/1.1" 200 OK
-2026-06-12 08:32:11 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 25 chars, 1 word-chunks, offset=21.04s, persisted=yes
-INFO:     127.0.0.1:50183 - "GET /api/live?since=2026-06-12T07%3A32%3A08Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50184 - "GET /api/live?since=2026-06-12T07%3A32%3A11Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50185 - "GET /api/live?since=2026-06-12T07%3A32%3A11Z HTTP/1.1" 200 OK
-2026-06-12 08:32:15 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 120 chars, 2 word-chunks, offset=23.88s, persisted=yes
-INFO:     127.0.0.1:50187 - "GET /api/live?since=2026-06-12T07%3A32%3A11Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50188 - "GET /api/live?since=2026-06-12T07%3A32%3A15Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50191 - "GET /api/live?since=2026-06-12T07%3A32%3A15Z HTTP/1.1" 200 OK
-2026-06-12 08:32:19 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 94 chars, 4 word-chunks, offset=28.05s, persisted=yes
-2026-06-12 08:32:19 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=90 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50194 - "GET /api/live?since=2026-06-12T07%3A32%3A15Z HTTP/1.1" 200 OK
-2026-06-12 08:32:20 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 48 chars, 1 word-chunks, offset=28.59s, persisted=yes
-INFO:     127.0.0.1:50195 - "GET /api/live?since=2026-06-12T07%3A32%3A19Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50196 - "GET /api/live?since=2026-06-12T07%3A32%3A20Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50198 - "GET /api/live?since=2026-06-12T07%3A32%3A20Z HTTP/1.1" 200 OK
-2026-06-12 08:32:24 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 27 chars, 1 word-chunks, offset=34.46s, persisted=yes
-INFO:     127.0.0.1:50199 - "GET /api/live?since=2026-06-12T07%3A32%3A20Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50200 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50201 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50202 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50203 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50204 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50205 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-2026-06-12 08:32:35 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=105 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50207 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-2026-06-12 08:32:35 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 25 chars, 1 word-chunks, offset=45.15s, persisted=yes
-INFO:     127.0.0.1:50208 - "GET /api/live?since=2026-06-12T07%3A32%3A24Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50209 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50210 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50211 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50212 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50213 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50214 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50215 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50216 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50217 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50218 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50219 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
-2026-06-12 08:32:47 [WARNING] server.audio.thread_starter: Could not find device by name 'Microphone Array (Intel® Smart ' on the new PA; falling back to index 1. Available WASAPI input devices: ['Microphone Array (Intel® Smart Sound Technology for Digital Microphones)', 'Stereo Mix (Realtek(R) Audio)', 'Speakers (Realtek(R) Audio) [Loopback]', '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]']
-2026-06-12 08:32:47 [INFO] server.audio.thread_starter: Switching loopback to device 17: 27E1N1600AE (HD Audio Driver for Display Audio) [Loopback] @ 48000Hz
-INFO:     127.0.0.1:50220 - "POST /api/switch-device HTTP/1.1" 200 OK
-2026-06-12 08:32:47 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
-2026-06-12 08:32:47 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
-INFO:     127.0.0.1:50222 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50223 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50224 - "OPTIONS /api/follow-default HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50225 - "POST /api/follow-default HTTP/1.1" 200 OK
-2026-06-12 08:32:50 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=120 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50226 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-2026-06-12 08:32:51 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (959085 bytes MP3) for 6a2bb5e46cd73d53d7371cb9
-INFO:     127.0.0.1:50227 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50228 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50231 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-2026-06-12 08:32:54 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 41 chars, 1 word-chunks, offset=62.36s, persisted=yes
-2026-06-12 08:32:54 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 25 chars, 1 word-chunks, offset=62.84s, persisted=yes
-INFO:     127.0.0.1:50232 - "GET /api/live?since=2026-06-12T07%3A32%3A35Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50233 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50235 - "GET /api/live?since=2026-06-12T07%3A32%3A54Z HTTP/1.1" 200 OK
-2026-06-12 08:32:57 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 56 chars, 1 word-chunks, offset=66.38s, persisted=yes
-INFO:     127.0.0.1:50236 - "GET /api/live?since=2026-06-12T07%3A32%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50237 - "GET /api/live?since=2026-06-12T07%3A32%3A57Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50238 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50240 - "GET /api/live?since=2026-06-12T07%3A32%3A57Z HTTP/1.1" 200 OK
-2026-06-12 08:33:00 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 88 chars, 3 word-chunks, offset=69.86s, persisted=yes
-INFO:     127.0.0.1:50241 - "GET /api/live?since=2026-06-12T07%3A32%3A57Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50242 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50243 - "GET /api/live?since=2026-06-12T07%3A33%3A00Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50244 - "GET /api/live?since=2026-06-12T07%3A33%3A00Z HTTP/1.1" 200 OK
-2026-06-12 08:33:05 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=135 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
-2026-06-12 08:33:06 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 75 chars, 1 word-chunks, offset=74.74s, persisted=yes
-INFO:     127.0.0.1:50246 - "GET /api/live?since=2026-06-12T07%3A33%3A00Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50247 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50248 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50249 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50250 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50251 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50253 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-2026-06-12 08:33:14 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 27 chars, 1 word-chunks, offset=80.56s, persisted=yes
-INFO:     127.0.0.1:50254 - "GET /api/live?since=2026-06-12T07%3A33%3A06Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50255 - "GET /api/live?since=2026-06-12T07%3A33%3A14Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50257 - "GET /api/devices HTTP/1.1" 200 OK
-2026-06-12 08:33:17 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 75 chars, 2 word-chunks, offset=86.79s, persisted=yes
-INFO:     127.0.0.1:50258 - "GET /api/live?since=2026-06-12T07%3A33%3A14Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50259 - "GET /api/live?since=2026-06-12T07%3A33%3A17Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50260 - "GET /api/live?since=2026-06-12T07%3A33%3A17Z HTTP/1.1" 200 OK
-2026-06-12 08:33:20 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=150 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
-INFO:     127.0.0.1:50262 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50263 - "GET /api/live?since=2026-06-12T07%3A33%3A17Z HTTP/1.1" 200 OK
-2026-06-12 08:33:22 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 27 chars, 1 word-chunks, offset=91.57s, persisted=yes
-INFO:     127.0.0.1:50264 - "GET /api/live?since=2026-06-12T07%3A33%3A17Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50265 - "GET /api/live?since=2026-06-12T07%3A33%3A22Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50266 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:50267 - "GET /api/live?since=2026-06-12T07%3A33%3A22Z HTTP/1.1" 200 OK
-2026-06-12 08:33:27 [INFO] lifehelper.main: Stopping session...
-2026-06-12 08:33:27 [INFO] server.audio.capture: Capture loop finished.
-2026-06-12 08:33:27 [INFO] server.audio.capture: Microphone capture loop finished.
-INFO:     127.0.0.1:50270 - "GET /api/live?since=2026-06-12T07%3A33%3A22Z HTTP/1.1" 200 OK
-2026-06-12 08:33:28 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 25 chars, 1 word-chunks, offset=98.57s, persisted=yes
-INFO:     127.0.0.1:50274 - "GET /api/live?since=2026-06-12T07%3A33%3A22Z HTTP/1.1" 200 OK
-2026-06-12 08:33:29 [INFO] server.audio.transcribe: [speaker] Flushing 1.29s of buffered audio on stop
-2026-06-12 08:33:29 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
-2026-06-12 08:33:29 [INFO] server.audio.transcribe: [mic] Flushing 0.90s of buffered audio on stop
-INFO:     127.0.0.1:50275 - "GET /api/live?since=2026-06-12T07%3A33%3A28Z HTTP/1.1" 200 OK
-2026-06-12 08:33:33 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 18 chars, 1 word-chunks, offset=101.95s, persisted=yes
-2026-06-12 08:33:33 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 27 chars, 1 word-chunks, offset=102.23s, persisted=yes
-2026-06-12 08:33:33 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a2bb5e46cd73d53d7371cb9)
-2026-06-12 08:33:36 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=1 (629613 bytes MP3) for 6a2bb5e46cd73d53d7371cb9
-2026-06-12 08:33:38 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a2bb5e46cd73d53d7371cb9
-2026-06-12 08:33:38 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-12 08:33:38 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
-INFO:     127.0.0.1:50268 - "POST /session/stop HTTP/1.1" 200 OK
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-12 09:17:28 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
+2026-06-12 09:17:28 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
+INFO:     127.0.0.1:54525 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/update/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54525 - "GET /session/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54525 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-06-12 09:17:35 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-06-12 09:17:35 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-06-12 09:17:35 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:54525 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "POST /api/update/check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "OPTIONS /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-12 09:17:36 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:54525 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "OPTIONS /session/start HTTP/1.1" 200 OK
+2026-06-12 09:17:36 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
+2026-06-12 09:17:36 [INFO] server.services.live_uploader: [live_uploader] Stopped without finalise (rec=None)
+2026-06-12 09:17:36 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-12 09:17:37 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 16): Speakers (Realtek(R) Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2
+2026-06-12 09:17:37 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:17:37 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-06-12 09:17:38 [INFO] server.services.recordings: Recording created with ID: 6a2bc0a29fa83cc326b797f2
+2026-06-12 09:17:38 [INFO] server.audio.thread_starter: Recording session started with ID: 6a2bc0a29fa83cc326b797f2
+2026-06-12 09:17:38 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:17:38 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:17:38 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-12 09:17:38 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-12 09:17:38 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a2bc0a29fa83cc326b797f2 at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-12 09:17:38 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:54525 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+2026-06-12 09:17:39 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
+2026-06-12 09:17:39 [INFO] server.audio.wasapi_defaults: [wasapi-defaults] pycaw available - default detection uses MMDevice API
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:42 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:17:42 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:17:42 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:17:42 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=15 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:17:42 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:42 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:43 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:43 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:43 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:43 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:44 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:44 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:44 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:44 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:44 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:17:44 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:17:44 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:17:44 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:17:44 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:47 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:17:47 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:17:47 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:47 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:47 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:17:48 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:48 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:48 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:48 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:49 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:49 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:49 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:49 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:49 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:49 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:17:49 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:17:49 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:17:49 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:52 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:17:52 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:17:52 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:17:52 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:52 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:53 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:53 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:53 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:53 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:54 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:54 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:54 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:54 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:54 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:17:55 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:17:55 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:17:55 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:17:55 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:55 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 118 chars, 1 word-chunks, offset=13.29s, persisted=yes
+2026-06-12 09:17:55 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 31 chars, 1 word-chunks, offset=13.98s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 09:17:58 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:17:58 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:17:58 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=30 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:17:58 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:58 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:58 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A17%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:17:58 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:58 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:59 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:59 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:17:59 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:17:59 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A17%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:18:00 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:00 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:00 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:00 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:00 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:00 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:00 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A17%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:18:02 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 127 chars, 1 word-chunks, offset=20.77s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A17%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:18:03 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:03 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:03 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:18:03 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:03 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:03 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 37 chars, 1 word-chunks, offset=22.13s, persisted=yes
+2026-06-12 09:18:03 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:03 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A02Z HTTP/1.1" 200 OK
+2026-06-12 09:18:04 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:04 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:04 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:04 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A03Z HTTP/1.1" 200 OK
+2026-06-12 09:18:05 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:05 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:05 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:05 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:05 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:05 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:05 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A03Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A03Z HTTP/1.1" 200 OK
+2026-06-12 09:18:08 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:08 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:08 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:18:08 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:08 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:08 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:09 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:09 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 36 chars, 1 word-chunks, offset=27.44s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A03Z HTTP/1.1" 200 OK
+2026-06-12 09:18:09 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:09 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:10 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:10 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:10 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 116 chars, 2 word-chunks, offset=28.22s, persisted=yes
+2026-06-12 09:18:10 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:10 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:10 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:10 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:10 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:10 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:10 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A09Z HTTP/1.1" 200 OK
+2026-06-12 09:18:11 [INFO] server.audio.default_watcher: [default-watcher] loopback mismatch detected: current='Speakers (Realtek(R) Audio) [Loopback]' -> windows-default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]'; debouncing for 2.0s before swap
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A10Z HTTP/1.1" 200 OK
+2026-06-12 09:18:13 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:13 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:13 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=45 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:18:13 [INFO] server.audio.default_watcher: [default-watcher] firing auto-swap: loopback -> '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' (windows default changed and held stable for 2.0s)
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A10Z HTTP/1.1" 200 OK
+2026-06-12 09:18:14 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 41 chars, 1 word-chunks, offset=32.53s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A10Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A14Z HTTP/1.1" 200 OK
+2026-06-12 09:18:17 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 42 chars, 1 word-chunks, offset=35.67s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A14Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:23 [ERROR] server.audio.thread_starter: Aborting device swap: capture loops did not release their streams within 5.0s (loopback_acked=False, mic_acked=False). PyAudio not reinitialized to avoid PortAudio corruption.
+2026-06-12 09:18:23 [WARNING] server.audio.default_watcher: [default-watcher] swap to '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' failed (Device swap aborted: capture loops did not release their streams in time.); will retry on next default change
+2026-06-12 09:18:23 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:23 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:23 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:18:24 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:24 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:24 [INFO] server.audio.default_watcher: [default-watcher] loopback mismatch detected: current='Speakers (Realtek(R) Audio) [Loopback]' -> windows-default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]'; debouncing for 2.0s before swap
+2026-06-12 09:18:24 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:24 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:25 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:25 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:25 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:25 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:25 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:25 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:25 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:25 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:25 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:26 [INFO] server.audio.default_watcher: [default-watcher] firing auto-swap: loopback -> '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' (windows default changed and held stable for 2.0s)
+2026-06-12 09:18:26 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:26 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:26 [INFO] server.audio.thread_starter: Switching loopback to device 17: 27E1N1600AE (HD Audio Driver for Display Audio) [Loopback] @ 48000Hz
+2026-06-12 09:18:26 [INFO] server.audio.default_watcher: [default-watcher] loopback successfully auto-switched to '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]'
+2026-06-12 09:18:26 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:26 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:26 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:18:27 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:27 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:27 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:27 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:28 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:28 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:28 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:28 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:28 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:28 [INFO] server.audio.thread_starter: [microphone] Device recovery skipped: another PyAudio swap is in progress
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:30 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:30 [ERROR] server.audio.capture: Failed to open mic stream (attempt 6): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:30 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-12 09:18:35 [WARNING] server.audio.thread_starter: [microphone] Device recovery: other capture loop did not release its stream in 5s; forcing PA reset
+2026-06-12 09:18:36 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:36 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:36 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:36 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:41 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:41 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:41 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=60 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:18:41 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:41 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:41 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:18:41 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 120 chars, 1 word-chunks, offset=58.97s, persisted=yes
+2026-06-12 09:18:41 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:41 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A17Z HTTP/1.1" 200 OK
+2026-06-12 09:18:41 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (466029 bytes MP3) for 6a2bc0a29fa83cc326b797f2
+2026-06-12 09:18:42 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:42 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:42 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:42 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A41Z HTTP/1.1" 200 OK
+2026-06-12 09:18:43 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:43 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:43 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:43 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:43 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:43 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:43 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A41Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A41Z HTTP/1.1" 200 OK
+2026-06-12 09:18:46 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:46 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:46 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:18:46 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:46 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:46 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:46 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:47 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:47 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A41Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-12 09:18:47 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:47 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:48 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 152 chars, 3 word-chunks, offset=66.29s, persisted=yes
+2026-06-12 09:18:48 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:48 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:48 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:48 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:48 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:48 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:48 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A41Z HTTP/1.1" 200 OK
+2026-06-12 09:18:49 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 92 chars, 2 word-chunks, offset=66.79s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A48Z HTTP/1.1" 200 OK
+2026-06-12 09:18:51 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:51 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:51 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:18:51 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:51 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A49Z HTTP/1.1" 200 OK
+2026-06-12 09:18:52 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:52 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:52 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:52 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A49Z HTTP/1.1" 200 OK
+2026-06-12 09:18:53 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:53 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:53 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:18:53 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:18:53 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:18:53 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:18:53 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:18:53 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:18:53 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:18:54 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 31 chars, 2 word-chunks, offset=72.60s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A49Z HTTP/1.1" 200 OK
+2026-06-12 09:18:54 [INFO] server.audio.default_watcher: [default-watcher] loopback mismatch detected: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' -> windows-default='Speakers (Realtek(R) Audio) [Loopback]'; debouncing for 2.0s before swap
+2026-06-12 09:18:55 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 108 chars, 2 word-chunks, offset=73.64s, persisted=yes
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A54Z HTTP/1.1" 200 OK
+2026-06-12 09:18:56 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:18:56 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:18:56 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=75 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:18:56 [INFO] server.audio.default_watcher: [default-watcher] firing auto-swap: loopback -> 'Speakers (Realtek(R) Audio) [Loopback]' (windows default changed and held stable for 2.0s)
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:06 [ERROR] server.audio.thread_starter: Aborting device swap: capture loops did not release their streams within 5.0s (loopback_acked=False, mic_acked=False). PyAudio not reinitialized to avoid PortAudio corruption.
+2026-06-12 09:19:06 [WARNING] server.audio.default_watcher: [default-watcher] swap to 'Speakers (Realtek(R) Audio) [Loopback]' failed (Device swap aborted: capture loops did not release their streams in time.); will retry on next default change
+2026-06-12 09:19:06 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:06 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:19:06 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:07 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:07 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-12 09:19:07 [INFO] server.audio.default_watcher: [default-watcher] loopback mismatch detected: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' -> windows-default='Speakers (Realtek(R) Audio) [Loopback]'; debouncing for 2.0s before swap
+2026-06-12 09:19:07 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:07 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:08 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:08 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:08 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:08 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:08 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:19:08 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:19:08 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:19:08 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:19:08 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 09:19:09 [INFO] server.audio.default_watcher: [default-watcher] firing auto-swap: loopback -> 'Speakers (Realtek(R) Audio) [Loopback]' (windows default changed and held stable for 2.0s)
+2026-06-12 09:19:09 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:19:09 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:19:09 [INFO] server.audio.thread_starter: Switching loopback to device 16: Speakers (Realtek(R) Audio) [Loopback] @ 48000Hz
+2026-06-12 09:19:09 [INFO] server.audio.default_watcher: [default-watcher] loopback successfully auto-switched to 'Speakers (Realtek(R) Audio) [Loopback]'
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:09 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:09 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:09 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:19:10 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:10 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:10 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:10 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:11 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:11 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-12 09:19:12 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:19:12 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:12 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:12 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:19:12 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:19:12 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:19:12 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:19:12 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:17 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:19:17 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:19:17 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:19:17 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:17 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:17 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:17 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:18 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:18 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:18 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:18 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:19 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:19 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:19 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:19:19 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:19:19 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:19:19 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:19:19 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:22 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:19:22 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:19:22 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=90 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart '[pyaudio-fallback] follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]'[pyaudio-fallback] follow=True
+2026-06-12 09:19:22 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:22 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:22 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:23 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:23 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:23 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:23 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:24 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:24 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:24 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:24 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:24 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:19:24 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:19:24 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:19:24 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:19:24 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:27 [INFO] server.audio.thread_starter: Prefix-matched 'Microphone Array (Intel® Smart ' to 'Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' on the new PA (PortAudio truncated one of the two name strings)
+2026-06-12 09:19:27 [INFO] server.audio.thread_starter: Re-resolved microphone 'Microphone Array (Intel® Smart ': 1 -> 14 on new PA
+2026-06-12 09:19:27 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:27 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:27 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:54525 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-12 09:19:28 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:28 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:28 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:28 [ERROR] server.audio.capture: Failed to open mic stream (attempt 3): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:29 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:29 [ERROR] server.audio.capture: Failed to open mic stream (attempt 4): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54525 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:29 [INFO] server.audio.capture: Opening mic stream (device 14) at 44100Hz
+2026-06-12 09:19:29 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9997] Invalid sample rate
+2026-06-12 09:19:29 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-12 09:19:29 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 09:19:29 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=1)
+2026-06-12 09:19:29 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 09:19:29 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-12 09:19:29 [INFO] lifehelper.main: Stopping session...
+2026-06-12 09:19:29 [INFO] server.audio.capture: Capture loop finished.
+2026-06-12 09:19:30 [INFO] server.audio.capture: Microphone capture loop finished.
+2026-06-12 09:19:30 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+2026-06-12 09:19:31 [INFO] server.audio.transcribe: [mic] Flushing 0.65s of buffered audio on stop
+2026-06-12 09:19:31 [INFO] server.audio.transcribe: [speaker] Flushing 0.61s of buffered audio on stop
+2026-06-12 09:19:31 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a2bc0a29fa83cc326b797f2)
+INFO:     127.0.0.1:54560 - "GET /api/live?since=2026-06-12T08%3A18%3A55Z HTTP/1.1" 200 OK
+2026-06-12 09:19:33 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=1 (361773 bytes MP3) for 6a2bc0a29fa83cc326b797f2
