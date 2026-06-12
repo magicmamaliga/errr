@@ -1,7 +1,242 @@
-2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: Device 23 ('Speakers (Realtek(R) Audio) [Loopback]') disappeared between probe and swap: [Errno -9996] Invalid device info. Rolling back to previous selection on the new PA.
-2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: No loopback device found with any method.
-2026-06-11 22:02:05 [ERROR] server.audio.thread_starter: Could not restore any loopback device after failed switch
-2026-06-11 22:02:05 [INFO] server.audio.thread_starter: Restored previous microphone 'Microphone Array (Intel® Smart ' at index 1 on new PA
-2026-06-11 22:02:05 [ERROR] server.routes.devices: Failed to switch device: [Errno -9996] Invalid device info
-INFO:     127.0.0.1:51116 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-06-11 22:02:05 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-12 08:05:04 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-12 08:05:04 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
+2026-06-12 08:05:04 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
+2026-06-12 08:05:04 [INFO] lifehelper: Launched via protocol handler (action: launch)
+2026-06-12 08:05:04 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
+2026-06-12 08:05:05 [INFO] server.services.local_presence: [local_presence] Announced port 8066 via nonce
+2026-06-12 08:05:05 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [17220]
+INFO:     Waiting for application startup.
+2026-06-12 08:05:06 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
+2026-06-12 08:05:06 [INFO] server.audio.default_watcher: Default-device watcher started (poll=1.0s, debounce=2.0s)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+INFO:     127.0.0.1:63443 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+INFO:     127.0.0.1:63444 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-12 08:05:06 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
+2026-06-12 08:05:06 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
+INFO:     127.0.0.1:63445 - "GET /api/update/status HTTP/1.1" 401 Unauthorized
+2026-06-12 08:05:07 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-06-12 08:05:07 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-06-12 08:05:07 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:63446 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63448 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63450 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63451 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63452 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63454 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-12 08:05:09 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:63455 - "POST /api/token HTTP/1.1" 200 OK
+2026-06-12 08:05:09 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
+2026-06-12 08:05:09 [INFO] server.services.live_uploader: [live_uploader] Stopped without finalise (rec=None)
+2026-06-12 08:05:09 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-12 08:05:09 [INFO] server.audio.thread_starter: Found Loopback Device (Index: 17): 27E1N1600AE (HD Audio Driver for Display Audio) [Loopback], Native Rate: 48000 Hz, Channels: 2
+2026-06-12 08:05:09 [INFO] server.audio.thread_starter: Found Microphone Device (Index: 1): Microphone Array (Intel® Smart , Rate: 44100 Hz, Channels: 2
+2026-06-12 08:05:09 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-06-12 08:05:11 [INFO] server.services.recordings: Recording created with ID: 6a2bafa7ba7a8672f7870283
+2026-06-12 08:05:11 [INFO] server.audio.thread_starter: Recording session started with ID: 6a2bafa7ba7a8672f7870283
+2026-06-12 08:05:11 [INFO] server.audio.capture: Opening loopback stream (device 17) at 48000Hz
+2026-06-12 08:05:11 [INFO] server.audio.capture: Opening mic stream (device 1) at 44100Hz
+2026-06-12 08:05:11 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-12 08:05:11 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-12 08:05:11 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a2bafa7ba7a8672f7870283 at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-12 08:05:11 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:63456 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63458 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+2026-06-12 08:05:11 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
+INFO:     127.0.0.1:63460 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63462 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63463 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63464 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63465 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63466 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 08:05:20 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=15 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63467 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63468 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63469 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63470 - "OPTIONS /api/microphone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63471 - "POST /api/microphone HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63473 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 08:05:24 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 24 chars, 1 word-chunks, offset=9.80s, persisted=yes
+INFO:     127.0.0.1:63475 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-12 08:05:25 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 61 chars, 1 word-chunks, offset=10.52s, persisted=yes
+INFO:     127.0.0.1:63476 - "GET /api/live?since=2026-06-12T07%3A05%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63477 - "GET /api/live?since=2026-06-12T07%3A05%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63478 - "GET /api/live?since=2026-06-12T07%3A05%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63480 - "GET /api/live?since=2026-06-12T07%3A05%3A25Z HTTP/1.1" 200 OK
+2026-06-12 08:05:31 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 50 chars, 2 word-chunks, offset=17.52s, persisted=yes
+INFO:     127.0.0.1:63481 - "GET /api/live?since=2026-06-12T07%3A05%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63482 - "GET /api/live?since=2026-06-12T07%3A05%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63483 - "GET /api/live?since=2026-06-12T07%3A05%3A31Z HTTP/1.1" 200 OK
+2026-06-12 08:05:35 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=30 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63485 - "GET /api/live?since=2026-06-12T07%3A05%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63487 - "GET /api/live?since=2026-06-12T07%3A05%3A31Z HTTP/1.1" 200 OK
+2026-06-12 08:05:38 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 101 chars, 2 word-chunks, offset=24.52s, persisted=yes
+INFO:     127.0.0.1:63488 - "GET /api/live?since=2026-06-12T07%3A05%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63489 - "GET /api/live?since=2026-06-12T07%3A05%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63492 - "GET /api/live?since=2026-06-12T07%3A05%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63493 - "GET /api/live?since=2026-06-12T07%3A05%3A38Z HTTP/1.1" 200 OK
+2026-06-12 08:05:43 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 76 chars, 1 word-chunks, offset=28.69s, persisted=yes
+INFO:     127.0.0.1:63495 - "GET /api/live?since=2026-06-12T07%3A05%3A38Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63496 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63497 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63498 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63499 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63500 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:05:50 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=45 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63501 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63502 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63503 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63506 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63507 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63508 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63509 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63510 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63511 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63512 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:05 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=60 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63513 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63514 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63515 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63516 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63517 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63519 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63520 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63521 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:13 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (893421 bytes MP3) for 6a2bafa7ba7a8672f7870283
+INFO:     127.0.0.1:63522 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63523 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63524 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63525 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63526 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63527 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63528 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:20 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=75 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63529 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:21 [WARNING] server.audio.silence_monitor: [silence-monitor] speaker: no speech-level audio for 41.9s while channel enabled
+2026-06-12 08:06:21 [INFO] server.audio.silence_monitor: [silence-monitor] speaker: audio restored after silence
+INFO:     127.0.0.1:63530 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63531 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63532 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63533 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63534 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63535 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63538 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63539 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63540 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63543 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:32 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 105 chars, 2 word-chunks, offset=77.22s, persisted=yes
+INFO:     127.0.0.1:63544 - "GET /api/live?since=2026-06-12T07%3A05%3A43Z HTTP/1.1" 200 OK
+2026-06-12 08:06:36 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 57 chars, 1 word-chunks, offset=81.90s, persisted=yes
+2026-06-12 08:06:36 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=90 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63546 - "GET /api/live?since=2026-06-12T07%3A06%3A32Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63547 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63548 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63549 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63550 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63551 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63552 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63553 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63554 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63555 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63556 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:06:51 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=105 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63557 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63558 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63559 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63560 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63561 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63562 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63563 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63564 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63565 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63567 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63568 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:07:06 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=120 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63569 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63570 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63571 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63572 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63573 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63575 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63576 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:07:16 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=1 (917037 bytes MP3) for 6a2bafa7ba7a8672f7870283
+INFO:     127.0.0.1:63577 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63578 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63579 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:07:21 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=135 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:63580 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63581 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63582 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63583 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63585 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53436 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49672 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49673 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49675 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49676 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:07:36 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=150 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:49681 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49682 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49685 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49686 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49687 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49688 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49689 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49690 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49691 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49692 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:07:51 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=165 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:49694 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49695 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49696 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49697 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49698 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49699 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49700 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49701 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49702 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49703 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49704 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:08:07 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=180 mic: current='Microphone Array (Intel® Smart ' default='Microphone Array (Intel® Smart ' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+INFO:     127.0.0.1:49705 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49706 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49707 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49709 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49712 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49713 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49714 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49716 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49717 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:08:20 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=2 (922221 bytes MP3) for 6a2bafa7ba7a8672f7870283
+INFO:     127.0.0.1:49718 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:08:20 [INFO] lifehelper.main: Stopping session...
+2026-06-12 08:08:20 [INFO] server.audio.capture: Microphone capture loop finished.
+2026-06-12 08:08:20 [INFO] server.audio.capture: Capture loop finished.
+2026-06-12 08:08:21 [INFO] server.audio.transcribe: [speaker] Flushing 0.16s of buffered audio on stop
+2026-06-12 08:08:21 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a2bafa7ba7a8672f7870283)
+INFO:     127.0.0.1:49722 - "GET /api/live?since=2026-06-12T07%3A06%3A36Z HTTP/1.1" 200 OK
+2026-06-12 08:08:22 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+2026-06-12 08:08:23 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=3 (61101 bytes MP3) for 6a2bafa7ba7a8672f7870283
+2026-06-12 08:08:25 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a2bafa7ba7a8672f7870283
+2026-06-12 08:08:25 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-12 08:08:25 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
+INFO:     127.0.0.1:49719 - "POST /session/stop HTTP/1.1" 200 OK
