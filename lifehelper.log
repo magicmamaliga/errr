@@ -1,32 +1,291 @@
-2026-06-13 11:36:46 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=78 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
-2026-06-13 11:36:46 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A42Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A46Z HTTP/1.1" 200 OK
-2026-06-13 11:36:49 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 37 chars, 1 word-chunks, offset=370.41s, persisted=yes
-INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A46Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-2026-06-13 11:36:52 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-2026-06-13 11:36:56 [INFO] server.audio.thread_starter: Microphone selection: index=21 name='Headset (SoundCore 2)' rate=16000Hz channels=1
-2026-06-13 11:36:56 [INFO] server.audio.thread_starter: Switching microphone to device 21: Headset (SoundCore 2) @ 16000Hz
-INFO:     127.0.0.1:62308 - "POST /api/switch-device HTTP/1.1" 200 OK
-2026-06-13 11:36:56 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-2026-06-13 11:36:56 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=5 (933165 bytes MP3) for 6a2d314c99e5a985175df4da
-2026-06-13 11:36:57 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
-2026-06-13 11:37:02 [ERROR] server.audio.thread_starter: No loopback device found with any method.
-2026-06-13 11:37:02 [INFO] server.audio.thread_starter: Microphone selection: index=11 name='Headset (SoundCore 2)' rate=44100Hz channels=2
-2026-06-13 11:37:02 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=81 mic: current='Headset (SoundCore 2)' default='Microphone Array (Intel® Smart ' follow=False | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default=None follow=True
-2026-06-13 11:37:02 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-2026-06-13 11:37:02 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 1): [Errno -9996] Invalid device
-2026-06-13 11:37:07 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
-2026-06-13 11:37:07 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 2): [Errno -9996] Invalid device
-INFO:     127.0.0.1:62447 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+2026-06-13 12:06:01 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
+2026-06-13 12:06:01 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
+2026-06-13 12:06:01 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
+2026-06-13 12:06:01 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
+2026-06-13 12:06:01 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
+INFO:     Started server process [18304]
+INFO:     Waiting for application startup.
+2026-06-13 12:06:02 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
+2026-06-13 12:06:02 [INFO] server.audio.default_watcher: Default-device watcher started (poll=5.0s, debounce=5.0s)
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
+2026-06-13 12:06:02 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
+2026-06-13 12:06:02 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
+INFO:     127.0.0.1:54623 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /session/status HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54623 - "OPTIONS /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "POST /api/transcription-mode HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:54623 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "OPTIONS /api/token HTTP/1.1" 200 OK
+2026-06-13 12:06:07 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
+2026-06-13 12:06:07 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
+2026-06-13 12:06:07 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:54623 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "OPTIONS /session/start HTTP/1.1" 200 OK
+2026-06-13 12:06:07 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
+2026-06-13 12:06:07 [INFO] server.services.live_uploader: [live_uploader] Stopped without finalise (rec=None)
+2026-06-13 12:06:07 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-13 12:06:07 [INFO] server.audio.thread_starter: Loopback selection: index=22 name='Headphones (SoundCore 2) [Loopback]' rate=48000Hz channels=2
+2026-06-13 12:06:07 [INFO] server.audio.thread_starter: Microphone selection: index=19 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
+2026-06-13 12:06:07 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-06-13 12:06:09 [INFO] server.services.recordings: Recording created with ID: 6a2d39a199e5a985175df4dd
+2026-06-13 12:06:09 [INFO] server.audio.thread_starter: Recording session started with ID: 6a2d39a199e5a985175df4dd
+2026-06-13 12:06:09 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:09 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:06:09 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-13 12:06:09 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
+2026-06-13 12:06:09 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a2d39a199e5a985175df4dd at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-13 12:06:09 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:54623 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "POST /api/transcription-mode HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-13 12:06:12 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
+2026-06-13 12:06:12 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=3 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:06:12 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:12 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-13 12:06:17 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:17 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-13 12:06:20 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 9 chars, 1 word-chunks, offset=8.77s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-13 12:06:22 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:22 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A20Z HTTP/1.1" 200 OK
+2026-06-13 12:06:24 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 17 chars, 1 word-chunks, offset=11.82s, persisted=yes
+2026-06-13 12:06:24 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 10 chars, 1 word-chunks, offset=11.66s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A20Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A24Z HTTP/1.1" 200 OK
+2026-06-13 12:06:27 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=6 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:06:27 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:06:27 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:28 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 14 chars, 1 word-chunks, offset=15.78s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A24Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A28Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:06:31 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 15 chars, 1 word-chunks, offset=19.70s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A28Z HTTP/1.1" 200 OK
+2026-06-13 12:06:32 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=20.93s, persisted=yes
+2026-06-13 12:06:32 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:33 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A31Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "OPTIONS /api/switch-device HTTP/1.1" 200 OK
+2026-06-13 12:06:33 [INFO] server.audio.thread_starter: Microphone selection: index=21 name='Headset (SoundCore 2)' rate=16000Hz channels=1
+2026-06-13 12:06:33 [INFO] server.audio.thread_starter: Switching microphone to device 21: Headset (SoundCore 2) @ 16000Hz
+INFO:     127.0.0.1:54623 - "POST /api/switch-device HTTP/1.1" 200 OK
+2026-06-13 12:06:33 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:06:33 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:34 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 11 chars, 1 word-chunks, offset=22.43s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A32Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A34Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A34Z HTTP/1.1" 200 OK
+2026-06-13 12:06:38 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:06:38 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:38 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 7 chars, 1 word-chunks, offset=25.33s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A34Z HTTP/1.1" 200 OK
+2026-06-13 12:06:39 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=27.26s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A38Z HTTP/1.1" 200 OK
+2026-06-13 12:06:41 [WARNING] lifehelper.whisper: Failed to read whisper JSON C:\Users\Mate\AppData\Local\Temp\tmpranx5d0n.json: 'utf-8' codec can't decode bytes in position 979-980: invalid continuation byte
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A39Z HTTP/1.1" 200 OK
+2026-06-13 12:06:43 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=9 mic: current='Headset (SoundCore 2)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=False | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:06:43 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:06:43 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A39Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A39Z HTTP/1.1" 200 OK
+2026-06-13 12:06:46 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 12 chars, 1 word-chunks, offset=34.71s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A39Z HTTP/1.1" 200 OK
+2026-06-13 12:06:48 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:06:48 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+2026-06-13 12:06:53 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:06:53 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+2026-06-13 12:06:58 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=12 mic: current='Headset (SoundCore 2)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=False | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:06:58 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:06:58 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+2026-06-13 12:07:01 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 12 chars, 1 word-chunks, offset=49.12s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A06%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:07:03 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:07:03 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A01Z HTTP/1.1" 200 OK
+2026-06-13 12:07:05 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 36 chars, 1 word-chunks, offset=53.14s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A01Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A05Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A05Z HTTP/1.1" 200 OK
+2026-06-13 12:07:08 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 20 chars, 1 word-chunks, offset=55.91s, persisted=yes
+2026-06-13 12:07:08 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:08 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:07:09 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 13 chars, 1 word-chunks, offset=56.49s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A05Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A09Z HTTP/1.1" 200 OK
+2026-06-13 12:07:12 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (914157 bytes MP3) for 6a2d39a199e5a985175df4dd
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A09Z HTTP/1.1" 200 OK
+2026-06-13 12:07:12 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 10 chars, 1 word-chunks, offset=60.45s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A09Z HTTP/1.1" 200 OK
+2026-06-13 12:07:14 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=15 mic: current='Headset (SoundCore 2)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=False | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:07:14 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:07:14 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A12Z HTTP/1.1" 200 OK
+2026-06-13 12:07:16 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=63.70s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A12Z HTTP/1.1" 200 OK
+2026-06-13 12:07:17 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 9 chars, 1 word-chunks, offset=63.64s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A16Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:07:19 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
+2026-06-13 12:07:19 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "OPTIONS /api/follow-default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "POST /api/follow-default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+2026-06-13 12:07:24 [INFO] server.audio.thread_starter: Microphone selection: index=19 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
+2026-06-13 12:07:24 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:07:24 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+2026-06-13 12:07:25 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=71.07s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A17Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A25Z HTTP/1.1" 200 OK
+2026-06-13 12:07:29 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=18 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:07:29 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:29 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A25Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A25Z HTTP/1.1" 200 OK
+2026-06-13 12:07:33 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 54 chars, 1 word-chunks, offset=80.83s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A25Z HTTP/1.1" 200 OK
+2026-06-13 12:07:33 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=81.38s, persisted=yes
+2026-06-13 12:07:34 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:34 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54663 - "GET /api/live?since=2026-06-13T11%3A07%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:07:35 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 23 chars, 1 word-chunks, offset=83.97s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A33Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A35Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A35Z HTTP/1.1" 200 OK
+2026-06-13 12:07:39 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:39 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A35Z HTTP/1.1" 200 OK
+2026-06-13 12:07:40 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 17 chars, 1 word-chunks, offset=88.52s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A35Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A40Z HTTP/1.1" 200 OK
+2026-06-13 12:07:44 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=21 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:07:44 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:44 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:07:44 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 24 chars, 1 word-chunks, offset=92.80s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A40Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A44Z HTTP/1.1" 200 OK
+2026-06-13 12:07:48 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 17 chars, 1 word-chunks, offset=95.69s, persisted=yes
+2026-06-13 12:07:48 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=95.83s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A44Z HTTP/1.1" 200 OK
+2026-06-13 12:07:49 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:49 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A48Z HTTP/1.1" 200 OK
+2026-06-13 12:07:52 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 32 chars, 1 word-chunks, offset=100.58s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A48Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A52Z HTTP/1.1" 200 OK
+2026-06-13 12:07:55 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 12:07:55 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A52Z HTTP/1.1" 200 OK
+2026-06-13 12:07:56 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=104.79s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A56Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:07:59 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 11 chars, 1 word-chunks, offset=107.68s, persisted=yes
+2026-06-13 12:08:00 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=24 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 12:08:00 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:08:00 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A56Z HTTP/1.1" 200 OK
+2026-06-13 12:08:00 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 13 chars, 1 word-chunks, offset=107.89s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A07%3A59Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A00Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A00Z HTTP/1.1" 200 OK
+2026-06-13 12:08:05 [INFO] server.audio.thread_starter: Loopback selection: index=24 name='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' rate=48000Hz channels=2
+2026-06-13 12:08:05 [INFO] server.audio.capture: Opening loopback stream (device 24) at 48000Hz
+2026-06-13 12:08:05 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A00Z HTTP/1.1" 200 OK
+2026-06-13 12:08:06 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 11 chars, 1 word-chunks, offset=114.60s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A00Z HTTP/1.1" 200 OK
+2026-06-13 12:08:08 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 3 chars, 1 word-chunks, offset=111.32s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A06Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A08Z HTTP/1.1" 200 OK
+2026-06-13 12:08:10 [INFO] server.audio.capture: Opening loopback stream (device 24) at 48000Hz
+2026-06-13 12:08:10 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A08Z HTTP/1.1" 200 OK
+2026-06-13 12:08:11 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=119.09s, persisted=yes
+2026-06-13 12:08:12 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 30 chars, 1 word-chunks, offset=119.04s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A08Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/devices HTTP/1.1" 200 OK
+2026-06-13 12:08:15 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=1 (957357 bytes MP3) for 6a2d39a199e5a985175df4dd
+2026-06-13 12:08:15 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=27 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' follow=True
+2026-06-13 12:08:15 [INFO] server.audio.capture: Opening mic stream (device 19) at 48000Hz
+2026-06-13 12:08:15 [INFO] server.audio.capture: Opening loopback stream (device 24) at 48000Hz
+2026-06-13 12:08:15 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 13 chars, 1 word-chunks, offset=123.32s, persisted=yes
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A12Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A15Z HTTP/1.1" 200 OK
+2026-06-13 12:08:18 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 16 chars, 1 word-chunks, offset=126.22s, persisted=yes
+2026-06-13 12:08:18 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 14 chars, 1 word-chunks, offset=126.41s, persisted=yes
+2026-06-13 12:08:19 [ERROR] server.audio.thread_starter: No loopback device found with any method.
+2026-06-13 12:08:19 [WARNING] server.audio.thread_starter: [pa-refresh] loopback: could not re-bind '27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' (rate=48000, channels=2) on new PA (follow=True); pausing capture until a working device appears
+2026-06-13 12:08:19 [INFO] server.audio.thread_starter: Microphone selection: index=20 name='Headset (SoundCore 2)' rate=16000Hz channels=1
+2026-06-13 12:08:19 [INFO] server.audio.thread_starter: Switching microphone to device 20: Headset (SoundCore 2) @ 16000Hz
+INFO:     127.0.0.1:54623 - "POST /api/switch-device HTTP/1.1" 200 OK
+2026-06-13 12:08:19 [INFO] server.audio.capture: Opening mic stream (device 20) at 16000Hz
+2026-06-13 12:08:19 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): [Errno -9997] Invalid sample rate
+INFO:     127.0.0.1:54623 - "GET /api/live?since=2026-06-13T11%3A08%3A15Z HTTP/1.1" 200 OK
