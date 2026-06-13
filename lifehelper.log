@@ -1,19 +1,32 @@
-2026-06-13 10:14:59 [INFO] server.audio.transcribe: [local] Transcribed segment (mic), 22 chars, 1 word-chunks, offset=133.07s, persisted=yes
-2026-06-13 10:15:00 [INFO] server.audio.capture: Opening mic stream (device 21) at 16000Hz
-2026-06-13 10:15:00 [INFO] server.audio.capture: Opening loopback stream (device 23) at 48000Hz
-INFO:     127.0.0.1:62120 - "GET /api/live?since=2026-06-13T09%3A14%3A54Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62120 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62120 - "GET /api/live?since=2026-06-13T09%3A14%3A59Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62120 - "GET /api/live?since=2026-06-13T09%3A14%3A59Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:62120 - "GET /api/live?since=2026-06-13T09%3A14%3A59Z HTTP/1.1" 200 OK
-2026-06-13 10:15:06 [ERROR] server.audio.thread_starter: No loopback device found with any method.
-2026-06-13 10:15:06 [INFO] server.audio.thread_starter: Microphone selection: index=8 name='Headphones (SoundCore 2)' rate=48000Hz channels=0
-2026-06-13 10:15:06 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=150 mic: current='Headphones (SoundCore 2)' default='Headphones (SoundCore 2)'[pyaudio-fallback] follow=True | loopback: current='' default=None[-] follow=True
-2026-06-13 10:15:06 [INFO] server.audio.capture: Opening mic stream (device 8) at 48000Hz
-2026-06-13 10:15:06 [ERROR] server.audio.capture: Failed to open mic stream (attempt 1): Invalid audio channels
-2026-06-13 10:15:06 [INFO] server.audio.capture: Opening loopback stream (device 23) at 48000Hz
-2026-06-13 10:15:06 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 1): [Errno -9996] Invalid device
-2026-06-13 10:15:10 [INFO] server.audio.capture: Opening loopback stream (device 23) at 48000Hz
-2026-06-13 10:15:10 [INFO] server.audio.capture: Opening mic stream (device 8) at 48000Hz
-2026-06-13 10:15:10 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 2): [Errno -9996] Invalid device
-2026-06-13 10:15:10 [ERROR] server.audio.capture: Failed to open mic stream (attempt 2): Invalid audio channels
+2026-06-13 11:36:46 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=78 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Headphones (SoundCore 2) [Loopback]' default='Headphones (SoundCore 2) [Loopback]' follow=True
+2026-06-13 11:36:46 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A42Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A46Z HTTP/1.1" 200 OK
+2026-06-13 11:36:49 [INFO] server.audio.transcribe: [local] Transcribed segment (speaker), 37 chars, 1 word-chunks, offset=370.41s, persisted=yes
+INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A46Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+2026-06-13 11:36:52 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+2026-06-13 11:36:56 [INFO] server.audio.thread_starter: Microphone selection: index=21 name='Headset (SoundCore 2)' rate=16000Hz channels=1
+2026-06-13 11:36:56 [INFO] server.audio.thread_starter: Switching microphone to device 21: Headset (SoundCore 2) @ 16000Hz
+INFO:     127.0.0.1:62308 - "POST /api/switch-device HTTP/1.1" 200 OK
+2026-06-13 11:36:56 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 11:36:56 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=5 (933165 bytes MP3) for 6a2d314c99e5a985175df4da
+2026-06-13 11:36:57 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62308 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
+2026-06-13 11:37:02 [ERROR] server.audio.thread_starter: No loopback device found with any method.
+2026-06-13 11:37:02 [INFO] server.audio.thread_starter: Microphone selection: index=11 name='Headset (SoundCore 2)' rate=44100Hz channels=2
+2026-06-13 11:37:02 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=81 mic: current='Headset (SoundCore 2)' default='Microphone Array (Intel® Smart ' follow=False | loopback: current='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' default=None follow=True
+2026-06-13 11:37:02 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 11:37:02 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 1): [Errno -9996] Invalid device
+2026-06-13 11:37:07 [INFO] server.audio.capture: Opening loopback stream (device 22) at 48000Hz
+2026-06-13 11:37:07 [ERROR] server.audio.capture: Failed to open loopback stream (attempt 2): [Errno -9996] Invalid device
+INFO:     127.0.0.1:62447 - "GET /api/live?since=2026-06-13T10%3A36%3A49Z HTTP/1.1" 200 OK
