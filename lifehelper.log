@@ -1,6 +1,6 @@
-API call logging
-Choose how your organization logs data from supported API calls, including chat completions, voice interactions, and other processed outputs. Logged data is accessible within your organization for review, analysis, and evaluation purposes. Learn more.
-Note: API calls from the Responses API are logged by default. Use the `store=false` API parameter to disable logging.
-Disabled
-Enabled per call
-Enabled for all projects
+there is 2 things
+
+when we get 9991 error i would like to have a fallback instead of a hard unexpected exit, like fallback to any 
+
+
+mongodb+srv://lifehelper:<db_password>@lifehelper.u1wlwlz.mongodb.net/?appName=Lifehelper
