@@ -2,19 +2,4 @@ there is 2 things
 
 when we get 9991 error i would like to have a fallback instead of a hard unexpected exit, like fallback to any 
 
-
-
-
-
-root@srv1592388:/opt/lifehelper# docker compose exec backend nslookup ac-iajd2th-shard-00-00.txkghem.mongodb.net
-Server:         127.0.0.11
-Address:        127.0.0.11:53
-
-Non-authoritative answer:
-ac-iajd2th-shard-00-00.txkghem.mongodb.net      canonical name = mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
-
-Non-authoritative answer:
-ac-iajd2th-shard-00-00.txkghem.mongodb.net      canonical name = mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
-Name:   mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
-Address: 34.76.93.128
-        "authSource=admin&replicaSet=atlas-mne7xs-shard-0"
+mongodb+srv://lifehelper:mypassword@lifehelper.txkghem.mongodb.net/?appName=lifehelper
