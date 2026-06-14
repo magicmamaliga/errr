@@ -1,51 +1,21 @@
-root@srv1592388:/opt/lifehelper# docker compose logs backend
-backend-1  |
-backend-1  |   .   ____          _            __ _ _
-backend-1  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
-backend-1  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
-backend-1  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
-backend-1  |   '  |____| .__|_| |_|_| |_\__, | / / / /
-backend-1  |  =========|_|==============|___/=/_/_/_/
-backend-1  |
-backend-1  |  :: Spring Boot ::                (v4.0.6)
-backend-1  |
-backend-1  | 2026-06-14T22:25:15.303Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : Starting BackendApplication v0.0.1-SNAPSHOT using Java 21.0.11 with PID 1 (/app/app.jar started by appuser in /app)
-backend-1  | 2026-06-14T22:25:15.309Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : No active profile set, falling back to 1 default profile: "default"
-backend-1  | 2026-06-14T22:25:17.319Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-backend-1  | 2026-06-14T22:25:17.677Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 344 ms. Found 10 MongoDB repository interfaces.
-backend-1  | 2026-06-14T22:25:18.803Z  INFO 1 --- [backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-backend-1  | 2026-06-14T22:25:18.836Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-backend-1  | 2026-06-14T22:25:18.837Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
-backend-1  | 2026-06-14T22:25:18.993Z  INFO 1 --- [backend] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3545 ms
-backend-1  | 2026-06-14T22:25:20.250Z  INFO 1 --- [backend] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-124-generic"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@79d14037, com.mongodb.Jep395RecordCodecProvider@6c1e40d9, com.mongodb.KotlinCodecProvider@4b50c21, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-backend-1  | 2026-06-14T22:25:20.251Z  INFO 1 --- [backend] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-backend-1  |
-backend-1  | com.mongodb.MongoSocketOpenException: Exception opening socket
-backend-1  |    at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at java.base/java.util.Optional.orElseThrow(Unknown Source) ~[na:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  | Caused by: java.net.ConnectException: Connection refused
-backend-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    ... 4 common frames omitted
-backend-1  |
-backend-1  | 2026-06-14T22:25:23.805Z  INFO 1 --- [backend] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-backend-1  | 2026-06-14T22:25:23.806Z  WARN 1 --- [backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-backend-1  | 2026-06-14T22:25:23.821Z  INFO 1 --- [backend] [           main] u.m.b.security.config.RsaKeyConfig       : JWT signing key loaded from file:/etc/lifehelper/keys/private.key
-backend-1  | 2026-06-14T22:25:23.889Z  INFO 1 --- [backend] [           main] u.m.backend.security.JwksController      : JWKS endpoint initialized with key ID: lifehelper-rsa
-backend-1  | 2026-06-14T22:25:25.898Z  INFO 1 --- [backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-backend-1  | 2026-06-14T22:25:25.935Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : Started BackendApplication in 11.501 seconds (process running for 13.492)
-backend-1  | 2026-06-14T22:25:27.831Z  INFO 1 --- [backend] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-backend-1  | 2026-06-14T22:25:27.832Z  INFO 1 --- [backend] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-backend-1  | 2026-06-14T22:25:27.836Z  INFO 1 --- [backend] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+root@srv1592388:/opt/lifehelper# grep -n '^SPRING_DATA_MONGODB_URI=' .env
+19:SPRING_DATA_MONGODB_URI=mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
+root@srv1592388:/opt/lifehelper# echo "shell var: [\$SPRING_DATA_MONGODB_URI]"
+shell var: [$SPRING_DATA_MONGODB_URI]
+root@srv1592388:/opt/lifehelper# grep -n '^SPRING_DATA_MONGODB_URI=' .env
+19:SPRING_DATA_MONGODB_URI=mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
+root@srv1592388:/opt/lifehelper# echo "shell var: [$SPRING_DATA_MONGODB_URI]"
+shell var: []
+root@srv1592388:/opt/lifehelper# docker compose config | grep -A1 SPRING_DATA_MONGODB_URI
+      SPRING_DATA_MONGODB_URI: mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
+      STRIPE_SECRET_KEY: sk_test
+root@srv1592388:/opt/lifehelper# docker compose exec backend sh -c 'echo "[$SPRING_DATA_MONGODB_URI]"'
+[mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper]
+root@srv1592388:/opt/lifehelper# file .env                  # should say "ASCII text", not "ASCII text, with CRLF"
+.env: Unicode text, UTF-8 text
+root@srv1592388:/opt/lifehelper# sed -i 's/\r$//' .env
+root@srv1592388:/opt/lifehelper# docker compose up -d --force-recreate backend
+[+] up 1/1
+ ✔ Container lifehelper-backend-1 Started                                                                                                                                                                          2.8s
+root@srv1592388:/opt/lifehelper# docker compose logs --tail=80 backend | grep -E 'clusterSettings|hosts='
+backend-1  | 2026-06-14T22:55:12.523Z  INFO 1 --- [backend] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-124-generic"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@79d14037, com.mongodb.Jep395RecordCodecProvider@6c1e40d9, com.mongodb.KotlinCodecProvider@4b50c21, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
