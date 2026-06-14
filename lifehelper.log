@@ -3,20 +3,25 @@ there is 2 things
 when we get 9991 error i would like to have a fallback instead of a hard unexpected exit, like fallback to any 
 
 
-backend-1  | ***************************
-backend-1  | APPLICATION FAILED TO START
-backend-1  | ***************************
+backend-1  | 2026-06-14T14:04:58.202Z  INFO 1 --- [backend] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
 backend-1  |
-backend-1  | Description:
-backend-1  |
-backend-1  | Failed to bind properties under 'rsa.public-key' to java.security.interfaces.RSAPublicKey:
-backend-1  |
-backend-1  |     Property: rsa.public-key
-backend-1  |     Value: "${JWT_PUBLIC_KEY_LOCATION:classpath:certs/public.key}"
-backend-1  |     Origin: class path resource [application.properties] from app.jar - 26:16
-backend-1  |     Reason: failed to convert java.lang.String to java.security.interfaces.RSAPublicKey (caused by java.io.FileNotFoundException: /etc/lifehelper/keys/public.key (Permission denied))
-backend-1  |
-backend-1  | Action:
-backend-1  |
-backend-1  | Update your application's configuration
+backend-1  | com.mongodb.MongoSocketOpenException: Exception opening socket
+backend-1  |    at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at java.base/java.util.Optional.orElseThrow(Unknown Source) ~[na:na]
+backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  | Caused by: java.net.ConnectException: Connection refused
+backend-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+backend-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
+backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
+backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
+backend-1  |    at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
+backend-1  |    at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
+backend-1  |    at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.6.5.jar!/:na]
+backend-1  |    ... 4 common frames omitted
 backend-1  |
