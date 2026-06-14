@@ -3,4 +3,20 @@ there is 2 things
 when we get 9991 error i would like to have a fallback instead of a hard unexpected exit, like fallback to any 
 
 
-mongodb+srv://lifehelper:<db_password>@lifehelper.u1wlwlz.mongodb.net/?appName=Lifehelper
+backend-1  | ***************************
+backend-1  | APPLICATION FAILED TO START
+backend-1  | ***************************
+backend-1  |
+backend-1  | Description:
+backend-1  |
+backend-1  | Failed to bind properties under 'rsa.public-key' to java.security.interfaces.RSAPublicKey:
+backend-1  |
+backend-1  |     Property: rsa.public-key
+backend-1  |     Value: "${JWT_PUBLIC_KEY_LOCATION:classpath:certs/public.key}"
+backend-1  |     Origin: class path resource [application.properties] from app.jar - 26:16
+backend-1  |     Reason: failed to convert java.lang.String to java.security.interfaces.RSAPublicKey (caused by java.io.FileNotFoundException: /etc/lifehelper/keys/public.key (Permission denied))
+backend-1  |
+backend-1  | Action:
+backend-1  |
+backend-1  | Update your application's configuration
+backend-1  |
