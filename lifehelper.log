@@ -1,41 +1,37 @@
-backend-1  | 2026-06-14T16:03:34.153Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : Starting BackendApplication v0.0.1-SNAPSHOT using Java 21.0.11 with PID 1 (/app/app.jar started by appuser in /app)
-backend-1  | 2026-06-14T16:03:34.160Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : No active profile set, falling back to 1 default profile: "default"
-backend-1  | 2026-06-14T16:03:36.338Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
-backend-1  | 2026-06-14T16:03:36.762Z  INFO 1 --- [backend] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 412 ms. Found 10 MongoDB repository interfaces.
-backend-1  | 2026-06-14T16:03:38.739Z  INFO 1 --- [backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
-backend-1  | 2026-06-14T16:03:38.766Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-backend-1  | 2026-06-14T16:03:38.767Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.21]
-backend-1  | 2026-06-14T16:03:38.917Z  INFO 1 --- [backend] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 4638 ms
-backend-1  | 2026-06-14T16:03:40.124Z  INFO 1 --- [backend] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-124-generic"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@79d14037, com.mongodb.Jep395RecordCodecProvider@6c1e40d9, com.mongodb.KotlinCodecProvider@4b50c21, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
-backend-1  | 2026-06-14T16:03:40.130Z  INFO 1 --- [backend] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017
-backend-1  |
-backend-1  | com.mongodb.MongoSocketOpenException: Exception opening socket
-backend-1  |    at com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at java.base/java.util.Optional.orElseThrow(Unknown Source) ~[na:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  | Caused by: java.net.ConnectException: Connection refused
-backend-1  |    at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]
-backend-1  |    at java.base/java.net.Socket.connect(Unknown Source) ~[na:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.6.5.jar!/:na]
-backend-1  |    ... 4 common frames omitted
-backend-1  |
-backend-1  | 2026-06-14T16:03:43.801Z  INFO 1 --- [backend] [           main] eAuthenticationProviderManagerConfigurer : Global AuthenticationManager configured with AuthenticationProvider bean with name authenticationProvider
-backend-1  | 2026-06-14T16:03:43.803Z  WARN 1 --- [backend] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with an AuthenticationProvider bean. UserDetailsService beans will not be used by Spring Security for automatically configuring username/password login. Consider removing the AuthenticationProvider bean. Alternatively, consider using the UserDetailsService in a manually instantiated DaoAuthenticationProvider. If the current configuration is intentional, to turn off this warning, increase the logging level of 'org.springframework.security.config.annotation.authentication.configuration.InitializeUserDetailsBeanManagerConfigurer' to ERROR
-backend-1  | 2026-06-14T16:03:43.819Z  INFO 1 --- [backend] [           main] u.m.b.security.config.RsaKeyConfig       : JWT signing key loaded from file:/etc/lifehelper/keys/private.key
-backend-1  | 2026-06-14T16:03:43.901Z  INFO 1 --- [backend] [           main] u.m.backend.security.JwksController      : JWKS endpoint initialized with key ID: lifehelper-rsa
-backend-1  | 2026-06-14T16:03:46.077Z  INFO 1 --- [backend] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
-backend-1  | 2026-06-14T16:03:46.114Z  INFO 1 --- [backend] [           main] u.m.backend.BackendApplication           : Started BackendApplication in 12.913 seconds (process running for 14.678)
-backend-1  | 2026-06-14T16:03:46.831Z  INFO 1 --- [backend] [omcat-handler-0] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-backend-1  | 2026-06-14T16:03:46.833Z  INFO 1 --- [backend] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-backend-1  | 2026-06-14T16:03:46.837Z  INFO 1 --- [backend] [omcat-handler-0] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
-backend-1  | 2026-06-14T16:04:46.191Z  INFO 1 --- [backend] [   scheduling-1] org.mongodb.driver.cluster               : Waiting for server to become available for operation find with ID 9. Remaining time: 29989 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketOpenException: Exception opening socket}, caused by {java.net.ConnectException: Connection refused}}].
+
+import com.mongodb.ConnectionString;
+import com.mongodb.MongoClientSettings;
+import com.mongodb.MongoException;
+import com.mongodb.ServerApi;
+import com.mongodb.ServerApiVersion;
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+import com.mongodb.client.MongoDatabase;
+import org.bson.Document;
+
+public class MongoClientConnectionExample {
+    public static void main(String[] args) {
+        String connectionString = "mongodb+srv://lifehelper:<db_password>@lifehelper.txkghem.mongodb.net/?appName=lifehelper";
+
+        ServerApi serverApi = ServerApi.builder()
+                .version(ServerApiVersion.V1)
+                .build();
+
+        MongoClientSettings settings = MongoClientSettings.builder()
+                .applyConnectionString(new ConnectionString(connectionString))
+                .serverApi(serverApi)
+                .build();
+
+        // Create a new client and connect to the server
+        try (MongoClient mongoClient = MongoClients.create(settings)) {
+            try {
+                // Send a ping to confirm a successful connection
+                MongoDatabase database = mongoClient.getDatabase("admin");
+                database.runCommand(new Document("ping", 1));
+                System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
+            } catch (MongoException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+}
