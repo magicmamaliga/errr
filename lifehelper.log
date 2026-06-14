@@ -1,37 +1,10 @@
-
-import com.mongodb.ConnectionString;
-import com.mongodb.MongoClientSettings;
-import com.mongodb.MongoException;
-import com.mongodb.ServerApi;
-import com.mongodb.ServerApiVersion;
-import com.mongodb.client.MongoClient;
-import com.mongodb.client.MongoClients;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-
-public class MongoClientConnectionExample {
-    public static void main(String[] args) {
-        String connectionString = "mongodb+srv://lifehelper:<db_password>@lifehelper.txkghem.mongodb.net/?appName=lifehelper";
-
-        ServerApi serverApi = ServerApi.builder()
-                .version(ServerApiVersion.V1)
-                .build();
-
-        MongoClientSettings settings = MongoClientSettings.builder()
-                .applyConnectionString(new ConnectionString(connectionString))
-                .serverApi(serverApi)
-                .build();
-
-        // Create a new client and connect to the server
-        try (MongoClient mongoClient = MongoClients.create(settings)) {
-            try {
-                // Send a ping to confirm a successful connection
-                MongoDatabase database = mongoClient.getDatabase("admin");
-                database.runCommand(new Document("ping", 1));
-                System.out.println("Pinged your deployment. You successfully connected to MongoDB!");
-            } catch (MongoException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-}
+root@srv1592388:/opt/lifehelper# grep -n SPRING_DATA_MONGODB_URI docker-compose.yaml
+73:      # missing SPRING_DATA_MONGODB_URI will fail `docker compose up`
+82:      SPRING_DATA_MONGODB_URI: ${SPRING_DATA_MONGODB_URI:?SPRING_DATA_MONGODB_URI must be set in .env (Atlas mongodb+srv://... URI or local mongodb://lifehelper:PASSWORD@mongodb:27017/lifehelper?authSource=admin)}
+root@srv1592388:/opt/lifehelper# grep '^SPRING_DATA_MONGODB_URI=' .env
+SPRING_DATA_MONGODB_URI=mongodb+srv://lifehelper:81j6dsdfkngjcN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
+root@srv1592388:/opt/lifehelper# docker compose config | grep -A1 SPRING_DATA_MONGODB_URI
+      SPRING_DATA_MONGODB_URI: mongodb+srv://lifehelper:81j6dsdfkngjcN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
+      STRIPE_SECRET_KEY: sk_live_SOMEKEYTHATICHANGED
+root@srv1592388:/opt/lifehelper# docker compose exec backend printenv SPRING_DATA_MONGODB_URI
+mongodb+srv://lifehelper:81j6dsdfkngjcN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
