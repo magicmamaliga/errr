@@ -6,31 +6,15 @@ when we get 9991 error i would like to have a fallback instead of a hard unexpec
 
 
 
-PS C:\Users\Mate>  nslookup -type=SRV _mongodb._tcp.lifehelper.txkghem.mongodb.net
-Server:  UnKnown
-Address:  10.145.152.6
+root@srv1592388:/opt/lifehelper# docker compose exec backend nslookup ac-iajd2th-shard-00-00.txkghem.mongodb.net
+Server:         127.0.0.11
+Address:        127.0.0.11:53
 
 Non-authoritative answer:
-_mongodb._tcp.lifehelper.txkghem.mongodb.net    SRV service location:
-          priority       = 0
-          weight         = 0
-          port           = 27017
-          svr hostname   = ac-iajd2th-shard-00-01.txkghem.mongodb.net
-_mongodb._tcp.lifehelper.txkghem.mongodb.net    SRV service location:
-          priority       = 0
-          weight         = 0
-          port           = 27017
-          svr hostname   = ac-iajd2th-shard-00-00.txkghem.mongodb.net
-_mongodb._tcp.lifehelper.txkghem.mongodb.net    SRV service location:
-          priority       = 0
-          weight         = 0
-          port           = 27017
-          svr hostname   = ac-iajd2th-shard-00-02.txkghem.mongodb.net
-PS C:\Users\Mate>  nslookup -type=TXT _mongodb._tcp.lifehelper.txkghem.mongodb.net
-Server:  UnKnown
-Address:  10.145.152.6
+ac-iajd2th-shard-00-00.txkghem.mongodb.net      canonical name = mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
 
 Non-authoritative answer:
-_mongodb._tcp.lifehelper.txkghem.mongodb.net    text =
-
+ac-iajd2th-shard-00-00.txkghem.mongodb.net      canonical name = mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
+Name:   mtm-gcp-europewest1-0-m0-11-shard-00-00.u024n.gcp.mongodb.net
+Address: 34.76.93.128
         "authSource=admin&replicaSet=atlas-mne7xs-shard-0"
