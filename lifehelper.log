@@ -1,21 +1,4 @@
-root@srv1592388:/opt/lifehelper# grep -n '^SPRING_DATA_MONGODB_URI=' .env
-19:SPRING_DATA_MONGODB_URI=mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
-root@srv1592388:/opt/lifehelper# echo "shell var: [\$SPRING_DATA_MONGODB_URI]"
-shell var: [$SPRING_DATA_MONGODB_URI]
-root@srv1592388:/opt/lifehelper# grep -n '^SPRING_DATA_MONGODB_URI=' .env
-19:SPRING_DATA_MONGODB_URI=mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
-root@srv1592388:/opt/lifehelper# echo "shell var: [$SPRING_DATA_MONGODB_URI]"
-shell var: []
-root@srv1592388:/opt/lifehelper# docker compose config | grep -A1 SPRING_DATA_MONGODB_URI
-      SPRING_DATA_MONGODB_URI: mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper
-      STRIPE_SECRET_KEY: sk_test
-root@srv1592388:/opt/lifehelper# docker compose exec backend sh -c 'echo "[$SPRING_DATA_MONGODB_URI]"'
-[mongodb+srv://lifehelper:81asdgfsargdfN0Xz@lifehelper.txkghem.mongodb.net/?appName=lifehelper]
-root@srv1592388:/opt/lifehelper# file .env                  # should say "ASCII text", not "ASCII text, with CRLF"
-.env: Unicode text, UTF-8 text
-root@srv1592388:/opt/lifehelper# sed -i 's/\r$//' .env
-root@srv1592388:/opt/lifehelper# docker compose up -d --force-recreate backend
-[+] up 1/1
- ✔ Container lifehelper-backend-1 Started                                                                                                                                                                          2.8s
-root@srv1592388:/opt/lifehelper# docker compose logs --tail=80 backend | grep -E 'clusterSettings|hosts='
-backend-1  | 2026-06-14T22:55:12.523Z  INFO 1 --- [backend] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.6.5"}, "os": {"type": "Linux", "name": "Linux", "architecture": "amd64", "version": "6.8.0-124-generic"}, "platform": "Java/Eclipse Adoptium/21.0.11+10-LTS", "env": {"container": {"runtime": "docker"}}} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@79d14037, com.mongodb.Jep395RecordCodecProvider@6c1e40d9, com.mongodb.KotlinCodecProvider@4b50c21, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+XHR POST https://lifehelper.uk/api/public/register
+XML Parsing Error: no root element found
+   Location: https://lifehelper.uk/api/public/register
+   Line Number 1, Column 1:
