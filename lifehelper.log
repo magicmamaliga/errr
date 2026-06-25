@@ -1,262 +1,206 @@
-2026-06-25 19:46:29 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-25 19:46:29 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-25 19:46:29 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-25 19:46:29 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
-2026-06-25 19:46:29 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [25800]
-INFO:     Waiting for application startup.
-2026-06-25 19:46:32 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
-2026-06-25 19:46:32 [INFO] server.audio.default_watcher: Default-device watcher started (poll=5.0s, debounce=5.0s)
-2026-06-25 19:46:32 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-06-25 19:46:32 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-06-25 19:46:32 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-25 19:46:32 [INFO] server.audio.thread_starter: Loopback selection: index=16 name='Speakers (Realtek(R) Audio) [Loopback]' rate=48000Hz channels=2
-2026-06-25 19:46:32 [INFO] server.audio.thread_starter: Microphone selection: index=14 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
-2026-06-25 19:46:33 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
-2026-06-25 19:46:33 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 19:46:33 [INFO] server.audio.thread_starter: Ambient capture started (pre-roll buffer enabled).
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-25 19:46:33 [INFO] server.audio.call_detector: Call detector loop ENTER: tick=2.0s holdoff=5.0s window=10.0s ambient_enabled=True detection_enabled=True required_active_ticks=2
-2026-06-25 19:46:33 [INFO] server.audio.call_detector: Call detector started.
-INFO:     Application startup complete.
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-25 19:46:33 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
-2026-06-25 19:46:33 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
-2026-06-25 19:46:35 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
-2026-06-25 19:46:42 [INFO] server.audio.call_detector: User declined call-record prompt
-2026-06-25 19:46:44 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.6s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     Shutting down
-INFO:     Waiting for application shutdown.
-2026-06-25 19:46:50 [INFO] lifehelper.lifecycle: Stopping threads...
-2026-06-25 19:46:50 [INFO] server.audio.call_detector: Call detector stopped.
-2026-06-25 19:46:50 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-25 19:46:50 [INFO] server.audio.capture: Capture loop finished.
-2026-06-25 19:46:50 [INFO] server.audio.capture: Microphone capture loop finished.
-2026-06-25 19:46:50 [INFO] server.audio.thread_starter: Ambient capture stopped.
-2026-06-25 19:46:50 [INFO] lifehelper.lifecycle: FastAPI shutdown complete.
-INFO:     Application shutdown complete.
-INFO:     Finished server process [25800]
-2026-06-25 21:40:48 [INFO] lifehelper: [config] Loaded .env from: C:\Users\Mate\AppData\Local\Programs\LifeHelper\.env
-2026-06-25 21:40:48 [INFO] lifehelper: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffmpeg.exe
-2026-06-25 21:40:48 [INFO] lifehelper: [config] Using ffprobe: C:\Users\Mate\AppData\Local\LifeHelper\assets\ffmpeg\ffprobe.exe
-2026-06-25 21:40:48 [INFO] lifehelper.asset_bootstrap: [bootstrap] Assets v2 already present (target v2)
-2026-06-25 21:40:48 [INFO] lifehelper: 🚀 Starting LifeHelper backend on port 8066...
-INFO:     Started server process [28536]
-INFO:     Waiting for application startup.
-2026-06-25 21:40:50 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
-2026-06-25 21:40:50 [INFO] server.audio.default_watcher: Default-device watcher started (poll=5.0s, debounce=5.0s)
-2026-06-25 21:40:50 [INFO] lifehelper.diarization: Preferred provider: directml (DmlExecutionProvider available in onnxruntime (['DmlExecutionProvider', 'CPUExecutionProvider']))
-2026-06-25 21:40:50 [INFO] lifehelper.diarization: Embedding backend preference: ort (auto, based on preferred provider=directml)
-2026-06-25 21:40:50 [INFO] lifehelper.diarization: Embedding extractor load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-25 21:40:51 [INFO] server.audio.thread_starter: Loopback selection: index=16 name='Speakers (Realtek(R) Audio) [Loopback]' rate=48000Hz channels=2
-2026-06-25 21:40:51 [INFO] server.audio.thread_starter: Microphone selection: index=14 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Embedding model has 2 inputs: feats='audio_signal' (channels_first=True), length='length'
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Embedding model has 2 outputs; using 'embs' (dim=192); ignoring 'logits'
-2026-06-25 21:40:51 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:40:51 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:40:51 [INFO] server.audio.thread_starter: Ambient capture started (pre-roll buffer enabled).
-2026-06-25 21:40:51 [INFO] server.audio.call_detector: Call detector loop ENTER: tick=2.0s holdoff=5.0s window=10.0s ambient_enabled=True detection_enabled=True required_active_ticks=2
-2026-06-25 21:40:51 [INFO] server.audio.call_detector: Call detector started.
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: DmlSpeakerEmbeddingExtractor loaded: dim=192 active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Speaker embedding extractor loaded: dim=192 model=embedding.onnx backend=ort provider=directml
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Diarizer load plan: preferred=(ort,directml) attempts=[('ort', 'directml'), ('ort', 'cpu'), ('sherpa', 'cpu')]
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Segmentation model has symbolic input shape ['N', 1, 'T']; probing with default window=160000 samples
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: DmlOfflineSpeakerDiarization loaded: window_samples=160000 local_speakers=3 powerset=True active_providers=['DmlExecutionProvider', 'CPUExecutionProvider']
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: cluster_threshold(): backend='ort'
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: cluster_threshold(): env override -> 0.520
-2026-06-25 21:40:51 [INFO] lifehelper.diarization: Diarizer loaded (seg=segmentation.onnx, emb=embedding.onnx), threads=8, sample_rate=16000, cluster_threshold=0.52, backend=ort, requested_provider=directml, effective_provider=directml
-2026-06-25 21:40:51 [INFO] lifehelper.lifecycle: Diarization models pre-warmed
-2026-06-25 21:40:53 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=never speaker_last_speech=never both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-2026-06-25 21:41:23 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.1s ago speaker_last_speech=never both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:65010 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65011 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65012 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65013 - "GET /api/settings HTTP/1.1" 401 Unauthorized
-INFO:     127.0.0.1:65014 - "GET /session/status HTTP/1.1" 401 Unauthorized
-INFO:     127.0.0.1:65015 - "GET /api/update/status HTTP/1.1" 401 Unauthorized
-INFO:     127.0.0.1:65016 - "OPTIONS /api/token HTTP/1.1" 200 OK
-2026-06-25 21:41:48 [INFO] httpx: HTTP Request: GET https://lifehelper.uk/api/public/jwks "HTTP/1.1 200 OK"
-2026-06-25 21:41:48 [INFO] server.auth: [auth] Loaded RSA public key from JWKS endpoint (https://lifehelper.uk/api/public/jwks)
-2026-06-25 21:41:48 [INFO] server.routes.token: JWT Token verified and set via /api/token
-INFO:     127.0.0.1:65017 - "POST /api/token HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65019 - "GET /api/update/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65020 - "POST /api/update/check HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65023 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65024 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:41:59 [INFO] server.audio.call_detector: Call accepted by user (or auto-accepted) - starting capture-only recording
-2026-06-25 21:41:59 [INFO] server.services.recordings: Creating recording (token present: True, mode=deferred, title=None)
-2026-06-25 21:42:01 [INFO] server.services.recordings: Recording created with ID: 6a3d9299916efb9f1d31caf9
-2026-06-25 21:42:01 [INFO] server.audio.thread_starter: Recording session started with ID: 6a3d9299916efb9f1d31caf9 (transcribe=False)
-2026-06-25 21:42:01 [INFO] server.audio.thread_starter: Pre-roll injected: speaker=36.4s mic=69.0s effective=69.0s
-2026-06-25 21:42:01 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a3d9299916efb9f1d31caf9 at 16000 Hz (interval=60s, codec=mp3@128k)
-INFO:     127.0.0.1:65027 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:03 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.1s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-2026-06-25 21:42:05 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
-2026-06-25 21:42:05 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:05 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65029 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65030 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:11 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:42:11 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65031 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:16 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=18 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:42:16 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:16 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65034 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:21 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:21 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65037 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:26 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:26 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65039 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65040 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:31 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=21 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:42:31 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:42:31 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65042 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:33 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-2026-06-25 21:42:36 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:36 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65047 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:41 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:42:41 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65049 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:46 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=24 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:42:46 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:42:46 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65051 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65053 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:52 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:42:52 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65055 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:42:57 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:42:57 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65058 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:02 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=27 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:43:02 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:02 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:43:04 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-INFO:     127.0.0.1:65060 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:07 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:07 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:43:08 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (2006829 bytes MP3) for 6a3d9299916efb9f1d31caf9
-INFO:     127.0.0.1:65061 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65062 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:12 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:12 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65063 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:17 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=30 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:43:17 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:17 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65065 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:22 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:22 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65072 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:27 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:28 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65074 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65075 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:33 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=33 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:43:33 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:33 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:43:34 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-INFO:     127.0.0.1:65076 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:38 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:43:38 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-INFO:     127.0.0.1:65077 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:43 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:43 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65078 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:48 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=36 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:43:48 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:48 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65079 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65081 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:53 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:53 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65082 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:43:58 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:43:58 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65085 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:03 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=39 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:44:03 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:44:03 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:04 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=1.5s ago speaker_last_speech=22.9s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-INFO:     127.0.0.1:65086 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:08 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:08 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:65088 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:65089 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:12 [INFO] server.audio.call_detector: Speaker silent for 31s (mic ignored - office ambient keeps it active) - entering ENDING grace window
-2026-06-25 21:44:13 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=1 (998829 bytes MP3) for 6a3d9299916efb9f1d31caf9
-2026-06-25 21:44:14 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:14 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-25 21:44:14 [INFO] server.audio.call_detector: [call-detector heartbeat] state=ending consecutive_active=0/2 mic_last_speech=6.4s ago speaker_last_speech=32.9s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3d9299916efb9f1d31caf9
-INFO:     127.0.0.1:52241 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:19 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=42 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:44:19 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:19 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52243 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:24 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:24 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52245 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52247 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-25 21:44:29 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:29 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52248 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:34 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=45 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:44:34 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:34 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52249 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:39 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:39 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52251 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:42 [INFO] server.audio.call_detector: Finalising auto-captured recording
-2026-06-25 21:44:44 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:44 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52253 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52254 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-25 21:44:49 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=48 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-25 21:44:49 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-25 21:44:49 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:52255 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:52 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a3d9299916efb9f1d31caf9)
-2026-06-25 21:44:52 [INFO] server.audio.capture: Capture loop finished.
-2026-06-25 21:44:52 [INFO] server.audio.capture: Microphone capture loop finished.
-2026-06-25 21:44:54 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
-INFO:     127.0.0.1:52259 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:44:55 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=2 (508653 bytes MP3) for 6a3d9299916efb9f1d31caf9
-2026-06-25 21:44:59 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a3d9299916efb9f1d31caf9
-2026-06-25 21:44:59 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-INFO:     127.0.0.1:52263 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:45:01 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=12.3s ago speaker_last_speech=80.3s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:52265 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52266 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52267 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52269 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:45:16 [INFO] server.audio.end_of_call_prompt: End-of-call prompt for 6a3d9299916efb9f1d31caf9 -> save
-INFO:     127.0.0.1:52271 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52273 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52274 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52275 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-25 21:45:31 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=42.5s ago speaker_last_speech=110.5s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:52288 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:52304 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-Exception ignored in: <function Variable.__del__ at 0x0000016E7F2377E0>
-Traceback (most recent call last):
-  File "tkinter\__init__.py", line 414, in __del__
-RuntimeError: main thread is not in main loop
+2026-06-25 23:04:19 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=15 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
+2026-06-25 23:04:19 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-25 23:04:19 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+INFO:     127.0.0.1:56845 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56846 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56847 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56848 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56850 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56852 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:04:30 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=4 (1032237 bytes MP3) for 6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56853 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56854 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56855 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56856 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56857 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:04:40 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56858 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56859 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56861 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56862 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56863 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:04:49 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:04:49 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56864 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56865 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56866 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56868 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56869 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56870 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56871 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56872 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56873 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56874 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56875 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:05:11 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56876 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56877 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56879 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56880 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:05:19 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:05:19 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56881 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56882 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56883 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56885 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56886 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56887 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56889 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56890 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:05:35 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=5 (1023021 bytes MP3) for 6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56891 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56892 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56893 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:05:41 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56894 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56895 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56897 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56898 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:05:50 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=18 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
+2026-06-25 23:05:50 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:05:50 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56899 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56900 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56901 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56902 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56903 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56904 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56905 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56906 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:06:11 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago both_active(10s)=True ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56910 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56911 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56913 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56914 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:06:20 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+2026-06-25 23:06:20 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+INFO:     127.0.0.1:56915 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56916 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56917 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56919 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56920 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56921 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56922 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56923 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56924 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56926 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56927 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:06:39 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=6 (1024173 bytes MP3) for 6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56928 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:06:41 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=4.1s ago speaker_last_speech=10.6s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56929 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56930 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56931 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56933 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:06:50 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:06:50 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56934 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56935 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56936 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56937 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56938 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56939 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:01 [INFO] server.audio.call_detector: Speaker silent for 31s (mic ignored - office ambient keeps it active) - entering ENDING grace window
+INFO:     127.0.0.1:56940 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:03 [INFO] server.audio.call_detector: [call-detector heartbeat] state=ending consecutive_active=0/2 mic_last_speech=2.9s ago speaker_last_speech=32.8s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:56941 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56942 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56943 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56946 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56947 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56948 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56949 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56952 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:20 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=21 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
+2026-06-25 23:07:20 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:07:20 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:50634 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50637 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50639 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50641 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50642 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:30 [WARNING] server.audio.silence_monitor: [silence-monitor] mic: no speech-level audio for 30.0s while channel enabled
+2026-06-25 23:07:31 [WARNING] server.audio.silence_monitor: [silence-monitor] speaker: no speech-level audio for 60.1s while channel enabled
+2026-06-25 23:07:31 [INFO] server.audio.silence_monitor: [silence-monitor] speaker: audio restored after silence
+2026-06-25 23:07:31 [INFO] server.audio.call_detector: Speaker audio resumed during ENDING grace - returning to ACTIVE
+INFO:     127.0.0.1:50643 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:33 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=33.1s ago speaker_last_speech=1.6s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:50644 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50645 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:38 [INFO] server.audio.silence_monitor: [silence-monitor] mic: audio restored after silence
+INFO:     127.0.0.1:50646 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50648 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50649 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:43 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=7 (1017837 bytes MP3) for 6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:50650 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50651 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50652 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-25 23:07:50 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:07:50 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:50654 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50655 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50656 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50657 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50658 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50659 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50661 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50663 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50664 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50665 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50666 - "GET /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50667 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50669 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50670 - "POST /api/update/check HTTP/1.1" 200 OK
+2026-06-25 23:08:03 [INFO] server.audio.call_detector: [call-detector heartbeat] state=active consecutive_active=0/2 mic_last_speech=1.4s ago speaker_last_speech=24.6s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:50674 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50675 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50676 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50678 - "GET /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50679 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50679 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50681 - "POST /api/update/check HTTP/1.1" 200 OK
+2026-06-25 23:08:10 [INFO] server.audio.call_detector: Speaker silent for 31s (mic ignored - office ambient keeps it active) - entering ENDING grace window
+2026-06-25 23:08:12 [INFO] server.audio.call_detector: [call-detector heartbeat] state=ending consecutive_active=0/2 mic_last_speech=4.9s ago speaker_last_speech=32.6s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:50686 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50687 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50688 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50689 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:20 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-25 23:08:20 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:50691 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50692 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50693 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50694 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50695 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50696 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50697 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50698 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50699 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:40 [INFO] server.audio.call_detector: Finalising auto-captured recording
+INFO:     127.0.0.1:50700 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50701 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:46 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=8 (963693 bytes MP3) for 6a3da4abd2dab4199c8a876f
+INFO:     127.0.0.1:50703 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50704 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50705 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:50 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a3da4abd2dab4199c8a876f)
+2026-06-25 23:08:50 [INFO] server.audio.capture: Capture loop finished.
+2026-06-25 23:08:50 [INFO] server.audio.capture: Microphone capture loop finished.
+2026-06-25 23:08:50 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+INFO:     127.0.0.1:50709 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50710 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:57 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a3da4abd2dab4199c8a876f
+2026-06-25 23:08:57 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+INFO:     127.0.0.1:50711 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50713 - "GET /session/status HTTP/1.1" 200 OK
+2026-06-25 23:08:59 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=18.5s ago speaker_last_speech=80.5s ago both_active(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:50711 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50711 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50715 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50717 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50718 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50721 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50717 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
