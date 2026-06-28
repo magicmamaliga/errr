@@ -1,38 +1,5 @@
-backend-1  | 2026-06-28T06:49:44.839Z  INFO 1 --- [backend] [cat-handler-105] .m.b.r.s.s.R2MultipartUploadOrchestrator : Uploaded 6a40c3eb58ebc72df27abd9b_audio.mp3 (230445 bytes) via single PutObject
-backend-1  | 2026-06-28T06:49:44.840Z  INFO 1 --- [backend] [cat-handler-105] u.m.b.record.service.FileStorageService  : Assembled live recording 6a40c3eb58ebc72df27abd9b from 1 chunks (230445 bytes) -> 6a40c3eb58ebc72df27abd9b_audio.mp3
-backend-1  | 2026-06-28T06:49:45.091Z  INFO 1 --- [backend] [cat-handler-105] u.m.b.record.service.RecordingService    : Finalised live recording 6a40c3eb58ebc72df27abd9b (1 chunks, .mp3, by=USER) -> 6a40c3eb58ebc72df27abd9b_audio.mp3
-backend-1  | 2026-06-28T06:49:45.092Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a40c3eb58ebc72df27abd9b]
-backend-1  | 2026-06-28T06:49:45.193Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering findById for userId 6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-06-28T06:49:46.725Z  INFO 1 --- [backend] [cat-handler-107] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
-backend-1  | 2026-06-28T06:49:47.076Z  INFO 1 --- [backend] [cat-handler-109] u.m.b.record.service.RecordingService    : Entering getRecordingAudioBytes() with user t***@gmail.com
-backend-1  | 2026-06-28T06:49:52.091Z  INFO 1 --- [backend] [cat-handler-111] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
-backend-1  | 2026-06-28T06:49:57.525Z  INFO 1 --- [backend] [cat-handler-118] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
-backend-1  | 2026-06-28T06:49:57.996Z  INFO 1 --- [backend] [        async-1] u.m.backend.record.ai.service.AiService  : Received chat response for recordingId: 6a40c3eb58ebc72df27abd9b, type: summary
-backend-1  | 2026-06-28T06:49:57.998Z  INFO 1 --- [backend] [        async-1] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_NANO(modelName=gpt-5-nano, inputPricePerMillionTokens=0.05, cachedInputPricePerMillionTokens=0.005, outputPricePerMillionTokens=0.4)
-backend-1  | 2026-06-28T06:49:58.095Z  INFO 1 --- [backend] [        async-1] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0008
-backend-1  | 2026-06-28T06:49:58.203Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c41658ebc72df27abd9c
-backend-1  | 2026-06-28T06:49:58.203Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0008
-backend-1  | 2026-06-28T06:49:58.298Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-06-28T06:50:02.881Z  INFO 1 --- [backend] [cat-handler-124] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
-backend-1  | 2026-06-28T06:50:03.816Z  INFO 1 --- [backend] [        async-1] u.m.backend.record.ai.service.AiService  : Received chat response for recordingId: 6a40c3eb58ebc72df27abd9b, type: title
-backend-1  | 2026-06-28T06:50:03.818Z  INFO 1 --- [backend] [        async-1] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_NANO(modelName=gpt-5-nano, inputPricePerMillionTokens=0.05, cachedInputPricePerMillionTokens=0.005, outputPricePerMillionTokens=0.4)
-backend-1  | 2026-06-28T06:50:03.911Z  INFO 1 --- [backend] [        async-1] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0004
-backend-1  | 2026-06-28T06:50:04.005Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c41b58ebc72df27abd9d
-backend-1  | 2026-06-28T06:50:04.005Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0004
-backend-1  | 2026-06-28T06:50:04.100Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-06-28T06:50:08.294Z  INFO 1 --- [backend] [cat-handler-128] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
-backend-1  | 2026-06-28T06:50:24.675Z  INFO 1 --- [backend] [cat-handler-134] u.m.backend.record.ai.AIController       : AI ask: recordingId=6a40c3eb58ebc72df27abd9b sessionId=new model=gpt-5-mini messages=2
-backend-1  | 2026-06-28T06:50:24.676Z  INFO 1 --- [backend] [cat-handler-134] u.m.b.record.ai.service.FluxAIService    : processAiQuery user=tornaimate95@gmail.com recordingId=6a40c3eb58ebc72df27abd9b sessionId=new messages=2 model=gpt-5-mini
-backend-1  | 2026-06-28T06:50:24.918Z  WARN 1 --- [backend] [cat-handler-134] s.w.s.m.m.a.RequestMappingHandlerAdapter : !!!
-backend-1  | Performing asynchronous handling through the default Spring MVC SimpleAsyncTaskExecutor.
-backend-1  | This executor is not suitable for production use under load.
-backend-1  | Please, configure an AsyncTaskExecutor through the WebMvc config.
-backend-1  | -------------------------------
-backend-1  | !!!
-backend-1  | 2026-06-28T06:50:51.612Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.a.s.AiResponseStreamParser       : TOKEN USAGE FOUND: Prompt Tokens: 185, Completion Tokens: 2387, Total Tokens: 2572
-backend-1  | 2026-06-28T06:50:51.613Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_MINI(modelName=gpt-5-mini, inputPricePerMillionTokens=0.25, cachedInputPricePerMillionTokens=0.025, outputPricePerMillionTokens=2.0)
-backend-1  | 2026-06-28T06:50:51.707Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0063
-backend-1  | 2026-06-28T06:50:51.806Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c44b58ebc72df27abd9e
-backend-1  | 2026-06-28T06:50:51.807Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0063
-backend-1  | 2026-06-28T06:50:51.902Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-06-28T06:50:51.910Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.a.s.AiInteractionDeduplicator    : Saving 3 interactions to session b834e1d8-4fd9-46d3-9825-ad9c373e4555 of recording 6a40c3eb58ebc72df27abd9b
+INFO:     127.0.0.1:53759 - "POST /api/recordings/6a40c60c58ebc72df27abda0/transcribe-locally HTTP/1.1" 200 OK
+2026-06-28 08:02:30 [ERROR] server.routes.upload: [local-deferred] local transcription failed for 6a40c60c58ebc72df27abda0: module 'server.utils.proc' has no attribute 'no_windows_kwargs'
+INFO:     127.0.0.1:53769 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53771 - "POST /api/recordings/6a40c60c58ebc72df27abda0/transcribe-locally HTTP/1.1" 200 OK
+2026-06-28 08:03:01 [ERROR] server.routes.upload: [local-deferred] local transcription failed for 6a40c60c58ebc72df27abda0: module 'server.utils.proc' has no attribute 'no_windows_kwargs'
