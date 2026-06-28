@@ -1,9 +1,8 @@
-Traceback (most recent call last):
-  File "lifehelper.py", line 159, in <module>
-  File "lifehelper.py", line 87, in main
-  File "server\utils\single_instance\__init__.py", line 89, in acquire_lock
-    _GUARD.register_presence()
-  File "server\utils\single_instance\windows.py", line 41, in register_presence
-    if self._mutex_handle is not None:
-       ^^^^^^^^^^^^^^^^^^
-AttributeError: 'WindowsProcessGuard' object has no attribute '_mutex_handle'. Did you mean: 'self_mutex_handle'?
+backend-1  | 2026-06-28T05:25:39.006Z  INFO 1 --- [backend] [at-handler-3619] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=english, duration=0.87, text=3 chars, segments=0, words=1
+backend-1  | 2026-06-28T05:25:39.008Z  INFO 1 --- [backend] [at-handler-3619] u.m.b.r.a.s.AiTranscriptionService       : Aligning 1 punctuated tokens to 1 word entries
+backend-1  | 2026-06-28T05:25:39.008Z  INFO 1 --- [backend] [at-handler-3619] u.m.b.r.a.s.AiTranscriptionService       : Alignment succeeded: 1 tokens mapped to 1 words
+backend-1  | 2026-06-28T05:25:39.008Z  INFO 1 --- [backend] [at-handler-3619] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.001
+backend-1  | 2026-06-28T05:25:39.108Z  INFO 1 --- [backend] [at-handler-3619] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user t***@gmail.com (cost: $0.001, text length: 3 chars, chunks: 1)
+backend-1  | 2026-06-28T05:25:39.205Z  INFO 1 --- [backend] [at-handler-3619] u.m.b.r.ai.AiTranscriptionController     : AI transcription for recording 6a40b02fb69a329c2bc03a78 by t***@gmail.com: offset=32.32216238975525s, text=3 chars, chunks=1, source=speaker
+backend-1  | 2026-06-28T05:25:40.731Z  INFO 1 --- [backend] [at-handler-3621] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-06-28T05:25:40.916Z  INFO 1 --- [backend] [at-handler-3621] u.m.b.record.service.RecordingService    : finalizeLiveRecording: recording 6a40b02fb69a329c2bc03a78 had no chunks; nothing to flush
