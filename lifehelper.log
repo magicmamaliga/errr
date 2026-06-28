@@ -1,61 +1,38 @@
-2026-06-28 06:24:59 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
-2026-06-28 06:24:59 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-28 06:24:59 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
-2026-06-28 06:25:01 [INFO] server.services.recordings: Recording created with ID: 6a40b02fb69a329c2bc03a78
-2026-06-28 06:25:01 [INFO] server.audio.thread_starter: Recording session started with ID: 6a40b02fb69a329c2bc03a78 (transcribe=True)
-2026-06-28 06:25:01 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-2026-06-28 06:25:01 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-28 06:25:01 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-06-28 06:25:01 [INFO] server.audio.transcribe: Transcription worker running. All audio resampled to 16000 Hz
-2026-06-28 06:25:01 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a40b02fb69a329c2bc03a78 at 16000 Hz (interval=60s, codec=mp3@128k)
-2026-06-28 06:25:01 [INFO] lifehelper.main: Session started.
-INFO:     127.0.0.1:64003 - "POST /session/start HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64006 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64009 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64010 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64012 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64014 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64015 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-28 06:25:10 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 51 chars, offset=4.40s)
-INFO:     127.0.0.1:64017 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64018 - "GET /api/live?since=2026-06-28T05%3A25%3A10Z HTTP/1.1" 200 OK
-2026-06-28 06:25:13 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 129 chars, offset=7.07s)
-INFO:     127.0.0.1:64019 - "GET /api/live?since=2026-06-28T05%3A25%3A10Z HTTP/1.1" 200 OK
-2026-06-28 06:25:14 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 39 chars, offset=8.94s)
-INFO:     127.0.0.1:64023 - "GET /api/live?since=2026-06-28T05%3A25%3A13Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64024 - "GET /api/live?since=2026-06-28T05%3A25%3A14Z HTTP/1.1" 200 OK
-2026-06-28 06:25:18 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 31 chars, offset=12.85s)
-INFO:     127.0.0.1:64026 - "GET /api/live?since=2026-06-28T05%3A25%3A14Z HTTP/1.1" 200 OK
-2026-06-28 06:25:19 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 128 chars, offset=14.07s)
-INFO:     127.0.0.1:64027 - "GET /api/live?since=2026-06-28T05%3A25%3A18Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64028 - "GET /api/live?since=2026-06-28T05%3A25%3A19Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64031 - "GET /api/live?since=2026-06-28T05%3A25%3A19Z HTTP/1.1" 200 OK
-2026-06-28 06:25:23 [INFO] lifehelper.main: Stopping session...
-2026-06-28 06:25:23 [INFO] server.audio.capture: Capture loop finished.
-2026-06-28 06:25:23 [INFO] server.audio.capture: Microphone capture loop finished.
-INFO:     127.0.0.1:64034 - "GET /api/live?since=2026-06-28T05%3A25%3A19Z HTTP/1.1" 200 OK
-2026-06-28 06:25:24 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 21 chars, offset=19.78s)
-INFO:     127.0.0.1:64036 - "GET /api/live?since=2026-06-28T05%3A25%3A19Z HTTP/1.1" 200 OK
-2026-06-28 06:25:26 [INFO] server.audio.transcribe: [ai] Transcribed segment (speaker, 93 chars, offset=21.07s)
-INFO:     127.0.0.1:64037 - "GET /api/live?since=2026-06-28T05%3A25%3A24Z HTTP/1.1" 200 OK
-2026-06-28 06:25:27 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 15 chars, offset=22.60s)
-INFO:     127.0.0.1:64039 - "GET /api/live?since=2026-06-28T05%3A25%3A26Z HTTP/1.1" 200 OK
-2026-06-28 06:25:28 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
-INFO:     127.0.0.1:64040 - "GET /api/live?since=2026-06-28T05%3A25%3A27Z HTTP/1.1" 200 OK
-2026-06-28 06:25:29 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 24 chars, offset=25.71s)
-INFO:     127.0.0.1:64042 - "GET /api/live?since=2026-06-28T05%3A25%3A27Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64043 - "GET /api/live?since=2026-06-28T05%3A25%3A29Z HTTP/1.1" 200 OK
-2026-06-28 06:25:33 [INFO] server.audio.transcribe: [ai] Transcribed segment (mic, 34 chars, offset=28.36s)
-2026-06-28 06:25:33 [INFO] server.audio.transcribe: [speaker] Flushing 0.87s of buffered audio on stop
-INFO:     127.0.0.1:64046 - "GET /api/live?since=2026-06-28T05%3A25%3A29Z HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64047 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-28 06:25:34 [INFO] server.audio.transcribe: [mic] Flushing 1.35s of buffered audio on stop
-2026-06-28 06:25:34 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=144 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-28 06:25:37 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a40b02fb69a329c2bc03a78)
-2026-06-28 06:25:37 [WARNING] server.services.live_uploader: [live_uploader] Final flush failed: cannot access local variable 'proc' where it is not associated with a value
-2026-06-28 06:25:39 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a40b02fb69a329c2bc03a78
-2026-06-28 06:25:39 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-28 06:25:39 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
-INFO:     127.0.0.1:64032 - "POST /session/stop HTTP/1.1" 200 OK
-INFO:     127.0.0.1:64051 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-28 06:26:04 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+backend-1  | 2026-06-28T06:49:44.839Z  INFO 1 --- [backend] [cat-handler-105] .m.b.r.s.s.R2MultipartUploadOrchestrator : Uploaded 6a40c3eb58ebc72df27abd9b_audio.mp3 (230445 bytes) via single PutObject
+backend-1  | 2026-06-28T06:49:44.840Z  INFO 1 --- [backend] [cat-handler-105] u.m.b.record.service.FileStorageService  : Assembled live recording 6a40c3eb58ebc72df27abd9b from 1 chunks (230445 bytes) -> 6a40c3eb58ebc72df27abd9b_audio.mp3
+backend-1  | 2026-06-28T06:49:45.091Z  INFO 1 --- [backend] [cat-handler-105] u.m.b.record.service.RecordingService    : Finalised live recording 6a40c3eb58ebc72df27abd9b (1 chunks, .mp3, by=USER) -> 6a40c3eb58ebc72df27abd9b_audio.mp3
+backend-1  | 2026-06-28T06:49:45.092Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a40c3eb58ebc72df27abd9b]
+backend-1  | 2026-06-28T06:49:45.193Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering findById for userId 6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-06-28T06:49:46.725Z  INFO 1 --- [backend] [cat-handler-107] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
+backend-1  | 2026-06-28T06:49:47.076Z  INFO 1 --- [backend] [cat-handler-109] u.m.b.record.service.RecordingService    : Entering getRecordingAudioBytes() with user t***@gmail.com
+backend-1  | 2026-06-28T06:49:52.091Z  INFO 1 --- [backend] [cat-handler-111] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
+backend-1  | 2026-06-28T06:49:57.525Z  INFO 1 --- [backend] [cat-handler-118] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
+backend-1  | 2026-06-28T06:49:57.996Z  INFO 1 --- [backend] [        async-1] u.m.backend.record.ai.service.AiService  : Received chat response for recordingId: 6a40c3eb58ebc72df27abd9b, type: summary
+backend-1  | 2026-06-28T06:49:57.998Z  INFO 1 --- [backend] [        async-1] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_NANO(modelName=gpt-5-nano, inputPricePerMillionTokens=0.05, cachedInputPricePerMillionTokens=0.005, outputPricePerMillionTokens=0.4)
+backend-1  | 2026-06-28T06:49:58.095Z  INFO 1 --- [backend] [        async-1] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0008
+backend-1  | 2026-06-28T06:49:58.203Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c41658ebc72df27abd9c
+backend-1  | 2026-06-28T06:49:58.203Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0008
+backend-1  | 2026-06-28T06:49:58.298Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-06-28T06:50:02.881Z  INFO 1 --- [backend] [cat-handler-124] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
+backend-1  | 2026-06-28T06:50:03.816Z  INFO 1 --- [backend] [        async-1] u.m.backend.record.ai.service.AiService  : Received chat response for recordingId: 6a40c3eb58ebc72df27abd9b, type: title
+backend-1  | 2026-06-28T06:50:03.818Z  INFO 1 --- [backend] [        async-1] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_NANO(modelName=gpt-5-nano, inputPricePerMillionTokens=0.05, cachedInputPricePerMillionTokens=0.005, outputPricePerMillionTokens=0.4)
+backend-1  | 2026-06-28T06:50:03.911Z  INFO 1 --- [backend] [        async-1] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0004
+backend-1  | 2026-06-28T06:50:04.005Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c41b58ebc72df27abd9d
+backend-1  | 2026-06-28T06:50:04.005Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0004
+backend-1  | 2026-06-28T06:50:04.100Z  INFO 1 --- [backend] [        async-1] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-06-28T06:50:08.294Z  INFO 1 --- [backend] [cat-handler-128] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a40c3eb58ebc72df27abd9b
+backend-1  | 2026-06-28T06:50:24.675Z  INFO 1 --- [backend] [cat-handler-134] u.m.backend.record.ai.AIController       : AI ask: recordingId=6a40c3eb58ebc72df27abd9b sessionId=new model=gpt-5-mini messages=2
+backend-1  | 2026-06-28T06:50:24.676Z  INFO 1 --- [backend] [cat-handler-134] u.m.b.record.ai.service.FluxAIService    : processAiQuery user=tornaimate95@gmail.com recordingId=6a40c3eb58ebc72df27abd9b sessionId=new messages=2 model=gpt-5-mini
+backend-1  | 2026-06-28T06:50:24.918Z  WARN 1 --- [backend] [cat-handler-134] s.w.s.m.m.a.RequestMappingHandlerAdapter : !!!
+backend-1  | Performing asynchronous handling through the default Spring MVC SimpleAsyncTaskExecutor.
+backend-1  | This executor is not suitable for production use under load.
+backend-1  | Please, configure an AsyncTaskExecutor through the WebMvc config.
+backend-1  | -------------------------------
+backend-1  | !!!
+backend-1  | 2026-06-28T06:50:51.612Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.a.s.AiResponseStreamParser       : TOKEN USAGE FOUND: Prompt Tokens: 185, Completion Tokens: 2387, Total Tokens: 2572
+backend-1  | 2026-06-28T06:50:51.613Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_MINI(modelName=gpt-5-mini, inputPricePerMillionTokens=0.25, cachedInputPricePerMillionTokens=0.025, outputPricePerMillionTokens=2.0)
+backend-1  | 2026-06-28T06:50:51.707Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.service.PricingService           : For recordingId: 6a40c3eb58ebc72df27abd9b, the total cost is 0.0063
+backend-1  | 2026-06-28T06:50:51.806Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : Transaction created: ID=6a40c44b58ebc72df27abd9e
+backend-1  | 2026-06-28T06:50:51.807Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0063
+backend-1  | 2026-06-28T06:50:51.902Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : User balance updated? true: userID=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-06-28T06:50:51.910Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.a.s.AiInteractionDeduplicator    : Saving 3 interactions to session b834e1d8-4fd9-46d3-9825-ad9c373e4555 of recording 6a40c3eb58ebc72df27abd9b
