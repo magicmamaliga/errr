@@ -1,197 +1,37 @@
-1457 INFO: Initializing module graph hook caches...
-1479 INFO: Analyzing modules for base_library.zip ...
-3328 INFO: Processing standard module hook 'hook-encodings.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-4189 INFO: Processing standard module hook 'hook-heapq.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-5187 INFO: Processing standard module hook 'hook-pickle.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-6658 INFO: Caching module dependency graph...
-6692 INFO: Analyzing C:\Users\Mate\Desktop\Project\lifehelper\local-server\lifehelper.py
-6835 INFO: Processing standard module hook 'hook-platform.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:300: SyntaxWarning: invalid escape sequence '\('
-  m = re.match('([su]([0-9]{1,2})p?) \(([0-9]{1,2}) bit\)$', token)
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:301: SyntaxWarning: invalid escape sequence '\('
-  m2 = re.match('([su]([0-9]{1,2})p?)( \(default\))?$', token)
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:310: SyntaxWarning: invalid escape sequence '\('
-  elif re.match('(flt)p?( \(default\))?$', token):
-C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\pydub\utils.py:314: SyntaxWarning: invalid escape sequence '\('
-  elif re.match('(dbl)p?( \(default\))?$', token):
-6912 INFO: Processing standard module hook 'hook-_ctypes.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-7005 INFO: Processing standard module hook 'hook-numpy.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-7571 INFO: Processing standard module hook 'hook-difflib.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-7793 INFO: Processing standard module hook 'hook-multiprocessing.util.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-7931 INFO: Processing standard module hook 'hook-xml.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-8960 INFO: Processing standard module hook 'hook-sysconfig.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks'
-9522 INFO: Processing standard module hook 'hook-psutil.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-10288 INFO: Processing pre-safe-import-module hook 'hook-typing_extensions.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\PyInstaller\\hooks\\pre_safe_import_module'
-10294 INFO: SetuptoolsInfo: initializing cached setuptools info...
-11779 INFO: Processing standard module hook 'hook-charset_normalizer.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-12104 INFO: Processing standard module hook 'hook-webrtcvad.py' from 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Python\\Python312\\Lib\\site-packages\\_pyinstaller_hooks_contrib\\stdhooks'
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\importlib\metadata\__init__.py", line 397, in from_name
-    return next(cls.discover(name=name))
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-StopIteration
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\imphook.py", line 422, in _load_hook_module
-    self._hook_module = importlib_load_source(self.hook_module_name, self.hook_filename)
-                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\compat.py", line 566, in importlib_load_source
-    mod_loader.exec_module(mod)
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pyinstaller_hooks_contrib\stdhooks\hook-webrtcvad.py", line 15, in <module>
-    datas = copy_metadata('webrtcvad')
-            ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\utils\hooks\__init__.py", line 974, in copy_metadata
-    dist = importlib_metadata.distribution(package_name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\importlib\metadata\__init__.py", line 862, in distribution
-    return Distribution.from_name(distribution_name)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\importlib\metadata\__init__.py", line 399, in from_name
-    raise PackageNotFoundError(name)
-importlib.metadata.PackageNotFoundError: No package metadata was found for webrtcvad
-
-During handling of the above exception, another exception occurred:
-
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\__main__.py", line 321, in <module>
-    run()
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\__main__.py", line 215, in run
-    run_build(pyi_config, spec_file, **vars(args))
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\__main__.py", line 70, in run_build
-    PyInstaller.building.build_main.main(pyi_config, spec_file, **kwargs)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\building\build_main.py", line 1275, in main
-    build(specfile, distpath, workpath, clean_build)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\building\build_main.py", line 1213, in build
-    exec(code, spec_namespace)
-  File "lifehelper.spec", line 77, in <module>
-    a = Analysis(
-        ^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\building\build_main.py", line 584, in __init__
-    self.__postinit__()
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\building\datastruct.py", line 184, in __postinit__
-    self.assemble()
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\building\build_main.py", line 716, in assemble
-    program_scripts.append(self.graph.add_script(script))
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 283, in add_script
-    self._top_script_node = super().add_script(pathname)
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1194, in add_script
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
-    ret_modules = super()._safe_import_hook(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2103, in _safe_import_hook
-    target_modules = self.import_hook(
-                     ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1279, in import_hook
-    submodule = self._safe_import_module(head, mname, submodule)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
-    return super()._safe_import_module(module_basename, module_name, parent_package)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
-    ret_modules = super()._safe_import_hook(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2312, in _safe_import_hook
-    self.import_hook(
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1305, in import_hook
-    for target_submodule in self._import_importable_package_submodules(
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1554, in _import_importable_package_submodules
-    submodule = self._safe_import_module(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
-    return super()._safe_import_module(module_basename, module_name, parent_package)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
-    ret_modules = super()._safe_import_hook(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2312, in _safe_import_hook
-    self.import_hook(
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1305, in import_hook
-    for target_submodule in self._import_importable_package_submodules(
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1554, in _import_importable_package_submodules
-    submodule = self._safe_import_module(
-                ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
-    return super()._safe_import_module(module_basename, module_name, parent_package)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
-    ret_modules = super()._safe_import_hook(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2103, in _safe_import_hook
-    target_modules = self.import_hook(
-                     ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1266, in import_hook
-    target_package, target_module_partname = self._find_head_package(
-                                             ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1445, in _find_head_package
-    target_package = self._safe_import_module(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
-    return super()._safe_import_module(module_basename, module_name, parent_package)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 477, in _safe_import_hook
-    ret_modules = super()._safe_import_hook(
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2103, in _safe_import_hook
-    target_modules = self.import_hook(
-                     ^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1266, in import_hook
-    target_package, target_module_partname = self._find_head_package(
-                                             ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1445, in _find_head_package
-    target_package = self._safe_import_module(
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 539, in _safe_import_module
-    return super()._safe_import_module(module_basename, module_name, parent_package)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 1826, in _safe_import_module
-    self._process_imports(n)
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\lib\modulegraph\modulegraph.py", line 2654, in _process_imports
-    target_modules = self._safe_import_hook(*import_info, **kwargs)
-                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 385, in _safe_import_hook
-    excluded_imports = self._find_all_excluded_imports(source_module.identifier)
-                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\analysis.py", line 373, in _find_all_excluded_imports
-    excluded_imports.update(module_hook.excludedimports)
-                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\imphook.py", line 343, in __getattr__
-    self._load_hook_module()
-  File "C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\PyInstaller\depend\imphook.py", line 425, in _load_hook_module
-    raise ImportErrorWhenRunningHook(self.hook_module_name, self.hook_filename)
-PyInstaller.exceptions.ImportErrorWhenRunningHook: ERROR: Failed to import module __PyInstaller_hooks_0_webrtcvad required by hook for module C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pyinstaller_hooks_contrib\stdhooks\hook-webrtcvad.py. Please check whether module __PyInstaller_hooks_0_webrtcvad actually exists and whether the hook is compatible with your version of C:\Users\Mate\AppData\Local\Programs\Python\Python312\Lib\site-packages\_pyinstaller_hooks_contrib\stdhooks\hook-webrtcvad.py: You might want to read more about hooks in the manual and provide a pull-request to improve PyInstaller.
-PyInstaller build failed!
-ERROR: Build failed!
+2026-06-29 19:46:46 [INFO] server.audio.end_of_call_prompt: End-of-call prompt for 6a42bd39cff41dc7b7336d6d -> save
+2026-06-29 19:46:48 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.5s ago speaker_last_speech=86.9s ago speaker_sustained=86.9s ago speaker_trigger(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:57760 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+2026-06-29 19:46:49 [INFO] server.audio.call_detector: Call detector stopped.
+INFO:     127.0.0.1:57761 - "PUT /api/settings HTTP/1.1" 200 OK
+2026-06-29 19:46:50 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+INFO:     127.0.0.1:57762 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57763 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57764 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57765 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57766 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57777 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57781 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57790 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57795 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57798 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57803 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51599 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51603 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51606 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51608 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51125 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51131 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51133 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51136 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51141 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51143 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51146 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51150 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 19:53:00 [WARNING] server.audio.capture: Microphone stream lost device mid-read (PortAudio errno=-9999): [Errno -9999] Unanticipated host error; closing stream and routing through device recovery
+2026-06-29 19:53:00 [INFO] server.audio.capture: Opening mic stream (device 20) at 16000Hz
+2026-06-29 19:53:00 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9992] Insufficient memory
+2026-06-29 19:53:00 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
+2026-06-29 19:53:00 [INFO] server.audio.thread_starter: Microphone selection: index=14 name='Microphone Array (IntelÂ® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
+2026-06-29 19:53:00 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=14)
+2026-06-29 19:53:00 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-29 19:53:00 [INFO] server.audio.capture: Opening loopback stream (device 22) at 44100Hz
