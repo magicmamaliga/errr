@@ -1,5 +1,83 @@
-INFO:     127.0.0.1:53759 - "POST /api/recordings/6a40c60c58ebc72df27abda0/transcribe-locally HTTP/1.1" 200 OK
-2026-06-28 08:02:30 [ERROR] server.routes.upload: [local-deferred] local transcription failed for 6a40c60c58ebc72df27abda0: module 'server.utils.proc' has no attribute 'no_windows_kwargs'
-INFO:     127.0.0.1:53769 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:53771 - "POST /api/recordings/6a40c60c58ebc72df27abda0/transcribe-locally HTTP/1.1" 200 OK
-2026-06-28 08:03:01 [ERROR] server.routes.upload: [local-deferred] local transcription failed for 6a40c60c58ebc72df27abda0: module 'server.utils.proc' has no attribute 'no_windows_kwargs'
+026-06-29 06:07:31 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
+2026-06-29 06:07:31 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-29 06:07:31 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-06-29 06:07:32 [INFO] server.services.recordings: Recording created with ID: 6a41fd9513a8bcdd20b01cad
+2026-06-29 06:07:32 [INFO] server.audio.thread_starter: Recording session started with ID: 6a41fd9513a8bcdd20b01cad (transcribe=True)
+2026-06-29 06:07:32 [INFO] server.audio.thread_starter: Pre-roll skipped (one channel empty): speaker=0.00s mic=25.30s
+2026-06-29 06:07:32 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a41fd9513a8bcdd20b01cad at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-29 06:07:32 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:56336 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56338 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56339 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:07:36 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
+INFO:     127.0.0.1:56341 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:07:36 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-29 06:07:36 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56342 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:07:39 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=8.0s ago mic_sustained=0.0s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a41fd9513a8bcdd20b01cad
+INFO:     127.0.0.1:56343 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56344 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56346 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56347 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56348 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56349 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56350 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56351 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56352 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56353 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56354 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56355 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56356 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56357 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56358 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56359 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56360 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56361 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56362 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56363 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:08:07 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=3 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
+2026-06-29 06:08:07 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
+2026-06-29 06:08:07 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
+INFO:     127.0.0.1:56364 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56366 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:08:09 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=1.3s ago speaker_last_speech=38.2s ago mic_sustained=1.3s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a41fd9513a8bcdd20b01cad
+INFO:     127.0.0.1:56367 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56368 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56370 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56371 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56372 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56373 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56374 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56376 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:08:21 [INFO] lifehelper.main: Stopping session...
+INFO:     127.0.0.1:56380 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56381 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56382 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56383 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56384 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56385 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56386 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 06:08:31 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a41fd9513a8bcdd20b01cad)
+INFO:     127.0.0.1:56387 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56388 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 06:08:34 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (774189 bytes MP3) for 6a41fd9513a8bcdd20b01cad
+2026-06-29 06:08:37 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
+2026-06-29 06:08:37 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a41fd9513a8bcdd20b01cad
+2026-06-29 06:08:37 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-29 06:08:37 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
+INFO:     127.0.0.1:56378 - "POST /session/stop HTTP/1.1" 200 OK
+2026-06-29 06:08:39 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=3.5s ago speaker_last_speech=68.4s ago mic_sustained=17.5s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:56394 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56396 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 06:09:22 [INFO] server.audio.call_detector: User declined call-record prompt
+2026-06-29 06:09:24 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.7s ago speaker_last_speech=16.1s ago mic_sustained=0.7s ago speaker_sustained=16.1s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55210 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55214 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 06:09:54 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=46.2s ago mic_sustained=0.0s ago speaker_sustained=46.2s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55216 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 06:10:25 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.3s ago speaker_last_speech=0.7s ago mic_sustained=0.3s ago speaker_sustained=0.7s ago both_sustained(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+2026-06-29 06:10:29 [INFO] server.audio.call_detector: User declined call-record prompt
+2026-06-29 06:10:31 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.6s ago speaker_last_speech=7.3s ago mic_sustained=0.6s ago speaker_sustained=7.3s ago both_sustained(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55220 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55226 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 06:11:01 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=1.2s ago speaker_last_speech=37.5s ago mic_sustained=1.2s ago speaker_sustained=37.5s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
