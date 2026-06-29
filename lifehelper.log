@@ -1,37 +1,56 @@
-2026-06-29 19:46:46 [INFO] server.audio.end_of_call_prompt: End-of-call prompt for 6a42bd39cff41dc7b7336d6d -> save
-2026-06-29 19:46:48 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.5s ago speaker_last_speech=86.9s ago speaker_sustained=86.9s ago speaker_trigger(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:57760 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-06-29 19:46:49 [INFO] server.audio.call_detector: Call detector stopped.
-INFO:     127.0.0.1:57761 - "PUT /api/settings HTTP/1.1" 200 OK
-2026-06-29 19:46:50 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
-INFO:     127.0.0.1:57762 - "GET /session/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57763 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57764 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57765 - "GET /session/status HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57766 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57777 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57781 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57790 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57795 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57798 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:57803 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51599 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51603 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51606 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51608 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51125 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51131 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51133 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51136 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51141 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51143 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51146 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:51150 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 19:53:00 [WARNING] server.audio.capture: Microphone stream lost device mid-read (PortAudio errno=-9999): [Errno -9999] Unanticipated host error; closing stream and routing through device recovery
-2026-06-29 19:53:00 [INFO] server.audio.capture: Opening mic stream (device 20) at 16000Hz
-2026-06-29 19:53:00 [ERROR] server.audio.capture: Failed to open mic stream (attempt 5): [Errno -9992] Insufficient memory
-2026-06-29 19:53:00 [WARNING] server.audio.capture: Microphone device appears unavailable - attempting fallback to the current system default...
-2026-06-29 19:53:00 [INFO] server.audio.thread_starter: Microphone selection: index=14 name='Microphone Array (IntelÂ® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
-2026-06-29 19:53:00 [INFO] server.audio.thread_starter: [microphone] Recovered to new default device (index=14)
-2026-06-29 19:53:00 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-29 19:53:00 [INFO] server.audio.capture: Opening loopback stream (device 22) at 44100Hz
+2026-06-29 19:38:31 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-06-29 19:38:33 [INFO] server.services.recordings: Recording created with ID: 6a42bba9cff41dc7b7336d6a
+2026-06-29 19:38:33 [INFO] server.audio.thread_starter: Recording session started with ID: 6a42bba9cff41dc7b7336d6a (transcribe=True)
+2026-06-29 19:38:33 [INFO] server.audio.thread_starter: Pre-roll injected: speaker=10.7s mic=17.9s (WAV 17.9s, transcribe 17.9s)
+2026-06-29 19:38:33 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a42bba9cff41dc7b7336d6a at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-06-29 19:38:33 [INFO] lifehelper.main: Session started.
+INFO:     127.0.0.1:59934 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59936 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59937 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59939 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59941 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59942 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59946 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59947 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59949 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59951 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59953 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59954 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 19:38:48 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
+2026-06-29 19:38:49 [INFO] server.audio.capture: Opening mic stream (device 20) at 16000Hz
+2026-06-29 19:38:49 [INFO] server.audio.capture: Opening loopback stream (device 22) at 44100Hz
+INFO:     127.0.0.1:59955 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59956 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59957 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59958 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59959 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59960 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59961 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59962 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59963 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59964 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59966 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59967 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59969 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59970 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59971 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59972 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59973 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59974 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 19:39:14 [INFO] lifehelper.main: Stopping session...
+INFO:     127.0.0.1:59977 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59978 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59979 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 19:39:19 [INFO] server.audio.capture: Opening mic stream (device 20) at 16000Hz
+2026-06-29 19:39:19 [INFO] server.audio.capture: Opening loopback stream (device 22) at 44100Hz
+INFO:     127.0.0.1:59980 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59981 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59982 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59983 - "GET /api/live HTTP/1.1" 200 OK
+2026-06-29 19:39:24 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a42bba9cff41dc7b7336d6a)
+INFO:     127.0.0.1:59987 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59988 - "GET /api/ HTTP/1.1" 200 OK
+2026-06-29 19:39:28 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (943533 bytes MP3) for 6a42bba9cff41dc7b7336d6a
+2026-06-29 19:39:30 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a42bba9cff41dc7b7336d6a
+2026-06-29 19:39:30 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-06-29 19:39:30 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
