@@ -1,83 +1,13 @@
-026-06-29 06:07:31 [INFO] lifehelper.main: Starting new session with group: Default group, language: en
-2026-06-29 06:07:31 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-29 06:07:31 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
-2026-06-29 06:07:32 [INFO] server.services.recordings: Recording created with ID: 6a41fd9513a8bcdd20b01cad
-2026-06-29 06:07:32 [INFO] server.audio.thread_starter: Recording session started with ID: 6a41fd9513a8bcdd20b01cad (transcribe=True)
-2026-06-29 06:07:32 [INFO] server.audio.thread_starter: Pre-roll skipped (one channel empty): speaker=0.00s mic=25.30s
-2026-06-29 06:07:32 [INFO] server.services.live_uploader: [live_uploader] Started for recording 6a41fd9513a8bcdd20b01cad at 16000 Hz (interval=60s, codec=mp3@128k)
-2026-06-29 06:07:32 [INFO] lifehelper.main: Session started.
-INFO:     127.0.0.1:56336 - "POST /session/start HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56338 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56339 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:07:36 [INFO] server.audio.default_watcher: [default-watcher] recording session detected; watcher is now actively chasing Windows default changes
-INFO:     127.0.0.1:56341 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:07:36 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-29 06:07:36 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:56342 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:07:39 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=8.0s ago mic_sustained=0.0s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a41fd9513a8bcdd20b01cad
-INFO:     127.0.0.1:56343 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56344 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56346 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56347 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56348 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56349 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56350 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56351 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56352 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56353 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56354 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56355 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56356 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56357 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56358 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56359 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56360 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56361 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56362 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56363 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:08:07 [INFO] server.audio.default_watcher: [default-watcher] heartbeat tick=3 mic: current='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' default='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' follow=True | loopback: current='Speakers (Realtek(R) Audio) [Loopback]' default='Speakers (Realtek(R) Audio) [Loopback]' follow=True
-2026-06-29 06:08:07 [INFO] server.audio.capture: Opening mic stream (device 14) at 48000Hz
-2026-06-29 06:08:07 [INFO] server.audio.capture: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:56364 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56366 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:08:09 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=1.3s ago speaker_last_speech=38.2s ago mic_sustained=1.3s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=6a41fd9513a8bcdd20b01cad
-INFO:     127.0.0.1:56367 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56368 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56370 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56371 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56372 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56373 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56374 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56376 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:08:21 [INFO] lifehelper.main: Stopping session...
-INFO:     127.0.0.1:56380 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56381 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56382 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56383 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56384 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56385 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56386 - "GET /api/live HTTP/1.1" 200 OK
-2026-06-29 06:08:31 [INFO] server.services.live_uploader: [live_uploader] Thread exiting (rec=6a41fd9513a8bcdd20b01cad)
-INFO:     127.0.0.1:56387 - "GET /api/live HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56388 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 06:08:34 [INFO] server.services.live_uploader: [live_uploader] Uploaded seq=0 (774189 bytes MP3) for 6a41fd9513a8bcdd20b01cad
-2026-06-29 06:08:37 [INFO] server.audio.default_watcher: [default-watcher] recording session ended; watcher idling (no PA probes until next session)
-2026-06-29 06:08:37 [INFO] server.services.live_uploader: [live_uploader] Finalised recording 6a41fd9513a8bcdd20b01cad
-2026-06-29 06:08:37 [INFO] server.audio.finalize_session: Session stopped - clearing in-memory buffers (live uploader owns persistence).
-2026-06-29 06:08:37 [INFO] lifehelper.main: Session stopped. Server stays alive for new sessions and background diarization.
-INFO:     127.0.0.1:56378 - "POST /session/stop HTTP/1.1" 200 OK
-2026-06-29 06:08:39 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=3.5s ago speaker_last_speech=68.4s ago mic_sustained=17.5s ago speaker_sustained=never both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:56394 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:56396 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 06:09:22 [INFO] server.audio.call_detector: User declined call-record prompt
-2026-06-29 06:09:24 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.7s ago speaker_last_speech=16.1s ago mic_sustained=0.7s ago speaker_sustained=16.1s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:55210 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55214 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 06:09:54 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=46.2s ago mic_sustained=0.0s ago speaker_sustained=46.2s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:55216 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 06:10:25 [INFO] server.audio.call_detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.3s ago speaker_last_speech=0.7s ago mic_sustained=0.3s ago speaker_sustained=0.7s ago both_sustained(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
-2026-06-29 06:10:29 [INFO] server.audio.call_detector: User declined call-record prompt
-2026-06-29 06:10:31 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.6s ago speaker_last_speech=7.3s ago mic_sustained=0.6s ago speaker_sustained=7.3s ago both_sustained(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
-INFO:     127.0.0.1:55220 - "GET /api/ HTTP/1.1" 200 OK
-INFO:     127.0.0.1:55226 - "GET /api/ HTTP/1.1" 200 OK
-2026-06-29 06:11:01 [INFO] server.audio.call_detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=1.2s ago speaker_last_speech=37.5s ago mic_sustained=1.2s ago speaker_sustained=37.5s ago both_sustained(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+backend-1  | 2026-06-29T07:51:48.203Z  INFO 1 --- [backend] [mcat-handler-16] .m.b.r.a.DeferredTranscriptionController : Deferred transcription request for recording 6a421482e6f08a70eb7da79f by t***@gmail.com - flipping mode from ai to ai (force=true)
+backend-1  | 2026-06-29T07:51:48.550Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a421482e6f08a70eb7da79f]
+backend-1  | 2026-06-29T07:51:48.653Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : No transcript found for recording 6a421482e6f08a70eb7da79f - attempting AI transcription from audio
+backend-1  | 2026-06-29T07:51:48.655Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering findById for userId 6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-06-29T07:51:48.742Z  INFO 1 --- [backend] [mcat-handler-17] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a421482e6f08a70eb7da79f
+backend-1  | 2026-06-29T07:51:54.701Z  INFO 1 --- [backend] [mcat-handler-20] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a421482e6f08a70eb7da79f
+backend-1  | 2026-06-29T07:51:58.514Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=english, duration=155.66, text=fifth of fifth th fifth th if if okay yeah that's in milliamps okay yeah right there ma in the parentheses so the affected sensor that has the code is pulling 20 million in this recording i'm doing something the other one behind that one making 566 right so during during my speech all the way in the back that's pulling 844 the one speaker is on the left hand side pulling over the youtube video is going so i should hear everything i should see my transcribed voice okay moving on the the recording, segments=null, words=[Word[word=fifth, start=61.28, end=62.68], Word[word=of, start=68.52, end=69.22], Word[word=fifth, start=70.98, end=72.38], Word[word=th, start=72.38, end=74.5], Word[word=fifth, start=76.9, end=78.3], Word[word=th, start=78.3, end=78.32], Word[word=if, start=88.5, end=89.9], Word[word=if, start=117.4, end=118.8], Word[word=okay, start=120.8, end=121.48], Word[word=yeah, start=121.48, end=121.82], Word[word=that's, start=121.82, end=121.88], Word[word=in, start=121.88, end=122.28], Word[word=milliamps, start=122.28, end=122.52], Word[word=okay, start=122.52, end=122.82], Word[word=yeah, start=122.82, end=123.04], Word[word=right, start=123.04, end=123.12], Word[word=there, start=123.12, end=123.38], Word[word=ma, start=123.38, end=123.78], Word[word=in, start=123.78, end=124.5], Word[word=the, start=124.5, end=124.5], Word[word=parentheses, start=124.5, end=124.5], Word[word=so, start=124.5, end=124.88], Word[word=the, start=124.88, end=125.38], Word[word=affected, start=125.38, end=125.86], Word[word=sensor, start=125.86, end=126.22], Word[word=that, start=126.22, end=126.42], Word[word=has, start=126.42, end=126.6], Word[word=the, start=126.6, end=126.82], Word[word=code, start=126.82, end=127.06], Word[word=is, start=127.06, end=127.22], Word[word=pulling, start=127.22, end=127.42], Word[word=20, start=127.42, end=127.76], Word[word=million, start=127.76, end=128.0], Word[word=in, start=128.0, end=128.22], Word[word=this, start=128.22, end=128.36], Word[word=recording, start=128.36, end=129.0], Word[word=i'm, start=129.0, end=129.3], Word[word=doing, start=129.3, end=129.68], Word[word=something, start=129.68, end=129.96], Word[word=the, start=129.96, end=130.64], Word[word=other, start=130.64, end=130.64], Word[word=one, start=130.64, end=130.74], Word[word=behind, start=131.0, end=131.68], Word[word=that, start=131.68, end=132.36], Word[word=one, start=132.36, end=132.36], Word[word=making, start=132.36, end=132.86], Word[word=566, start=132.86, end=133.82], Word[word=right, start=133.82, end=134.8], Word[word=so, start=134.8, end=135.24], Word[word=during, start=135.24, end=135.92], Word[word=during, start=135.92, end=136.8], Word[word=my, start=136.8, end=137.22], Word[word=speech, start=137.22, end=137.74], Word[word=all, start=137.74, end=137.88], Word[word=the, start=137.88, end=138.0], Word[word=way, start=138.0, end=138.08], Word[word=in, start=138.08, end=138.18], Word[word=the, start=138.18, end=138.34], Word[word=back, start=138.34, end=138.7], Word[word=that's, start=138.7, end=138.88], Word[word=pulling, start=138.88, end=139.1], Word[word=844, start=139.1, end=139.68], Word[word=the, start=139.68, end=140.24], Word[word=one, start=140.24, end=140.68], Word[word=speaker, start=140.68, end=141.26], Word[word=is, start=141.26, end=141.7], Word[word=on, start=141.7, end=141.74], Word[word=the, start=141.74, end=141.9], Word[word=left, start=141.9, end=142.22], Word[word=hand, start=142.22, end=142.46], Word[word=side, start=142.46, end=142.8], Word[word=pulling, start=142.8, end=143.46], Word[word=over, start=143.46, end=143.64], Word[word=the, start=143.64, end=144.04], Word[word=youtube, start=144.04, end=144.18], Word[word=video, start=144.18, end=144.56], Word[word=is, start=144.56, end=144.8], Word[word=going, start=144.8, end=145.3], Word[word=so, start=145.3, end=145.7], Word[word=i, start=145.7, end=146.0], Word[word=should, start=146.0, end=146.14], Word[word=hear, start=146.14, end=146.78], Word[word=everything, start=146.78, end=147.52], Word[word=i, start=147.52, end=147.8], Word[word=should, start=147.8, end=148.16], Word[word=see, start=148.16, end=148.76], Word[word=my, start=148.76, end=149.1], Word[word=transcribed, start=149.1, end=149.8], Word[word=voice, start=149.8, end=150.7], Word[word=okay, start=150.7, end=151.04], Word[word=moving, start=151.04, end=151.32], Word[word=on, start=151.32, end=151.78], Word[word=the, start=151.78, end=152.94], Word[word=the, start=152.94, end=154.3], Word[word=recording, start=154.3, end=154.74]]
+backend-1  | 2026-06-29T07:51:58.518Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Aligning 95 punctuated tokens to 95 word entries
+backend-1  | 2026-06-29T07:51:58.520Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Alignment succeeded: 95 tokens mapped to 95 words
+backend-1  | 2026-06-29T07:51:58.521Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.020236
+backend-1  | 2026-06-29T07:51:58.624Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user t***@gmail.com (cost: $0.020236, text length: 500 chars, chunks: 7)
+backend-1  | 2026-06-29T07:51:59.036Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.ChannelEnergyAttributor      : Channel-energy attribution for session_audio.mp3: tagged 7 chunks (speaker=0, mic=7)
+backend-1  | 2026-06-29T07:51:59.161Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : Auto-transcription complete for recording 6a421482e6f08a70eb7da79f: 500 chars, 7 chunks
