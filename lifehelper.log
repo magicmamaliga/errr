@@ -1,8 +1,14 @@
+backend-1  | 2026-07-16T19:12:23.281Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=hungarian, duration=40.28, text=... sjakkor én bekerültem most egy 50 pár napjaire a helyre a, segments=null, words=[Word[word=, start=3.92, end=4.72], Word[word=sjakkor, start=24.26, end=25.06], Word[word=én, start=25.06, end=25.06], Word[word=bekerültem, start=25.06, end=26.1], Word[word=most, start=27.4, end=28.2], Word[word=egy, start=28.2, end=28.4], Word[word=50, start=28.4, end=28.8], Word[word=pár, start=28.8, end=29.1], Word[word=napjaire, start=29.1, end=29.5], Word[word=a, start=29.5, end=29.6], Word[word=helyre, start=29.6, end=29.8], Word[word=a, start=29.8, end=30.6]]
+backend-1  | 2026-07-16T19:12:23.290Z  INFO 1 --- [backend] [        async-1] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.005236
+backend-1  | 2026-07-16T19:12:23.395Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user t***@gmail.com (cost: $0.005236, text length: 61 chars, chunks: 1)
+backend-1  | 2026-07-16T19:12:24.742Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=english, duration=40.28, text=None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. So I've been introduced to this place about 50 days ago., segments=null, words=[Word[word=None, start=0.0, end=1.92], Word[word=could, start=1.92, end=2.48], Word[word=stand, start=2.48, end=3.38], Word[word=for, start=3.38, end=4.44], Word[word=the, start=4.44, end=5.28], Word[word=Lord, start=5.28, end=5.66], Word[word=none, start=7.86, end=8.22], Word[word=could, start=8.22, end=8.52], Word[word=stand, start=8.52, end=8.74], Word[word=for, start=8.74, end=8.98], Word[word=the, start=8.98, end=9.58], Word[word=Lord, start=9.58, end=9.58], Word[word=here, start=10.98, end=11.36], Word[word=on, start=11.36, end=12.02], Word[word=it, start=12.02, end=12.34], Word[word=is, start=12.34, end=12.58], Word[word=the, start=12.58, end=13.24], Word[word=hell, start=13.24, end=13.38], Word[word=walker, start=13.38, end=14.06], Word[word=So, start=31.42, end=32.58], Word[word=I've, start=32.58, end=33.72], Word[word=been, start=33.72, end=33.8], Word[word=introduced, start=33.8, end=34.44], Word[word=to, start=34.44, end=34.62], Word[word=this, start=34.62, end=34.94], Word[word=place, start=34.94, end=35.46], Word[word=about, start=35.46, end=36.66], Word[word=50, start=36.66, end=37.94], Word[word=days, start=37.94, end=38.68], Word[word=ago, start=38.68, end=39.08]]
+
+
 {
   "_id": {
     "$oid": "6a57414d69c4c5da78b269e4"
   },
-  "title": "Introduced to This Place 50 Days Ago",
+  "title": "Introduced to this place about 50 days ago",
   "userId": "6a2fa5b7b7709d6e5e612eca",
   "group": "Default group",
   "recordingType": "LIVE_RECORDING",
@@ -11,9 +17,9 @@
   "aiTitle": true,
   "audioUrl": "6a57414d69c4c5da78b269e4_audio.mp3",
   "originalAudioFileName": "session_audio.mp3",
-  "transcript": "None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. Feliratozottrész és amikor én bekerültem So I've been introduced to this place about 50 days ago.",
+  "transcript": "None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. So I've been introduced to this place about 50 days ago. ... sjakkor én bekerültem most egy 50 pár napjaire a helyre a",
   "uploadedAt": {
-    "$date": "2026-07-16T17:50:48.238Z"
+    "$date": "2026-07-16T19:12:44.818Z"
   },
   "createdAt": {
     "$date": "2026-07-15T08:14:05.144Z"
@@ -29,8 +35,8 @@
   "transcriptChunks": [
     {
       "start": 0,
-      "end": 5.659999847412109,
-      "text": "None could stand for the Lord,",
+      "end": 39.08000183105469,
+      "text": "None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. So I've been introduced to this place about 50 days ago.",
       "words": [
         {
           "start": 0,
@@ -61,15 +67,7 @@
           "start": 5.28000020980835,
           "end": 5.659999847412109,
           "text": "Lord"
-        }
-      ],
-      "source": "mic"
-    },
-    {
-      "start": 7.860000133514404,
-      "end": 9.579999923706055,
-      "text": "none could stand for the Lord,",
-      "words": [
+        },
         {
           "start": 7.860000133514404,
           "end": 8.220000267028809,
@@ -99,15 +97,7 @@
           "start": 9.579999923706055,
           "end": 9.579999923706055,
           "text": "Lord"
-        }
-      ],
-      "source": "mic"
-    },
-    {
-      "start": 10.979999542236328,
-      "end": 14.0600004196167,
-      "text": "here on it is the hell walker.",
-      "words": [
+        },
         {
           "start": 10.979999542236328,
           "end": 11.359999656677246,
@@ -142,48 +132,7 @@
           "start": 13.380000114440918,
           "end": 14.0600004196167,
           "text": "walker"
-        }
-      ],
-      "source": "mic"
-    },
-    {
-      "start": 23.65999984741211,
-      "end": 26.239999771118164,
-      "text": "Feliratozottrész és amikor én bekerültem",
-      "words": [
-        {
-          "start": 23.65999984741211,
-          "end": 25.059999465942383,
-          "text": "Feliratozottrész"
         },
-        {
-          "start": 25.059999465942383,
-          "end": 25.059999465942383,
-          "text": "és"
-        },
-        {
-          "start": 25.059999465942383,
-          "end": 25.059999465942383,
-          "text": "amikor"
-        },
-        {
-          "start": 25.059999465942383,
-          "end": 25.139999389648438,
-          "text": "én"
-        },
-        {
-          "start": 25.139999389648438,
-          "end": 26.239999771118164,
-          "text": "bekerültem"
-        }
-      ],
-      "source": "speaker"
-    },
-    {
-      "start": 31.420000076293945,
-      "end": 39.08000183105469,
-      "text": "So I've been introduced to this place about 50 days ago.",
-      "words": [
         {
           "start": 31.420000076293945,
           "end": 32.58000183105469,
@@ -241,29 +190,73 @@
         }
       ],
       "source": "mic"
+    },
+    {
+      "start": 24.260000228881836,
+      "end": 30.600000381469727,
+      "text": "... sjakkor én bekerültem most egy 50 pár napjaire a helyre a",
+      "words": [
+        {
+          "start": 24.260000228881836,
+          "end": 25.059999465942383,
+          "text": "sjakkor"
+        },
+        {
+          "start": 25.059999465942383,
+          "end": 25.059999465942383,
+          "text": "én"
+        },
+        {
+          "start": 25.059999465942383,
+          "end": 26.100000381469727,
+          "text": "bekerültem"
+        },
+        {
+          "start": 27.399999618530273,
+          "end": 28.200000762939453,
+          "text": "most"
+        },
+        {
+          "start": 28.200000762939453,
+          "end": 28.399999618530273,
+          "text": "egy"
+        },
+        {
+          "start": 28.399999618530273,
+          "end": 28.799999237060547,
+          "text": "50"
+        },
+        {
+          "start": 28.799999237060547,
+          "end": 29.100000381469727,
+          "text": "pár"
+        },
+        {
+          "start": 29.100000381469727,
+          "end": 29.5,
+          "text": "napjaire"
+        },
+        {
+          "start": 29.5,
+          "end": 29.600000381469727,
+          "text": "a"
+        },
+        {
+          "start": 29.600000381469727,
+          "end": 29.799999237060547,
+          "text": "helyre"
+        },
+        {
+          "start": 29.799999237060547,
+          "end": 30.600000381469727,
+          "text": "a"
+        }
+      ],
+      "source": "speaker"
     }
   ],
   "diarizationStatus": "NONE",
   "diarizationPreserveManual": false,
   "_class": "uk.magicmamaliga.backend.record.model.Recording",
-  "summary": "**Summary**\n\n- **Main topics**\n  - Opening religious line: “None could stand for the Lord, none could stand for the Lord,” followed by a reference to a “hell walker.”\n  - Bilingual note: Hungarian segment “Feliratozottrész és amikor én bekerültem,” indicating a captioned portion and the speaker’s entry.\n  - Personal timeline: “So I’ve been introduced to this place about 50 days ago.”\n\n- **Key points**\n  - The speaker asserts a stance or challenge related to standing before the Lord, tied to the “hell walker” mention.\n  - There is a mention of captions or subtitles and a description of the speaker entering the place.\n\n- **Context / speaker attribution**\n  - All points appear to be from a single speaker (no distinct dialogue turns identified).\n\n- **Decisions / next steps**\n  - No explicit decisions or actions stated. The speaker notes a personal introduction to the place roughly 50 days ago."
+  "summary": "**Summary**\n\n- Main topics\n  - Refrain: “None could stand for the Lord” (repeated), suggesting a religious or representational theme.\n  - Self-identification or description as a “hell walker” referenced in the line “here on it is the hell walker.”\n  - Arrival: the speaker says they were introduced to the place about 50 days ago.\n  - Hungarian note echoes the same timeline: “then I entered this place about 50 days ago.”\n\n- Key points / conclusions\n  - The speaker is positioning themselves as recently arrived to a particular place (about 50 days).\n  - No explicit actions or decisions are stated; mainly descriptive statements and identity cues (hell walker, standing for the Lord).\n\n- Language notes\n  - The transcript mixes English with Hungarian; the Hungarian portion reinforces the timeline (~50 days ago).\n\n- Notable attributions\n  - No distinct second speaker identified; if present, no clear dialogue cues to separate voices."
 }
-
-
-ckend-1  | 2026-07-16T17:50:10.428Z  INFO 1 --- [backend] [mcat-handler-16] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a57414d69c4c5da78b269e4
-backend-1  | 2026-07-16T17:50:11.180Z  WARN 1 --- [backend] [        async-1] u.m.b.r.service.storage.AudioTranscoder  : ffmpeg exited rc=222 args=[-hide_banner, -nostdin, -i, /tmp/lh_vad_in_3034343473979805362.mp3, -af, silencedetect=noise=-35:d=2.0, -f, null, -] stderr=Input #0, mp3, from '/tmp/lh_vad_in_3034343473979805362.mp3':
-backend-1  |   Metadata:
-backend-1  |     encoder         : Lavf62.3.100
-backend-1  |   Duration: 00:00:40.28, start: 0.069063, bitrate: 64 kb/s
-backend-1  |   Stream #0:0: Audio: mp3 (mp3float), 16000 Hz, mono, fltp, 64 kb/s, start 0.069062
-backend-1  | [Parsed_silencedetect_0 @ 0x7fed398f3140] Value -35.000000 for parameter 'noise' out of range [0 - 1.79769e+308]
-backend-1  | [fc#-1 @ 0x7fed339d9080] Error applying option 'noise' to filter 'silencedetect': Result not representable
-backend-1  | Error opening output file -.
-backend-1  | Error opening output files: Result not representable
-backend-1  | 2026-07-16T17:50:11.183Z  WARN 1 --- [backend] [        async-1] u.m.b.r.service.storage.AudioVadTrimmer  : VAD-trim session_audio_speaker.mp3: silencedetect failed (ffmpeg failed (rc=222)), falling back to whole-audio transcription
-backend-1  | 2026-07-16T17:50:16.490Z  INFO 1 --- [backend] [mcat-handler-19] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a57414d69c4c5da78b269e4
-backend-1  | 2026-07-16T17:50:18.669Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=hungarian, duration=40.28, text=Feliratozottrész  és amikor én bekerültem és most egy ötven pár nap jön a helyre, segments=null, words=[Word[word=Feliratozottrész, start=23.66, end=25.06], Word[word=és, start=25.06, end=25.06], Word[word=amikor, start=25.06, end=25.06], Word[word=én, start=25.06, end=25.14], Word[word=bekerültem, start=25.14, end=26.24], Word[word=és, start=38.86, end=40.26], Word[word=most, start=40.26, end=40.26], Word[word=egy, start=40.26, end=40.26], Word[word=ötven, start=40.26, end=40.26], Word[word=pár, start=40.26, end=40.26], Word[word=nap, start=40.26, end=40.26], Word[word=jön, start=40.26, end=40.26], Word[word=a, start=40.26, end=40.26], Word[word=helyre, start=40.26, end=40.26]]
-backend-1  | 2026-07-16T17:50:18.673Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Aligning 14 punctuated tokens to 14 word entries
-backend-1  | 2026-07-16T17:50:18.673Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Alignment succeeded: 14 tokens mapped to 14 words
-backend-1  | 2026-07-16T17:50:18.676Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper hallucination filter for session_audio_speaker_vad01.mp3: dropped 0 text + 1 timing of 2 chunks
-backend-1  | 2026-07-16T17:50:18.677Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : VAD region 1/1 (session_audio_speaker_vad01.mp3) -> offset=0.000s, 1 segments, 80 chars
