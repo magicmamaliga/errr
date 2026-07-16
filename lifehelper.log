@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "6a57414d69c4c5da78b269e4"
   },
-  "title": "Hell Walker After Fifty Days",
+  "title": "Introduced to This Place 50 Days Ago",
   "userId": "6a2fa5b7b7709d6e5e612eca",
   "group": "Default group",
   "recordingType": "LIVE_RECORDING",
@@ -11,9 +11,9 @@
   "aiTitle": true,
   "audioUrl": "6a57414d69c4c5da78b269e4_audio.mp3",
   "originalAudioFileName": "session_audio.mp3",
-  "transcript": "None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. 🎧 És amikor én bekerültem most egy ötven pár nap jöhet a So I've been introduced to this place about 50 days ago. helyre,",
+  "transcript": "None could stand for the Lord, none could stand for the Lord, here on it is the hell walker. Feliratozottrész és amikor én bekerültem So I've been introduced to this place about 50 days ago.",
   "uploadedAt": {
-    "$date": "2026-07-16T08:18:47.222Z"
+    "$date": "2026-07-16T17:50:48.238Z"
   },
   "createdAt": {
     "$date": "2026-07-15T08:14:05.144Z"
@@ -147,77 +147,34 @@
       "source": "mic"
     },
     {
-      "start": 24.420000076293945,
-      "end": 26.15999984741211,
-      "text": "🎧 És amikor én",
+      "start": 23.65999984741211,
+      "end": 26.239999771118164,
+      "text": "Feliratozottrész és amikor én bekerültem",
       "words": [
         {
-          "start": 24.420000076293945,
-          "end": 24.860000610351562,
-          "text": "És"
+          "start": 23.65999984741211,
+          "end": 25.059999465942383,
+          "text": "Feliratozottrész"
         },
         {
-          "start": 24.860000610351562,
+          "start": 25.059999465942383,
+          "end": 25.059999465942383,
+          "text": "és"
+        },
+        {
+          "start": 25.059999465942383,
           "end": 25.059999465942383,
           "text": "amikor"
         },
         {
           "start": 25.059999465942383,
-          "end": 25.280000686645508,
+          "end": 25.139999389648438,
           "text": "én"
         },
         {
-          "start": 25.280000686645508,
-          "end": 26.15999984741211,
+          "start": 25.139999389648438,
+          "end": 26.239999771118164,
           "text": "bekerültem"
-        }
-      ],
-      "source": "speaker"
-    },
-    {
-      "start": 27.719999313354492,
-      "end": 29.799999237060547,
-      "text": "bekerültem most egy ötven pár nap jöhet a",
-      "words": [
-        {
-          "start": 27.719999313354492,
-          "end": 28.15999984741211,
-          "text": "most"
-        },
-        {
-          "start": 28.15999984741211,
-          "end": 28.3799991607666,
-          "text": "egy"
-        },
-        {
-          "start": 28.3799991607666,
-          "end": 28.799999237060547,
-          "text": "ötven"
-        },
-        {
-          "start": 28.799999237060547,
-          "end": 29.079999923706055,
-          "text": "pár"
-        },
-        {
-          "start": 29.079999923706055,
-          "end": 29.280000686645508,
-          "text": "nap"
-        },
-        {
-          "start": 29.280000686645508,
-          "end": 29.420000076293945,
-          "text": "jöhet"
-        },
-        {
-          "start": 29.420000076293945,
-          "end": 29.579999923706055,
-          "text": "a"
-        },
-        {
-          "start": 29.579999923706055,
-          "end": 29.799999237060547,
-          "text": "helyre"
         }
       ],
       "source": "speaker"
@@ -284,23 +241,29 @@
         }
       ],
       "source": "mic"
-    },
-    {
-      "start": 38.86000061035156,
-      "end": 40.2599983215332,
-      "text": "helyre,",
-      "words": [
-        {
-          "start": 38.86000061035156,
-          "end": 40.2599983215332,
-          "text": "aha"
-        }
-      ],
-      "source": "speaker"
     }
   ],
   "diarizationStatus": "NONE",
   "diarizationPreserveManual": false,
   "_class": "uk.magicmamaliga.backend.record.model.Recording",
-  "summary": "**Transcript Summary (mixed English–Hungarian, concise)**\n\n- **Main topics**\n  - Religious imagery: repetition of “None could stand for the Lord” and reference to “hell walker.”\n  - Personal introduction to a place: a note that the speaker has been introduced to the place about 50 days ago (English line: “So I've been introduced to this place about 50 days ago.”). Hungarian fragments surround this idea: “És amikor én bekerültem… ötven pár nap…” and “helyre,”.\n\n- **Key points (attribution: speaker is unspecified)**\n  - Speaker references standing for the Lord and mentions a “hell walker.”\n  - Speaker indicates they were introduced to the place roughly 50 days ago.\n\n- **Conclusions / decisions / actions**\n  - None evident in this snippet.\n\n- **Notes**\n  - The passage is brief and bilingual; some phrases are fragmented/transcription-noise."
+  "summary": "**Summary**\n\n- **Main topics**\n  - Opening religious line: “None could stand for the Lord, none could stand for the Lord,” followed by a reference to a “hell walker.”\n  - Bilingual note: Hungarian segment “Feliratozottrész és amikor én bekerültem,” indicating a captioned portion and the speaker’s entry.\n  - Personal timeline: “So I’ve been introduced to this place about 50 days ago.”\n\n- **Key points**\n  - The speaker asserts a stance or challenge related to standing before the Lord, tied to the “hell walker” mention.\n  - There is a mention of captions or subtitles and a description of the speaker entering the place.\n\n- **Context / speaker attribution**\n  - All points appear to be from a single speaker (no distinct dialogue turns identified).\n\n- **Decisions / next steps**\n  - No explicit decisions or actions stated. The speaker notes a personal introduction to the place roughly 50 days ago."
 }
+
+
+ckend-1  | 2026-07-16T17:50:10.428Z  INFO 1 --- [backend] [mcat-handler-16] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a57414d69c4c5da78b269e4
+backend-1  | 2026-07-16T17:50:11.180Z  WARN 1 --- [backend] [        async-1] u.m.b.r.service.storage.AudioTranscoder  : ffmpeg exited rc=222 args=[-hide_banner, -nostdin, -i, /tmp/lh_vad_in_3034343473979805362.mp3, -af, silencedetect=noise=-35:d=2.0, -f, null, -] stderr=Input #0, mp3, from '/tmp/lh_vad_in_3034343473979805362.mp3':
+backend-1  |   Metadata:
+backend-1  |     encoder         : Lavf62.3.100
+backend-1  |   Duration: 00:00:40.28, start: 0.069063, bitrate: 64 kb/s
+backend-1  |   Stream #0:0: Audio: mp3 (mp3float), 16000 Hz, mono, fltp, 64 kb/s, start 0.069062
+backend-1  | [Parsed_silencedetect_0 @ 0x7fed398f3140] Value -35.000000 for parameter 'noise' out of range [0 - 1.79769e+308]
+backend-1  | [fc#-1 @ 0x7fed339d9080] Error applying option 'noise' to filter 'silencedetect': Result not representable
+backend-1  | Error opening output file -.
+backend-1  | Error opening output files: Result not representable
+backend-1  | 2026-07-16T17:50:11.183Z  WARN 1 --- [backend] [        async-1] u.m.b.r.service.storage.AudioVadTrimmer  : VAD-trim session_audio_speaker.mp3: silencedetect failed (ffmpeg failed (rc=222)), falling back to whole-audio transcription
+backend-1  | 2026-07-16T17:50:16.490Z  INFO 1 --- [backend] [mcat-handler-19] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a57414d69c4c5da78b269e4
+backend-1  | 2026-07-16T17:50:18.669Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper verbose_json: language=hungarian, duration=40.28, text=Feliratozottrész  és amikor én bekerültem és most egy ötven pár nap jön a helyre, segments=null, words=[Word[word=Feliratozottrész, start=23.66, end=25.06], Word[word=és, start=25.06, end=25.06], Word[word=amikor, start=25.06, end=25.06], Word[word=én, start=25.06, end=25.14], Word[word=bekerültem, start=25.14, end=26.24], Word[word=és, start=38.86, end=40.26], Word[word=most, start=40.26, end=40.26], Word[word=egy, start=40.26, end=40.26], Word[word=ötven, start=40.26, end=40.26], Word[word=pár, start=40.26, end=40.26], Word[word=nap, start=40.26, end=40.26], Word[word=jön, start=40.26, end=40.26], Word[word=a, start=40.26, end=40.26], Word[word=helyre, start=40.26, end=40.26]]
+backend-1  | 2026-07-16T17:50:18.673Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Aligning 14 punctuated tokens to 14 word entries
+backend-1  | 2026-07-16T17:50:18.673Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Alignment succeeded: 14 tokens mapped to 14 words
+backend-1  | 2026-07-16T17:50:18.676Z  INFO 1 --- [backend] [        async-1] u.m.b.r.a.s.AiTranscriptionService       : Whisper hallucination filter for session_audio_speaker_vad01.mp3: dropped 0 text + 1 timing of 2 chunks
+backend-1  | 2026-07-16T17:50:18.677Z  INFO 1 --- [backend] [        async-1] u.m.b.r.event.RecordingEventListener     : VAD region 1/1 (session_audio_speaker_vad01.mp3) -> offset=0.000s, 1 segments, 80 chars
