@@ -1,14 +1,116 @@
-2026-07-17 18:54:06 [INFO] server.audio.call_detection.detector: Call detector loop ENTER: tick=2.0s holdoff=5.0s window=10.0s ambient_enabled=True detection_enabled=True required_active_ticks=2
-2026-07-17 18:54:06 [INFO] server.audio.call_detection.detector: Call detector started.
-INFO:     127.0.0.1:54336 - "PUT /api/settings HTTP/1.1" 200 OK
-INFO:     127.0.0.1:54337 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
-2026-07-17 18:54:08 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
-2026-07-17 18:54:08 [ERROR] lifehelper: Uncaught exception in thread 'call-detector': cannot unpack non-iterable NoneType object
+2026-07-17 19:06:31 [INFO] server.audio.device_manager.state: Loopback selection: index=16 name='Speakers (Realtek(R) Audio) [Loopback]' rate=48000Hz channels=2
+2026-07-17 19:06:31 [INFO] server.audio.device_manager.state: Microphone selection: index=14 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
+2026-07-17 19:06:31 [INFO] server.audio.capture.loopback: Opening loopback stream (device 16) at 48000Hz
+2026-07-17 19:06:31 [INFO] server.audio.capture.microphone: Opening mic stream (device 14) at 48000Hz
+2026-07-17 19:06:31 [INFO] server.audio.session.ambient: Ambient capture started (pre-roll buffer enabled).
+INFO:     127.0.0.1:55264 - "PUT /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55268 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55269 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:06:38 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnPropertyValueChanged implementation:
 Traceback (most recent call last):
-  File "threading.py", line 1075, in _bootstrap_inner
-  File "threading.py", line 1012, in run
-  File "server\audio\call_detection\detector.py", line 610, in _loop
-    last_heartbeat_at, last_logged_state = _emit_heartbeat_if_needed(
-    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-TypeError: cannot unpack non-iterable NoneType object
-INFO:     127.0.0.1:54338 - "GET /session/status HTTP/1.1" 200 OK
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnPropertyValueChanged() takes 3 positional arguments but 4 were given
+INFO:     127.0.0.1:55276 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55277 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:06:44 [INFO] server.audio.call_detection.detector: Call detector loop ENTER: tick=2.0s holdoff=5.0s window=10.0s ambient_enabled=True detection_enabled=True required_active_ticks=2
+2026-07-17 19:06:44 [INFO] server.audio.call_detection.detector: Call detector started.
+INFO:     127.0.0.1:55277 - "PUT /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55280 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55279 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+2026-07-17 19:06:46 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=idle consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=6.8s ago speaker_sustained=6.8s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55280 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55292 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55290 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55295 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55296 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:06:59 [INFO] server.audio.call_detection.detector: User declined call-record prompt
+INFO:     127.0.0.1:55299 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55300 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:07:01 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=22.5s ago speaker_sustained=22.5s ago speaker_trigger(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55303 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55304 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55304 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55307 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55306 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55310 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55311 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55317 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55316 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55321 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55322 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55322 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55323 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55325 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:07:31 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=52.6s ago speaker_sustained=52.6s ago speaker_trigger(10s)=False ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55326 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55327 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55332 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55331 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55332 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55334 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55334 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55335 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55337 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55339 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55340 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55342 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55341 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+2026-07-17 19:08:01 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55345 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55343 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55345 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55348 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55347 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55351 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55352 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55353 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55354 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55357 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55356 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55357 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55359 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55360 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:08:32 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55361 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55362 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55365 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55365 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55366 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55368 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55368 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55370 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55371 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55372 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55373 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55377 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55376 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+2026-07-17 19:09:02 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=1.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55380 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55381 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55381 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55382 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55384 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55386 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55387 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55390 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55391 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55394 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55395 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55395 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55397 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55398 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:09:32 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
+INFO:     127.0.0.1:55399 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55401 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55404 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55405 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55407 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55409 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55409 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55410 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55412 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55415 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55416 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55417 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55418 - "GET /session/status HTTP/1.1" 200 OK
+2026-07-17 19:10:02 [INFO] server.audio.call_detection.detector: [call-detector heartbeat] state=cooldown consecutive_active=0/2 mic_last_speech=0.0s ago speaker_last_speech=0.0s ago speaker_sustained=0.0s ago speaker_trigger(10s)=True ambient_enabled=True detection_enabled=True recording_id=None
