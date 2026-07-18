@@ -1,79 +1,205 @@
-2026-07-17 20:08:31 [INFO] server.audio.device_manager.state: Loopback selection: index=17 name='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' rate=48000Hz channels=2
-2026-07-17 20:08:31 [INFO] server.audio.device_manager.switching: Switching loopback to device 17: 27E1N1600AE (HD Audio Driver for Display Audio) [Loopback] @ 48000Hz
-2026-07-17 20:08:31 [INFO] server.audio.device_manager.events.bus: [device-event] manual_switched channel=loopback from='Speakers (Realtek(R) Audio) [Loopback]' to='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' rec='6a5a7d938038f183870b6f07' detail='User picked a device via /api/switch-device'
-2026-07-17 20:08:31 [ERROR] server.routes.devices: Failed to switch device: 'defaultSamplerate'
-INFO:     127.0.0.1:58435 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-07-17 20:08:31 [INFO] server.audio.capture.microphone: Opening mic stream (device 14) at 48000Hz
-2026-07-17 20:08:31 [INFO] server.audio.capture.loopback: Opening loopback stream (device 17) at 48000Hz
-INFO:     127.0.0.1:58436 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58437 - "GET /api/live?since=2026-07-17T19%3A08%3A31Z HTTP/1.1" 200 OK
-2026-07-17 20:08:34 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 105 chars, offset=59.23s
-INFO:     127.0.0.1:58438 - "GET /api/live?since=2026-07-17T19%3A08%3A31Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-2026-07-17 20:08:34 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (speaker), 109 chars, offset=60.44s
-INFO:     127.0.0.1:58439 - "GET /api/live?since=2026-07-17T19%3A08%3A34Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58440 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58441 - "GET /api/live?since=2026-07-17T19%3A08%3A34Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-2026-07-17 20:08:37 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (speaker), 113 chars, offset=63.58s
-INFO:     127.0.0.1:58442 - "GET /api/live?since=2026-07-17T19%3A08%3A34Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58443 - "GET /api/live?since=2026-07-17T19%3A08%3A37Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58444 - "GET /api/devices HTTP/1.1" 200 OK
-2026-07-17 20:08:40 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 96 chars, offset=66.59s
-INFO:     127.0.0.1:58445 - "GET /api/live?since=2026-07-17T19%3A08%3A37Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58446 - "GET /api/live?since=2026-07-17T19%3A08%3A40Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58447 - "GET /api/live?since=2026-07-17T19%3A08%3A40Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58448 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58449 - "GET /api/live?since=2026-07-17T19%3A08%3A40Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58450 - "GET /api/live?since=2026-07-17T19%3A08%3A40Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-2026-07-17 20:08:47 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 92 chars, offset=73.60s
-INFO:     127.0.0.1:58451 - "GET /api/live?since=2026-07-17T19%3A08%3A40Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58452 - "GET /api/devices HTTP/1.1" 200 OK
-2026-07-17 20:08:49 [INFO] server.audio.device_manager.state: Loopback selection: index=16 name='Speakers (Realtek(R) Audio) [Loopback]' rate=48000Hz channels=2
-2026-07-17 20:08:49 [INFO] server.audio.device_manager.switching: Switching loopback to device 16: Speakers (Realtek(R) Audio) [Loopback] @ 48000Hz
-2026-07-17 20:08:49 [INFO] server.audio.device_manager.events.bus: [device-event] manual_switched channel=loopback from='27E1N1600AE (HD Audio Driver for Display Audio) [Loopback]' to='Speakers (Realtek(R) Audio) [Loopback]' rec='6a5a7d938038f183870b6f07' detail='User picked a device via /api/switch-device'
-2026-07-17 20:08:49 [ERROR] server.routes.devices: Failed to switch device: 'defaultSamplerate'
-INFO:     127.0.0.1:58453 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-07-17 20:08:49 [INFO] server.audio.capture.microphone: Opening mic stream (device 14) at 48000Hz
-2026-07-17 20:08:49 [INFO] server.audio.capture.loopback: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:58454 - "GET /api/live?since=2026-07-17T19%3A08%3A47Z&deviceEventsSince=a717a432-f891-482f-89bc-f3702c267042 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58455 - "GET /api/live?since=2026-07-17T19%3A08%3A47Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58456 - "GET /api/live?since=2026-07-17T19%3A08%3A47Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58457 - "GET /api/devices HTTP/1.1" 200 OK
-2026-07-17 20:08:53 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 85 chars, offset=80.97s
-INFO:     127.0.0.1:58458 - "GET /api/live?since=2026-07-17T19%3A08%3A47Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58459 - "GET /api/live?since=2026-07-17T19%3A08%3A53Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58460 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58461 - "GET /api/live?since=2026-07-17T19%3A08%3A53Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-2026-07-17 20:08:57 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (speaker), 121 chars, offset=83.79s
-INFO:     127.0.0.1:58462 - "GET /api/live?since=2026-07-17T19%3A08%3A53Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58463 - "GET /api/live?since=2026-07-17T19%3A08%3A57Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58464 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58465 - "GET /api/live?since=2026-07-17T19%3A08%3A57Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-2026-07-17 20:09:02 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 112 chars, offset=87.98s
-INFO:     127.0.0.1:58467 - "GET /api/live?since=2026-07-17T19%3A08%3A57Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58468 - "GET /api/live?since=2026-07-17T19%3A09%3A02Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-2026-07-17 20:09:04 [INFO] server.services.live_uploader.uploader: [live_uploader] Uploaded seq=0 (1431405 bytes MP3) for 6a5a7d938038f183870b6f07
-INFO:     127.0.0.1:58471 - "GET /api/devices HTTP/1.1" 200 OK
-2026-07-17 20:09:04 [INFO] server.audio.device_manager.state: Microphone selection: index=15 name='Stereo Mix (Realtek(R) Audio)' rate=48000Hz channels=2
-2026-07-17 20:09:04 [INFO] server.audio.device_manager.switching: Switching microphone to device 15: Stereo Mix (Realtek(R) Audio) @ 48000Hz
-2026-07-17 20:09:04 [INFO] server.audio.device_manager.events.bus: [device-event] manual_switched channel=microphone from='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' to='Stereo Mix (Realtek(R) Audio)' rec='6a5a7d938038f183870b6f07' detail='User picked a device via /api/switch-device'
-2026-07-17 20:09:04 [ERROR] server.routes.devices: Failed to switch device: 'defaultSamplerate'
-INFO:     127.0.0.1:58469 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-07-17 20:09:04 [INFO] server.audio.capture.microphone: Opening mic stream (device 15) at 48000Hz
-2026-07-17 20:09:04 [INFO] server.audio.capture.loopback: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:58469 - "GET /api/live?since=2026-07-17T19%3A09%3A02Z&deviceEventsSince=060f636e-4160-4093-a17c-6bf48a32cb57 HTTP/1.1" 200 OK
-2026-07-17 20:09:06 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (speaker), 85 chars, offset=90.79s
-INFO:     127.0.0.1:58472 - "GET /api/live?since=2026-07-17T19%3A09%3A02Z&deviceEventsSince=d6ac3fa4-b31f-49aa-bd08-b11794819934 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58473 - "GET /api/live?since=2026-07-17T19%3A09%3A06Z&deviceEventsSince=d6ac3fa4-b31f-49aa-bd08-b11794819934 HTTP/1.1" 200 OK
-2026-07-17 20:09:08 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 111 chars, offset=95.24s
-2026-07-17 20:09:08 [INFO] server.audio.device_manager.switching: Switching microphone to device 15: Stereo Mix (Realtek(R) Audio) @ 48000Hz
-2026-07-17 20:09:08 [INFO] server.audio.device_manager.events.bus: [device-event] manual_switched channel=microphone from='Stereo Mix (Realtek(R) Audio)' to='Stereo Mix (Realtek(R) Audio)' rec='6a5a7d938038f183870b6f07' detail='User picked a device via /api/switch-device'
-2026-07-17 20:09:08 [ERROR] server.routes.devices: Failed to switch device: 'defaultSamplerate'
-INFO:     127.0.0.1:58474 - "POST /api/switch-device HTTP/1.1" 500 Internal Server Error
-2026-07-17 20:09:08 [INFO] server.audio.capture.microphone: Opening mic stream (device 15) at 48000Hz
-2026-07-17 20:09:08 [INFO] server.audio.capture.loopback: Opening loopback stream (device 16) at 48000Hz
-INFO:     127.0.0.1:58475 - "GET /api/devices HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58476 - "GET /api/live?since=2026-07-17T19%3A09%3A06Z&deviceEventsSince=d6ac3fa4-b31f-49aa-bd08-b11794819934 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58477 - "GET /api/live?since=2026-07-17T19%3A09%3A08Z&deviceEventsSince=847821ab-12e1-4c86-b595-e6535f5a1be2 HTTP/1.1" 200 OK
-INFO:     127.0.0.1:58478 - "GET /api/live?since=2026-07-17T19%3A09%3A08Z&deviceEventsSince=847821ab-12e1-4c86-b595-e6535f5a1be2 HTTP/1.1" 200 OK
-2026-07-17 20:09:12 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (speaker), 106 chars, offset=98.33s
-INFO:     127.0.0.1:58479 - "GET /api/devices HTTP/1.1" 200 OK
+2026-07-18 06:33:49 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDeviceStateChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDeviceStateChanged() takes 3 positional arguments but 4 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:33:50 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+INFO:     127.0.0.1:62470 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62471 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62472 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62473 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62474 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62475 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62476 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62477 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62478 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63223 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63225 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63227 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63227 - "GET /api/settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63230 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63230 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63231 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63232 - "GET /api/update/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63233 - "POST /api/update/check HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63238 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63239 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63243 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63244 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63249 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63248 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63249 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49971 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49972 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49975 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49976 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49982 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49981 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65046 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65047 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65047 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53795 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53797 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53798 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53799 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53803 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53804 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53807 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53808 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53808 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53811 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53810 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53720 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53721 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53728 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53727 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+2026-07-18 06:35:28 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:35:28 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+INFO:     127.0.0.1:53738 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53737 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53738 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53740 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53741 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54932 - "GET /api/settings/preroll/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54933 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54933 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54934 - "GET /api/ HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54935 - "GET /session/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54936 - "GET /api/ HTTP/1.1" 200 OK
+2026-07-18 06:35:41 [INFO] server.routes.token: JWT Token verified and set via /api/token
+INFO:     127.0.0.1:54938 - "POST /api/token HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54939 - "OPTIONS /session/start HTTP/1.1" 200 OK
+2026-07-18 06:35:41 [INFO] lifehelper.main: Starting new session with group: Default group
+2026-07-18 06:35:41 [INFO] server.audio.session.recording: Session stopped - clearing in-memory buffers (live uploader owns persistence).
+2026-07-18 06:35:41 [INFO] server.audio.capture.loopback: Capture loop finished.
+2026-07-18 06:35:41 [INFO] server.audio.capture.microphone: Microphone capture loop finished.
+2026-07-18 06:35:41 [INFO] server.audio.device_manager.state: Loopback selection: index=22 name='Headphones (HUAWEI FreeLace Pro 2) [Loopback]' rate=44100Hz channels=2
+2026-07-18 06:35:41 [INFO] server.audio.device_manager.state: Microphone selection: index=19 name='Microphone Array (Intel® Smart Sound Technology for Digital Microphones)' rate=48000Hz channels=2
+2026-07-18 06:35:41 [INFO] server.services.recordings: Creating recording (token present: True, mode=None, title=None)
+2026-07-18 06:35:42 [INFO] server.services.recordings: Recording created with ID: 6a5b10ae8038f183870b6f12
+2026-07-18 06:35:42 [INFO] server.audio.session.recording: Recording session started with ID: 6a5b10ae8038f183870b6f12 (transcribe=True)
+2026-07-18 06:35:42 [INFO] server.audio.capture.loopback: Opening loopback stream (device 22) at 44100Hz
+2026-07-18 06:35:42 [INFO] server.audio.capture.microphone: Opening mic stream (device 19) at 48000Hz
+2026-07-18 06:35:42 [INFO] server.audio.transcribe.worker: Transcription worker running. All audio resampled to 16000 Hz
+2026-07-18 06:35:42 [INFO] server.audio.transcribe.worker: Transcription worker running. All audio resampled to 16000 Hz
+2026-07-18 06:35:42 [INFO] server.audio.session.preroll: Pre-roll injected: 30.0s (WAV 30.0s, transcribe 20.0s)
+2026-07-18 06:35:42 [INFO] server.services.live_uploader.uploader: [live_uploader] Started for recording 6a5b10ae8038f183870b6f12 at 16000 Hz (interval=60s, codec=mp3@128k)
+2026-07-18 06:35:42 [INFO] lifehelper.main: Session started.
+2026-07-18 06:35:42 [INFO] server.audio.transcribe.worker: [ai] Dropping low-speech segment (mic, 0.88s, 4 voiced / 44 frames) before transcription
+INFO:     127.0.0.1:54940 - "POST /session/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54943 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54944 - "GET /api/live HTTP/1.1" 200 OK
+2026-07-18 06:35:45 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 14 chars, offset=30.08s
+INFO:     127.0.0.1:54945 - "GET /api/live HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54946 - "GET /api/devices HTTP/1.1" 200 OK
+2026-07-18 06:35:47 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 74 chars, offset=33.01s
+INFO:     127.0.0.1:54947 - "GET /api/live?since=2026-07-18T05%3A35%3A45Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54948 - "GET /api/live?since=2026-07-18T05%3A35%3A47Z HTTP/1.1" 200 OK
+2026-07-18 06:35:50 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 83 chars, offset=35.41s
+INFO:     127.0.0.1:54949 - "GET /api/live?since=2026-07-18T05%3A35%3A47Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54950 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54951 - "GET /api/live?since=2026-07-18T05%3A35%3A50Z HTTP/1.1" 200 OK
+2026-07-18 06:35:52 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 29 chars, offset=37.88s
+2026-07-18 06:35:52 [INFO] server.audio.transcribe.worker: [ai] Dropping low-speech segment (mic, 1.90s, 0 voiced / 95 frames) before transcription
+INFO:     127.0.0.1:54952 - "GET /api/live?since=2026-07-18T05%3A35%3A50Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54953 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54954 - "GET /api/live?since=2026-07-18T05%3A35%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64196 - "GET /api/live?since=2026-07-18T05%3A35%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64197 - "GET /api/live?since=2026-07-18T05%3A35%3A52Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64198 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64199 - "GET /api/live?since=2026-07-18T05%3A35%3A52Z HTTP/1.1" 200 OK
+2026-07-18 06:35:59 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 45 chars, offset=45.11s
+INFO:     127.0.0.1:64200 - "GET /api/live?since=2026-07-18T05%3A35%3A52Z HTTP/1.1" 200 OK
+2026-07-18 06:36:02 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 18 chars, offset=48.33s
+INFO:     127.0.0.1:64201 - "GET /api/live?since=2026-07-18T05%3A35%3A59Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64202 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64203 - "GET /api/live?since=2026-07-18T05%3A36%3A02Z HTTP/1.1" 200 OK
+2026-07-18 06:36:04 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+2026-07-18 06:36:04 [ERROR] comtypes._comobject: Exception in IMMNotificationClient.OnDefaultDeviceChanged implementation:
+Traceback (most recent call last):
+  File "comtypes\_comobject.py", line 98, in call_with_this
+TypeError: _NotificationClient.OnDefaultDeviceChanged() takes 4 positional arguments but 5 were given
+INFO:     127.0.0.1:64204 - "GET /api/live?since=2026-07-18T05%3A36%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64205 - "GET /api/live?since=2026-07-18T05%3A36%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64206 - "GET /api/live?since=2026-07-18T05%3A36%3A02Z HTTP/1.1" 200 OK
+2026-07-18 06:36:07 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 21 chars, offset=53.72s
+INFO:     127.0.0.1:64207 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64208 - "GET /api/live?since=2026-07-18T05%3A36%3A02Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64209 - "GET /api/live?since=2026-07-18T05%3A36%3A07Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64213 - "GET /api/live?since=2026-07-18T05%3A36%3A07Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64214 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64215 - "GET /api/live?since=2026-07-18T05%3A36%3A07Z HTTP/1.1" 200 OK
+2026-07-18 06:36:13 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 32 chars, offset=58.94s
+INFO:     127.0.0.1:64216 - "GET /api/live?since=2026-07-18T05%3A36%3A07Z HTTP/1.1" 200 OK
+2026-07-18 06:36:15 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 13 chars, offset=61.90s
+INFO:     127.0.0.1:64218 - "GET /api/live?since=2026-07-18T05%3A36%3A13Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64219 - "GET /api/devices HTTP/1.1" 200 OK
+2026-07-18 06:36:16 [INFO] server.audio.transcribe.worker: [ai] Dropping low-speech segment (mic, 1.32s, 0 voiced / 66 frames) before transcription
+INFO:     127.0.0.1:64218 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+2026-07-18 06:36:18 [INFO] server.audio.transcribe.worker: [ai] Dropping low-speech segment (mic, 1.22s, 0 voiced / 61 frames) before transcription
+INFO:     127.0.0.1:64220 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64221 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64222 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49725 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49726 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+2026-07-18 06:36:23 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 23 chars, offset=68.55s
+INFO:     127.0.0.1:49728 - "GET /api/devices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49729 - "GET /api/live?since=2026-07-18T05%3A36%3A15Z HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49730 - "OPTIONS /api/follow-default HTTP/1.1" 200 OK
+2026-07-18 06:36:24 [INFO] server.audio.device_manager.events.bus: [device-event] follow_toggled channel=microphone from=None to=None rec='6a5b10ae8038f183870b6f12' detail='Auto-follow DISABLED via /api/follow-default'
+INFO:     127.0.0.1:49731 - "POST /api/follow-default HTTP/1.1" 200 OK
+2026-07-18 06:36:25 [INFO] server.audio.device_manager.events.bus: [device-event] follow_toggled channel=microphone from=None to=None rec='6a5b10ae8038f183870b6f12' detail='Auto-follow ENABLED via /api/follow-default'
+INFO:     127.0.0.1:49732 - "POST /api/follow-default HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49733 - "GET /api/live?since=2026-07-18T05%3A36%3A23Z HTTP/1.1" 200 OK
+2026-07-18 06:36:32 [INFO] server.audio.transcribe.ai: [ai] Transcribed segment (mic), 5 chars, offset=71.58s
