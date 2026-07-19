@@ -1,3 +1,6 @@
-MAIL_PORT=587
-MAIL_FROM=noreply@lifehelper.uk
-MAIL_USERNAME=a890b5001@smtp-brevo.com
+2026-07-18 22:40:58 [INFO] lifehelper: [config] No .env file found. Searched: ['C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\.env', 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\.env']
+2026-07-18 22:40:58 [INFO] lifehelper: [config] Using OS environment variables / defaults.
+2026-07-18 22:40:59 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=2) - downloading
+2026-07-18 22:42:13 [WARNING] server.utils.downloads: [bootstrap] download attempt 1/5 failed for https://download.lifehelper.uk/assets-v2.zip (have 245049152 bytes): truncated download: have 245049152 of 251322852 bytes from https://download.lifehelper.uk/assets-v2.zip
+2026-07-18 22:42:21 [ERROR] lifehelper.asset_bootstrap: [bootstrap] sha256 mismatch: expected f80bd18249d35c7d9bf0963c757101cc05e18dcb39f6d32c9ae9cedf66fd9826, got a310480994b20a5b38e0abc0a245dd013a5b71258177a17426cf3618efd7fcdb
+2026-07-18 22:42:21 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
