@@ -1,11 +1,35 @@
-2026-07-19 08:30:31 [INFO] lifehelper: [config] No .env file found. Searched: ['C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\.env', 'C:\\Users\\Mate\\AppData\\Local\\Programs\\LifeHelper\\_internal\\.env']
-2026-07-19 08:30:31 [INFO] lifehelper: [config] Using OS environment variables / defaults.
-2026-07-19 08:30:33 [INFO] lifehelper.asset_bootstrap: [bootstrap] Asset bundle out of date (installed=None, target=2) - downloading
-2026-07-19 08:30:33 [INFO] server.utils.downloads: HTTP 200 https://download.lifehelper.uk/assets-v2.zip content-length='251322852' content-type='application/x-zip-compressed' content-encoding=None transfer-encoding=None etag='"dde0a7852150c4e7b66568d29ceb8c88"' cf-ray='a1d80587bb5c86b2-LHR' cf-cache-status='HIT'
-2026-07-19 08:31:06 [INFO] server.utils.downloads: wrote 251322852 bytes to assets-v2.zip.part, first 32 bytes = 504b0304140000000800f393b95c2371cc4797283b02034766021d0000006469
-2026-07-19 08:31:06 [WARNING] server.utils.downloads: [bootstrap] sha256 mismatch on attempt 1/2 expected f80bd18249d35c7d9bf0963c757101cc05e18dcb39f6d32c9ae9cedf66fd9826, got a310480994b20a5b38e0abc0a245dd013a5b71258177a17426cf3618efd7fcdb, size 251322852
-2026-07-19 08:31:09 [INFO] server.utils.downloads: HTTP 200 https://download.lifehelper.uk/assets-v2.zip content-length='251322852' content-type='application/x-zip-compressed' content-encoding=None transfer-encoding=None etag='"dde0a7852150c4e7b66568d29ceb8c88"' cf-ray='a1d806628b984e1a-LHR' cf-cache-status='HIT'
-2026-07-19 08:31:38 [INFO] server.utils.downloads: wrote 251322852 bytes to assets-v2.zip.part, first 32 bytes = 504b0304140000000800f393b95c2371cc4797283b02034766021d0000006469
-2026-07-19 08:31:39 [WARNING] server.utils.downloads: [bootstrap] sha256 mismatch on attempt 2/2 expected f80bd18249d35c7d9bf0963c757101cc05e18dcb39f6d32c9ae9cedf66fd9826, got a310480994b20a5b38e0abc0a245dd013a5b71258177a17426cf3618efd7fcdb, size 251322852
-2026-07-19 08:31:39 [ERROR] lifehelper.asset_bootstrap: [bootstrap] sha256 mismatch: expected f80bd18249d35c7d9bf0963c757101cc05e18dcb39f6d32c9ae9cedf66fd9826, got a310480994b20a5b38e0abc0a245dd013a5b71258177a17426cf3618efd7fcdb
-2026-07-19 08:31:39 [ERROR] lifehelper: Asset bootstrap failed; aborting startup.
+backend-1  | 2026-07-23T08:44:55.938Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+backend-1  | 2026-07-23T08:44:55.962Z  INFO 1 --- [backend] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
+backend-1  |
+backend-1  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+backend-1  | 2026-07-23T08:44:55.993Z ERROR 1 --- [backend] [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
+backend-1  |
+backend-1  | ***************************
+backend-1  | APPLICATION FAILED TO START
+backend-1  | ***************************
+backend-1  |
+backend-1  | Description:
+backend-1  |
+backend-1  | The dependencies of some of the beans in the application context form a cycle:
+backend-1  |
+backend-1  |    collectionAIController defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/CollectionAIController.class]
+backend-1  |       ↓
+backend-1  |    fluxCollectionAiService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/FluxCollectionAiService.class]
+backend-1  |       ↓
+backend-1  |    collectionContextBuilder defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/CollectionContextBuilder.class]
+backend-1  | ┌─────┐
+backend-1  | |  transcriptIndexService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/TranscriptIndexService.class]
+backend-1  | ↑     ↓
+backend-1  | |  ragEmbeddingCache defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/RagEmbeddingCache.class]
+backend-1  | ↑     ↓
+backend-1  | |  transactionLedgerService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/transactionledger/service/TransactionLedgerService.class]
+backend-1  | ↑     ↓
+backend-1  | |  recordingService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/record/service/RecordingService.class]
+backend-1  | └─────┘
+backend-1  |
+backend-1  |
+backend-1  | Action:
+backend-1  |
+backend-1  | Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
+backend-1  |
+backend-1 exited with code 1 (restarting)
