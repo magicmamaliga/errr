@@ -1,35 +1,37 @@
-backend-1  | 2026-07-23T08:44:55.938Z  INFO 1 --- [backend] [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-backend-1  | 2026-07-23T08:44:55.962Z  INFO 1 --- [backend] [           main] .s.b.a.l.ConditionEvaluationReportLogger :
-backend-1  |
-backend-1  | Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-backend-1  | 2026-07-23T08:44:55.993Z ERROR 1 --- [backend] [           main] o.s.b.d.LoggingFailureAnalysisReporter   :
-backend-1  |
-backend-1  | ***************************
-backend-1  | APPLICATION FAILED TO START
-backend-1  | ***************************
-backend-1  |
-backend-1  | Description:
-backend-1  |
-backend-1  | The dependencies of some of the beans in the application context form a cycle:
-backend-1  |
-backend-1  |    collectionAIController defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/CollectionAIController.class]
-backend-1  |       ↓
-backend-1  |    fluxCollectionAiService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/FluxCollectionAiService.class]
-backend-1  |       ↓
-backend-1  |    collectionContextBuilder defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/CollectionContextBuilder.class]
-backend-1  | ┌─────┐
-backend-1  | |  transcriptIndexService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/TranscriptIndexService.class]
-backend-1  | ↑     ↓
-backend-1  | |  ragEmbeddingCache defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/rag/service/RagEmbeddingCache.class]
-backend-1  | ↑     ↓
-backend-1  | |  transactionLedgerService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/transactionledger/service/TransactionLedgerService.class]
-backend-1  | ↑     ↓
-backend-1  | |  recordingService defined in URL [jar:nested:/app/app.jar/!BOOT-INF/classes/!/uk/magicmamaliga/backend/record/service/RecordingService.class]
-backend-1  | └─────┘
-backend-1  |
-backend-1  |
-backend-1  | Action:
-backend-1  |
-backend-1  | Relying upon circular references is discouraged and they are prohibited by default. Update your application to remove the dependency cycle between beans. As a last resort, it may be possible to break the cycle automatically by setting spring.main.allow-circular-references to true.
-backend-1  |
-backend-1 exited with code 1 (restarting)
+backend-1  | 2026-07-24T20:02:16.501Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.rag.CollectionAIController   : Collection ask: collection=6a630744482cabd32d59e22a session=new model=gpt-5.5 messages=1
+backend-1  | 2026-07-24T20:02:16.501Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.FluxCollectionAiService  : processQuery: user=t***@gmail.com collection=6a630744482cabd32d59e22a session=new model=gpt-5.5 clientMessages=1
+backend-1  | 2026-07-24T20:02:17.087Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b39e08038f183870b6f1b produced 3 chunks from 31 lines
+backend-1  | 2026-07-24T20:02:19.556Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 426431da-bff6-43bd-8a7c-85e19e56166b
+backend-1  | 2026-07-24T20:02:20.056Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = a21ae456-8652-4b22-9398-8f1a434c26b4
+backend-1  | 2026-07-24T20:02:20.447Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f15ce01a-2eb3-4a74-b1d4-cf3955fbbcaf
+backend-1  | 2026-07-24T20:02:20.635Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
+backend-1  | 2026-07-24T20:02:20.821Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4ccdcf7beafb579c22a userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b39e08038f183870b6f1b collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
+backend-1  | 2026-07-24T20:02:20.822Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
+backend-1  | 2026-07-24T20:02:20.935Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-07-24T20:02:20.935Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b39e08038f183870b6f1b (3 chunks, ~878 tokens, membership size 1)
+backend-1  | 2026-07-24T20:02:20.939Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b266d8038f183870b6f18 produced 1 chunks from 11 lines
+backend-1  | 2026-07-24T20:02:20.939Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5665eb01-aa8d-40f9-bc11-b8401dc8ea8c
+backend-1  | 2026-07-24T20:02:23.160Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
+backend-1  | 2026-07-24T20:02:23.260Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4cfdcf7beafb579c22b userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b266d8038f183870b6f18 collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
+backend-1  | 2026-07-24T20:02:23.261Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
+backend-1  | 2026-07-24T20:02:23.357Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-07-24T20:02:23.357Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b266d8038f183870b6f18 (1 chunks, ~328 tokens, membership size 2)
+backend-1  | 2026-07-24T20:02:23.359Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b25198038f183870b6f15 produced 3 chunks from 37 lines
+backend-1  | 2026-07-24T20:02:23.360Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 0339875d-3b52-4341-a929-833a0f60642b
+backend-1  | 2026-07-24T20:02:23.813Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = eaa55e4c-3a08-4bed-9f1c-061e05e64c18
+backend-1  | 2026-07-24T20:02:24.011Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = a89eecc3-6679-4f3d-b640-feff88593e9e
+backend-1  | 2026-07-24T20:02:24.252Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
+backend-1  | 2026-07-24T20:02:24.351Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4d0dcf7beafb579c22c userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b25198038f183870b6f15 collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
+backend-1  | 2026-07-24T20:02:24.352Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
+backend-1  | 2026-07-24T20:02:24.449Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-07-24T20:02:24.449Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b25198038f183870b6f15 (3 chunks, ~1099 tokens, membership size 3)
+backend-1  | 2026-07-24T20:02:24.884Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.TranscriptIndexService   : search: userId=6a2fa5b7b7709d6e5e612eca scope=3 topK=9 threshold=0.5 candidates=7 hits=1 (semantic=0 lexical=1)
+backend-1  | 2026-07-24T20:02:24.884Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.TranscriptIndexService   : search: userId=6a2fa5b7b7709d6e5e612eca expansion added 1 neighbour chunks (radius=1)
+backend-1  | 2026-07-24T20:02:24.890Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.s.CollectionContextBuilder       : build: collection=6a630744482cabd32d59e22a question.len=12 topK=9 hits=2 citations=1 hasDescription=false
+backend-1  | 2026-07-24T20:02:29.335Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0)
+backend-1  | 2026-07-24T20:02:29.336Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.rag.service.RagStreamParser  : RAG token usage: userId=6a2fa5b7b7709d6e5e612eca collectionId=6a630744482cabd32d59e22a model=AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0) prompt=967 cached=0 completion=242 total=1209
+backend-1  | 2026-07-24T20:02:29.337Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0157
+backend-1  | 2026-07-24T20:02:29.434Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4d5dcf7beafb579c22d userId=6a2fa5b7b7709d6e5e612eca recordingId=null collectionId=6a630744482cabd32d59e22a category=RAG_QUERY_USAGE model=AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0) cost=0.0157
+backend-1  | 2026-07-24T20:02:29.435Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0157
+backend-1  | 2026-07-24T20:02:29.533Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
+backend-1  | 2026-07-24T20:02:29.656Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.service.RagCollectionPersister   : persist: collection=6a630744482cabd32d59e22a session=a85341a4-3a28-4059-8bb6-d005f7c138d2 appended user+assistant turns (assistant.len=794, citations=1)
