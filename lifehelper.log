@@ -1,37 +1,287 @@
-backend-1  | 2026-07-24T20:02:16.501Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.rag.CollectionAIController   : Collection ask: collection=6a630744482cabd32d59e22a session=new model=gpt-5.5 messages=1
-backend-1  | 2026-07-24T20:02:16.501Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.FluxCollectionAiService  : processQuery: user=t***@gmail.com collection=6a630744482cabd32d59e22a session=new model=gpt-5.5 clientMessages=1
-backend-1  | 2026-07-24T20:02:17.087Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b39e08038f183870b6f1b produced 3 chunks from 31 lines
-backend-1  | 2026-07-24T20:02:19.556Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 426431da-bff6-43bd-8a7c-85e19e56166b
-backend-1  | 2026-07-24T20:02:20.056Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = a21ae456-8652-4b22-9398-8f1a434c26b4
-backend-1  | 2026-07-24T20:02:20.447Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = f15ce01a-2eb3-4a74-b1d4-cf3955fbbcaf
-backend-1  | 2026-07-24T20:02:20.635Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
-backend-1  | 2026-07-24T20:02:20.821Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4ccdcf7beafb579c22a userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b39e08038f183870b6f1b collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
-backend-1  | 2026-07-24T20:02:20.822Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
-backend-1  | 2026-07-24T20:02:20.935Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-07-24T20:02:20.935Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b39e08038f183870b6f1b (3 chunks, ~878 tokens, membership size 1)
-backend-1  | 2026-07-24T20:02:20.939Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b266d8038f183870b6f18 produced 1 chunks from 11 lines
-backend-1  | 2026-07-24T20:02:20.939Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 5665eb01-aa8d-40f9-bc11-b8401dc8ea8c
-backend-1  | 2026-07-24T20:02:23.160Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
-backend-1  | 2026-07-24T20:02:23.260Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4cfdcf7beafb579c22b userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b266d8038f183870b6f18 collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
-backend-1  | 2026-07-24T20:02:23.261Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
-backend-1  | 2026-07-24T20:02:23.357Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-07-24T20:02:23.357Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b266d8038f183870b6f18 (1 chunks, ~328 tokens, membership size 2)
-backend-1  | 2026-07-24T20:02:23.359Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.TranscriptChunker      : chunk: recording 6a5b25198038f183870b6f15 produced 3 chunks from 37 lines
-backend-1  | 2026-07-24T20:02:23.360Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = 0339875d-3b52-4341-a929-833a0f60642b
-backend-1  | 2026-07-24T20:02:23.813Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = eaa55e4c-3a08-4bed-9f1c-061e05e64c18
-backend-1  | 2026-07-24T20:02:24.011Z  INFO 1 --- [backend] [mcat-handler-45] o.s.ai.vectorstore.SimpleVectorStore     : Calling EmbeddingModel for document id = a89eecc3-6679-4f3d-b640-feff88593e9e
-backend-1  | 2026-07-24T20:02:24.252Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0000
-backend-1  | 2026-07-24T20:02:24.351Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4d0dcf7beafb579c22c userId=6a2fa5b7b7709d6e5e612eca recordingId=6a5b25198038f183870b6f15 collectionId=null category=RAG_EMBEDDING_USAGE model=AiPricingEnum.TEXT_EMBEDDING_3_SMALL(modelName=text-embedding-3-small, category=EMBEDDING, inputPricePerMillionTokens=0.02, cachedInputPricePerMillionTokens=0.02, outputPricePerMillionTokens=0.0) cost=0.0000
-backend-1  | 2026-07-24T20:02:24.352Z  INFO 1 --- [backend] [mcat-handler-45] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange 0.0000
-backend-1  | 2026-07-24T20:02:24.449Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-07-24T20:02:24.449Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.rag.service.RagEmbeddingCache      : ensureCached: cached recording 6a5b25198038f183870b6f15 (3 chunks, ~1099 tokens, membership size 3)
-backend-1  | 2026-07-24T20:02:24.884Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.TranscriptIndexService   : search: userId=6a2fa5b7b7709d6e5e612eca scope=3 topK=9 threshold=0.5 candidates=7 hits=1 (semantic=0 lexical=1)
-backend-1  | 2026-07-24T20:02:24.884Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.service.TranscriptIndexService   : search: userId=6a2fa5b7b7709d6e5e612eca expansion added 1 neighbour chunks (radius=1)
-backend-1  | 2026-07-24T20:02:24.890Z  INFO 1 --- [backend] [mcat-handler-45] u.m.b.r.s.CollectionContextBuilder       : build: collection=6a630744482cabd32d59e22a question.len=12 topK=9 hits=2 citations=1 hasDescription=false
-backend-1  | 2026-07-24T20:02:29.335Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.transactionledger.AiPricingEnum    : Found AI pricing: AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0)
-backend-1  | 2026-07-24T20:02:29.336Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.rag.service.RagStreamParser  : RAG token usage: userId=6a2fa5b7b7709d6e5e612eca collectionId=6a630744482cabd32d59e22a model=AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0) prompt=967 cached=0 completion=242 total=1209
-backend-1  | 2026-07-24T20:02:29.337Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.service.PricingService           : For recordingId: null, the total cost is 0.0157
-backend-1  | 2026-07-24T20:02:29.434Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : RAG transaction created: id=6a63c4d5dcf7beafb579c22d userId=6a2fa5b7b7709d6e5e612eca recordingId=null collectionId=6a630744482cabd32d59e22a category=RAG_QUERY_USAGE model=AiPricingEnum.GPT_5_5(modelName=gpt-5.5, category=CHAT, inputPricePerMillionTokens=5.0, cachedInputPricePerMillionTokens=0.5, outputPricePerMillionTokens=30.0) cost=0.0157
-backend-1  | 2026-07-24T20:02:29.435Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.backend.user.service.UserService     : Entering updateUserBalance for userId 6a2fa5b7b7709d6e5e612eca and amountChange -0.0157
-backend-1  | 2026-07-24T20:02:29.533Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.t.s.TransactionLedgerService       : RAG debit user balance updated? true: userId=6a2fa5b7b7709d6e5e612eca
-backend-1  | 2026-07-24T20:02:29.656Z  INFO 1 --- [backend] [or-http-epoll-2] u.m.b.r.service.RagCollectionPersister   : persist: collection=6a630744482cabd32d59e22a session=a85341a4-3a28-4059-8bb6-d005f7c138d2 appended user+assistant turns (assistant.len=794, citations=1)
+
+> frontend@0.0.0 lint
+> eslint .
+
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\auth\context\AuthContext.jsx
+  55:18  error  'err' is defined but never used                                                                                                 no-unused-vars
+  95:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\auth\pages\EmailVerificationPage.jsx
+  12:12  error  'resendErrorMsg' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+  12:28  error  'setResendErrorMsg' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        no-unused-vars
+  17:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  15 |         const token = searchParams.get('token');
+  16 |         if (!token || !/^[a-zA-Z0-9._-]{10,256}$/.test(token)) {
+> 17 |             setStatus('error');
+     |             ^^^^^^^^^ Avoid calling setState() directly within an effect
+  18 |             setMessage('No verification token provided.');
+  19 |             return;
+  20 |         }  react-hooks/set-state-in-effect
+  48:18  error  'err' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\auth\pages\LoginPage.jsx
+   34:28  error  'setResendErrorMsg' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  113:18  error  'err' is defined but never used                                                                    no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\auth\pages\RegisterPage.jsx
+  48:11  error  'navigate' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\billing\components\TopUpModal.jsx
+  47:11  warning  The 'billingProfile' logical expression could make the dependencies of useMemo Hook (at line 114) change on every render. To fix this, wrap the initialization of 'billingProfile' in its own useMemo() Hook  react-hooks/exhaustive-deps
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\chat\utils\transcriptForAI.js
+  50:18  error  'e' is defined but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\organization\context\OrganizationContext.jsx
+  83:14  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\profile\components\UserProfileModal.jsx
+  19:13  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  17 |     useEffect(() => {
+  18 |         if (isOpen && user) {
+> 19 |             setGroupSettings(user.groupSettings || {});
+     |             ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  20 |         }
+  21 |     }, [isOpen]);
+  22 |  react-hooks/set-state-in-effect
+  21:8   warning  React Hook useEffect has a missing dependency: 'user'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      react-hooks/exhaustive-deps
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\rag\CollectionChatPage.jsx
+  58:15  error  'idsInScope' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\rag\components\CollectionChatPanel.jsx
+  49:34  error  'collectionId' is defined but never used                                              no-unused-vars
+  66:13  error  'user' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\components\CloudExplainerModal.jsx
+  32:21  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  30 |
+  31 |     useEffect(() => {
+> 32 |         if (isOpen) setBusy(false);
+     |                     ^^^^^^^ Avoid calling setState() directly within an effect
+  33 |     }, [isOpen]);
+  34 |
+  35 |     // ESC == "Stay local" - the free choice is the safe default if  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\components\ConsentModal.jsx
+  33:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  31 |     useEffect(() => {
+  32 |         if (isOpen) {
+> 33 |             setConsented(false);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  34 |             setCopied(false);
+  35 |         }
+  36 |     }, [isOpen]);  react-hooks/set-state-in-effect
+  59:18  error  '_' is defined but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\components\DeviceSelector.jsx
+  25:26  error  'recordingId' is defined but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\components\EditableRecordingTitle.jsx
+  39:25  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  37 |     // outside (e.g. AI generates a title after the recording stops).
+  38 |     useEffect(() => {
+> 39 |         if (!isEditing) setSavedTitle(null);
+     |                         ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  40 |     }, [title, isEditing]);
+  41 |
+  42 |     const displayTitle = savedTitle ?? title ?? '';  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\components\RecordingContent.jsx
+  144:53  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  142 |     const AUTO_AI_WINDOW_MS = 2 * 60 * 1000;
+  143 |     const finishedAtMs = recording?.uploadedAt ? new Date(recording.uploadedAt).getTime() : 0;
+> 144 |     const withinAutoAiWindow = finishedAtMs > 0 && (Date.now() - finishedAtMs < AUTO_AI_WINDOW_MS);
+      |                                                     ^^^^^^^^^^ Cannot call impure function
+  145 |     const awaitingAutoSummary = autoSummaryExpected && withinAutoAiWindow;
+  146 |     const awaitingAutoTitle = autoTitleExpected && withinAutoAiWindow;
+  147 |  react-hooks/purity
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useAudioPlayback.js
+  29:22  error  '_' is defined but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useDesktopAppAvailable.js
+  59:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  57 |     useEffect(() => {
+  58 |         if (isMobile) {
+> 59 |             setAvailable(false);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  60 |             return;
+  61 |         }
+  62 |  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useLiveSession.jsx
+  136:26  error  'e' is defined but never used  no-unused-vars
+  262:30  error  '_' is defined but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useLiveTranscriptPolling.js
+  138:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  136 |             // post-stop details page doesn't briefly show a stale
+  137 |             // warning from the just-finished recording.
+> 138 |             setActiveWarnings([]);
+      |             ^^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  139 |             setDeviceEvents([]);
+  140 |             return;
+  141 |         }  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useRecordingTimer.js
+  24:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  22 |     useEffect(() => {
+  23 |         if (timerDuration === null || !active) {
+> 24 |             setTimeRemaining(null);
+     |             ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  25 |             if (intervalRef.current) clearInterval(intervalRef.current);
+  26 |             return;
+  27 |         }  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useSpeakerChips.js
+  35:27  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `recording`, but the source dependencies were [recording?.segments, speakerNameMap]. Inferred less specific property than source.
+
+  33 |     }, [allSpeakers]);
+  34 |
+> 35 |     const chips = useMemo(() => {
+     |                           ^^^^^^^
+> 36 |         if (!recording?.segments?.length) return [];
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 37 |         const byKey = new Map();
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 56 |         return [...byKey.values()];
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 57 |     }, [recording?.segments, speakerNameMap]);
+     | ^^^^^^ Could not preserve existing manual memoization
+  58 |
+  59 |     const speakerColorMap = useMemo(() => {
+  60 |         if (!recording?.segments?.length) return {};                                   react-hooks/preserve-manual-memoization
+  59:37  error  Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `recording.segments`, but the source dependencies were [recording?.segments]. Inferred different dependency than source.
+
+  57 |     }, [recording?.segments, speakerNameMap]);
+  58 |
+> 59 |     const speakerColorMap = useMemo(() => {
+     |                                     ^^^^^^^
+> 60 |         if (!recording?.segments?.length) return {};
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |         const map = {};
+     …
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 69 |         return map;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 70 |     }, [recording?.segments]);
+     | ^^^^^^ Could not preserve existing manual memoization
+  71 |
+  72 |     // Shape RecordingContent's assign-speaker picker expects: the
+  73 |     // {@code current} speakers already appearing in this recording,  react-hooks/preserve-manual-memoization
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useTranscriptData.js
+  178:19  error  Error: Cannot call impure function during render
+
+`Date.now` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  176 |             const recordingStartMs = recording?.createdAt
+  177 |                 ? new Date(recording.createdAt).getTime()
+> 178 |                 : Date.now();
+      |                   ^^^^^^^^^^ Cannot call impure function
+  179 |             // Synthesize a wall-clock timestamp per chunk from the
+  180 |             // recording's createdAt + the chunk's offset-into-recording so
+  181 |             // ChatBubble's existing time formatter keeps working  react-hooks/purity
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\hooks\useUploadRecording.js
+  52:46  error  'isMobile' is assigned a value but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\pages\Dashboard.jsx
+  145:9   error  'balance' is assigned a value but never used. Allowed unused vars must match /^[A-Z_]/u  no-unused-vars
+  234:33  error  'creditedAmount' is defined but never used                                               no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\features\recordings\utils\liveRecordingStorage.js
+  27:14  error  '_' is defined but never used  no-unused-vars
+  39:14  error  '_' is defined but never used  no-unused-vars
+  52:14  error  '_' is defined but never used  no-unused-vars
+  62:14  error  '_' is defined but never used  no-unused-vars
+  78:14  error  '_' is defined but never used  no-unused-vars
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\shared\components\UpdateBanner.jsx
+  65:13  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  63 |         const view = _buildView(status);
+  64 |         if (!view || view.persistDismiss === false) {
+> 65 |             setDismissed(false);
+     |             ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  66 |             return;
+  67 |         }
+  68 |         setDismissed(!!dismissKey && _readDismissed() === dismissKey);  react-hooks/set-state-in-effect
+
+C:\Users\Mate\Desktop\Project\naplo\web-ui\src\shared\constants\firstRunGate.js
+  23:14  error  '_' is defined but never used  no-unused-vars
+  35:14  error  '_' is defined but never used  no-unused-vars
+
+✖ 43 problems (41 errors, 2 warnings)
