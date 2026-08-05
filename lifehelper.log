@@ -1,15 +1,11 @@
-Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:8066/api/. (Reason: CORS request did not succeed). Status code: (null).
-XHR 
-GET
-https://naplo.app/api/v1/local-presence
-[HTTP/2 404  70ms]
+there are 2 issues i found 
+1 2026-08-05 18:22:21 [WARNING] naplo.lifecycle: Model pre-warm failed: cannot import name 'get_diarizer' from 'server.diarization' (C:\Users\Mate\AppData\Local\Programs\Naplo\_internal\server\diarization\__init__.py)
+Traceback (most recent call last):
+  File "server\lifecycle.py", line 82, in _load
+    from .diarization import (
 
-	
-GET
-	https://naplo.app/api/v1/local-presence
-Status
-404
-VersionHTTP/2
-Transferred2.33 kB (0 B size)
-Referrer Policystrict-origin-when-cross-origin
-DNS ResolutionSystem
+2 ⚠
+Naplo desktop app isn’t running
+
+Start it from your tray, or launch it from here. If you uninstalled, you can grab it again from the download page. 
+message does not disappear
