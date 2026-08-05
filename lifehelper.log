@@ -1,27 +1,15 @@
-Error: Minified React error #301; visit https://react.dev/errors/301 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    renderWithHooksAgain https://naplo.app/assets/index-4RnJKlVt.js:4039
-    renderWithHooks https://naplo.app/assets/index-4RnJKlVt.js:4012
-    updateFunctionComponent https://naplo.app/assets/index-4RnJKlVt.js:5639
-    beginWork https://naplo.app/assets/index-4RnJKlVt.js:6250
-    performUnitOfWork https://naplo.app/assets/index-4RnJKlVt.js:9016
-    workLoopSync https://naplo.app/assets/index-4RnJKlVt.js:8914
-    renderRootSync https://naplo.app/assets/index-4RnJKlVt.js:8898
-    performWorkOnRoot https://naplo.app/assets/index-4RnJKlVt.js:8573
-    performWorkOnRootViaSchedulerTask https://naplo.app/assets/index-4RnJKlVt.js:9571
-    performWorkUntilDeadline https://naplo.app/assets/index-4RnJKlVt.js:609
-index-4RnJKlVt.js:5268:13
-[ErrorBoundary] Uncaught error: Error: Minified React error #301; visit https://react.dev/errors/301 for the full message or use the non-minified dev environment for full errors and additional helpful warnings.
-    renderWithHooksAgain https://naplo.app/assets/index-4RnJKlVt.js:4039
-    renderWithHooks https://naplo.app/assets/index-4RnJKlVt.js:4012
-    updateFunctionComponent https://naplo.app/assets/index-4RnJKlVt.js:5639
-    beginWork https://naplo.app/assets/index-4RnJKlVt.js:6250
-    performUnitOfWork https://naplo.app/assets/index-4RnJKlVt.js:9016
-    workLoopSync https://naplo.app/assets/index-4RnJKlVt.js:8914
-    renderRootSync https://naplo.app/assets/index-4RnJKlVt.js:8898
-    performWorkOnRoot https://naplo.app/assets/index-4RnJKlVt.js:8573
-    performWorkOnRootViaSchedulerTask https://naplo.app/assets/index-4RnJKlVt.js:9571
-    performWorkUntilDeadline https://naplo.app/assets/index-4RnJKlVt.js:609
- 
-Object { componentStack: "\nUpdateBanner@https://naplo.app/assets/index-4RnJKlVt.js:26155:20\nmain@unknown:0:0\ndiv@unknown:0:0\nDashboard@https://naplo.app/assets/index-4RnJKlVt.js:43746:50\nProtectedRoute@https://naplo.app/assets/index-4RnJKlVt.js:19759:24\nRenderedRoute@https://naplo.app/assets/index-4RnJKlVt.js:13549:23\nRoutes@https://naplo.app/assets/index-4RnJKlVt.js:13886:16\nRouter@https://naplo.app/assets/index-4RnJKlVt.js:13825:16\nBrowserRouter@https://naplo.app/assets/index-4RnJKlVt.js:14521:23\nDesktopAppProvider@https://naplo.app/assets/index-4RnJKlVt.js:25821:28\nOrganizationProvider@https://naplo.app/assets/index-4RnJKlVt.js:19447:30\nAuthProvider@https://naplo.app/assets/index-4RnJKlVt.js:19279:22\nErrorBoundary@https://naplo.app/assets/index-4RnJKlVt.js:70538:5\nApp@unknown:0:0\nQueryClientProvider@https://naplo.app/assets/index-4RnJKlVt.js:24774:27" }
-​
-componentStack: "\nUpdateBanner@https://naplo.app/assets/index-4RnJKlVt.js:26155:20\nmain@unknown:0:0\ndiv@unknown:0:0\nDashboard@https://naplo.app/assets/index-4RnJKlVt.js:43746:50\nProtectedRoute@https://naplo.app/assets/index-4RnJKlVt.js:19759:24\nRenderedRoute@https://naplo.app/assets/index-4RnJKlVt.js:13549:23\nRoutes@https://naplo.app/assets/index-4RnJKlVt.js:13886:16\nRouter@https://naplo.app/assets/index-4RnJKlVt.js:13825:16\nBrowserRouter@https://naplo.app/assets/index-4RnJKlVt.js:14521:23\nDesktopAppProvider@https://naplo.app/assets/index-4RnJKlVt.js:25821:28\nOrganizationProvider@https://naplo.app/assets/index-4RnJKlVt.js:19447:30\nAuthProvider@https://naplo.app/assets/index-4RnJKlVt.js:19279:22\nErrorBoundary@https://naplo.app/assets/index-4RnJKlVt.js:70538:5\nApp@unknown:0:0\nQueryClientProvider@https://naplo.app/assets/index-4RnJKlVt.js:24774:27"
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at http://localhost:8066/api/. (Reason: CORS request did not succeed). Status code: (null).
+XHR 
+GET
+https://naplo.app/api/v1/local-presence
+[HTTP/2 404  70ms]
+
+	
+GET
+	https://naplo.app/api/v1/local-presence
+Status
+404
+VersionHTTP/2
+Transferred2.33 kB (0 B size)
+Referrer Policystrict-origin-when-cross-origin
+DNS ResolutionSystem
