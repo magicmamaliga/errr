@@ -1,29 +1,21 @@
-there are 2 issues i found 
-1 failed import get_diarizer
-2026-08-05 18:22:17 [INFO] naplo: [config] No .env file found. Searched: ['C:\\Users\\Mate\\AppData\\Local\\Programs\\Naplo\\.env', 'C:\\Users\\Mate\\AppData\\Local\\Programs\\Naplo\\_internal\\.env']
-2026-08-05 18:22:17 [INFO] naplo: [config] Using OS environment variables / defaults.
-2026-08-05 18:22:18 [INFO] naplo.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
-2026-08-05 18:22:20 [INFO] naplo: 🚀 Starting Naplo backend on port 8066...
-INFO:     Started server process [21228]
-INFO:     Waiting for application startup.
-2026-08-05 18:22:21 [INFO] naplo: [config] Using bundled ffmpeg: C:\Users\Mate\AppData\Local\Naplo\assets\ffmpeg\ffmpeg.exe
-2026-08-05 18:22:21 [INFO] naplo: [config] Using ffprobe: C:\Users\Mate\AppData\Local\Naplo\assets\ffmpeg\ffprobe.exe
-2026-08-05 18:22:21 [WARNING] naplo.lifecycle: Model pre-warm failed: cannot import name 'get_diarizer' from 'server.diarization' (C:\Users\Mate\AppData\Local\Programs\Naplo\_internal\server\diarization\__init__.py)
-Traceback (most recent call last):
-  File "server\lifecycle.py", line 82, in _load
-    from .diarization import (
-ImportError: cannot import name 'get_diarizer' from 'server.diarization' (C:\Users\Mate\AppData\Local\Programs\Naplo\_internal\server\diarization\__init__.py)
-2026-08-05 18:22:21 [INFO] server.services.local_presence: [local_presence] Heartbeat thread started
-2026-08-05 18:22:21 [INFO] server.services.auth_nudge: [auth-nudge] Started (initial grace=60s, poll=60s, reprompt=600s)
-2026-08-05 18:22:21 [INFO] server.audio.device_manager.events.source_windows: [windows-mmdevice] event source started (coalesce_window=0.50s)
-2026-08-05 18:22:21 [INFO] server.audio.device_manager.events.dispatcher: [dispatcher] started (source=windows-mmdevice, source_alive=True)
-INFO:     Application startup complete.
-INFO:     Uvicorn running on http://127.0.0.1:8066 (Press CTRL+C to quit)
-2026-08-05 18:22:21 [INFO] server.audio.device_manager.events.source_windows: [windows-mmdevice] IMMNotificationClient registered; listening for OS default-device changes
-2026-08-05 18:23:21 [INFO] server.services.auth_nudge: [auth-nudge] Fired sign-in toast (no JWT present; next reprompt in 600s)
-
-2 ⚠
-Naplo desktop app isn’t running
-
-Start it from your tray, or launch it from here. If you uninstalled, you can grab it again from the download page. 
-message does not disappear (maybe related to the python logs i showed before) 
+backend-1  | 2026-08-05T18:03:44.053Z  INFO 1 --- [backend] [cat-handler-272] .m.b.r.a.DeferredTranscriptionController : Deferred transcription request for recording 6a7379e0b7e67ca544a72948 by t***@gmail.com - flipping mode from local to ai (force=true)
+backend-1  | 2026-08-05T18:03:45.766Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : Entering handleFinishedRecording with event RecordingFinishedEvent[recordingId=6a7379e0b7e67ca544a72948]
+backend-1  | 2026-08-05T18:03:45.782Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : No transcript found for recording 6a7379e0b7e67ca544a72948 - attempting AI transcription from audio
+backend-1  | 2026-08-05T18:03:45.784Z  INFO 1 --- [backend] [        async-2] u.m.backend.user.service.UserService     : Entering findById for userId 6a6e39b4fa2173292bad5766
+backend-1  | 2026-08-05T18:03:45.855Z  INFO 1 --- [backend] [cat-handler-273] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
+backend-1  | 2026-08-05T18:03:45.856Z  INFO 1 --- [backend] [cat-handler-273] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:03:48.523Z  INFO 1 --- [backend] [        async-2] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:03:51.006Z  INFO 1 --- [backend] [cat-handler-276] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
+backend-1  | 2026-08-05T18:03:51.007Z  INFO 1 --- [backend] [cat-handler-276] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:03:53.036Z  INFO 1 --- [backend] [        async-2] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user t***@gmail.com org 6a6e39b4fa2173292bad5767 (cost: $0.010118, text length: 995 chars, chunks: 5)
+backend-1  | 2026-08-05T18:03:53.037Z  INFO 1 --- [backend] [        async-2] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:03:56.171Z  INFO 1 --- [backend] [cat-handler-280] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
+backend-1  | 2026-08-05T18:03:56.173Z  INFO 1 --- [backend] [cat-handler-280] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:03:56.782Z  INFO 1 --- [backend] [        async-2] u.m.b.r.a.s.AiTranscriptionService       : AI transcription successful for user t***@gmail.com org 6a6e39b4fa2173292bad5767 (cost: $0.010118, text length: 995 chars, chunks: 5)
+backend-1  | 2026-08-05T18:03:56.786Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : Per-channel transcription for 20231201 - Nationwide_PR_Department_monthly_phone_call._Nov_2023.mp3: speaker=5 chunks (995 chars), mic=5 chunks (995 chars), merged=10 chunks
+backend-1  | 2026-08-05T18:03:56.839Z  INFO 1 --- [backend] [        async-2] u.m.b.r.event.RecordingEventListener     : Auto-transcription complete for recording 6a7379e0b7e67ca544a72948: 1941 chars, 10 chunks
+backend-1  | 2026-08-05T18:04:01.325Z  INFO 1 --- [backend] [cat-handler-282] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
+backend-1  | 2026-08-05T18:04:01.327Z  INFO 1 --- [backend] [cat-handler-282] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:04:06.565Z  INFO 1 --- [backend] [cat-handler-283] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
+backend-1  | 2026-08-05T18:04:06.566Z  INFO 1 --- [backend] [cat-handler-283] u.m.backend.user.service.UserService     : Entering findByEmail for user t***@gmail.com
+backend-1  | 2026-08-05T18:04:11.806Z  INFO 1 --- [backend] [cat-handler-287] u.m.backend.record.RecordingController   : Entering getRecordingDetails() with recordingId 6a7379e0b7e67ca544a72948
