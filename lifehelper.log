@@ -1,5 +1,5 @@
-PS C:\Users\Mate\Desktop\Project\naplo\local-server> poetry lock
-Creating virtualenv naplo-local-server-yw3SsHxr-py3.12 in C:\Users\Mate\AppData\Local\pypoetry\Cache\virtualenvs
-Resolving dependencies... (12.5s)
-
-Because naplo-local-server depends on pyobjc-framework-AudioToolbox (11.0) which doesn't match any versions, version solving failed.
+Installing the current project: naplo-local-server (0.1.0)
+Error: The current project could not be installed: No file/folder found for package naplo-local-server
+If you do not want to install the current project use --no-root.
+If you want to use Poetry only for dependency management but not for packaging, you can disable package mode by setting package-mode = false in your pyproject.toml file.
+If you did intend to install the current project, you may need to set `packages` in your pyproject.toml file.
