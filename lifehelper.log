@@ -1,18 +1,7 @@
-local-server % tail -1000 dist/Naplo.app/Contents/MacOS/naplo.faulthandler.log
-Thread 0x000000016e1c3000 (most recent call first):
-  File "server/tray.py", line 740 in _loop
-  File "threading.py", line 1012 in run
-  File "threading.py", line 1075 in _bootstrap_inner
-  File "threading.py", line 1032 in _bootstrap
-
-Thread 0x000000016d1b7000 (most recent call first):
-  File "PIL/Image.py", line 650 in __init__
-  File ???, line 0 in Fatal Python error: Segmentation fault
-
-
-Extension modules: PIL._imaging, PIL._imagingmath, numpy._core._multiarray_umath, numpy.linalg._umath_linalg, _cffi_backend, _webrtcvad, objc._objc, CoreFoundation._CoreFoundation, CoreFoundation._inlines, Foundation._Foundation, Foundation._inlines, AppKit._AppKit, AppKit._inlines, CoreAudio._CoreAudio, CoreAudio._inlines, CoreMedia._CoreMedia, CoreMedia._inlines, AVFAudio._inlines, AVFoundation._AVFoundation, AVFoundation._inlines, UserNotifications._UserNotifications, charset_normalizer.md, charset_normalizer.cd, requests.packages.charset_normalizer.md, requests.packages.chardet.md, requests.packages.charset_normalizer.cd, requests.packages.chardet.cd, objc._machsignals, PIL._imagingft (total: 29)
-tornaitechltd@Mates-MacBook-Air local-server % tail -1000 dist/Naplo.app/Contents/MacOS/naplo.log             
-2026-08-10 21:55:28 [INFO] naplo: [config] No .env file found. Searched: ['/Users/tornaitechltd/Desktop/naplo/local-server/dist/Naplo.app/Contents/MacOS/.env', '/Users/tornaitechltd/Desktop/naplo/local-server/dist/Naplo.app/Contents/Frameworks/.env']
-2026-08-10 21:55:28 [INFO] naplo: [config] Using OS environment variables / defaults.
-2026-08-10 21:55:28 [INFO] naplo.asset_bootstrap: [bootstrap] Assets v1 already present (target v1)
-2026-08-10 21:55:28 [INFO] naplo: 🚀 Starting Naplo backend on port 8066...
+The return statement
+return_stmt ::=  "return" [expression_list]
+return may only occur syntactically nested in a function definition, not within a nested class definition.
+If an expression list is present, it is evaluated, else None is substituted.
+return leaves the current function call with the expression list (or None) as return value.
+When return passes control out of a try statement with a finally clause, that finally clause is executed before really leaving the function.
+In a generator function, the return statement indicates that the generator is done and will cause StopIteration to be raised. The returned value (if any) is used as an argument to construct StopIteration and becomes the StopIteration.value attribute.
